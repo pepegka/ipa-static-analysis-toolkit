@@ -1,0 +1,70 @@
+- id: SECH-03.weak_hash
+  vector: SECH-03
+  title: Weak hash primitive (MD5 / SHA-1)
+  description: |
+    Imports CC_MD5 / CC_SHA1 (CommonCrypto) or CryptoKit's Insecure.MD5 /
+    Insecure.SHA1. Both are collision-broken and unsuitable for signatures, integrity
+    checks or password hashing, but are also widely used for non-security purposes
+    (cache keys, ETags, file checksums), so the finding is a pointer for review.
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0008]
+  mastg: [MASTG-TEST-0211]
+  masvs: [MASVS-CRYPTO]
+  search:
+    - kind: importedSymbol
+      pattern: '^_\$s9CryptoKit8InsecureO(3MD5|4SHA1)V'
+    - kind: symbol
+      pattern: '^_CC_MD5$|^_CC_SHA1$'
+  references:
+    - https://csrc.nist.gov/pubs/sp/800/131/a/r2/final
+
+- id: SECH-03.embedded_certificates
+  vector: SECH-03
+  title: Embedded certificate / public-key material
+  description: |
+    PEM certificate or public-key blobs embedded in the binary (e.g. pinned
+    roots). An embedded root is normal and usually good practice (certificate
+    pinning), so this ships informational, review only. Private keys and API
+    tokens are reported separately under SECH-05.
+  severity: info
+  maswe: [MASWE-0028]
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: string
+      pattern: '-----BEGIN CERTIFICATE-----|-----BEGIN PUBLIC KEY-----'
+
+- id: SECH-03.cert_pinning
+  vector: SECH-03
+  title: SSL certificate pinning (informational)
+  description: Use of TrustKit, AFSecurityPolicy or NSURLSessionPinningDelegate; informational signal.
+  severity: info
+  maswe: [MASWE-0028]
+  mastg: []
+  polarity: defensive
+  search:
+    - kind: symbol
+      pattern: 'TSKConfigurationKey|TrustKit|AFSecurityPolicy|SSLPinningModeCertificate|SSLPinningModePublicKey'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity
+
+- id: SECH-03.insecure_randomness
+  vector: SECH-03
+  title: Non-cryptographic random number generator
+  description: |
+    Imports rand() / srand() / random() / drand48(), predictable PRNGs unsuitable
+    for tokens, keys, IVs or nonces. Use SecRandomCopyBytes or arc4random_buf.
+    `arc4random() % n` also introduces modulo bias; prefer arc4random_uniform(n).
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0012]
+  mastg: [MASTG-TEST-0311]
+  masvs: [MASVS-CRYPTO]
+  search:
+    - kind: importedSymbol
+      pattern: '^_(rand|srand|random|srandom|drand48|srand48)$'
+    - kind: string
+      pattern: 'arc4random\(\)\s*%'
+  references:
+    - https://developer.apple.com/documentation/security/secrandomcopybytes(_:_:_:)

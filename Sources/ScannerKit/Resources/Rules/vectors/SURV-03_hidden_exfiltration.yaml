@@ -1,0 +1,60 @@
+- id: SURV-03.background_url_session
+  vector: SURV-03
+  title: Background URLSession configuration
+  description: |
+    backgroundSessionConfigurationWithIdentifier, keeps shipping data even after
+    the app is killed, common channel for telemetry drain.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'backgroundSessionConfigurationWithIdentifier'
+  references:
+    - https://developer.apple.com/documentation/foundation/urlsessionconfiguration/background(withidentifier:)
+
+- id: SURV-03.bg_task_scheduler
+  vector: SURV-03
+  title: BGTaskScheduler silent background wake-ups
+  description: |
+    BGTaskScheduler / submitTaskRequest, schedules periodic background wake-ups,
+    used to drain accumulated logs/telemetry while the user is away.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'BGTaskScheduler|BGAppRefreshTaskRequest|BGProcessingTaskRequest'
+  references:
+    - https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler
+
+- id: SURV-03.expiring_bg_task
+  vector: SURV-03
+  title: Begin / end expiring background task
+  description: |
+    beginBackgroundTaskWithExpirationHandler, requests up to 30 s extra runtime
+    after the app is sent to background. Used to finish a telemetry POST.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'beginBackgroundTaskWithExpirationHandler|beginBackgroundTask'
+  references:
+    - https://developer.apple.com/documentation/uikit/uiapplication/beginbackgroundtask(expirationhandler:)
+
+- id: SURV-03.background_fetch
+  vector: SURV-03
+  title: Background fetch mode (UIBackgroundModes "fetch")
+  description: |
+    UIBackgroundModes contains "fetch", system schedules periodic background
+    wake-ups for opportunistic data sync. "processing", "remote-notification"
+    and "voip" are covered by S12 (system persistence) and S19 (push channels).
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: backgroundMode
+      pattern: '^fetch$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/uibackgroundmodes

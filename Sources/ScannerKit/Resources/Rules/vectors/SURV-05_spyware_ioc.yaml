@@ -1,0 +1,161 @@
+- id: SURV-05.pegasus_nso_strings
+  vector: SURV-05
+  title: NSO Pegasus / generic spyware artefacts
+  description: |
+    Strings / file paths historically tied to NSO Pegasus loaders, drop chains,
+    BLASTPASS and HOMAGE deliveries. Source: Citizen Lab.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: 'com\.apple\.WebKit\.workaround|/private/var/db/com\.apple\.xpc\.roleaccountd\.staging|pkd\.staging|/var/db/com\.apple\.appstored/staging|XML-Bastion|p[a-z]{0,3}bridgehead|gatekeeperd-spy|tmp/.+nsopf|com\.apple\.private\.security\.bridgehead'
+
+- id: SURV-05.predator_intellexa
+  vector: SURV-05
+  title: Intellexa Predator artefacts
+  description: |
+    Predator (Intellexa / Cytrox), strings, drop paths, C2 indicators tied to public
+    Citizen Lab / Google TAG writeups.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(intellexa|cytrox|predator_?loader|alien_?implant|cytrox_?inject)\b'
+
+- id: SURV-05.reign_quadream
+  vector: SURV-05
+  title: QuaDream Reign artefacts
+  description: QuaDream Reign (Israeli spyware vendor), ENDOFDAYS exploit chain.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(reign_loader|endofdays|quadream|kismet_chain)\b'
+
+- id: SURV-05.finfisher
+  vector: SURV-05
+  title: FinFisher / FinSpy artefacts
+  description: Gamma Group FinFisher / FinSpy lawful-intercept toolkit.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(finspy|finfisher|gamma_group|spk_install)\b'
+
+- id: SURV-05.hermit_rcs
+  vector: SURV-05
+  title: Hermit / RCS Lab artefacts
+  description: Hermit / RCS Lab Tykelab, Italian lawful-intercept tooling.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(rcs_?lab|tykelab|hermit_?ios|rcs_?spyware)\b'
+
+- id: SURV-05.lockdown_bypass_strings
+  vector: SURV-05
+  title: Indicators of attempted Lockdown-mode evasion
+  description: Strings referencing Lockdown bypass paths / known FORCEDENTRY / BLASTPASS markers.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(forcedentry|blastpass|webp_?heap|pwnyowner|pwnage|kasper_sandbox_escape)\b'
+
+- id: SURV-05.candiru_devilstongue
+  vector: SURV-05
+  title: Candiru / DevilsTongue artefacts
+  description: |
+    Candiru (Saito Tech), DevilsTongue / Sherlock spyware. Strings and markers
+    tied to Citizen Lab / Microsoft MSTIC writeups.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(candiru|devil''?s?tongue|saito_?tech|sherlock_?implant)\b'
+  references:
+    - https://citizenlab.ca/2021/07/hooking-candiru-another-mercenary-spyware-vendor-comes-into-focus/
+
+- id: SURV-05.paragon_graphite
+  vector: SURV-05
+  title: Paragon Graphite artefacts
+  description: |
+    Paragon Solutions Graphite, mercenary spyware named in Citizen Lab 2025
+    research. Loader / C2 marker strings.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(graphite_?loader|paragon_?solutions|graphite_?implant)\b'
+  references:
+    - https://citizenlab.ca/2025/06/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted/
+
+- id: SURV-05.stalkerware_families
+  vector: SURV-05
+  title: Consumer stalkerware / spouseware SDK markers
+  description: |
+    Vendor / SDK marker strings for commercial phone-monitoring ("stalkerware") families such as
+    mSpy, FlexiSPY, Cocospy, Hoverwatch, TheTruthSpy, Spyzie, KidsGuard, uMobix, XNSPY, Mobistealth,
+    iKeyMonitor, Spyera, WebWatcher, Spyic, Minspy, Neatspy and ClevGuard. These exfiltrate messages,
+    location, call logs and keystrokes to a vendor panel.
+  severity: high
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(mspy|flexispy|flexi_?spy|cocospy|hoverwatch|thetruthspy|the_?truth_?spy|spyzie|kidsguard|umobix|xnspy|mobistealth|ikeymonitor|spyera|webwatcher|spyic|minspy|neatspy|clevguard|spyhuman|mobile_?tracker_?free|hellospy|spy24)\b'
+  references:
+    - https://stopstalkerware.org/
+    - https://www.eff.org/issues/stalkerware
+
+- id: SURV-05.stalkerware_domains
+  vector: SURV-05
+  title: Consumer stalkerware panel / C2 domains
+  description: |
+    Hard-coded upload/panel domains for commercial stalkerware families, the endpoint the
+    monitored data is exfiltrated to.
+  severity: high
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)(mspyonline\.com|thetruthspy\.com|flexispy\.com|cocospy\.com|hoverwatch\.com|umobix\.com|xnspy\.com|mobistealth\.com|ikeymonitor\.com|spyera\.com|clevguard\.(com|net)|spyic\.com|minspy\.com|neatspy\.com|api\.mspy\.|wpanel\.thetruthspy)'
+
+- id: SURV-05.stalkerware_capabilities
+  vector: SURV-05
+  title: Covert monitoring capability markers
+  description: |
+    Covert-monitoring capability strings characteristic of stalkerware even when the vendor name is
+    stripped, hidden-icon install, silent call recording, keylog upload and remote-command panels.
+    Corroborated (two independent markers) to avoid firing on legitimate MDM/parental controls.
+  severity: high
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(hide_?app_?icon|stealth_?mode|invisible_?mode|keylog(ger|_upload)?|call_?record(er|ing)_?secret|whatsapp_?spy|sms_?tracker|ambient_?recording|remote_?camera_?capture)\b'
+
+- id: SURV-05.triangulation_triangledb
+  vector: SURV-05
+  title: Operation Triangulation / TriangleDB artefacts
+  description: |
+    Operation Triangulation (TriangleDB implant), strings, the `BackupAgent`
+    process marker and C2 domains documented by Kaspersky Securelist.
+  severity: critical
+  maswe: [MASWE-0048]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(triangledb|triangle_?db|operation_?triangulation)\b'
+    - kind: string
+      pattern: '(backuprabbit\.com|cloudsponcer\.com|growthtransport\.com|unlimitedteacher\.com)'
+  references:
+    - https://securelist.com/operation-triangulation-the-last-hardware-mystery/111669/

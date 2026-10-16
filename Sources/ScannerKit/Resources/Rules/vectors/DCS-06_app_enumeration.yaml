@@ -1,0 +1,50 @@
+- id: DCS-06.canOpenURL
+  vector: DCS-06
+  title: canOpenURL / LSApplicationQueriesSchemes runtime probe
+  description: |
+    Calls -[UIApplication canOpenURL:] or declares LSApplicationQueriesSchemes, used
+    to test which other apps are installed (iOS analogue of Android's QUERY_ALL_PACKAGES).
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: symbol
+      pattern: 'canOpenURL'
+    - kind: string
+      pattern: 'LSApplicationQueriesSchemes'
+  references:
+    - https://developer.apple.com/documentation/uikit/uiapplication/canopenurl(_:)
+  mitre: [T1418]
+
+- id: DCS-06.remote_control_apps
+  vector: DCS-06
+  title: Probes for remote-control apps (AnyDesk / TeamViewer)
+  description: |
+    The app probes URL schemes or bundle IDs of remote-control / remote-support
+    apps (AnyDesk, TeamViewer, QuickSupport), a common anti-fraud SDK pattern.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: 'anydesk|teamviewer|quicksupport'
+  mitre: [T1418]
+
+- id: DCS-06.competitor_url_schemes
+  vector: DCS-06
+  title: Checks for specific messenger, social or banking apps
+  description: |
+    LSApplicationQueriesSchemes names the scheme of a messenger, social or banking app
+    (tg, vk, whatsapp, telegram, instagram, sberbank, alfabank, vtb, tinkoffbank),
+    so -canOpenURL: can tell whether it is installed.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: urlScheme
+      pattern: '^(tg|vk|whatsapp|telegram|fb|instagram|tiktok|sberbank|alfabank|vtb|tinkoffbank|yandextaxi|ozon|wildberries|kp|kpqs|edadeal|yamarket|yandex|gosuslugi|vkauthorize|vkmsg|vkcomments|vkmusic|ok|odnoklassniki|mailru|mir-pay|samokat|rutube|mts|megafon|beeline|tele2)$'
+      case_sensitive: false
+  mitre: [T1418]
+  references:
+    - https://developer.apple.com/documentation/uikit/uiapplication/canopenurl(_:)

@@ -1,0 +1,57 @@
+{
+  "structural": [
+    {
+      "name": "IAB TCF Global Vendor List",
+      "requiredTopLevelKeys": [
+        "gvlSpecificationVersion",
+        "vendorListVersion",
+        "vendors"
+      ],
+      "source": "https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md",
+      "why": "The GVL lists every registered ad-tech vendor with its privacy-policy and legitimate-interest URLs so a consent dialog can show them. Shipping it says nothing about which of those vendors the app talks to."
+    }
+  ],
+  "linkLists": [
+    {
+      "name": "Privacy-policy link list",
+      "linkKeys": [
+        "privacyPolicy",
+        "privacy_policy",
+        "privacyPolicyUrl",
+        "privacy_policy_url",
+        "privacyPolicyLink",
+        "privacy_policy_link",
+        "privacyUrl",
+        "privacy_url",
+        "policyUrl",
+        "policy_url"
+      ],
+      "minimumEntries": 2,
+      "source": "https://developer.apple.com/app-store/review/guidelines/#5.1.1",
+      "why": "Guideline 5.1.1(i) requires an app to link its privacy policy and that policy to cover every third party the app shares user data with, so apps ship lists of partners each paired with that partner's policy link (Life360's dataPartners.json names 127). The key says the URL is a policy page to show the user, the role the GVL's per-vendor privacy URL plays. The test is structural, not a file name: every host-bearing string must sit in an entry that holds such a link, the only scheme URLs are under the link keys, and there are at least two entries, because a single policy link is usually the app's own and costs nothing to keep. A list that also carries an endpoint or API host under any other key is mined as usual."
+    }
+  ],
+  "nameMarkers": [
+    "license",
+    "licence",
+    "acknowledgement",
+    "acknowledgment",
+    "acknowledgements",
+    "third_party_notices",
+    "thirdpartynotices",
+    "third-party-notices",
+    "open_source_notices",
+    "oss-licenses"
+  ],
+  "nameMarkersWhy": "License and acknowledgement texts cite each open-source project's homepage and licence URL. They are attribution, not destinations. Only document formats qualify, so an SDK's license.conf that names its licensing server is still mined.",
+  "nameMarkerExtensions": [
+    "html",
+    "htm",
+    "txt",
+    "md",
+    "markdown",
+    "rtf",
+    "plist",
+    "json"
+  ]
+}

@@ -1,0 +1,358 @@
+- id: SECH-06.app_group_entitlement
+  vector: SECH-06
+  title: App Groups entitlement (cross-app data sharing)
+  description: |
+    application-groups entitlement allows multiple apps from the same publisher to share
+    UserDefaults/files (often used to share IDFA / VPN-detected flag between sibling apps).
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'application-groups'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.application-groups
+
+- id: SECH-06.universal_links_associated
+  vector: SECH-06
+  title: Associated domains / universal links
+  description: com.apple.developer.associated-domains, handles universal links / web credentials.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'associated-domains'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.associated-domains
+
+- id: SECH-06.keychain_access_group
+  vector: SECH-06
+  title: Keychain access group (cross-app credential share)
+  description: keychain-access-groups, shares keychain entries across same-publisher apps.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'keychain-access-groups'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/keychain-access-groups
+
+- id: SECH-06.network_extension_provider
+  vector: SECH-06
+  title: NetworkExtension provider entitlement
+  description: |
+    com.apple.developer.networking.networkextension, runs a system-level VPN/Filter
+    provider. Legitimate for VPN apps; otherwise unusual.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'networking.networkextension'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.networking.networkextension
+
+- id: SECH-06.systemextension
+  vector: SECH-06
+  title: System extension entitlement
+  description: com.apple.developer.system-extension.install, installs a system extension.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'system-extension'
+
+- id: SECH-06.driverkit
+  vector: SECH-06
+  title: DriverKit entitlement
+  description: DriverKit, userspace driver framework. Extremely rare in App Store apps.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'driverkit'
+
+- id: SECH-06.aps_environment_production
+  vector: SECH-06
+  title: APS push environment
+  description: aps-environment entitlement, push notifications.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: 'aps-environment'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment
+
+- id: SECH-06.get_task_allow
+  vector: SECH-06
+  title: get-task-allow entitlement (debuggable binary)
+  description: |
+    The `get-task-allow` entitlement lets another process attach to and inspect
+    the app's task port; i.e. the binary is debuggable. This is expected for
+    development builds but should never ship in App Store / production
+    distribution; its presence in a release build is a strong re-sign / tampering
+    or mis-build indicator.
+  severity: high
+  maswe: [MASWE-0063]
+  mastg: [MASTG-TEST-0261]
+  search:
+    - kind: entitlement
+      pattern: 'get-task-allow'
+  mitre: [T1631]
+
+- id: SECH-06.dynamic_codesigning
+  vector: SECH-06
+  title: dynamic-codesigning entitlement (JIT / RWX memory)
+  description: |
+    `dynamic-codesigning` permits the app to allocate writable-then-executable
+    (RWX/JIT) memory. Restricted to browsers/JS engines; in an ordinary app it
+    widens the attack surface for code injection.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  search:
+    - kind: entitlement
+      pattern: 'dynamic-codesigning'
+
+- id: SECH-06.private_entitlements
+  vector: SECH-06
+  title: Apple private entitlement (com.apple.private.*)
+  description: |
+    Declares an Apple-private (`com.apple.private.*`) entitlement. App Store apps
+    cannot legitimately hold these; their presence indicates a platform/system
+    binary or a re-signed/tampered build.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  search:
+    - kind: entitlement
+      pattern: 'com\.apple\.private\.'
+  mitre: [T1631]
+
+- id: SECH-06.dynamic_loader_imports
+  vector: SECH-06
+  title: Dynamic loader in use (dlopen / dlsym)
+  description: |
+    The binary imports dlopen/dlsym, so it can resolve and call code chosen at
+    runtime rather than at link time. That is how optional frameworks, plugin
+    architectures and A/B-tested SDKs are loaded, and it is entirely normal, so
+    this ships as INFO inventory rather than a weakness. It matters only as
+    context: an app that also carries obfuscation (SURV-04) or a data broker
+    (TRK-02) can assemble behaviour a static scan cannot see, and dynamic code
+    loading is the mechanism that makes that possible.
+    Note the limit of the signal: an import proves the symbol is linked, not
+    that it is ever called, and iOS forbids loading code that is not already in
+    the signed bundle. (MASWE-0049)
+  severity: info
+  maswe: [MASWE-0049]
+  mastg: []
+  polarity: neutral
+  masvs: [MASVS-CODE]
+  search:
+    - kind: importedSymbol
+      pattern: '^_dlopen$|^_dlsym$'
+
+- id: SECH-06.wifi_info_entitlement
+  vector: SECH-06
+  title: Access Wi-Fi Information entitlement
+  description: |
+    Signed with com.apple.developer.networking.wifi-info, which lets the app read information about the connected Wi-Fi network. The network name and BSSID locate a device as precisely as GPS. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.networking\.wifi-info$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.networking.wifi-info
+
+- id: SECH-06.healthkit_entitlement
+  vector: SECH-06
+  title: HealthKit entitlement
+  description: |
+    Signed with com.apple.developer.healthkit, which lets the app request access to health and activity data in the Health app. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.healthkit$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.healthkit
+
+- id: SECH-06.healthkit_access_entitlement
+  vector: SECH-06
+  title: HealthKit Capabilities entitlement
+  description: |
+    Signed with com.apple.developer.healthkit.access, which names health data types that need additional permission, such as clinical health records. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.healthkit\.access$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.healthkit.access
+
+- id: SECH-06.healthkit_background_entitlement
+  vector: SECH-06
+  title: HealthKit background-delivery entitlement
+  description: |
+    Signed with com.apple.developer.healthkit.background-delivery, which lets HealthKit observer queries receive updates while the app runs in the background. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.healthkit\.background-delivery$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.healthkit.background-delivery
+
+- id: SECH-06.homekit_entitlement
+  vector: SECH-06
+  title: HomeKit entitlement
+  description: |
+    Signed with com.apple.developer.homekit, which lets the app manage HomeKit accessories. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.homekit$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.homekit
+
+- id: SECH-06.contacts_notes_entitlement
+  vector: SECH-06
+  title: Contact-notes entitlement
+  description: |
+    Signed with com.apple.developer.contacts.notes, which lets the app read the notes field of contact entries, which Apple gates separately from contacts access. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.contacts\.notes$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.contacts.notes
+
+- id: SECH-06.nfc_reader_entitlement
+  vector: SECH-06
+  title: NFC tag-reader entitlement
+  description: |
+    Signed with com.apple.developer.nfc.readersession.formats, which names the NFC data formats the app can read. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.nfc\.readersession\.formats$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.formats
+
+- id: SECH-06.notification_filtering_entitlement
+  vector: SECH-06
+  title: Notification-filtering entitlement
+  description: |
+    Signed with com.apple.developer.usernotifications.filtering, which lets the app receive notifications without showing them to the user. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.usernotifications\.filtering$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.usernotifications.filtering
+
+- id: SECH-06.location_push_entitlement
+  vector: SECH-06
+  title: Location Push Service Extension entitlement
+  description: |
+    Signed with com.apple.developer.location.push, which lets a location-sharing app query the device location in response to a push notification. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.location\.push$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.location.push
+
+- id: SECH-06.sensorkit_entitlement
+  vector: SECH-06
+  title: SensorKit reader entitlement
+  description: |
+    Signed with com.apple.developer.sensorkit.reader.allow, which grants access to SensorKit data for a preapproved research study. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.sensorkit\.reader\.allow$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.sensorkit.reader.allow
+
+- id: SECH-06.multicast_entitlement
+  vector: SECH-06
+  title: Multicast networking entitlement
+  description: |
+    Signed with com.apple.developer.networking.multicast, which lets the app send and receive IP multicast traffic on the local network. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.networking\.multicast$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.networking.multicast
+
+- id: SECH-06.autofill_provider_entitlement
+  vector: SECH-06
+  title: AutoFill credential-provider entitlement
+  description: |
+    Signed with com.apple.developer.authentication-services.autofill-credential-provider, which lets the app, with user permission, supply user names and passwords for AutoFill in other apps. The entitlement shows the capability
+    is granted; whether the app needs it is the question the linked MASTG test poses.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: neutral
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.authentication-services\.autofill-credential-provider$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.authentication-services.autofill-credential-provider

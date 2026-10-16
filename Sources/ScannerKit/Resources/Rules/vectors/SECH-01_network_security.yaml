@@ -1,0 +1,59 @@
+- id: SECH-01.cfstream_plaintext_socket
+  vector: SECH-01
+  title: Raw CFStream / NSStream socket (bypasses ATS)
+  description: |
+    Opens a raw socket stream via CFStreamCreatePairWithSocketToHost /
+    NSStream getStreamsToHostWithName. These APIs are not governed by App
+    Transport Security, so TLS is opt-in, a common way cleartext traffic slips
+    past ATS. Confirm the SSL security level is set.
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0026]
+  mastg: [MASTG-TEST-0323]
+  masvs: [MASVS-NETWORK]
+  search:
+    - kind: symbol
+      pattern: 'CFStreamCreatePairWithSocketToHost|getStreamsToHostWithName|CFStreamCreatePairWithSocket'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity
+
+- id: SECH-01.disabled_cert_validation
+  vector: SECH-01
+  title: TLS certificate validation disabled
+  description: |
+    References to the private NSURLRequest API that accepts any HTTPS certificate for a
+    host (allowsAnyHTTPSCertificateForHost / setAllowsAnyHTTPSCertificate). The API has no
+    other use, so its presence means validation can be switched off. Enables trivial
+    man-in-the-middle. The CFStream key kCFStreamSSLValidatesCertificateChain is not
+    matched here: its name also appears in libraries' own error text (CocoaAsyncSocket's
+    "Security option unavailable - kCFStreamSSLValidatesCertificateChain"), and whether it
+    is set to false is not visible statically. References to it are reported by
+    SECH-01.cfstream_tls_relaxation_referenced.
+  severity: critical
+  maswe: [MASWE-0027]
+  mastg: []
+  masvs: [MASVS-NETWORK]
+  search:
+    - kind: string
+      pattern: '(?i)\b(allowsAnyHTTPSCertificateForHost|allowsAnyHTTPSCertificate|setAllowsAnyHTTPSCertificate|NSURLRequestAllowsAnyHTTPSCertificate)\b'
+  mitre: [T1521]
+
+- id: SECH-01.cfstream_tls_relaxation_referenced
+  vector: SECH-01
+  title: References CFStream TLS-relaxation keys
+  description: |
+    A binary imports kCFStreamSSLValidatesCertificateChain or the deprecated
+    kCFStreamSSLAllowsAnyRoot / AllowsExpiredCertificates / AllowsExpiredRoots keys,
+    which exist to relax certificate validation on a CFStream socket. Networking
+    libraries import them for optional settings, so the import shows the capability,
+    not that validation is switched off.
+  severity: info
+  maswe: [MASWE-0027]
+  mastg: []
+  polarity: neutral
+  masvs: [MASVS-NETWORK]
+  search:
+    - kind: importedSymbol
+      pattern: '^_kCFStreamSSL(ValidatesCertificateChain|AllowsAnyRoot|AllowsExpiredCertificates|AllowsExpiredRoots)$'
+  references:
+    - https://developer.apple.com/documentation/cfnetwork/kcfstreamsslvalidatescertificatechain

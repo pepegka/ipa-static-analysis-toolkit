@@ -1,0 +1,130 @@
+- id: SECH-02.file_protection_none
+  vector: SECH-02
+  title: File protection disabled (NSFileProtectionNone)
+  description: |
+    Uses NSFileProtectionNone / .none data-protection class, leaving files
+    readable even when the device is locked. Sensitive data should use at least
+    NSFileProtectionCompleteUntilFirstUserAuthentication.
+  severity: medium
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: string
+      pattern: '\bNSFileProtectionNone\b'
+
+  references:
+    - https://support.apple.com/guide/security/data-protection-classes-secb010e978a/web
+    - https://developer.apple.com/documentation/foundation/fileprotectiontype/none
+
+- id: SECH-02.userdefaults_credentials
+  vector: SECH-02
+  title: Credentials in UserDefaults
+  description: |
+    Stores credential-like keys in NSUserDefaults, which is unencrypted plist
+    storage. Secrets belong in the Keychain.
+  severity: medium
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: string
+      pattern: '(?i)(setObject|setValue).{0,40}forKey:.{0,20}(password|token|secret|auth_?token|access_?token)'
+  references:
+    - https://developer.apple.com/documentation/foundation/userdefaults
+
+- id: SECH-02.keychain_accessible_always
+  vector: SECH-02
+  title: Keychain item readable while device locked (kSecAttrAccessibleAlways)
+  description: |
+    Uses kSecAttrAccessibleAlways / kSecAttrAccessibleAlwaysThisDeviceOnly, a
+    deprecated Keychain accessibility class that leaves the item readable even
+    when the device is locked. Sensitive secrets should use
+    kSecAttrAccessibleWhenUnlocked(ThisDeviceOnly) or …AfterFirstUnlock at
+    minimum.
+  severity: medium
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: string
+      pattern: '\bkSecAttrAccessibleAlways(ThisDeviceOnly)?\b'
+  references:
+    - https://developer.apple.com/documentation/security/ksecattraccessible
+
+- id: SECH-02.backup_exclusion_marker
+  vector: SECH-02
+  title: Backup-exclusion API in use (NSURLIsExcludedFromBackupKey)
+  description: |
+    References NSURLIsExcludedFromBackupKey / isExcludedFromBackup. The key does not
+    guarantee exclusion, and sensitive files still need to be encrypted, so its presence
+    is a reference, not a mitigation.
+  severity: info
+  maswe: [MASWE-0006]
+  mastg: [MASTG-TEST-0215]
+  polarity: neutral
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: importedSymbol
+      pattern: '^_(NSURLIsExcludedFromBackupKey|kCFURLIsExcludedFromBackupKey)$'
+    - kind: string
+      pattern: '\b(NSURLIsExcludedFromBackupKey|isExcludedFromBackup|kCFURLIsExcludedFromBackupKey)\b'
+  references:
+    - https://developer.apple.com/documentation/foundation/urlresourcekey/isexcludedfrombackupkey
+
+- id: SECH-02.data_protection_entitlement
+  vector: SECH-02
+  title: Default data-protection class declared (positive signal)
+  description: |
+    The app declares com.apple.developer.default-data-protection, which sets the
+    default NSFileProtection class for every file it creates. Declaring it at all
+    is good practice, the class it names is what matters, and that is not visible
+    in the entitlement key alone. Reported as inventory, not as a weakness.
+  severity: info
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  masvs: [MASVS-STORAGE]
+  polarity: defensive
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.default-data-protection$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.default-data-protection
+
+- id: SECH-02.file_protection_none_referenced
+  vector: SECH-02
+  title: References NSFileProtectionNone
+  description: |
+    A binary imports NSFileProtectionNone, the class that leaves a file readable while
+    the device is locked. The import shows the option is referenced, often by a
+    library that maps every protection class; whether it is applied to sensitive
+    data needs the manual review the linked MASTG test describes.
+  severity: info
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  polarity: neutral
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: importedSymbol
+      pattern: '^_NSFileProtectionNone$'
+  references:
+    - https://developer.apple.com/documentation/foundation/fileprotectiontype/none
+
+- id: SECH-02.keychain_accessible_always_referenced
+  vector: SECH-02
+  title: References kSecAttrAccessibleAlways
+  description: |
+    A binary imports kSecAttrAccessibleAlways or its ThisDeviceOnly variant, the
+    deprecated accessibility classes that keep a Keychain item readable while the device
+    is locked. Keychain wrapper libraries import them to map every class, so whether an
+    item is stored this way needs the manual review the linked MASTG test describes.
+  severity: info
+  maswe: [MASWE-0001]
+  mastg: [MASTG-TEST-0300]
+  polarity: neutral
+  masvs: [MASVS-STORAGE]
+  search:
+    - kind: importedSymbol
+      pattern: '^_kSecAttrAccessibleAlways(ThisDeviceOnly)?$'
+  references:
+    - https://developer.apple.com/documentation/security/ksecattraccessiblealways

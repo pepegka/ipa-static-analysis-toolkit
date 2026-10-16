@@ -1,0 +1,89 @@
+- id: DCS-02.cl_location_manager
+  vector: DCS-02
+  title: CoreLocation use
+  description: Imports CLLocationManager, basic location access.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'CLLocationManager'
+  references:
+    - https://developer.apple.com/documentation/corelocation/cllocationmanager
+
+- id: DCS-02.significant_change_monitoring
+  vector: DCS-02
+  title: Significant-location-change monitoring (background)
+  description: |
+    startMonitoringSignificantLocationChanges wakes the app in the background
+    whenever the device's cell tower changes, used for sustained background
+    location tracking with low power cost.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'startMonitoringSignificantLocationChanges|setUseSignificantLocationChanges'
+  references:
+    - https://developer.apple.com/documentation/corelocation/cllocationmanager/startmonitoringsignificantlocationchanges()
+
+- id: DCS-02.always_authorization
+  vector: DCS-02
+  title: Always-on (background) location authorization
+  description: |
+    Calls requestAlwaysAuthorization / allowsBackgroundLocationUpdates, always-on
+    location including while the app is backgrounded. Materially more invasive than
+    "When In Use"; Apple itself periodically re-prompts the user about it.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'requestAlwaysAuthorization$|\$setAllowsBackgroundLocationUpdates:$'
+  references:
+    - https://developer.apple.com/documentation/corelocation/cllocationmanager/requestalwaysauthorization()
+    - https://developer.apple.com/documentation/corelocation/cllocationmanager/allowsbackgroundlocationupdates
+
+- id: DCS-02.beacon_ranging
+  vector: DCS-02
+  title: iBeacon ranging (Bluetooth micro-location)
+  description: |
+    Ranges Bluetooth iBeacons (startRangingBeacons / didRangeBeacons) to
+    infer fine-grained indoor position and presence at specific places (stores,
+    venues), a retail/footfall-tracking primitive that piggybacks on Bluetooth.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'startRangingBeacons|didRangeBeacons'
+  references:
+    - https://developer.apple.com/documentation/corelocation/clbeaconregion
+
+- id: DCS-02.region_monitoring
+  vector: DCS-02
+  title: Geofence region monitoring
+  description: startMonitoringForRegion / CLMonitor enables silent geofence triggers.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'startMonitoringForRegion|didEnterRegion|didExitRegion|CLMonitor\b'
+  references:
+    - https://developer.apple.com/documentation/corelocation/clcircularregion
+
+- id: DCS-02.visit_monitoring
+  vector: DCS-02
+  title: Visit monitoring (CLVisit)
+  description: |
+    CLVisit emits an event each time the user arrives at or departs from a
+    place, a documented behaviour-analytics primitive.
+  severity: medium
+  maswe: [MASWE-0066]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'startMonitoringVisits|CLVisit(?!Mock)'
+  references:
+    - https://developer.apple.com/documentation/corelocation/clvisit

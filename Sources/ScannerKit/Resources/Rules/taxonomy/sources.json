@@ -1,0 +1,257 @@
+{
+  "sources": [
+    {
+      "key": "owasp-masvs",
+      "title": "OWASP MASVS",
+      "homeURL": "https://mas.owasp.org/MASVS/",
+      "urlPrefixes": [
+        "https://mas.owasp.org/MASVS/"
+      ],
+      "terms": "CC BY-SA 4.0",
+      "use": "The 24 MASVS v2 controls each finding maps to (taxonomy/masvs.json), and the eight control groups findings are reported under.",
+      "role": "taxonomy"
+    },
+    {
+      "key": "owasp-mastg",
+      "title": "OWASP MASTG",
+      "homeURL": "https://mas.owasp.org/MASTG/",
+      "urlPrefixes": [
+        "https://mas.owasp.org/MASTG/"
+      ],
+      "terms": "CC BY-SA 4.0",
+      "use": "The iOS tests, techniques and best practices behind each check (taxonomy/mastg.json, synced from upstream).",
+      "role": "rule-citation"
+    },
+    {
+      "key": "owasp-maswe",
+      "title": "OWASP MASWE",
+      "homeURL": "https://mas.owasp.org/MASWE/",
+      "urlPrefixes": [
+        "https://mas.owasp.org/MASWE/"
+      ],
+      "terms": "CC BY-SA 4.0",
+      "use": "Weakness catalogue with its MASVS control, CWE and profile mappings (taxonomy/maswe.json); the second level of the cluster rollup.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "apple-developer",
+      "title": "Apple Developer Documentation",
+      "homeURL": "https://developer.apple.com/documentation/",
+      "urlPrefixes": [
+        "https://developer.apple.com/documentation/",
+        "https://developer.apple.com/app-store/",
+        "https://developer.apple.com/support/",
+        "https://developer.apple.com/news/",
+        "https://developer.apple.com/videos/",
+        "https://developer.apple.com/library/archive/"
+      ],
+      "terms": "Reference only",
+      "use": "The normative definition of every Info.plist key, entitlement, framework and API symbol a rule keys on.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "apple-platform-security",
+      "title": "Apple Platform Security Guide",
+      "homeURL": "https://support.apple.com/guide/security/",
+      "urlPrefixes": [
+        "https://support.apple.com/guide/security/"
+      ],
+      "terms": "Reference only",
+      "use": "Data-protection classes, keychain accessibility semantics, Secure Enclave, Lockdown Mode.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "first-cvss",
+      "title": "FIRST CVSS v4.0",
+      "homeURL": "https://www.first.org/cvss/v4-0/specification-document",
+      "urlPrefixes": [
+        "https://www.first.org/cvss/"
+      ],
+      "terms": "Free use",
+      "use": "Qualitative severity bands anchoring every derived security severity.",
+      "role": "crosswalk"
+    },
+    {
+      "key": "mitre-attack",
+      "title": "MITRE ATT&CK for Mobile",
+      "homeURL": "https://attack.mitre.org/matrices/mobile/",
+      "urlPrefixes": [
+        "https://attack.mitre.org/"
+      ],
+      "terms": "ATT&CK Terms of Use (free use, attribution)",
+      "use": "Technique IDs (T1xxx) tagged on vectors and findings.",
+      "role": "crosswalk"
+    },
+    {
+      "key": "mitre-cwe",
+      "title": "MITRE CWE",
+      "homeURL": "https://cwe.mitre.org/",
+      "urlPrefixes": [
+        "https://cwe.mitre.org/"
+      ],
+      "terms": "Free use, attribution",
+      "use": "CWE ids as MASWE maps them to each weakness, for readers who work in CWE.",
+      "role": "crosswalk"
+    },
+    {
+      "key": "nist",
+      "title": "NIST (CSRC publications and NVD)",
+      "homeURL": "https://csrc.nist.gov/",
+      "urlPrefixes": [
+        "https://csrc.nist.gov/",
+        "https://nvlpubs.nist.gov/",
+        "https://nvd.nist.gov/"
+      ],
+      "terms": "US Government work, public domain",
+      "use": "Cryptographic primitive status: which algorithms are deprecated, disallowed, or approved.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "ietf-rfc",
+      "title": "IETF RFCs",
+      "homeURL": "https://www.rfc-editor.org/",
+      "urlPrefixes": [
+        "https://www.rfc-editor.org/rfc/",
+        "https://datatracker.ietf.org/doc/html/"
+      ],
+      "terms": "IETF Trust, free use",
+      "use": "Protocol-level definitions: TLS versions, JWT, URI schemes, Bonjour/DNS-SD.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "citizen-lab",
+      "title": "Citizen Lab",
+      "homeURL": "https://citizenlab.ca/",
+      "urlPrefixes": [
+        "https://citizenlab.ca/"
+      ],
+      "terms": "Cited research",
+      "use": "Mercenary-spyware indicators: Pegasus, Predator, QuaDream, Candiru, Paragon.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "kaspersky-securelist",
+      "title": "Kaspersky Securelist",
+      "homeURL": "https://securelist.com/",
+      "urlPrefixes": [
+        "https://securelist.com/"
+      ],
+      "terms": "Cited research",
+      "use": "Operation Triangulation / TriangleDB indicators.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "coalition-against-stalkerware",
+      "title": "Coalition Against Stalkerware / EFF",
+      "homeURL": "https://stopstalkerware.org/",
+      "urlPrefixes": [
+        "https://stopstalkerware.org/",
+        "https://www.eff.org/"
+      ],
+      "terms": "Cited research",
+      "use": "Consumer-stalkerware family and capability definitions.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "us-ftc",
+      "title": "US Federal Trade Commission",
+      "homeURL": "https://www.ftc.gov/",
+      "urlPrefixes": [
+        "https://www.ftc.gov/"
+      ],
+      "terms": "Public record",
+      "use": "Named location and data brokers (TRK-02), and tracker attribution grounded in enforcement actions.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "linddun",
+      "title": "LINDDUN privacy threat taxonomy",
+      "homeURL": "https://www.linddun.org/",
+      "urlPrefixes": [
+        "https://www.linddun.org/"
+      ],
+      "terms": "Reference",
+      "use": "Privacy threat categories bound per construct in the crosswalk.",
+      "role": "crosswalk"
+    },
+    {
+      "key": "eu-law",
+      "title": "EUR-Lex (GDPR and EU regulation)",
+      "homeURL": "https://eur-lex.europa.eu/",
+      "urlPrefixes": [
+        "https://eur-lex.europa.eu/"
+      ],
+      "terms": "EU public record",
+      "use": "GDPR articles cited on transparency, consent and data-residency findings.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "exodus-privacy",
+      "title": "Exodus Privacy",
+      "homeURL": "https://exodus-privacy.eu.org/",
+      "urlPrefixes": [
+        "https://exodus-privacy.eu.org/",
+        "https://reports.exodus-privacy.eu.org/"
+      ],
+      "terms": "Reference",
+      "use": "Independent tracker-prevalence benchmark cited in dashboard context.",
+      "role": "context"
+    },
+    {
+      "key": "vendor-sdk-docs",
+      "title": "First-party SDK vendor documentation",
+      "homeURL": "",
+      "urlPrefixes": [
+        "https://developers.google.com/",
+        "https://firebase.google.com/docs/",
+        "https://dev.appsflyer.com/",
+        "https://help.adjust.com/",
+        "https://help.branch.io/",
+        "https://docs.sentry.io/",
+        "https://yandex.com/dev/",
+        "https://yandex.ru/dev/",
+        "https://developers.facebook.com/docs/",
+        "https://developer.huawei.com/",
+        "https://docs.amplitude.com/",
+        "https://developer.apple.com/documentation/",
+        "https://developers.openai.com/",
+        "https://platform.claude.com/docs/",
+        "https://ai.google.dev/",
+        "https://amplitude.com/docs/",
+        "https://docs.mixpanel.com/",
+        "https://docs.dynatrace.com/",
+        "https://appmetrica.yandex.com/docs/",
+        "https://github.com/myTrackerSDK/",
+        "https://www.group-ib.com/products/",
+        "https://go.kaspersky.com/",
+        "https://apptracer.ru/doc/",
+        "https://www.ipify.org/"
+      ],
+      "terms": "Vendor documentation, referenced",
+      "use": "The vendor's own description of an SDK this scanner fingerprints: the authoritative statement of what that SDK is and what it collects. Used only to identify an SDK, never as a security claim.",
+      "role": "rule-citation"
+    },
+    {
+      "key": "public-suffix-list",
+      "title": "Mozilla Public Suffix List",
+      "homeURL": "https://publicsuffix.org/",
+      "urlPrefixes": [
+        "https://publicsuffix.org/"
+      ],
+      "terms": "MPL-2.0 (vendored unmodified)",
+      "use": "Registrable domains of every endpoint, private section included, so tenants of shared hosting (appspot.com, blob.core.windows.net) are not merged into one owner. Vendored at Rules/domains/public_suffix_list.dat.",
+      "role": "dataset"
+    },
+    {
+      "key": "iab-tcf",
+      "title": "IAB Europe Transparency & Consent Framework",
+      "homeURL": "https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework",
+      "urlPrefixes": [
+        "https://github.com/InteractiveAdvertisingBureau/"
+      ],
+      "terms": "Specification, referenced",
+      "use": "The Global Vendor List format, used to recognise a bundled vendor list so its hundreds of vendor privacy-policy URLs are not read as endpoints the app contacts.",
+      "role": "dataset"
+    }
+  ]
+}

@@ -1,0 +1,1766 @@
+{
+  "version": "2.0.0",
+  "source": {
+    "repo": "https://github.com/OWASP/mastg",
+    "commit": "83d6abb409f3d60991e0d91cdb04102de5cbf433",
+    "date": "2026-09-18",
+    "release": "2.0.0"
+  },
+  "tests": {
+    "MASTG-TEST-0209": {
+      "title": "Insufficient Key Sizes",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0013"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0209/"
+    },
+    "MASTG-TEST-0210": {
+      "title": "Broken Symmetric Encryption Algorithms",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0007"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0210/"
+    },
+    "MASTG-TEST-0211": {
+      "title": "Broken Hashing Algorithms",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0008"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0211/"
+    },
+    "MASTG-TEST-0213": {
+      "title": "Use of Hardcoded Cryptographic Keys in Code",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0003"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0213/"
+    },
+    "MASTG-TEST-0214": {
+      "title": "Hardcoded Cryptographic Keys in Files",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0003"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0214/"
+    },
+    "MASTG-TEST-0215": {
+      "title": "Sensitive Data Not Marked For Backup Exclusion",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0006"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0023"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0215/"
+    },
+    "MASTG-TEST-0219": {
+      "title": "Testing for Debugging Symbols",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0061"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0219/"
+    },
+    "MASTG-TEST-0220": {
+      "title": "Usage of Outdated Code Signature Format",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0056"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0220/"
+    },
+    "MASTG-TEST-0228": {
+      "title": "Position Independent Code (PIC) not Enabled",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0228/"
+    },
+    "MASTG-TEST-0229": {
+      "title": "Stack Canaries Not enabled",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0229/"
+    },
+    "MASTG-TEST-0230": {
+      "title": "Automatic Reference Counting (ARC) not enabled",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0230/"
+    },
+    "MASTG-TEST-0240": {
+      "title": "Jailbreak Detection in Code",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0051"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0240/"
+    },
+    "MASTG-TEST-0241": {
+      "title": "Runtime Use of Jailbreak Detection Techniques",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0051"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0241/"
+    },
+    "MASTG-TEST-0246": {
+      "title": "Runtime Use of Secure Screen Lock Detection APIs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0017"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0246/"
+    },
+    "MASTG-TEST-0248": {
+      "title": "References to APIs for Detecting Secure Screen Lock",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0017"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0248/"
+    },
+    "MASTG-TEST-0261": {
+      "title": "Debuggable Entitlement Enabled in the entitlements.plist",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0063"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0261/"
+    },
+    "MASTG-TEST-0266": {
+      "title": "References to APIs for Event-Bound Biometric Authentication",
+      "group": "MASVS-AUTH",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0020"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0266/"
+    },
+    "MASTG-TEST-0267": {
+      "title": "Runtime Use Of Event-Bound Biometric Authentication",
+      "group": "MASVS-AUTH",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0020"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0267/"
+    },
+    "MASTG-TEST-0268": {
+      "title": "References to APIs Allowing Fallback to Non-Biometric Authentication",
+      "group": "MASVS-AUTH",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0021"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0268/"
+    },
+    "MASTG-TEST-0269": {
+      "title": "Runtime Use Of APIs Allowing Fallback to Non-Biometric Authentication",
+      "group": "MASVS-AUTH",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0021"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0269/"
+    },
+    "MASTG-TEST-0270": {
+      "title": "References to APIs Detecting Biometric Enrollment Changes",
+      "group": "MASVS-AUTH",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0022"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0270/"
+    },
+    "MASTG-TEST-0271": {
+      "title": "Runtime Use Of APIs Detecting Biometric Enrollment Changes",
+      "group": "MASVS-AUTH",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0022"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0271/"
+    },
+    "MASTG-TEST-0273": {
+      "title": "Identify Dependencies with Known Vulnerabilities by Scanning Dependency Managers Artifacts",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0044"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0273/"
+    },
+    "MASTG-TEST-0275": {
+      "title": "Dependencies with Known Vulnerabilities in the App's SBOM",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "developer"
+      ],
+      "maswe": [
+        "MASWE-0044"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0275/"
+    },
+    "MASTG-TEST-0276": {
+      "title": "Use of the iOS General Pasteboard",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0276/"
+    },
+    "MASTG-TEST-0277": {
+      "title": "Sensitive Data in the iOS General Pasteboard at Runtime",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0277/"
+    },
+    "MASTG-TEST-0278": {
+      "title": "Pasteboard Contents Not Cleared After Use",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0278/"
+    },
+    "MASTG-TEST-0279": {
+      "title": "Pasteboard Contents Not Expiring",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0279/"
+    },
+    "MASTG-TEST-0280": {
+      "title": "Pasteboard Contents Not Restricted to Local Device",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0280/"
+    },
+    "MASTG-TEST-0281": {
+      "title": "Undeclared Known Tracking Domains",
+      "group": "MASVS-PRIVACY",
+      "type": [
+        "static",
+        "dynamic"
+      ],
+      "maswe": [
+        "MASWE-0074"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0281/"
+    },
+    "MASTG-TEST-0290": {
+      "title": "Runtime Verification of Sensitive Content Exposure in Screenshots During App Backgrounding",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "dynamic",
+        "filesystem"
+      ],
+      "maswe": [
+        "MASWE-0038"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0290/"
+    },
+    "MASTG-TEST-0296": {
+      "title": "Sensitive Data Exposure in Logs",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "logs"
+      ],
+      "maswe": [
+        "MASWE-0005"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0022"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0296/"
+    },
+    "MASTG-TEST-0297": {
+      "title": "Sensitive Data Exposure Through Logging APIs",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0005"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0022"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0297/"
+    },
+    "MASTG-TEST-0298": {
+      "title": "Runtime Monitoring of Files Eligible for Backup",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0006"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0023"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0298/"
+    },
+    "MASTG-TEST-0299": {
+      "title": "Data Protection Classes for Files in Private Storage",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "filesystem"
+      ],
+      "maswe": [
+        "MASWE-0001"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0024"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0299/"
+    },
+    "MASTG-TEST-0300": {
+      "title": "References to APIs for Storing Unencrypted Data in Private Storage",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0001"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0024"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0300/"
+    },
+    "MASTG-TEST-0301": {
+      "title": "Runtime Use of APIs for Storing Unencrypted Data in Private Storage",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0001"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0024"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0301/"
+    },
+    "MASTG-TEST-0302": {
+      "title": "Sensitive Data Unencrypted in Private Storage Files",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "filesystem"
+      ],
+      "maswe": [
+        "MASWE-0001"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0024"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0302/"
+    },
+    "MASTG-TEST-0303": {
+      "title": "References to APIs for Storing Unencrypted Data in Shared Storage",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0002"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0024"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0303/"
+    },
+    "MASTG-TEST-0311": {
+      "title": "Insecure Random API Usage",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0012"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0025"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0311/"
+    },
+    "MASTG-TEST-0313": {
+      "title": "References to APIs for Preventing Keyboard Caching of Text Fields",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0026"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0313/"
+    },
+    "MASTG-TEST-0314": {
+      "title": "Runtime Monitoring of Text Fields Eligible for Keyboard Caching",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0026"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0314/"
+    },
+    "MASTG-TEST-0317": {
+      "title": "Broken Symmetric Encryption Modes",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0007"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0005"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0317/"
+    },
+    "MASTG-TEST-0321": {
+      "title": "Hardcoded HTTP URLs",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0321/"
+    },
+    "MASTG-TEST-0322": {
+      "title": "App Transport Security Configurations Allowing Cleartext Traffic",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0322/"
+    },
+    "MASTG-TEST-0323": {
+      "title": "Uses of Low-Level Networking APIs for Cleartext Traffic",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0323/"
+    },
+    "MASTG-TEST-0331": {
+      "title": "Use of Deprecated WebView APIs",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0035"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0032"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0331/"
+    },
+    "MASTG-TEST-0332": {
+      "title": "Attacker-Controlled URI in WebViews",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0035"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0034"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0332/"
+    },
+    "MASTG-TEST-0333": {
+      "title": "Overly Broad File Read Access in WebViews",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0033"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0333/"
+    },
+    "MASTG-TEST-0335": {
+      "title": "WebView File Origin Access Relaxed by Configuration",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0033"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0335/"
+    },
+    "MASTG-TEST-0336": {
+      "title": "Runtime Setting of Relaxed WebView File Origin Policies",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "dynamic",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0033"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0336/"
+    },
+    "MASTG-TEST-0342": {
+      "title": "References to Weak ATS TLS Policy Exceptions in Info.plist",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0042"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0342/"
+    },
+    "MASTG-TEST-0343": {
+      "title": "URLSession TLS Protocol Configuration",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0042"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0343/"
+    },
+    "MASTG-TEST-0344": {
+      "title": "Network.framework TLS Protocol Configuration",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0043"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0344/"
+    },
+    "MASTG-TEST-0345": {
+      "title": "Embedded or Third-party TLS Stack Configuration",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0043"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0345/"
+    },
+    "MASTG-TEST-0346": {
+      "title": "References to APIs Hiding Sensitive Data in Text Input Fields",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0044"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0346/"
+    },
+    "MASTG-TEST-0347": {
+      "title": "Runtime Use of APIs Hiding Sensitive Data in Text Input Fields",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0036"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0044"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0347/"
+    },
+    "MASTG-TEST-0348": {
+      "title": "Insecure TLS Protocols in Network Traffic",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "dynamic",
+        "network"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0348/"
+    },
+    "MASTG-TEST-0349": {
+      "title": "Runtime Use of Insecure Random APIs",
+      "group": "MASVS-CRYPTO",
+      "type": [
+        "dynamic",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0012"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0025"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0349/"
+    },
+    "MASTG-TEST-0354": {
+      "title": "Runtime Use of Hook Detection Techniques",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic",
+        "hooks"
+      ],
+      "maswe": [
+        "MASWE-0058"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0048"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0354/"
+    },
+    "MASTG-TEST-0358": {
+      "title": "Implementation Details Exposure Through Logging APIs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0061"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0022"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0358/"
+    },
+    "MASTG-TEST-0359": {
+      "title": "Implementation Details Exposure in Logs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic",
+        "logs"
+      ],
+      "maswe": [
+        "MASWE-0061"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0022"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0359/"
+    },
+    "MASTG-TEST-0360": {
+      "title": "Purpose String Accuracy for Reachable Protected Resource Access",
+      "group": "MASVS-PRIVACY",
+      "type": [
+        "static",
+        "config",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0051"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0360/"
+    },
+    "MASTG-TEST-0361": {
+      "title": "Runtime Use of Protected Resource APIs Without Accurate Purpose Strings",
+      "group": "MASVS-PRIVACY",
+      "type": [
+        "dynamic",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0051"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0361/"
+    },
+    "MASTG-TEST-0362": {
+      "title": "Entitlements for Unjustified Capability Exposure",
+      "group": "MASVS-PRIVACY",
+      "type": [
+        "static",
+        "package",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0051"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0362/"
+    },
+    "MASTG-TEST-0363": {
+      "title": "Runtime Use of Entitlement-Backed APIs for Unjustified Capability Exposure",
+      "group": "MASVS-PRIVACY",
+      "type": [
+        "dynamic",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0051"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0363/"
+    },
+    "MASTG-TEST-0367": {
+      "title": "Runtime Use of Virtual Device Detection Techniques",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic"
+      ],
+      "maswe": [
+        "MASWE-0053"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0053"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0367/"
+    },
+    "MASTG-TEST-0370": {
+      "title": "Missing Input Validation in Custom URL Scheme Handlers",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0029"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0045",
+        "MASTG-BEST-0054"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0370/"
+    },
+    "MASTG-TEST-0371": {
+      "title": "Missing Source Validation in Custom URL Scheme Handlers",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0029"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0045",
+        "MASTG-BEST-0055"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0371/"
+    },
+    "MASTG-TEST-0376": {
+      "title": "References to Native Bridge APIs in WebViews",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0058"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0376/"
+    },
+    "MASTG-TEST-0377": {
+      "title": "References to `evaluateJavaScript` Used as Bridge Reply in `WKScriptMessageHandler`",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0062"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0377/"
+    },
+    "MASTG-TEST-0378": {
+      "title": "References to Password Fields in WebView-Loaded HTML",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0059",
+        "MASTG-BEST-0060"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0378/"
+    },
+    "MASTG-TEST-0379": {
+      "title": "References to `evaluateJavaScript` Without Content World Isolation",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0061"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0379/"
+    },
+    "MASTG-TEST-0380": {
+      "title": "References to `evaluateJavaScript` Writing Sensitive Data into WebView DOM",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0034"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0059"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0380/"
+    },
+    "MASTG-TEST-0383": {
+      "title": "References to Enforced Updating APIs",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0043"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0383/"
+    },
+    "MASTG-TEST-0384": {
+      "title": "Runtime Use of Enforced Updating APIs",
+      "group": "MASVS-CODE",
+      "type": [
+        "dynamic",
+        "network",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0043"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0384/"
+    },
+    "MASTG-TEST-0385": {
+      "title": "Missing Certificate Pinning in ATS",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static"
+      ],
+      "maswe": [
+        "MASWE-0028"
+      ],
+      "bestPractices": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0385/"
+    },
+    "MASTG-TEST-0386": {
+      "title": "References to Object Deserialization of Untrusted Data",
+      "group": "MASVS-CODE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0050"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0064"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0386/"
+    },
+    "MASTG-TEST-0387": {
+      "title": "References to Storage Integrity Check APIs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0057"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0065"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0387/"
+    },
+    "MASTG-TEST-0388": {
+      "title": "References to Sensitive Data Stored Unprotected in Shared App Group Containers",
+      "group": "MASVS-STORAGE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0001"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0068"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0388/"
+    },
+    "MASTG-TEST-0389": {
+      "title": "References to the App-Wide Restriction of Custom Keyboards",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0031"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0069"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0389/"
+    },
+    "MASTG-TEST-0390": {
+      "title": "Full Access Requested by a Custom Keyboard Extension",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0069"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0390/"
+    },
+    "MASTG-TEST-0391": {
+      "title": "Insufficient Obfuscation of Security-Relevant Native Code",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "package",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0059"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0029"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0391/"
+    },
+    "MASTG-TEST-0395": {
+      "title": "Missing Input Validation in Universal Link Handlers",
+      "group": "MASVS-PLATFORM",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0029"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0072"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0395/"
+    },
+    "MASTG-TEST-0396": {
+      "title": "References to URLSessionDelegate Bypassing Certificate Validation",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0027"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0073"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0396/"
+    },
+    "MASTG-TEST-0397": {
+      "title": "References to WKNavigationDelegate Bypassing Certificate Validation",
+      "group": "MASVS-NETWORK",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0027"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0073"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0397/"
+    },
+    "MASTG-TEST-0401": {
+      "title": "References to Debugging Detection APIs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "static",
+        "code",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0064"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0029",
+        "MASTG-BEST-0074"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0401/"
+    },
+    "MASTG-TEST-0402": {
+      "title": "Runtime Use of Debugging Detection APIs",
+      "group": "MASVS-RESILIENCE",
+      "type": [
+        "dynamic",
+        "hooks",
+        "manual"
+      ],
+      "maswe": [
+        "MASWE-0064"
+      ],
+      "bestPractices": [
+        "MASTG-BEST-0029",
+        "MASTG-BEST-0074"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0402/"
+    }
+  },
+  "deprecated": {
+    "MASTG-TEST-0052": {
+      "title": "Testing Local Data Storage",
+      "coveredBy": [
+        "MASTG-TEST-0299",
+        "MASTG-TEST-0300",
+        "MASTG-TEST-0301",
+        "MASTG-TEST-0302",
+        "MASTG-TEST-0303"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0052/"
+    },
+    "MASTG-TEST-0053": {
+      "title": "Checking Logs for Sensitive Data",
+      "coveredBy": [
+        "MASTG-TEST-0296",
+        "MASTG-TEST-0297"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0053/"
+    },
+    "MASTG-TEST-0054": {
+      "title": "Determining Whether Sensitive Data Is Shared with Third Parties",
+      "coveredBy": [
+        "MASTG-TEST-0206",
+        "MASTG-TEST-0281"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0054/"
+    },
+    "MASTG-TEST-0055": {
+      "title": "Finding Sensitive Data in the Keyboard Cache",
+      "coveredBy": [
+        "MASTG-TEST-0313",
+        "MASTG-TEST-0314"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0055/"
+    },
+    "MASTG-TEST-0056": {
+      "title": "Determining Whether Sensitive Data Is Exposed via IPC Mechanisms",
+      "coveredBy": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0056/"
+    },
+    "MASTG-TEST-0057": {
+      "title": "Checking for Sensitive Data Disclosed Through the User Interface",
+      "coveredBy": [
+        "MASTG-TEST-0346",
+        "MASTG-TEST-0347"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0057/"
+    },
+    "MASTG-TEST-0058": {
+      "title": "Testing Backups for Sensitive Data",
+      "coveredBy": [
+        "MASTG-TEST-0215",
+        "MASTG-TEST-0298"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0058/"
+    },
+    "MASTG-TEST-0059": {
+      "title": "Testing Auto-Generated Screenshots for Sensitive Information",
+      "coveredBy": [
+        "MASTG-TEST-0290"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0059/"
+    },
+    "MASTG-TEST-0060": {
+      "title": "Testing Memory for Sensitive Data",
+      "coveredBy": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0060/"
+    },
+    "MASTG-TEST-0061": {
+      "title": "Verifying the Configuration of Cryptographic Standard Algorithms",
+      "coveredBy": [
+        "MASTG-TEST-0209",
+        "MASTG-TEST-0210",
+        "MASTG-TEST-0211"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0061/"
+    },
+    "MASTG-TEST-0062": {
+      "title": "Testing Key Management",
+      "coveredBy": [
+        "MASTG-TEST-0213",
+        "MASTG-TEST-0214"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0062/"
+    },
+    "MASTG-TEST-0063": {
+      "title": "Testing Random Number Generation",
+      "coveredBy": [
+        "MASTG-TEST-0311"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CRYPTO/MASTG-TEST-0063/"
+    },
+    "MASTG-TEST-0064": {
+      "title": "Testing Biometric Authentication",
+      "coveredBy": [
+        "MASTG-TEST-0266",
+        "MASTG-TEST-0267",
+        "MASTG-TEST-0268",
+        "MASTG-TEST-0269",
+        "MASTG-TEST-0270",
+        "MASTG-TEST-0271"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0064/"
+    },
+    "MASTG-TEST-0065": {
+      "title": "Testing Data Encryption on the Network",
+      "coveredBy": [
+        "MASTG-TEST-0321",
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0236"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0065/"
+    },
+    "MASTG-TEST-0066": {
+      "title": "Testing the TLS Settings",
+      "coveredBy": [
+        "MASTG-TEST-0342",
+        "MASTG-TEST-0343",
+        "MASTG-TEST-0344",
+        "MASTG-TEST-0345",
+        "MASTG-TEST-0348"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0066/"
+    },
+    "MASTG-TEST-0067": {
+      "title": "Testing Endpoint Identity Verification",
+      "coveredBy": [
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0342",
+        "MASTG-TEST-0396",
+        "MASTG-TEST-0397"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0067/"
+    },
+    "MASTG-TEST-0068": {
+      "title": "Testing Custom Certificate Stores and Certificate Pinning",
+      "coveredBy": [
+        "MASTG-TEST-0385"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-NETWORK/MASTG-TEST-0068/"
+    },
+    "MASTG-TEST-0069": {
+      "title": "Testing App Permissions",
+      "coveredBy": [
+        "MASTG-TEST-0360",
+        "MASTG-TEST-0361",
+        "MASTG-TEST-0362",
+        "MASTG-TEST-0363"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0069/"
+    },
+    "MASTG-TEST-0070": {
+      "title": "Testing Universal Links",
+      "coveredBy": [
+        "MASTG-TEST-0370",
+        "MASTG-TEST-0371",
+        "MASTG-TEST-0395"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0070/"
+    },
+    "MASTG-TEST-0071": {
+      "title": "Testing UIActivity Sharing",
+      "coveredBy": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0071/"
+    },
+    "MASTG-TEST-0072": {
+      "title": "Testing App Extensions",
+      "coveredBy": [
+        "MASTG-TEST-0388",
+        "MASTG-TEST-0389",
+        "MASTG-TEST-0299",
+        "MASTG-TEST-0346",
+        "MASTG-TEST-0347"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0072/"
+    },
+    "MASTG-TEST-0073": {
+      "title": "Testing UIPasteboard",
+      "coveredBy": [
+        "MASTG-TEST-0276",
+        "MASTG-TEST-0277",
+        "MASTG-TEST-0278",
+        "MASTG-TEST-0279",
+        "MASTG-TEST-0280"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0073/"
+    },
+    "MASTG-TEST-0075": {
+      "title": "Testing Custom URL Schemes",
+      "coveredBy": [
+        "MASTG-TEST-0370",
+        "MASTG-TEST-0371"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0075/"
+    },
+    "MASTG-TEST-0076": {
+      "title": "Testing iOS WebViews",
+      "coveredBy": [
+        "MASTG-TEST-0331",
+        "MASTG-TEST-0332",
+        "MASTG-TEST-0333"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0076/"
+    },
+    "MASTG-TEST-0077": {
+      "title": "Testing WebView Protocol Handlers",
+      "coveredBy": [
+        "MASTG-TEST-0335",
+        "MASTG-TEST-0336"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0077/"
+    },
+    "MASTG-TEST-0078": {
+      "title": "Determining Whether Native Methods Are Exposed Through WebViews",
+      "coveredBy": [
+        "MASTG-TEST-0376",
+        "MASTG-TEST-0377",
+        "MASTG-TEST-0378",
+        "MASTG-TEST-0379",
+        "MASTG-TEST-0380"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PLATFORM/MASTG-TEST-0078/"
+    },
+    "MASTG-TEST-0079": {
+      "title": "Testing Object Persistence",
+      "coveredBy": [
+        "MASTG-TEST-0386",
+        "MASTG-TEST-0302"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0079/"
+    },
+    "MASTG-TEST-0080": {
+      "title": "Testing Enforced Updating",
+      "coveredBy": [
+        "MASTG-TEST-0383",
+        "MASTG-TEST-0384"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0080/"
+    },
+    "MASTG-TEST-0081": {
+      "title": "Making Sure that the App Is Properly Signed",
+      "coveredBy": [
+        "MASTG-TEST-0220"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0081/"
+    },
+    "MASTG-TEST-0082": {
+      "title": "Testing whether the App is Debuggable",
+      "coveredBy": [
+        "MASTG-TEST-0261"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0082/"
+    },
+    "MASTG-TEST-0083": {
+      "title": "Testing for Debugging Symbols",
+      "coveredBy": [
+        "MASTG-TEST-0219"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0083/"
+    },
+    "MASTG-TEST-0084": {
+      "title": "Testing for Debugging Code and Verbose Error Logging",
+      "coveredBy": [
+        "MASTG-TEST-0358",
+        "MASTG-TEST-0359"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0084/"
+    },
+    "MASTG-TEST-0085": {
+      "title": "Checking for Weaknesses in Third Party Libraries",
+      "coveredBy": [
+        "MASTG-TEST-0273",
+        "MASTG-TEST-0275"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0085/"
+    },
+    "MASTG-TEST-0086": {
+      "title": "Memory Corruption Bugs",
+      "coveredBy": [],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0086/"
+    },
+    "MASTG-TEST-0087": {
+      "title": "Make Sure That Free Security Features Are Activated",
+      "coveredBy": [
+        "MASTG-TEST-0228",
+        "MASTG-TEST-0229",
+        "MASTG-TEST-0230"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-CODE/MASTG-TEST-0087/"
+    },
+    "MASTG-TEST-0088": {
+      "title": "Testing Jailbreak Detection",
+      "coveredBy": [
+        "MASTG-TEST-0240",
+        "MASTG-TEST-0241"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0088/"
+    },
+    "MASTG-TEST-0089": {
+      "title": "Testing Anti-Debugging Detection",
+      "coveredBy": [
+        "MASTG-TEST-0401",
+        "MASTG-TEST-0402"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0089/"
+    },
+    "MASTG-TEST-0090": {
+      "title": "Testing File Integrity Checks",
+      "coveredBy": [
+        "MASTG-TEST-0387"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0090/"
+    },
+    "MASTG-TEST-0091": {
+      "title": "Testing Reverse Engineering Tools Detection",
+      "coveredBy": [
+        "MASTG-TEST-0354"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0091/"
+    },
+    "MASTG-TEST-0092": {
+      "title": "Testing Emulator Detection",
+      "coveredBy": [
+        "MASTG-TEST-0367"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0092/"
+    },
+    "MASTG-TEST-0093": {
+      "title": "Testing Obfuscation",
+      "coveredBy": [
+        "MASTG-TEST-0391"
+      ],
+      "url": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0093/"
+    }
+  },
+  "bestPractices": {
+    "MASTG-BEST-0022": {
+      "title": "Disable Verbose and Debug Logging in Production Builds",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0022/"
+    },
+    "MASTG-BEST-0023": {
+      "title": "Exclude Sensitive Information from Backups",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0023/"
+    },
+    "MASTG-BEST-0024": {
+      "title": "Store Data Encrypted in App Sandbox Directory",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0024/"
+    },
+    "MASTG-BEST-0025": {
+      "title": "Use Secure Random Number Generator APIs",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0025/"
+    },
+    "MASTG-BEST-0026": {
+      "title": "Preventing Keyboard Caching for Sensitive Text Inputs",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0026/"
+    },
+    "MASTG-BEST-0029": {
+      "title": "Implementing Resilience and RASP Signals",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0029/"
+    },
+    "MASTG-BEST-0030": {
+      "title": "Implementing Root Detection",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0030/"
+    },
+    "MASTG-BEST-0032": {
+      "title": "Migrate from UIWebView to WKWebView",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0032/"
+    },
+    "MASTG-BEST-0033": {
+      "title": "Securely Load File Content in a WebView",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0033/"
+    },
+    "MASTG-BEST-0034": {
+      "title": "Validate WebView Input",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0034/"
+    },
+    "MASTG-BEST-0042": {
+      "title": "Use Strong TLS Settings in ATS Configuration",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0042/"
+    },
+    "MASTG-BEST-0043": {
+      "title": "Enforce Strong TLS Settings When ATS Doesn't Apply",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0043/"
+    },
+    "MASTG-BEST-0044": {
+      "title": "Mask Sensitive Data in Text Input Fields",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0044/"
+    },
+    "MASTG-BEST-0045": {
+      "title": "Limit Sensitive Data Exposure Through iOS IPC Channels",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0045/"
+    },
+    "MASTG-BEST-0048": {
+      "title": "Hardening Against Reverse Engineering Tools",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0048/"
+    },
+    "MASTG-BEST-0051": {
+      "title": "Minimize iOS Permissions and Entitlements",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0051/"
+    },
+    "MASTG-BEST-0053": {
+      "title": "Hardening Against Virtual Devices",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0053/"
+    },
+    "MASTG-BEST-0054": {
+      "title": "Validate Input Parameters in Custom URL Scheme Handlers",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0054/"
+    },
+    "MASTG-BEST-0055": {
+      "title": "Validate Source Application in Custom URL Scheme Handlers",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0055/"
+    },
+    "MASTG-BEST-0058": {
+      "title": "Restrict Native Functionality Exposed Through WebView Bridges",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0058/"
+    },
+    "MASTG-BEST-0059": {
+      "title": "Render Sensitive UI as Native Views Over the WebView",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0059/"
+    },
+    "MASTG-BEST-0060": {
+      "title": "Use Native Views for Sensitive Text Entry Over a WebView",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0060/"
+    },
+    "MASTG-BEST-0061": {
+      "title": "Use WKContentWorld Isolation for DOM Inspection Scripts",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0061/"
+    },
+    "MASTG-BEST-0062": {
+      "title": "Use WKScriptMessageHandlerWithReply to Return Data to JavaScript",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0062/"
+    },
+    "MASTG-BEST-0064": {
+      "title": "Use Safe APIs for Object Deserialization",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0064/"
+    },
+    "MASTG-BEST-0065": {
+      "title": "Implementing Storage Integrity Checks on iOS",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0065/"
+    },
+    "MASTG-BEST-0067": {
+      "title": "Implementing Source Code Integrity Checks on iOS",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0067/"
+    },
+    "MASTG-BEST-0068": {
+      "title": "Secure Data Sharing Between App Extensions and Containing Apps",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0068/"
+    },
+    "MASTG-BEST-0069": {
+      "title": "Keep Sensitive Input on the System Keyboard",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0069/"
+    },
+    "MASTG-BEST-0072": {
+      "title": "Validate Input Parameters in Universal Link Handlers",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0072/"
+    },
+    "MASTG-BEST-0073": {
+      "title": "Properly Validate Server Trust in URLSessionDelegate and WKNavigationDelegate",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0073/"
+    },
+    "MASTG-BEST-0074": {
+      "title": "Implementing Anti-Debugging Checks on iOS",
+      "url": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0074/"
+    }
+  }
+}

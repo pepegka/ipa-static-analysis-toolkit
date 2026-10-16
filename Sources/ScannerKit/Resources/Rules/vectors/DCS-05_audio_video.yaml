@@ -1,0 +1,59 @@
+- id: DCS-05.audio_recording
+  vector: DCS-05
+  title: Microphone recording API (AVAudioRecorder)
+  description: AVAudioRecorder / AVAudioSession.requestRecordPermission, direct mic recording.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'AVAudioRecorder|requestRecordPermission|setCategoryRecord'
+  references:
+    - https://developer.apple.com/documentation/avfaudio/avaudiorecorder
+
+- id: DCS-05.video_capture
+  vector: DCS-05
+  title: Camera capture API
+  description: AVCaptureSession / AVCaptureDevice, direct camera capture.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'AVCaptureSession|AVCaptureDevice|AVCaptureVideoDataOutput'
+  references:
+    - https://developer.apple.com/documentation/avfoundation/avcapturesession
+
+- id: DCS-05.screen_capture_detect
+  vector: DCS-05
+  title: Screen-capture detection
+  description: |
+    UIScreen.isCaptured / UIScreenCapturedDidChangeNotification, detects screen
+    recording or AirPlay mirroring. Common in anti-fraud anti-remote-control flows.
+  severity: info
+  maswe: [MASWE-0038]
+  mastg: []
+  polarity: defensive
+  search:
+    - kind: importedSymbol
+      pattern: '^_UIScreenCapturedDidChangeNotification$'
+    - kind: string
+      pattern: 'UIScreenCapturedDidChangeNotification|isCaptured'
+  references:
+    - https://developer.apple.com/documentation/uikit/uiscreen/iscaptured
+
+- id: DCS-05.background_audio_mode
+  vector: DCS-05
+  title: Background audio mode (persistence channel)
+  description: |
+    UIBackgroundModes contains "audio", keeps the app alive in the background.
+    Music / podcast / VoIP apps need this legitimately, so it ships at low
+    severity; pair with S04/S08 sensor rules to assess intent.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: backgroundMode
+      pattern: '^audio$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/uibackgroundmodes

@@ -1,0 +1,3818 @@
+{
+  "$schema_version": 1,
+  "trackers": [
+    {
+      "id": "aarki",
+      "name": "Aarki",
+      "owner": "Aarki",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "aarki.com",
+        "aarki.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "accertify",
+      "name": "Accertify",
+      "owner": "Amex",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "accertify.com",
+        "int.accertify.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adapty",
+      "name": "Adapty",
+      "owner": "Adapty",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "adapty.io",
+        "api.adapty.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adbrix",
+      "name": "AdBrix / IGAWorks",
+      "owner": "IGAWorks",
+      "country": "KR",
+      "category": "attribution",
+      "domains": [
+        "ad-brix.com",
+        "adbrix.io",
+        "igaworks.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adcolony",
+      "name": "AdColony",
+      "owner": "Digital Turbine",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "adc3-launch.adcolony.com",
+        "adcolony.com",
+        "ads30.adcolony.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adform",
+      "name": "Adform",
+      "owner": "Adform",
+      "country": "DK",
+      "category": "advertising",
+      "domains": [
+        "adform.com",
+        "adform.net",
+        "track.adform.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adikteev",
+      "name": "Adikteev",
+      "owner": "Adikteev",
+      "country": "FR",
+      "category": "advertising",
+      "domains": [
+        "adikteev.com",
+        "asia-static.adikteev.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adjust",
+      "name": "Adjust",
+      "owner": "Adjust",
+      "country": "DE",
+      "category": "attribution",
+      "domains": [
+        "adj.st",
+        "adjust.com",
+        "app.adjust.com",
+        "app.adjust.io",
+        "go.link"
+      ],
+      "frameworks": [
+        "adjust_sdk",
+        "AdjustSdk",
+        "AdjustSigSdk"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adobe.analytics",
+      "name": "Adobe Analytics / Experience",
+      "owner": "Adobe",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "2o7.net",
+        "adobedc.net",
+        "demdex.net",
+        "everesttech.net",
+        "omtrdc.net",
+        "sc.omtrdc.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "adyen",
+      "name": "Adyen",
+      "owner": "Adyen",
+      "country": "NL",
+      "category": "payment",
+      "domains": [
+        "adyen.com",
+        "adyenpayments.com",
+        "checkoutshopper-live.adyen.com"
+      ]
+    },
+    {
+      "id": "affirm",
+      "name": "Affirm",
+      "owner": "Affirm",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "affirm.com",
+        "api.affirm.com"
+      ]
+    },
+    {
+      "id": "afterpay",
+      "name": "Afterpay / Clearpay",
+      "owner": "Block",
+      "country": "AU",
+      "category": "payment",
+      "domains": [
+        "afterpay.com",
+        "clearpay.co.uk",
+        "portal.afterpay.com"
+      ]
+    },
+    {
+      "id": "agora",
+      "name": "Agora",
+      "owner": "Agora",
+      "country": "US",
+      "category": "messaging",
+      "domains": [
+        "agora.io",
+        "edge.agora.io",
+        "sd-rtn.com"
+      ]
+    },
+    {
+      "id": "airbridge",
+      "name": "Airbridge",
+      "owner": "AB180",
+      "country": "KR",
+      "category": "attribution",
+      "domains": [
+        "ab180.co",
+        "abr.ge",
+        "airbridge.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "airship",
+      "name": "Airship (Urban Airship)",
+      "owner": "Airship",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "airship.com",
+        "asnapieu.com",
+        "go.urbanairship.com",
+        "urbanairship.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "akamai",
+      "name": "Akamai",
+      "owner": "Akamai",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "akamai.net",
+        "akamaiedge.net",
+        "akamaihd.net",
+        "akamaized.net"
+      ]
+    },
+    {
+      "id": "algorix",
+      "name": "AlgoriX",
+      "owner": "AlgoriX",
+      "country": "SG",
+      "category": "advertising",
+      "domains": [
+        "algorix.co",
+        "xyz.kningdom.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "alipay",
+      "name": "Alipay",
+      "owner": "Ant Group",
+      "country": "CN",
+      "category": "payment",
+      "domains": [
+        "alipay.com",
+        "alipayobjects.com",
+        "mdap.alipay.com"
+      ]
+    },
+    {
+      "id": "amap",
+      "name": "Amap / AutoNavi",
+      "owner": "Alibaba",
+      "country": "CN",
+      "category": "maps",
+      "domains": [
+        "amap.com",
+        "apilocate.amap.com",
+        "autonavi.com",
+        "gaode.com"
+      ]
+    },
+    {
+      "id": "amazon.ads",
+      "name": "Amazon Ads (APS)",
+      "owner": "Amazon",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "amazon-adsystem.com",
+        "aps.amazon.com",
+        "c.amazon-adsystem.com"
+      ],
+      "frameworks": [
+        "DTBiOSSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "amplitude",
+      "name": "Amplitude",
+      "owner": "Amplitude",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "amplitude.com",
+        "api.amplitude.com",
+        "api2.amplitude.com"
+      ],
+      "frameworks": [
+        "Amplitude",
+        "AmplitudeCore",
+        "AmplitudeSessionReplay"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "owner": "Anthropic",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "anthropic.com",
+        "api.anthropic.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appcenter",
+      "name": "Microsoft App Center",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "appcenter.ms",
+        "in.appcenter.ms"
+      ]
+    },
+    {
+      "id": "appdynamics",
+      "name": "AppDynamics",
+      "owner": "Cisco",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "appdynamics.com",
+        "eum-appdynamics.com"
+      ]
+    },
+    {
+      "id": "apple.core",
+      "name": "Apple",
+      "owner": "Apple",
+      "country": "US",
+      "category": "ecosystem",
+      "domains": [
+        "apple.com",
+        "applecnloc.com",
+        "icloud.com",
+        "mzstatic.com",
+        "push.apple.com"
+      ]
+    },
+    {
+      "id": "applovin",
+      "name": "AppLovin / MAX",
+      "owner": "AppLovin",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "a.applovin.com",
+        "applovin.com",
+        "applvn.com",
+        "ms.applvn.com",
+        "rt.applovin.com"
+      ],
+      "frameworks": [
+        "AppLovinSDK"
+      ],
+      "plistKeys": [
+        "AppLovinSdkKey"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appnext",
+      "name": "Appnext",
+      "owner": "Appnext",
+      "country": "IL",
+      "category": "advertising",
+      "domains": [
+        "admin.appnext.com",
+        "appnext.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appnexus",
+      "name": "Xandr / AppNexus",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "adnxs.com",
+        "appnexus.com",
+        "ib.adnxs.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appodeal",
+      "name": "Appodeal",
+      "owner": "Appodeal",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "appodeal.com",
+        "appodealx.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appsealing",
+      "name": "AppSealing",
+      "owner": "INKA",
+      "country": "KR",
+      "category": "antifraud",
+      "domains": [
+        "api.appsealing.com",
+        "appsealing.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "appsflyer",
+      "name": "AppsFlyer",
+      "owner": "AppsFlyer",
+      "country": "IL",
+      "category": "attribution",
+      "domains": [
+        "app.adjust.com.appsflyer",
+        "appsflyer.com",
+        "appsflyersdk.com",
+        "onelink.me"
+      ],
+      "frameworks": [
+        "AppsFlyerLib"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "apptimize",
+      "name": "Apptimize",
+      "owner": "Apptimize",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "apptimize.com",
+        "md-aws.apptimize.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "arkose",
+      "name": "Arkose Labs",
+      "owner": "Arkose Labs",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "arkoselabs.com",
+        "funcaptcha.com"
+      ],
+      "frameworks": [
+        "ArkoseLabsKit"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "assemblyai",
+      "name": "AssemblyAI",
+      "owner": "AssemblyAI",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "api.assemblyai.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "aws.checkip",
+      "name": "AWS checkip",
+      "owner": "Amazon",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "checkip.amazonaws.com"
+      ]
+    },
+    {
+      "id": "azure.cdn",
+      "name": "Azure CDN",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "azureedge.net",
+        "azurefd.net"
+      ]
+    },
+    {
+      "id": "baidu.core",
+      "name": "Baidu",
+      "owner": "Baidu",
+      "country": "CN",
+      "category": "search",
+      "domains": [
+        "baidu.com",
+        "baidustatic.com",
+        "bcebos.com",
+        "bdstatic.com"
+      ]
+    },
+    {
+      "id": "baidu.tongji",
+      "name": "Baidu Tongji",
+      "owner": "Baidu",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "hm.baidu.com",
+        "mtj.baidu.com",
+        "tongji.baidu.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "batch",
+      "name": "Batch",
+      "owner": "Batch",
+      "country": "FR",
+      "category": "push",
+      "domains": [
+        "api.batch.com",
+        "batch.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bidmachine",
+      "name": "BidMachine",
+      "owner": "Appodeal",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "api.bidmachine.io",
+        "bidmachine.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bigo.ads",
+      "name": "BigoAds",
+      "owner": "Bigo",
+      "country": "SG",
+      "category": "advertising",
+      "domains": [
+        "bigo.sg",
+        "bigossp.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bilibili",
+      "name": "Bilibili",
+      "owner": "Bilibili",
+      "country": "CN",
+      "category": "social",
+      "domains": [
+        "biliapi.net",
+        "bilibili.com",
+        "hdslb.com"
+      ]
+    },
+    {
+      "id": "biocatch",
+      "name": "BioCatch",
+      "owner": "BioCatch",
+      "country": "IL",
+      "category": "antifraud",
+      "domains": [
+        "api.biocatch.com",
+        "biocatch.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bizone.antifraud",
+      "name": "BI.ZONE",
+      "owner": "BI.ZONE",
+      "country": "RU",
+      "category": "antifraud",
+      "domains": [
+        "antifraud.bi.zone",
+        "bi.zone",
+        "mfp.bi.zone",
+        "sdk.bi.zone"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bluedot",
+      "name": "Bluedot",
+      "owner": "Bluedot",
+      "country": "AU",
+      "category": "maps",
+      "domains": [
+        "api.bluedotinnovation.com",
+        "bluedot.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "branch",
+      "name": "Branch",
+      "owner": "Branch",
+      "country": "US",
+      "category": "attribution",
+      "domains": [
+        "app.link",
+        "bnc.lt",
+        "branch.io",
+        "test-app.link"
+      ],
+      "frameworks": [
+        "BranchSDK"
+      ],
+      "plistKeys": [
+        "branch_key"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "braze",
+      "name": "Braze (Appboy)",
+      "owner": "Braze",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.braze.com",
+        "appboy.com",
+        "braze.com",
+        "sdk.iad-01.braze.com"
+      ],
+      "frameworks": [
+        "BrazeKit"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "bugsnag",
+      "name": "Bugsnag",
+      "owner": "SmartBear",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "bugsnag.com",
+        "notify.bugsnag.com",
+        "sessions.bugsnag.com"
+      ]
+    },
+    {
+      "id": "bytedance.infra",
+      "name": "ByteDance app infrastructure",
+      "owner": "ByteDance",
+      "country": "CN",
+      "category": "cdn",
+      "domains": [
+        "byteoversea.com",
+        "isnssdk.com"
+      ]
+    },
+    {
+      "id": "castle",
+      "name": "Castle",
+      "owner": "Castle",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "castle.io",
+        "d.castle.io",
+        "m.castle.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "chartbeat",
+      "name": "Chartbeat",
+      "owner": "Chartbeat",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "chartbeat.com",
+        "chartbeat.net",
+        "ping.chartbeat.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "chartboost",
+      "name": "Chartboost",
+      "owner": "Chartboost",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "chartboost.com",
+        "da.chartboost.com",
+        "live.chartboost.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "checkoutcom",
+      "name": "Checkout.com",
+      "owner": "Checkout.com",
+      "country": "GB",
+      "category": "payment",
+      "domains": [
+        "api.checkout.com",
+        "checkout.com"
+      ]
+    },
+    {
+      "id": "clarity",
+      "name": "Microsoft Clarity",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "c.clarity.ms",
+        "clarity.ms"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "clevertap",
+      "name": "CleverTap",
+      "owner": "CleverTap",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "clevertap-prod.com",
+        "clevertap.com",
+        "wzrkt.com"
+      ],
+      "frameworks": [
+        "CleverTapSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "cloudflare.cdn",
+      "name": "Cloudflare",
+      "owner": "Cloudflare",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "cloudflare.com",
+        "cloudflare.net"
+      ]
+    },
+    {
+      "id": "cloudflare.insights",
+      "name": "Cloudflare Web Analytics",
+      "owner": "Cloudflare",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "cloudflareinsights.com",
+        "static.cloudflareinsights.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "cloudfront",
+      "name": "Amazon CloudFront",
+      "owner": "Amazon",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "cloudfront.net"
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "owner": "Cohere",
+      "country": "CA",
+      "category": "ai",
+      "domains": [
+        "api.cohere.ai",
+        "api.cohere.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "complementics",
+      "name": "Complementics",
+      "owner": "Complementics",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "complementics.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "comscore",
+      "name": "Comscore",
+      "owner": "Comscore",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "comscore.com",
+        "sb.scorecardresearch.com",
+        "scorecardresearch.com"
+      ],
+      "frameworks": [
+        "ComScore"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "contentsquare",
+      "name": "Contentsquare",
+      "owner": "Contentsquare",
+      "country": "FR",
+      "category": "session-replay",
+      "domains": [
+        "c.contentsquare.net",
+        "contentsquare.com",
+        "contentsquare.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "countly",
+      "name": "Countly",
+      "owner": "Countly",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "count.ly",
+        "countly.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "criteo",
+      "name": "Criteo",
+      "owner": "Criteo",
+      "country": "FR",
+      "category": "advertising",
+      "domains": [
+        "bidder.criteo.com",
+        "criteo.com",
+        "criteo.net",
+        "gum.criteo.com",
+        "static.criteo.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "cuebiq",
+      "name": "Cuebiq",
+      "owner": "Cuebiq",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "api.cuebiq.com",
+        "cuebiq.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "customerio",
+      "name": "Customer.io",
+      "owner": "Customer.io",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "cdp.customer.io",
+        "customer.io",
+        "track.customer.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "owner": "Datadog",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "datadoghq.com",
+        "datadoghq.eu",
+        "ddog-gov.com"
+      ]
+    },
+    {
+      "id": "datadome",
+      "name": "DataDome",
+      "owner": "DataDome",
+      "country": "FR",
+      "category": "antifraud",
+      "domains": [
+        "api-js.datadome.co",
+        "ct.datadome.co",
+        "datadome.co"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "dataseat",
+      "name": "Dataseat",
+      "owner": "Verve",
+      "country": "GB",
+      "category": "advertising",
+      "domains": [
+        "dataseat.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "deepgram",
+      "name": "Deepgram",
+      "owner": "Deepgram",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "api.deepgram.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "owner": "DeepSeek",
+      "country": "CN",
+      "category": "ai",
+      "domains": [
+        "api.deepseek.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "deltadna",
+      "name": "deltaDNA",
+      "owner": "Unity",
+      "country": "GB",
+      "category": "analytics",
+      "domains": [
+        "deltadna.com",
+        "deltadna.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "didomi",
+      "name": "Didomi",
+      "owner": "Didomi",
+      "country": "FR",
+      "category": "consent",
+      "domains": [
+        "api.didomi.io",
+        "didomi.io",
+        "sdk.privacy-center.org"
+      ]
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "owner": "Discord",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "discord.com",
+        "discord.gg",
+        "discordapp.com"
+      ]
+    },
+    {
+      "id": "dynatrace",
+      "name": "Dynatrace",
+      "owner": "Dynatrace",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "dynatrace-managed.com",
+        "dynatrace.com"
+      ]
+    },
+    {
+      "id": "emarsys",
+      "name": "Emarsys (SAP)",
+      "owner": "SAP",
+      "country": "DE",
+      "category": "push",
+      "domains": [
+        "emarsys.net",
+        "mobile-sdk.emarsys.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "embrace",
+      "name": "Embrace",
+      "owner": "Embrace",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "data.emb-api.com",
+        "embrace.io"
+      ]
+    },
+    {
+      "id": "exponea",
+      "name": "Bloomreach / Exponea",
+      "owner": "Bloomreach",
+      "country": "NL",
+      "category": "push",
+      "domains": [
+        "bloomreach.com",
+        "exponea.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "facebook.audience",
+      "name": "Audience Network",
+      "owner": "Meta",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "audience-network.com",
+        "fbsbx.com"
+      ],
+      "frameworks": [
+        "FBAudienceNetwork"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "facebook.core",
+      "name": "Meta / Facebook",
+      "owner": "Meta",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ep1.facebook.com",
+        "ep6.facebook.com",
+        "facebook.net",
+        "graph.facebook.com"
+      ],
+      "frameworks": [
+        "FBAEMKit",
+        "FBSDKCoreKit",
+        "FBSDKCoreKit_Basics",
+        "FBSDKGamingServicesKit",
+        "FBSDKLoginKit",
+        "FBSDKShareKit"
+      ],
+      "plistKeys": [
+        "FacebookClientToken"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "fastly",
+      "name": "Fastly",
+      "owner": "Fastly",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "fastly.net",
+        "fastlylb.net",
+        "global.ssl.fastly.net"
+      ]
+    },
+    {
+      "id": "fingerprintjs",
+      "name": "FingerprintJS",
+      "owner": "FingerprintJS",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.fpjs.io",
+        "fingerprintjs.com",
+        "fpjs.io",
+        "fpnpmcdn.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "flurry",
+      "name": "Flurry",
+      "owner": "Yahoo",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "cdn.flurry.com",
+        "data.flurry.com",
+        "flurry.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "forter",
+      "name": "Forter",
+      "owner": "Forter",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.forter.com",
+        "cdn-flow.forter.com",
+        "forter.com"
+      ],
+      "frameworks": [
+        "ForterSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "foursquare",
+      "name": "Foursquare / Pilgrim",
+      "owner": "Foursquare",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "api.foursquare.com",
+        "foursquare.com",
+        "pilgrim.foursquare.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "freshworks",
+      "name": "Freshchat / Freshdesk",
+      "owner": "Freshworks",
+      "country": "IN",
+      "category": "support",
+      "domains": [
+        "freshchat.com",
+        "freshdesk.com",
+        "freshworks.com"
+      ]
+    },
+    {
+      "id": "fullstory",
+      "name": "FullStory",
+      "owner": "FullStory",
+      "country": "US",
+      "category": "session-replay",
+      "domains": [
+        "edge.fullstory.com",
+        "fs.com",
+        "fullstory.com",
+        "rs.fullstory.com"
+      ],
+      "frameworks": [
+        "FullStory"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "fyber",
+      "name": "Fyber / Digital Turbine",
+      "owner": "Digital Turbine",
+      "country": "DE",
+      "category": "advertising",
+      "domains": [
+        "fyber.com",
+        "fyber.net",
+        "go.fyber.com",
+        "inner-active.mobi"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "gameanalytics",
+      "name": "GameAnalytics",
+      "owner": "GameAnalytics",
+      "country": "DK",
+      "category": "analytics",
+      "domains": [
+        "api.gameanalytics.com",
+        "gameanalytics.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "getui",
+      "name": "GeTui / Igexin",
+      "owner": "GeTui",
+      "country": "CN",
+      "category": "push",
+      "domains": [
+        "gepush.com",
+        "getui.com",
+        "igexin.com",
+        "sdk.open.inc"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "gimbal",
+      "name": "Gimbal",
+      "owner": "Gimbal",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "gimbal.com",
+        "sdk.gimbal.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "glassbox",
+      "name": "Glassbox",
+      "owner": "Glassbox",
+      "country": "IL",
+      "category": "session-replay",
+      "domains": [
+        "glassbox.com",
+        "glassboxcdn.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "gocardless",
+      "name": "GoCardless",
+      "owner": "GoCardless",
+      "country": "GB",
+      "category": "payment",
+      "domains": [
+        "api.gocardless.com",
+        "gocardless.com"
+      ]
+    },
+    {
+      "id": "google-gemini",
+      "name": "Google Gemini",
+      "owner": "Google",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "aistudio.google.com",
+        "generativelanguage.googleapis.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "google.ads",
+      "name": "Google Ads",
+      "owner": "Google",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "admob.com",
+        "doubleclick.net",
+        "googleadservices.com",
+        "googlesyndication.com"
+      ],
+      "frameworks": [
+        "GoogleInteractiveMediaAds",
+        "GoogleMobileAds",
+        "GoogleMobileAdsTarget"
+      ],
+      "plistKeys": [
+        "GADApplicationIdentifier"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "google.analytics",
+      "name": "Firebase Analytics",
+      "owner": "Google",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "analytics.google.com",
+        "app-measurement.com",
+        "google-analytics.com"
+      ],
+      "frameworks": [
+        "FirebaseAnalytics",
+        "FirebaseAnalyticsTarget",
+        "GoogleAppMeasurement",
+        "GoogleAppMeasurementTarget"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "google.api",
+      "name": "Google APIs",
+      "owner": "Google",
+      "country": "US",
+      "category": "ecosystem",
+      "domains": [
+        "google.com",
+        "googleapis.com",
+        "gstatic.com"
+      ]
+    },
+    {
+      "id": "google.crashlytics",
+      "name": "Crashlytics",
+      "owner": "Google",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "crashlytics.com",
+        "reports.crashlytics.com",
+        "settings.crashlytics.com"
+      ]
+    },
+    {
+      "id": "google.fcm",
+      "name": "Firebase / FCM",
+      "owner": "Google",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "fcm.googleapis.com",
+        "firebaseinstallations.googleapis.com",
+        "mtalk.google.com"
+      ]
+    },
+    {
+      "id": "google.maps",
+      "name": "Google Maps",
+      "owner": "Google",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "maps.google.com",
+        "maps.googleapis.com"
+      ]
+    },
+    {
+      "id": "googletagmanager",
+      "name": "Google Tag Manager",
+      "owner": "Google",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "googletagmanager.com",
+        "tagmanager.google.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "groupib.fhp",
+      "name": "Group-IB FHP",
+      "owner": "Group-IB",
+      "country": "RU",
+      "category": "antifraud",
+      "domains": [
+        "cdn.group-ib.ru",
+        "fcdn.group-ib.com",
+        "mfp.group-ib.com",
+        "mlc.group-ib.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "growingio",
+      "name": "GrowingIO",
+      "owner": "GrowingIO",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "api.growingio.com",
+        "growingio.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "guardsquare",
+      "name": "Guardsquare / DexGuard",
+      "owner": "Guardsquare",
+      "country": "BE",
+      "category": "antifraud",
+      "domains": [
+        "guardsquare.com",
+        "threatcast.guardsquare.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "hcaptcha",
+      "name": "hCaptcha",
+      "owner": "Intuition Machines",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.hcaptcha.com",
+        "hcaptcha.com",
+        "js.hcaptcha.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "heap",
+      "name": "Heap",
+      "owner": "Heap",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "cdn.heapanalytics.com",
+        "heap.io",
+        "heapanalytics.com"
+      ],
+      "frameworks": [
+        "HeapModule"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "helpshift",
+      "name": "Helpshift",
+      "owner": "Helpshift",
+      "country": "US",
+      "category": "support",
+      "domains": [
+        "api.helpshift.com",
+        "helpshift.com"
+      ]
+    },
+    {
+      "id": "here",
+      "name": "HERE",
+      "owner": "HERE",
+      "country": "DE",
+      "category": "maps",
+      "domains": [
+        "here.com",
+        "hereapi.com",
+        "ls.hereapi.com"
+      ]
+    },
+    {
+      "id": "honeycomb",
+      "name": "Honeycomb",
+      "owner": "Honeycomb",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "api.honeycomb.io",
+        "honeycomb.io"
+      ]
+    },
+    {
+      "id": "hotjar",
+      "name": "Hotjar",
+      "owner": "Contentsquare",
+      "country": "MT",
+      "category": "session-replay",
+      "domains": [
+        "hotjar.com",
+        "hotjar.io",
+        "script.hotjar.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "huawei.hms",
+      "name": "Huawei HMS",
+      "owner": "Huawei",
+      "country": "CN",
+      "category": "ecosystem",
+      "domains": [
+        "appgallery.huawei.com",
+        "hms.huawei.com"
+      ],
+      "is_tracker": false
+    },
+    {
+      "id": "ifconfig",
+      "name": "ifconfig.me",
+      "owner": "ifconfig.me",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "ifconfig.co",
+        "ifconfig.me"
+      ]
+    },
+    {
+      "id": "incode",
+      "name": "Incode",
+      "owner": "Incode",
+      "country": "US",
+      "category": "identity",
+      "domains": [
+        "api.incode.com",
+        "incode.com"
+      ]
+    },
+    {
+      "id": "incognia",
+      "name": "Incognia",
+      "owner": "Incognia",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.incognia.com",
+        "incognia.com",
+        "us.api.incognia.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "inmobi",
+      "name": "InMobi",
+      "owner": "InMobi",
+      "country": "IN",
+      "category": "advertising",
+      "domains": [
+        "i.l.inmobi.com",
+        "inmobi.com",
+        "inmobicdn.net",
+        "sdkm.w.inmobi.com"
+      ],
+      "frameworks": [
+        "InMobiSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "insider",
+      "name": "Insider",
+      "owner": "Insider",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.useinsider.com",
+        "useinsider.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "instabug",
+      "name": "Instabug",
+      "owner": "Instabug",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "api.instabug.com",
+        "instabug.com"
+      ]
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "owner": "Intercom",
+      "country": "US",
+      "category": "support",
+      "domains": [
+        "api-iam.intercom.io",
+        "intercom.com",
+        "intercom.io",
+        "intercomcdn.com"
+      ]
+    },
+    {
+      "id": "iovation",
+      "name": "Iovation",
+      "owner": "TransUnion",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "iesnare.com",
+        "iovation.com",
+        "mpsnare.iesnare.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "ipify",
+      "name": "ipify (IP echo)",
+      "owner": "ipify",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.ipify.org",
+        "ipify.org"
+      ]
+    },
+    {
+      "id": "iproov",
+      "name": "iProov",
+      "owner": "iProov",
+      "country": "GB",
+      "category": "identity",
+      "domains": [
+        "iproov.com",
+        "secure.iproov.me"
+      ]
+    },
+    {
+      "id": "ironsource",
+      "name": "ironSource",
+      "owner": "Unity",
+      "country": "IL",
+      "category": "advertising",
+      "domains": [
+        "ironsource.mobi",
+        "ironsrc.com",
+        "ssacdn.com",
+        "supersonicads.com"
+      ],
+      "frameworks": [
+        "IronSource"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "iterable",
+      "name": "Iterable",
+      "owner": "Iterable",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.iterable.com",
+        "iterable.com",
+        "links.iterable.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "jampp",
+      "name": "Jampp",
+      "owner": "Affle",
+      "country": "AR",
+      "category": "advertising",
+      "domains": [
+        "jampp.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "jd",
+      "name": "JD.com",
+      "owner": "JD",
+      "country": "CN",
+      "category": "ecosystem",
+      "domains": [
+        "360buyimg.com",
+        "jd.com",
+        "jd.hk"
+      ]
+    },
+    {
+      "id": "jpush",
+      "name": "JPush / Aurora",
+      "owner": "Aurora Mobile",
+      "country": "CN",
+      "category": "push",
+      "domains": [
+        "api.jpush.cn",
+        "jiguang.cn",
+        "jpush.cn",
+        "jpush.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "jsdelivr",
+      "name": "jsDelivr",
+      "owner": "jsDelivr",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "jsdelivr.net"
+      ]
+    },
+    {
+      "id": "jumio",
+      "name": "Jumio",
+      "owner": "Jumio",
+      "country": "US",
+      "category": "identity",
+      "domains": [
+        "jumio.ai",
+        "jumio.com",
+        "netverify.com"
+      ]
+    },
+    {
+      "id": "kakao",
+      "name": "Kakao",
+      "owner": "Kakao",
+      "country": "KR",
+      "category": "social",
+      "domains": [
+        "daum.net",
+        "kakao.com",
+        "kakaocdn.net",
+        "kapi.kakao.com"
+      ]
+    },
+    {
+      "id": "kaspersky.sdk",
+      "name": "Kaspersky SDK",
+      "owner": "Kaspersky",
+      "country": "RU",
+      "category": "antifraud",
+      "domains": [
+        "kaspersky-labs.com",
+        "kaspersky.com",
+        "kavsdk.com",
+        "kfp.kaspersky.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "kayzen",
+      "name": "Kayzen",
+      "owner": "Kayzen",
+      "country": "DE",
+      "category": "advertising",
+      "domains": [
+        "kayzen.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "kissmetrics",
+      "name": "Kissmetrics",
+      "owner": "Kissmetrics",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "kissmetrics.com",
+        "kissmetrics.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "klarna",
+      "name": "Klarna",
+      "owner": "Klarna",
+      "country": "SE",
+      "category": "payment",
+      "domains": [
+        "klarna.com",
+        "klarnaevt.com",
+        "klarnaservices.com"
+      ]
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "owner": "Klaviyo",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "a.klaviyo.com",
+        "klaviyo.com",
+        "static.klaviyo.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "kochava",
+      "name": "Kochava",
+      "owner": "Kochava",
+      "country": "US",
+      "category": "attribution",
+      "domains": [
+        "control.kochava.com",
+        "kochava.com"
+      ],
+      "frameworks": [
+        "KochavaCore",
+        "KochavaMeasurement",
+        "KochavaTracker",
+        "KochavaTracking"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "kount",
+      "name": "Kount (Equifax)",
+      "owner": "Equifax",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "kount.com",
+        "kount.net",
+        "ssl.kaptcha.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "kuaishou",
+      "name": "Kuaishou",
+      "owner": "Kuaishou",
+      "country": "CN",
+      "category": "social",
+      "domains": [
+        "gifshow.com",
+        "kuaishou.com",
+        "kwaicdn.com"
+      ]
+    },
+    {
+      "id": "kumulos",
+      "name": "Kumulos",
+      "owner": "Kumulos",
+      "country": "GB",
+      "category": "push",
+      "domains": [
+        "kumulos.com",
+        "push.kumulos.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "launchdarkly",
+      "name": "LaunchDarkly",
+      "owner": "LaunchDarkly",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "clientstream.launchdarkly.com",
+        "events.launchdarkly.com",
+        "launchdarkly.com"
+      ]
+    },
+    {
+      "id": "leanplum",
+      "name": "Leanplum",
+      "owner": "CleverTap",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.leanplum.com",
+        "leanplum.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "liftoff",
+      "name": "Liftoff",
+      "owner": "Liftoff",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.liftoff.io",
+        "liftoff.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "line",
+      "name": "LINE",
+      "owner": "LY Corp",
+      "country": "JP",
+      "category": "social",
+      "domains": [
+        "line-apps.com",
+        "line-scdn.net",
+        "line.me",
+        "nelo2-col.linecorp.com"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "licdn.com",
+        "linkedin.com"
+      ]
+    },
+    {
+      "id": "linkedin.ads",
+      "name": "LinkedIn Ads",
+      "owner": "Microsoft",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.linkedin.com",
+        "analytics.pointdrive.linkedin.com",
+        "px.ads.linkedin.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "localytics",
+      "name": "Localytics",
+      "owner": "Upland",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "analytics.localytics.com",
+        "localytics.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "logentries",
+      "name": "Logentries / Rapid7",
+      "owner": "Rapid7",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "data.logentries.com",
+        "logentries.com"
+      ]
+    },
+    {
+      "id": "logrocket",
+      "name": "LogRocket",
+      "owner": "LogRocket",
+      "country": "US",
+      "category": "session-replay",
+      "domains": [
+        "logrocket.com",
+        "logrocket.io",
+        "lr-ingest.io"
+      ],
+      "frameworks": [
+        "LogRocket",
+        "logrocket_flutter"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "magnite",
+      "name": "Magnite / Rubicon",
+      "owner": "Magnite",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "fastlane.rubiconproject.com",
+        "magnite.com",
+        "rubiconproject.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mailru.adman",
+      "name": "myTarget",
+      "owner": "VK",
+      "country": "RU",
+      "category": "advertising",
+      "domains": [
+        "ad.mail.ru",
+        "ads.mail.ru",
+        "r.mail.ru",
+        "target.my.com",
+        "tracker.target.my.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mailru.mytracker",
+      "name": "MyTracker (VK)",
+      "owner": "VK",
+      "country": "RU",
+      "category": "analytics",
+      "domains": [
+        "mc.mail.ru",
+        "tracer.mytracker.com",
+        "tracker-api.my.com",
+        "tracker.mytracker.com",
+        "trk.mail.ru"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mapbox",
+      "name": "Mapbox",
+      "owner": "Mapbox",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "api.mapbox.com",
+        "events.mapbox.com",
+        "mapbox.com",
+        "tiles.mapbox.com"
+      ]
+    },
+    {
+      "id": "mapmyindia",
+      "name": "MapmyIndia / Mappls",
+      "owner": "MapmyIndia",
+      "country": "IN",
+      "category": "maps",
+      "domains": [
+        "mapmyindia.com",
+        "mappls.com"
+      ]
+    },
+    {
+      "id": "matomo",
+      "name": "Matomo",
+      "owner": "Matomo",
+      "country": "NZ",
+      "category": "analytics",
+      "domains": [
+        "matomo.cloud",
+        "matomo.org"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "meta.cdn",
+      "name": "Meta CDN",
+      "owner": "Meta",
+      "country": "US",
+      "category": "cdn",
+      "domains": [
+        "fbcdn.net"
+      ]
+    },
+    {
+      "id": "meta.social",
+      "name": "Facebook / Instagram (site)",
+      "owner": "Meta",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "cdninstagram.com",
+        "facebook.com",
+        "fb.com",
+        "fb.me",
+        "instagram.com"
+      ]
+    },
+    {
+      "id": "mintegral",
+      "name": "Mintegral / Mobvista",
+      "owner": "Mobvista",
+      "country": "CN",
+      "category": "advertising",
+      "domains": [
+        "mintegral.com",
+        "mintegral.net",
+        "mtgglobals.com",
+        "rayjump.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "owner": "Mistral",
+      "country": "FR",
+      "category": "ai",
+      "domains": [
+        "api.mistral.ai"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mixpanel",
+      "name": "Mixpanel",
+      "owner": "Mixpanel",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "api-js.mixpanel.com",
+        "api.mixpanel.com",
+        "mixpanel.com"
+      ],
+      "frameworks": [
+        "Mixpanel",
+        "mixpanel_flutter",
+        "MixpanelSessionReplay"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mobilewalla",
+      "name": "Mobilewalla",
+      "owner": "Mobilewalla",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "mobilewalla.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mobtech",
+      "name": "MobTech / Mob.com",
+      "owner": "MobTech",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "mob.com",
+        "mobtech.cn",
+        "wansdk.mob.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "moengage",
+      "name": "MoEngage",
+      "owner": "MoEngage",
+      "country": "IN",
+      "category": "push",
+      "domains": [
+        "moengage.com",
+        "sdk-01.moengage.com"
+      ],
+      "frameworks": [
+        "MoEngageCore",
+        "MoEngageSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mollie",
+      "name": "Mollie",
+      "owner": "Mollie",
+      "country": "NL",
+      "category": "payment",
+      "domains": [
+        "api.mollie.com",
+        "mollie.com"
+      ]
+    },
+    {
+      "id": "moloco",
+      "name": "Moloco",
+      "owner": "Moloco",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "moloco.com",
+        "molocoads.com"
+      ],
+      "frameworks": [
+        "MolocoSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mopub",
+      "name": "MoPub",
+      "owner": "AppLovin",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.mopub.com",
+        "mopub.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mouseflow",
+      "name": "Mouseflow",
+      "owner": "Mouseflow",
+      "country": "DK",
+      "category": "session-replay",
+      "domains": [
+        "cdn.mouseflow.com",
+        "mouseflow.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "mparticle",
+      "name": "mParticle",
+      "owner": "mParticle",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "identity.mparticle.com",
+        "mparticle.com",
+        "nativesdks.mparticle.com"
+      ],
+      "frameworks": [
+        "mParticle_Apple_SDK",
+        "mParticle_Apple_SDK_NoLocation"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "naver",
+      "name": "Naver",
+      "owner": "Naver",
+      "country": "KR",
+      "category": "social",
+      "domains": [
+        "naver.com",
+        "naver.net",
+        "nid.naver.com"
+      ]
+    },
+    {
+      "id": "netcore",
+      "name": "Netcore",
+      "owner": "Netcore",
+      "country": "IN",
+      "category": "push",
+      "domains": [
+        "netcorecloud.com",
+        "netcoresmartech.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "netease",
+      "name": "NetEase",
+      "owner": "NetEase",
+      "country": "CN",
+      "category": "ecosystem",
+      "domains": [
+        "126.net",
+        "163.com",
+        "netease.com"
+      ]
+    },
+    {
+      "id": "newrelic",
+      "name": "New Relic",
+      "owner": "New Relic",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "newrelic.com",
+        "nr-data.net"
+      ]
+    },
+    {
+      "id": "nielsen",
+      "name": "Nielsen",
+      "owner": "Nielsen",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "imrworldwide.com",
+        "nielsen.com",
+        "secure-us.imrworldwide.com",
+        "uimserv.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "nudata",
+      "name": "NuData (Mastercard)",
+      "owner": "Mastercard",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "nd.nudatasecurity.com",
+        "nudatasecurity.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "ogury",
+      "name": "Ogury",
+      "owner": "Ogury",
+      "country": "GB",
+      "category": "advertising",
+      "domains": [
+        "ogury-core-mobile.com",
+        "ogury.com",
+        "ogury.io",
+        "presage.io"
+      ],
+      "frameworks": [
+        "OguryAds"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "ok.tracer",
+      "name": "ok.tracer",
+      "owner": "VK",
+      "country": "RU",
+      "category": "analytics",
+      "domains": [
+        "ok-tracer.ok.ru",
+        "tracer.ok.ru"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "onesignal",
+      "name": "OneSignal",
+      "owner": "OneSignal",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.onesignal.com",
+        "onesignal.com"
+      ],
+      "frameworks": [
+        "OneSignalCore",
+        "OneSignalFramework"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "onetrust",
+      "name": "OneTrust",
+      "owner": "OneTrust",
+      "country": "US",
+      "category": "consent",
+      "domains": [
+        "cdn.cookielaw.org",
+        "cookielaw.org",
+        "geolocation.onetrust.com",
+        "onetrust.com"
+      ]
+    },
+    {
+      "id": "onfido",
+      "name": "Onfido",
+      "owner": "Onfido",
+      "country": "GB",
+      "category": "identity",
+      "domains": [
+        "api.onfido.com",
+        "onfido.com",
+        "sdk.onfido.com"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "owner": "OpenAI",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "api.openai.com",
+        "openai.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "owner": "OpenRouter",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "openrouter.ai"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "openx",
+      "name": "OpenX",
+      "owner": "OpenX",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "openx.com",
+        "openx.net",
+        "u.openx.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "oppo.push",
+      "name": "OPPO Push",
+      "owner": "OPPO",
+      "country": "CN",
+      "category": "push",
+      "domains": [
+        "31hs.com",
+        "heytapdownload.com",
+        "heytapmobi.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "optimizely",
+      "name": "Optimizely",
+      "owner": "Optimizely",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "cdn.optimizely.com",
+        "logx.optimizely.com",
+        "optimizely.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "outbrain",
+      "name": "Outbrain",
+      "owner": "Outbrain",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "outbrain.com",
+        "outbrainimg.com",
+        "zemanta.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "pangle",
+      "name": "Pangle",
+      "owner": "ByteDance",
+      "country": "CN",
+      "category": "advertising",
+      "domains": [
+        "pangle-global.io",
+        "pangle.io",
+        "pangleglobal.com"
+      ],
+      "frameworks": [
+        "BUAdSDK",
+        "PAGAdSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal / Braintree",
+      "owner": "PayPal",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "braintree-api.com",
+        "braintreegateway.com",
+        "paypal.com",
+        "paypalobjects.com"
+      ]
+    },
+    {
+      "id": "paytm",
+      "name": "Paytm",
+      "owner": "Paytm",
+      "country": "IN",
+      "category": "payment",
+      "domains": [
+        "paytm.com",
+        "securegw.paytm.in"
+      ]
+    },
+    {
+      "id": "pendo",
+      "name": "Pendo",
+      "owner": "Pendo",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "cdn.pendo.io",
+        "data.pendo.io",
+        "pendo.io"
+      ],
+      "frameworks": [
+        "Pendo",
+        "pendo_sdk"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "perimeterx",
+      "name": "HUMAN / PerimeterX",
+      "owner": "HUMAN",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "humansecurity.com",
+        "perimeterx.net",
+        "px-cdn.net",
+        "px-cloud.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "owner": "Perplexity",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "api.perplexity.ai"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "persona",
+      "name": "Persona",
+      "owner": "Persona",
+      "country": "US",
+      "category": "identity",
+      "domains": [
+        "personablob.blob.core.windows.net",
+        "withpersona.com"
+      ]
+    },
+    {
+      "id": "phonepe",
+      "name": "PhonePe",
+      "owner": "PhonePe",
+      "country": "IN",
+      "category": "payment",
+      "domains": [
+        "api.phonepe.com",
+        "phonepe.com"
+      ]
+    },
+    {
+      "id": "pinduoduo",
+      "name": "Pinduoduo",
+      "owner": "PDD",
+      "country": "CN",
+      "category": "ecosystem",
+      "domains": [
+        "pddpic.com",
+        "pinduoduo.com",
+        "yangkeduo.com"
+      ]
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "owner": "Pinterest",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "pinimg.com",
+        "pinterest.com"
+      ]
+    },
+    {
+      "id": "pinterest.ads",
+      "name": "Pinterest Ads",
+      "owner": "Pinterest",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.pinterest.com",
+        "analytics.pinterest.com",
+        "ct.pinterest.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "placer",
+      "name": "Placer.ai",
+      "owner": "Placer.ai",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "placer.ai"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "plaid",
+      "name": "Plaid",
+      "owner": "Plaid",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "cdn.plaid.com",
+        "plaid.com",
+        "production.plaid.com"
+      ]
+    },
+    {
+      "id": "plausible",
+      "name": "Plausible",
+      "owner": "Plausible",
+      "country": "EE",
+      "category": "analytics",
+      "domains": [
+        "plausible.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "owner": "PostHog",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "app.posthog.com",
+        "i.posthog.com",
+        "posthog.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "pubmatic",
+      "name": "PubMatic",
+      "owner": "PubMatic",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.pubmatic.com",
+        "image6.pubmatic.com",
+        "pubmatic.com"
+      ],
+      "frameworks": [
+        "OpenWrapSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "pubnub",
+      "name": "PubNub",
+      "owner": "PubNub",
+      "country": "US",
+      "category": "messaging",
+      "domains": [
+        "ps.pndsn.com",
+        "pubnub.com",
+        "pubnub.net"
+      ]
+    },
+    {
+      "id": "pusher",
+      "name": "Pusher",
+      "owner": "MessageBird",
+      "country": "GB",
+      "category": "messaging",
+      "domains": [
+        "pusher-platform.io",
+        "pusher.com",
+        "pusherapp.com"
+      ]
+    },
+    {
+      "id": "pushwoosh",
+      "name": "Pushwoosh",
+      "owner": "Pushwoosh",
+      "country": "RU",
+      "category": "push",
+      "domains": [
+        "cp.pushwoosh.com",
+        "go.pushwoosh.com",
+        "pushwoosh.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "qihoo360",
+      "name": "Qihoo 360",
+      "owner": "Qihoo 360",
+      "country": "CN",
+      "category": "ecosystem",
+      "domains": [
+        "360.cn",
+        "leihuo.360.cn",
+        "qhupdate.com",
+        "qihucdn.com"
+      ]
+    },
+    {
+      "id": "qonversion",
+      "name": "Qonversion",
+      "owner": "Qonversion",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "api.qonversion.io",
+        "qonversion.io"
+      ]
+    },
+    {
+      "id": "quantcast",
+      "name": "Quantcast",
+      "owner": "Quantcast",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "quantcast.com",
+        "quantcount.com",
+        "quantserve.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "quantummetric",
+      "name": "Quantum Metric",
+      "owner": "Quantum Metric",
+      "country": "US",
+      "category": "session-replay",
+      "domains": [
+        "quantummetric.com"
+      ],
+      "frameworks": [
+        "quantum_metric",
+        "QuantumMetric_SDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "radar",
+      "name": "Radar",
+      "owner": "Radar",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "api.radar.io",
+        "radar.com",
+        "radar.io"
+      ],
+      "frameworks": [
+        "RadarSDK",
+        "RadarSDKFraud"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "ravelin",
+      "name": "Ravelin",
+      "owner": "Ravelin",
+      "country": "GB",
+      "category": "antifraud",
+      "domains": [
+        "api.ravelin.com",
+        "ravelin.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "raygun",
+      "name": "Raygun",
+      "owner": "Raygun",
+      "country": "NZ",
+      "category": "crash",
+      "domains": [
+        "api.raygun.com",
+        "raygun.com",
+        "raygun.io"
+      ]
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "owner": "Razorpay",
+      "country": "IN",
+      "category": "payment",
+      "domains": [
+        "api.razorpay.com",
+        "lumberjack.razorpay.com",
+        "razorpay.com"
+      ]
+    },
+    {
+      "id": "recaptcha",
+      "name": "Google reCAPTCHA",
+      "owner": "Google",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "recaptcha.net",
+        "recaptchaenterprise.googleapis.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "reddit.ads",
+      "name": "Reddit Ads",
+      "owner": "Reddit",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads-api.reddit.com",
+        "alb.reddit.com",
+        "events.redditmedia.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "remerge",
+      "name": "Remerge",
+      "owner": "Remerge",
+      "country": "DE",
+      "category": "advertising",
+      "domains": [
+        "remerge.io",
+        "s2s.remerge.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "revenuecat",
+      "name": "RevenueCat",
+      "owner": "RevenueCat",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "api.revenuecat.com",
+        "revenuecat.com"
+      ]
+    },
+    {
+      "id": "riskified",
+      "name": "Riskified",
+      "owner": "Riskified",
+      "country": "IL",
+      "category": "antifraud",
+      "domains": [
+        "beacon.riskified.com",
+        "c.riskified.com",
+        "riskified.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "rollbar",
+      "name": "Rollbar",
+      "owner": "Rollbar",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "api.rollbar.com",
+        "rollbar.com"
+      ]
+    },
+    {
+      "id": "rtbhouse",
+      "name": "RTB House",
+      "owner": "RTB House",
+      "country": "PL",
+      "category": "advertising",
+      "domains": [
+        "creativecdn.com",
+        "rtbhouse.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "rudderstack",
+      "name": "RudderStack",
+      "owner": "RudderStack",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "dataplane.rudderstack.com",
+        "rudderlabs.com",
+        "rudderstack.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "safegraph",
+      "name": "SafeGraph",
+      "owner": "SafeGraph",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "api.safegraph.com",
+        "safegraph.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "sailthru",
+      "name": "Sailthru",
+      "owner": "Marigold",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.sailthru.com",
+        "sailthru.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "salesforce.mc",
+      "name": "Salesforce Marketing Cloud",
+      "owner": "Salesforce",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "exacttarget.com",
+        "marketingcloudapis.com",
+        "mcsv.net"
+      ],
+      "frameworks": [
+        "MarketingCloudSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "sardine",
+      "name": "Sardine",
+      "owner": "Sardine",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.sardine.ai",
+        "sardine.ai"
+      ],
+      "frameworks": [
+        "MobileIntelligence"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "segment",
+      "name": "Segment",
+      "owner": "Twilio",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "api.segment.io",
+        "cdn.segment.com",
+        "segment.com",
+        "segment.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "sensorsdata",
+      "name": "Sensors Data",
+      "owner": "Sensors Data",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "datasink.sensorsdata.cn",
+        "sensorsdata.cn",
+        "sensorsdata.com"
+      ],
+      "frameworks": [
+        "SensorsAnalyticsSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "owner": "Sentry",
+      "country": "US",
+      "category": "crash",
+      "domains": [
+        "ingest.sentry.io",
+        "sentry-cdn.com",
+        "sentry.io"
+      ]
+    },
+    {
+      "id": "seon",
+      "name": "SEON",
+      "owner": "SEON",
+      "country": "HU",
+      "category": "antifraud",
+      "domains": [
+        "io.seon.io",
+        "seon.io"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "shield",
+      "name": "SHIELD",
+      "owner": "SHIELD",
+      "country": "SG",
+      "category": "antifraud",
+      "domains": [
+        "cdn.shield.com",
+        "shield.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "sift",
+      "name": "Sift",
+      "owner": "Sift",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.sift.com",
+        "cdn.sift.com",
+        "sift.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "signifyd",
+      "name": "Signifyd",
+      "owner": "Signifyd",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "api.signifyd.com",
+        "signifyd.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "singular",
+      "name": "Singular",
+      "owner": "Singular",
+      "country": "US",
+      "category": "attribution",
+      "domains": [
+        "singular.live",
+        "singular.net",
+        "sng.link"
+      ],
+      "frameworks": [
+        "Singular"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "skyhook",
+      "name": "Skyhook",
+      "owner": "Qualcomm",
+      "country": "US",
+      "category": "maps",
+      "domains": [
+        "skyhook.com",
+        "skyhookwireless.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "smaato",
+      "name": "Smaato",
+      "owner": "Smaato",
+      "country": "DE",
+      "category": "advertising",
+      "domains": [
+        "ad.smaato.net",
+        "smaato.com",
+        "smaato.net",
+        "soma.smaato.net"
+      ],
+      "frameworks": [
+        "SmaatoSDKCore"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "smadex",
+      "name": "Smadex",
+      "owner": "Entravision",
+      "country": "ES",
+      "category": "advertising",
+      "domains": [
+        "ads.smadex.com",
+        "smadex.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "smartadserver",
+      "name": "Equativ / Smart",
+      "owner": "Equativ",
+      "country": "FR",
+      "category": "advertising",
+      "domains": [
+        "sascdn.com",
+        "smartadserver.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "smartlook",
+      "name": "Smartlook",
+      "owner": "Smartlook",
+      "country": "CZ",
+      "category": "session-replay",
+      "domains": [
+        "manager.smartlook.com",
+        "rec.smartlook.com",
+        "smartlook.com"
+      ],
+      "frameworks": [
+        "flutter_smartlook",
+        "SmartlookAnalytics"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "snap.ads",
+      "name": "Snap Ads",
+      "owner": "Snap",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "adsapi.snapchat.com",
+        "sc-analytics.appspot.com",
+        "tr.snapchat.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "snap.kit",
+      "name": "Snap Kit",
+      "owner": "Snap",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "sc-static.net",
+        "snapchat.com",
+        "snapkit.com"
+      ]
+    },
+    {
+      "id": "socure",
+      "name": "Socure",
+      "owner": "Socure",
+      "country": "US",
+      "category": "identity",
+      "domains": [
+        "service.socure.com",
+        "socure.com"
+      ]
+    },
+    {
+      "id": "sourcepoint",
+      "name": "Sourcepoint",
+      "owner": "Sourcepoint",
+      "country": "US",
+      "category": "consent",
+      "domains": [
+        "cdn.privacy-mgmt.com",
+        "sourcepoint.com",
+        "sp-prod.net"
+      ]
+    },
+    {
+      "id": "split",
+      "name": "Split",
+      "owner": "Harness",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "events.split.io",
+        "sdk.split.io",
+        "split.io"
+      ]
+    },
+    {
+      "id": "spotify.sdk",
+      "name": "Spotify SDK",
+      "owner": "Spotify",
+      "country": "SE",
+      "category": "ecosystem",
+      "domains": [
+        "scdn.co",
+        "spotify.com",
+        "spotifycdn.com"
+      ]
+    },
+    {
+      "id": "square",
+      "name": "Block / Square",
+      "owner": "Block",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "connect.squareup.com",
+        "square.com",
+        "squareup.com"
+      ]
+    },
+    {
+      "id": "startapp",
+      "name": "Start.io / StartApp",
+      "owner": "Start.io",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "start.io",
+        "startapp.com",
+        "startappservice.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "statsig",
+      "name": "Statsig",
+      "owner": "Statsig",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "featuregates.org",
+        "prodregistryv2.org",
+        "statsig.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "owner": "Stripe",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "api.stripe.com",
+        "js.stripe.com",
+        "m.stripe.com",
+        "r.stripe.com",
+        "stripe.com"
+      ]
+    },
+    {
+      "id": "sumsub",
+      "name": "Sumsub",
+      "owner": "Sumsub",
+      "country": "GB",
+      "category": "identity",
+      "domains": [
+        "api.sumsub.com",
+        "sumsub.com"
+      ]
+    },
+    {
+      "id": "superwall",
+      "name": "Superwall",
+      "owner": "Superwall",
+      "country": "US",
+      "category": "payment",
+      "domains": [
+        "api.superwall.com",
+        "superwall.com"
+      ]
+    },
+    {
+      "id": "swrve",
+      "name": "Swrve",
+      "owner": "Swrve",
+      "country": "US",
+      "category": "push",
+      "domains": [
+        "api.swrve.com",
+        "swrve.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "taboola",
+      "name": "Taboola",
+      "owner": "Taboola",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "cdn.taboola.com",
+        "taboola.com",
+        "taboolasyndication.com",
+        "trc.taboola.com"
+      ],
+      "frameworks": [
+        "TaboolaSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "talkingdata",
+      "name": "TalkingData",
+      "owner": "TalkingData",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "jic.talkingdata.com",
+        "talkingdata.com",
+        "tendcloud.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "tapjoy",
+      "name": "Tapjoy",
+      "owner": "Tapjoy",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "rpc.tapjoy.com",
+        "tapjoy.com",
+        "ws.tapjoyads.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "taplytics",
+      "name": "Taplytics",
+      "owner": "Taplytics",
+      "country": "CA",
+      "category": "analytics",
+      "domains": [
+        "api.taplytics.com",
+        "taplytics.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "tealium",
+      "name": "Tealium",
+      "owner": "Tealium",
+      "country": "US",
+      "category": "analytics",
+      "domains": [
+        "tags.tiqcdn.com",
+        "tealium.com"
+      ],
+      "frameworks": [
+        "TealiumSwift"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "owner": "Telegram",
+      "country": "AE",
+      "category": "social",
+      "domains": [
+        "t.me",
+        "telegram.me",
+        "telegram.org"
+      ]
+    },
+    {
+      "id": "tencent.bugly",
+      "name": "Tencent Bugly",
+      "owner": "Tencent",
+      "country": "CN",
+      "category": "crash",
+      "domains": [
+        "bugly.qq.com"
+      ]
+    },
+    {
+      "id": "tencent.map",
+      "name": "Tencent Maps",
+      "owner": "Tencent",
+      "country": "CN",
+      "category": "maps",
+      "domains": [
+        "map.qq.com",
+        "mapapi.qq.com"
+      ]
+    },
+    {
+      "id": "tenjin",
+      "name": "Tenjin",
+      "owner": "Tenjin",
+      "country": "US",
+      "category": "attribution",
+      "domains": [
+        "tenjin.com",
+        "tenjin.io",
+        "track.tenjin.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "threatmetrix",
+      "name": "ThreatMetrix",
+      "owner": "LexisNexis",
+      "country": "US",
+      "category": "antifraud",
+      "domains": [
+        "h.online-metrix.net",
+        "online-metrix.net"
+      ],
+      "frameworks": [
+        "RLTMXProfiling",
+        "TMXProfiling"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "tiktok.analytics",
+      "name": "TikTok Analytics",
+      "owner": "ByteDance",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "analytics.tiktok.com",
+        "business-api.tiktok.com"
+      ],
+      "frameworks": [
+        "tiktok_business_sdk",
+        "TikTokBusinessSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "tomtom",
+      "name": "TomTom",
+      "owner": "TomTom",
+      "country": "NL",
+      "category": "maps",
+      "domains": [
+        "api.tomtom.com",
+        "tomtom.com"
+      ]
+    },
+    {
+      "id": "tradedesk",
+      "name": "The Trade Desk",
+      "owner": "The Trade Desk",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "adsrvr.org",
+        "thetradedesk.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "twilio",
+      "name": "Twilio",
+      "owner": "Twilio",
+      "country": "US",
+      "category": "messaging",
+      "domains": [
+        "api.twilio.com",
+        "sendgrid.net",
+        "twilio.com"
+      ]
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "owner": "Amazon",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "jtvnw.net",
+        "ttvnw.net",
+        "twitch.tv"
+      ]
+    },
+    {
+      "id": "twitter.ads",
+      "name": "X / Twitter Ads (MACT)",
+      "owner": "X Corp",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads-api.twitter.com",
+        "ads-twitter.com",
+        "analytics.twitter.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "twitter.core",
+      "name": "X / Twitter",
+      "owner": "X Corp",
+      "country": "US",
+      "category": "social",
+      "domains": [
+        "api.twitter.com",
+        "t.co",
+        "twimg.com",
+        "twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "id": "umeng",
+      "name": "Umeng (Alibaba)",
+      "owner": "Alibaba",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "ulogs.umeng.com",
+        "umeng.co",
+        "umeng.com",
+        "umengcloud.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "unacast",
+      "name": "Unacast",
+      "owner": "Unacast",
+      "country": "NO",
+      "category": "advertising",
+      "domains": [
+        "api.unacast.com",
+        "unacast.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "unity.ads",
+      "name": "Unity Ads / Analytics",
+      "owner": "Unity",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "auction.unityads.unity3d.com",
+        "config.uca.cloud.unity3d.com",
+        "unity3d.com",
+        "unityads.unity.com",
+        "unityads.unity3d.com"
+      ],
+      "frameworks": [
+        "UnityAds"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "usercentrics",
+      "name": "Usercentrics",
+      "owner": "Usercentrics",
+      "country": "DE",
+      "category": "consent",
+      "domains": [
+        "api.usercentrics.eu",
+        "app.usercentrics.eu",
+        "usercentrics.eu"
+      ]
+    },
+    {
+      "id": "uxcam",
+      "name": "UXCam",
+      "owner": "UXCam",
+      "country": "US",
+      "category": "session-replay",
+      "domains": [
+        "api.uxcam.com",
+        "sdk.uxcam.com",
+        "uxcam.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "venntel",
+      "name": "Venntel / Gravy",
+      "owner": "Gravy Analytics",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "gravyanalytics.com",
+        "venntel.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "veriff",
+      "name": "Veriff",
+      "owner": "Veriff",
+      "country": "EE",
+      "category": "identity",
+      "domains": [
+        "magic.veriff.me",
+        "veriff.com",
+        "veriff.me"
+      ]
+    },
+    {
+      "id": "verve",
+      "name": "Verve Group",
+      "owner": "Verve",
+      "country": "DE",
+      "category": "advertising",
+      "domains": [
+        "hybid.net",
+        "pubnative.net",
+        "verve.com"
+      ],
+      "frameworks": [
+        "HyBid"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "vivo.push",
+      "name": "Vivo Push",
+      "owner": "Vivo",
+      "country": "CN",
+      "category": "push",
+      "domains": [
+        "vivo.com.cn",
+        "vivoglobal.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "vk.ads",
+      "name": "VK Ads",
+      "owner": "VK",
+      "country": "RU",
+      "category": "advertising",
+      "domains": [
+        "ad.vk.com",
+        "ads.vk.com",
+        "vk-ads.ru"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "vk.analytics",
+      "name": "VK Analytics",
+      "owner": "VK",
+      "country": "RU",
+      "category": "analytics",
+      "domains": [
+        "stat.userapi.com",
+        "stat.vk.com",
+        "vk-analytics.ru"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "volcengine",
+      "name": "Volcengine / VeAnalytics",
+      "owner": "ByteDance",
+      "country": "CN",
+      "category": "analytics",
+      "domains": [
+        "tobsnssdk.com",
+        "veanalytics.com",
+        "volces.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "vungle",
+      "name": "Vungle / Liftoff",
+      "owner": "Liftoff",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "ads.vungle.com",
+        "api.vungle.com",
+        "vungle.com",
+        "vungle.io"
+      ],
+      "frameworks": [
+        "VungleAdsSDK"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "webengage",
+      "name": "WebEngage",
+      "owner": "WebEngage",
+      "country": "IN",
+      "category": "push",
+      "domains": [
+        "c.webengage.com",
+        "webengage.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "wechat",
+      "name": "WeChat / Tencent",
+      "owner": "Tencent",
+      "country": "CN",
+      "category": "social",
+      "domains": [
+        "gtimg.cn",
+        "qpic.cn",
+        "qq.com",
+        "tencent.com",
+        "wechat.com",
+        "weixin.qq.com"
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "Sina Weibo",
+      "owner": "Sina",
+      "country": "CN",
+      "category": "social",
+      "domains": [
+        "api.weibo.com",
+        "sinaimg.cn",
+        "weibo.cn",
+        "weibo.com"
+      ]
+    },
+    {
+      "id": "what3words",
+      "name": "what3words",
+      "owner": "what3words",
+      "country": "GB",
+      "category": "maps",
+      "domains": [
+        "api.what3words.com",
+        "what3words.com"
+      ]
+    },
+    {
+      "id": "wonderpush",
+      "name": "WonderPush",
+      "owner": "WonderPush",
+      "country": "FR",
+      "category": "push",
+      "domains": [
+        "api.wonderpush.com",
+        "wonderpush.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "worldpay",
+      "name": "Worldpay",
+      "owner": "FIS",
+      "country": "GB",
+      "category": "payment",
+      "domains": [
+        "secure.worldpay.com",
+        "worldpay.com"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "owner": "xAI",
+      "country": "US",
+      "category": "ai",
+      "domains": [
+        "api.x.ai"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "xiaomi.push",
+      "name": "Xiaomi Push",
+      "owner": "Xiaomi",
+      "country": "CN",
+      "category": "push",
+      "domains": [
+        "mi.com",
+        "resolver.msg.xiaomi.net",
+        "xiaomi.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yahoo.ads",
+      "name": "Yahoo / Gemini Ads",
+      "owner": "Yahoo",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "adtech.yahooinc.com",
+        "advertising.yahoo.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yandex.advertising",
+      "name": "Yandex Ads",
+      "owner": "Yandex",
+      "country": "RU",
+      "category": "advertising",
+      "domains": [
+        "adfox.ru",
+        "ads.yandex.ru",
+        "an.yandex.ru",
+        "awaps.yandex.net",
+        "mobile.yandexadexchange.net"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yandex.appmetrica",
+      "name": "Yandex AppMetrica",
+      "owner": "Yandex",
+      "country": "RU",
+      "category": "analytics",
+      "domains": [
+        "appmetrica.io",
+        "appmetrica.yandex.net",
+        "mobile.appmetrica.yandex.net",
+        "redirect.appmetrica.yandex.com",
+        "startup.mobile.yandex.net",
+        "tracking.appmetrica.yandex.net"
+      ],
+      "frameworks": [
+        "AppMetricaCore"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yandex.metrika",
+      "name": "Yandex Metrika",
+      "owner": "Yandex",
+      "country": "RU",
+      "category": "analytics",
+      "domains": [
+        "mc.yandex.ru",
+        "metrica-tag.yandex.ru",
+        "metrika.yandex"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yandex.whocalls",
+      "name": "Yandex WhoCalls",
+      "owner": "Yandex",
+      "country": "RU",
+      "category": "caller-id",
+      "domains": [
+        "caller.yandex.net",
+        "whocalls.yandex.ru"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "yoti",
+      "name": "Yoti",
+      "owner": "Yoti",
+      "country": "GB",
+      "category": "identity",
+      "domains": [
+        "api.yoti.com",
+        "yoti.com"
+      ]
+    },
+    {
+      "id": "youappi",
+      "name": "YouAppi",
+      "owner": "YouAppi",
+      "country": "US",
+      "category": "advertising",
+      "domains": [
+        "youappi.com"
+      ],
+      "is_tracker": true
+    },
+    {
+      "id": "zendesk",
+      "name": "Zendesk",
+      "owner": "Zendesk",
+      "country": "US",
+      "category": "support",
+      "domains": [
+        "zdassets.com",
+        "zendesk.com",
+        "zopim.com"
+      ]
+    }
+  ]
+}

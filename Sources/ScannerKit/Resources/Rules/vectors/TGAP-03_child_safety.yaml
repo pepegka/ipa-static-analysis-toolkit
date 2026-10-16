@@ -1,0 +1,38 @@
+- id: TGAP-03.family_controls
+  vector: TGAP-03
+  title: Family Controls / Screen Time capability
+  description: |
+    The app declares com.apple.developer.family-controls, the entitlement behind
+    Screen Time, ManagedSettings and DeviceActivity. It lets an app observe and
+    restrict another user's device usage, which is legitimate for parental-control
+    and wellbeing apps and notable in anything else. Capability inventory, not a
+    weakness on its own.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  polarity: defensive
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.family-controls(\.development)?$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.family-controls
+
+- id: TGAP-03.declared_age_range_entitlement
+  vector: TGAP-03
+  title: Declared Age Range entitlement (positive disclosure signal)
+  description: |
+    The app declares com.apple.developer.declared-age-range, Apple's API for
+    asking the system for a user's age bracket without collecting a birth date.
+    Using it is the privacy-preserving way to age-gate, so this is a positive
+    signal reported as inventory.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0362]
+  masvs: [MASVS-PRIVACY]
+  polarity: defensive
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.declared-age-range$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.declared-age-range

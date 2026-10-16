@@ -1,0 +1,21 @@
+{
+  "hosts": [
+    "www.w3.org",
+    "w3.org",
+    "www.apple.com",
+    "ns.adobe.com",
+    "purl.org",
+    "schemas.xmlsoap.org",
+    "schemas.microsoft.com",
+    "schemas.openxmlformats.org",
+    "schemas.android.com",
+    "xmlns.com",
+    "www.xfa.org",
+    "iptc.org",
+    "ns.useplus.org",
+    "localhost",
+    "127.0.0.1",
+    "0.0.0.0",
+    "[::1]"
+  ]
+}

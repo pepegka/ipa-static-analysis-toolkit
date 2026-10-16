@@ -1,0 +1,157 @@
+{
+  "probes": [
+    {
+      "category": "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "humanName": "File timestamp",
+      "indicators": [
+        "creationDateKey",
+        "contentModificationDateKey",
+        "NSFileCreationDate",
+        "NSFileModificationDate",
+        "fileModificationDate"
+      ],
+      "exactSymbols": [
+        "stat",
+        "fstat",
+        "lstat",
+        "fstatat",
+        "getattrlist",
+        "getattrlistbulk",
+        "fgetattrlist",
+        "getattrlistat"
+      ],
+      "humanIndicators": "creationDate / modificationDate / fileModificationDate / stat / fstat / lstat / fstatat / getattrlist / fgetattrlist / getattrlistat / getattrlistbulk",
+      "reasons": [
+        {
+          "code": "DDA9.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "C617.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "3B52.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "0A2A.1",
+          "sdkOnly": true
+        }
+      ]
+    },
+    {
+      "category": "NSPrivacyAccessedAPICategorySystemBootTime",
+      "humanName": "System boot time",
+      "indicators": [
+        "systemUptime"
+      ],
+      "exactSymbols": [
+        "mach_absolute_time"
+      ],
+      "humanIndicators": "ProcessInfo.systemUptime / mach_absolute_time",
+      "reasons": [
+        {
+          "code": "35F9.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "8FFB.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "3D61.1",
+          "sdkOnly": false
+        }
+      ]
+    },
+    {
+      "category": "NSPrivacyAccessedAPICategoryDiskSpace",
+      "humanName": "Disk space",
+      "indicators": [
+        "NSFileSystemFreeSize",
+        "NSFileSystemSize",
+        "volumeAvailableCapacityForImportantUsageKey",
+        "volumeAvailableCapacityKey",
+        "volumeAvailableCapacityForOpportunisticUsageKey",
+        "volumeTotalCapacityKey"
+      ],
+      "exactSymbols": [
+        "statfs",
+        "fstatfs",
+        "statvfs",
+        "fstatvfs",
+        "getattrlist",
+        "fgetattrlist",
+        "getattrlistat"
+      ],
+      "humanIndicators": "systemFreeSize / systemSize / volumeAvailableCapacity*Key / volumeTotalCapacityKey / statfs / fstatfs / statvfs / fstatvfs",
+      "reasons": [
+        {
+          "code": "85F4.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "E174.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "7D9E.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "B728.1",
+          "sdkOnly": false
+        }
+      ]
+    },
+    {
+      "category": "NSPrivacyAccessedAPICategoryActiveKeyboards",
+      "humanName": "Active keyboards",
+      "indicators": [
+        "activeInputModes"
+      ],
+      "exactSymbols": [],
+      "humanIndicators": "UITextInputMode.activeInputModes",
+      "reasons": [
+        {
+          "code": "3EC4.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "54BD.1",
+          "sdkOnly": false
+        }
+      ]
+    },
+    {
+      "category": "NSPrivacyAccessedAPICategoryUserDefaults",
+      "humanName": "User defaults",
+      "indicators": [
+        "NSUserDefaults",
+        "standardUserDefaults",
+        "initWithSuiteName"
+      ],
+      "exactSymbols": [],
+      "humanIndicators": "NSUserDefaults / UserDefaults / initWithSuiteName:",
+      "reasons": [
+        {
+          "code": "CA92.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "1C8F.1",
+          "sdkOnly": false
+        },
+        {
+          "code": "C56D.1",
+          "sdkOnly": true
+        },
+        {
+          "code": "AC6B.1",
+          "sdkOnly": false
+        }
+      ]
+    }
+  ]
+}

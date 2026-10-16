@@ -1,0 +1,106 @@
+- id: DCS-07.ble_scanning
+  vector: DCS-07
+  title: Bluetooth LE peripheral scanning
+  description: |
+    Uses CoreBluetooth central-manager scanning (scanForPeripheralsWithServices), enumerates
+    nearby BLE devices. Legitimate for accessory apps; broadly it maps the user's surroundings.
+    Accessory / audio frameworks are allow-listed to reduce false positives.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: symbol
+      pattern: 'scanForPeripheralsWithServices|CBCentralManager'
+  attribution:
+    benign_in_frameworks: [CoreBluetooth, ExternalAccessory, MediaPlayer, AmazonChime]
+  references:
+    - https://developer.apple.com/documentation/corebluetooth/cbcentralmanager
+
+- id: DCS-07.uwb_ranging
+  vector: DCS-07
+  title: Ultra-wideband ranging (NearbyInteraction)
+  description: |
+    Uses NearbyInteraction / NISession, ultra-wideband precise ranging to other U1/U2 devices.
+    Measures distance/direction to nearby people and accessories.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: symbol
+      pattern: 'NISession|NINearbyObject|NearbyInteraction'
+  references:
+    - https://developer.apple.com/documentation/nearbyinteraction/nisession
+
+- id: DCS-07.wifi_info
+  vector: DCS-07
+  title: Wi-Fi network / BSSID inspection
+  description: |
+    Reads the current Wi-Fi network info (CNCopyCurrentNetworkInfo / NEHotspotHelper /
+    NEHotspotNetwork.fetchCurrent). The BSSID is a stable location proxy, the same access point
+    identifies a physical place across sessions.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360, MASTG-TEST-0362]
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: symbol
+      pattern: 'CNCopyCurrentNetworkInfo|NEHotspotHelper|fetchCurrentWithCompletionHandler|NEHotspotNetwork'
+    - kind: string
+      pattern: '\b(CNCopyCurrentNetworkInfo|BSSID|SSID_STR)\b'
+  references:
+    - https://developer.apple.com/documentation/networkextension/nehotspothelper
+
+- id: DCS-07.beacon_sdk
+  vector: DCS-07
+  title: Retail proximity / beacon SDK
+  description: |
+    Embeds a retail proximity-marketing SDK (Estimote, Kontakt.io, inMarket, Radar, Gimbal,
+    Bluedot, Swirl); these turn BLE-beacon proximity into a location/behaviour tracking channel.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: string
+      pattern: '(?i)\b(estimote|kontakt\.io|kontaktio|inmarket|radar\.io|radarsdk|gimbal|bluedot|swirl_?sdk|proximi\.io)\b'
+    - kind: frameworkName
+      pattern: '(?i)estimote|kontakt|gimbal|radar|bluedot'
+
+- id: DCS-07.bonjour_services
+  vector: DCS-07
+  title: Bonjour service enumeration (NSBonjourServices)
+  description: |
+    Declares NSBonjourServices, the app enumerates specific mDNS/Bonjour service types on the
+    local network. Severity scales with breadth in the analyzer; a single declared service is low,
+    many is a broader household-scan signal.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: plistKey
+      pattern: 'NSBonjourServices'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/nsbonjourservices
+    - https://www.rfc-editor.org/rfc/rfc6763
+
+- id: DCS-07.local_network
+  vector: DCS-07
+  title: Local network scanning
+  description: |
+    Bonjour / NWBrowser usage hinting at local-network device enumeration
+    (smart-home discovery, router probing).
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  masvs: [MASVS-PRIVACY]
+  search:
+    - kind: symbol
+      pattern: 'NWBrowser|NetServiceBrowser'
+    - kind: plistKey
+      pattern: 'NSBonjourServices|NSLocalNetworkUsageDescription'
+  references:
+    - https://developer.apple.com/documentation/network/nwbrowser
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/nslocalnetworkusagedescription

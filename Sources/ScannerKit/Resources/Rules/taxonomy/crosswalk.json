@@ -1,0 +1,484 @@
+{
+  "byConstruct": {
+    "DCS": {
+      "gdpr": [],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "mastg": [],
+      "maswe": [],
+      "solove": [
+        "Surveillance"
+      ]
+    },
+    "PLAT": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [],
+      "solove": []
+    },
+    "SECH": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [],
+      "solove": []
+    },
+    "SURV": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [],
+      "solove": [
+        "Surveillance",
+        "Intrusion"
+      ]
+    },
+    "TGAP": {
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "mastg": [],
+      "maswe": [],
+      "solove": [
+        "Exclusion"
+      ]
+    },
+    "TRK": {
+      "gdpr": [],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "mastg": [],
+      "maswe": [],
+      "solove": [
+        "Aggregation",
+        "Secondary Use"
+      ]
+    }
+  },
+  "byVector": {
+    "DCS-01": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0068",
+        "MASWE-0069"
+      ],
+      "solove": []
+    },
+    "DCS-02": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ],
+      "maswe": [
+        "MASWE-0066",
+        "MASWE-0069",
+        "MASWE-0073"
+      ],
+      "solove": []
+    },
+    "DCS-03": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ],
+      "maswe": [
+        "MASWE-0066",
+        "MASWE-0030"
+      ],
+      "solove": []
+    },
+    "DCS-04": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ],
+      "maswe": [
+        "MASWE-0069",
+        "MASWE-0066"
+      ],
+      "solove": []
+    },
+    "DCS-05": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ],
+      "maswe": [
+        "MASWE-0066",
+        "MASWE-0069"
+      ],
+      "solove": []
+    },
+    "DCS-06": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0069",
+        "MASWE-0068"
+      ],
+      "solove": []
+    },
+    "DCS-07": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0360",
+        "MASTG-TEST-0362"
+      ],
+      "maswe": [
+        "MASWE-0066",
+        "MASWE-0069"
+      ],
+      "solove": []
+    },
+    "PLAT-01": {
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0331",
+        "MASTG-TEST-0332",
+        "MASTG-TEST-0333",
+        "MASTG-TEST-0335",
+        "MASTG-TEST-0376",
+        "MASTG-TEST-0377",
+        "MASTG-TEST-0378",
+        "MASTG-TEST-0379",
+        "MASTG-TEST-0380"
+      ],
+      "maswe": [
+        "MASWE-0033",
+        "MASWE-0034",
+        "MASWE-0035"
+      ],
+      "solove": []
+    },
+    "PLAT-02": {
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0370",
+        "MASTG-TEST-0371",
+        "MASTG-TEST-0395"
+      ],
+      "maswe": [
+        "MASWE-0029"
+      ],
+      "solove": []
+    },
+    "PLAT-03": {
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0389"
+      ],
+      "maswe": [
+        "MASWE-0031"
+      ],
+      "solove": []
+    },
+    "PLAT-04": {
+      "cvss": "CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0037"
+      ],
+      "solove": []
+    },
+    "SECH-01": {
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0321",
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0342",
+        "MASTG-TEST-0343",
+        "MASTG-TEST-0344",
+        "MASTG-TEST-0345",
+        "MASTG-TEST-0385",
+        "MASTG-TEST-0396",
+        "MASTG-TEST-0397"
+      ],
+      "maswe": [
+        "MASWE-0026",
+        "MASWE-0027",
+        "MASWE-0028"
+      ],
+      "solove": []
+    },
+    "SECH-02": {
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0215",
+        "MASTG-TEST-0300",
+        "MASTG-TEST-0303"
+      ],
+      "maswe": [
+        "MASWE-0001",
+        "MASWE-0002",
+        "MASWE-0006"
+      ],
+      "solove": []
+    },
+    "SECH-03": {
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0210",
+        "MASTG-TEST-0211",
+        "MASTG-TEST-0311"
+      ],
+      "maswe": [
+        "MASWE-0007",
+        "MASWE-0008",
+        "MASWE-0012"
+      ],
+      "solove": []
+    },
+    "SECH-04": {
+      "cvss": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0228",
+        "MASTG-TEST-0229",
+        "MASTG-TEST-0230"
+      ],
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "solove": []
+    },
+    "SECH-05": {
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0004"
+      ],
+      "solove": []
+    },
+    "SECH-06": {
+      "cvss": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0261"
+      ],
+      "maswe": [
+        "MASWE-0061",
+        "MASWE-0063",
+        "MASWE-0049"
+      ],
+      "solove": []
+    },
+    "SECH-07": {
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0266",
+        "MASTG-TEST-0268"
+      ],
+      "maswe": [
+        "MASWE-0020",
+        "MASWE-0021",
+        "MASWE-0016"
+      ],
+      "solove": []
+    },
+    "SECH-08": {
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0273",
+        "MASTG-TEST-0275"
+      ],
+      "maswe": [
+        "MASWE-0044"
+      ],
+      "solove": []
+    },
+    "SURV-01": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0069",
+        "MASWE-0068"
+      ],
+      "solove": []
+    },
+    "SURV-02": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0240",
+        "MASTG-TEST-0401"
+      ],
+      "maswe": [
+        "MASWE-0064",
+        "MASWE-0065",
+        "MASWE-0051"
+      ],
+      "solove": []
+    },
+    "SURV-03": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0069",
+        "MASWE-0073"
+      ],
+      "solove": []
+    },
+    "SURV-04": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0391"
+      ],
+      "maswe": [
+        "MASWE-0059",
+        "MASWE-0060"
+      ],
+      "solove": []
+    },
+    "SURV-05": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0048",
+        "MASWE-0055"
+      ],
+      "solove": []
+    },
+    "TGAP-01": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0073",
+        "MASWE-0074"
+      ],
+      "solove": []
+    },
+    "TGAP-02": {
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 25"
+      ],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0078",
+        "MASWE-0070"
+      ],
+      "solove": []
+    },
+    "TGAP-03": {
+      "gdpr": [
+        "Art. 8"
+      ],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0078",
+        "MASWE-0071",
+        "MASWE-0073"
+      ],
+      "solove": []
+    },
+    "TRK-01": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [
+        "MASTG-TEST-0281"
+      ],
+      "maswe": [
+        "MASWE-0068",
+        "MASWE-0074",
+        "MASWE-0067"
+      ],
+      "solove": []
+    },
+    "TRK-02": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0068",
+        "MASWE-0067",
+        "MASWE-0076"
+      ],
+      "solove": []
+    },
+    "TRK-04": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0076",
+        "MASWE-0074"
+      ],
+      "solove": []
+    },
+    "TRK-05": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0067",
+        "MASWE-0073",
+        "MASWE-0076"
+      ],
+      "solove": []
+    },
+    "SECH-09": {
+      "gdpr": [],
+      "linddun": [],
+      "mastg": [],
+      "maswe": [
+        "MASWE-0041",
+        "MASWE-0042"
+      ],
+      "solove": []
+    }
+  },
+  "frameworkVersions": {
+    "attackMobile": "18.1",
+    "cvss": "4.0",
+    "mastg": "2.0.0",
+    "masvs": "2.1.0",
+    "maswe": "1.0.0"
+  }
+}

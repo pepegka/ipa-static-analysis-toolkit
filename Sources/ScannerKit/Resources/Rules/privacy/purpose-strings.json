@@ -1,0 +1,6 @@
+{
+  "source": "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0360/",
+  "placeholderWords": ["todo", "fixme", "tbd", "lorem ipsum", "placeholder", "your description here", "usage description"],
+  "templateSuffix": " description",
+  "templateMaxWords": 5
+}

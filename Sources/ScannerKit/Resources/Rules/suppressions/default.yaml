@@ -1,0 +1,13 @@
+- id: ignore-stdlib-debug-paths
+  reason: >
+    /bin/bash / /etc/apt / /usr/sbin/sshd appear as literal strings inside Swift
+    debug-info and Foundation error formatters even on stock builds. Only treat
+    them as jailbreak-probe evidence when at least one true jailbreak path
+    (Cydia, Sileo, MobileSubstrate, jailbreakd) is also present nearby; those
+    rules fire under a separate ruleID.
+  rule_id: SURV-02.jailbreak_file_paths
+  value_pattern: "^(/bin/bash|/etc/apt|/usr/sbin/sshd)$"
+
+- id: ignore-localized-strings-bundles
+  reason: Localized .strings files in language bundles aren't jailbreak signals.
+  binary_glob: "*.lproj/*"

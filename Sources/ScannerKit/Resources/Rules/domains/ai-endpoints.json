@@ -1,0 +1,51 @@
+{
+  "llmEndpoints": [
+    "api.openai.com",
+    "api.anthropic.com",
+    "generativelanguage.googleapis.com",
+    "api.mistral.ai",
+    "openrouter.ai",
+    "api.cohere.ai",
+    "api.perplexity.ai",
+    ".openai.azure.com",
+    "api.deepseek.com",
+    "api.x.ai",
+    "api.groq.com"
+  ],
+  "sttEndpoints": [
+    "api.deepgram.com",
+    "api.assemblyai.com",
+    "speech.googleapis.com",
+    "api.rev.ai"
+  ],
+  "llmSDKSymbols": [
+    "OpenAI",
+    "AnthropicSwift",
+    "GoogleGenerativeAI",
+    "FirebaseVertexAI",
+    "VertexAI",
+    "LangChain",
+    "MLCSwift",
+    "LlamaCpp",
+    "SwiftOpenAI",
+    "GoogleAI"
+  ],
+  "screenshotAPIs": [
+    "UIGraphicsImageRenderer",
+    "drawViewHierarchyInRect",
+    "CGWindowListCreateImage",
+    "snapshotViewAfterScreenUpdates",
+    "UIGraphicsBeginImageContext"
+  ],
+  "onDeviceML": [
+    "VNCoreMLModel",
+    "MLModelConfiguration",
+    "SystemLanguageModel",
+    "FoundationModels",
+    "MLCModel"
+  ],
+  "speechAPIs": [
+    "SFSpeechRecognizer",
+    "SFSpeechAudioBufferRecognitionRequest"
+  ]
+}

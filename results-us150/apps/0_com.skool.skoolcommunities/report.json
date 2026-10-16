@@ -1,0 +1,2373 @@
+{
+  "ats" : {
+    "allowsArbitraryLoads" : false,
+    "allowsArbitraryLoadsForMedia" : false,
+    "allowsArbitraryLoadsInWebContent" : false,
+    "allowsLocalNetworking" : false,
+    "exceptionDomains" : [
+      {
+        "allowsInsecureHTTPLoads" : true,
+        "domain" : "192.168.125.6",
+        "includesSubdomains" : true
+      },
+      {
+        "allowsInsecureHTTPLoads" : true,
+        "domain" : "localhost",
+        "includesSubdomains" : true
+      },
+      {
+        "allowsInsecureHTTPLoads" : true,
+        "domain" : "localhost.skool.com",
+        "includesSubdomains" : true
+      }
+    ]
+  },
+  "coverage" : {
+    "binaries" : 1,
+    "binariesWithReadableText" : 0,
+    "stringOnlyRules" : [
+      "DCS-01.battery_uptime_telemetry",
+      "DCS-01.sysctl_hw_kern",
+      "DCS-04.touch_data_struct",
+      "DCS-06.remote_control_apps",
+      "PLAT-01.file_url_access",
+      "PLAT-01.js_bridge_all_frames",
+      "SECH-01.disabled_cert_validation",
+      "SECH-02.file_protection_none",
+      "SECH-02.keychain_accessible_always",
+      "SECH-02.userdefaults_credentials",
+      "SECH-03.embedded_certificates",
+      "SECH-03.government_root_ca",
+      "SURV-01.gis_vpn_endpoint",
+      "SURV-01.ip_check_endpoints",
+      "SURV-01.max_obfuscated_interfaces",
+      "SURV-01.tor_detect",
+      "SURV-01.utun_interface_string",
+      "SURV-01.vpn_challenge_block",
+      "SURV-01.vpn_flag_in_telemetry",
+      "SURV-01.vpn_mtu_heuristic",
+      "SURV-01.vpn_probability_model",
+      "SURV-01.yandex_checkvpn_endpoint",
+      "SURV-02.cydia_substrate",
+      "SURV-02.frida_indicators",
+      "SURV-02.is_jailbroken_naming",
+      "SURV-02.jailbreak_file_paths",
+      "SURV-02.jailbreak_url_schemes",
+      "SURV-04.byte_array_constants",
+      "SURV-04.runtime_string_decode",
+      "SURV-04.tampered_classnames",
+      "SURV-05.amnesty_mvt_domains",
+      "SURV-05.candiru_devilstongue",
+      "SURV-05.finfisher",
+      "SURV-05.hermit_rcs",
+      "SURV-05.lockdown_bypass_strings",
+      "SURV-05.paragon_graphite",
+      "SURV-05.pegasus_nso_strings",
+      "SURV-05.predator_intellexa",
+      "SURV-05.reign_quadream",
+      "SURV-05.stalkerware_capabilities",
+      "SURV-05.stalkerware_domains",
+      "SURV-05.stalkerware_families",
+      "SURV-05.triangulation_triangledb",
+      "TRK-01.huawei_hms",
+      "TRK-01.kaspersky_vpn_client_status",
+      "TRK-01.mailru_vpn_probability",
+      "TRK-01.ok_tracer",
+      "TRK-02.anomaly_six",
+      "TRK-02.babel_street",
+      "TRK-02.predicio_cuebiq",
+      "TRK-02.safegraph",
+      "TRK-02.vermillion_strike",
+      "TRK-03.carrier_geo_sdk",
+      "TRK-03.egov_identity_endpoint",
+      "TRK-03.lawful_intercept_markers",
+      "TRK-03.regional_ecosystem_domains",
+      "TRK-03.regional_payment_systems"
+    ]
+  },
+  "createdAt" : "2026-09-30T20:36:25Z",
+  "fileManifest" : [
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon60x60@2x.png",
+      "relativePath" : "AppIcon60x60@2x.png",
+      "sha256" : "2b279cfc3869f947e3dfea3deb9ca7760e443f3e834460a95d8ebc49c236062a",
+      "sizeBytes" : 3442
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon76x76@2x~ipad.png",
+      "relativePath" : "AppIcon76x76@2x~ipad.png",
+      "sha256" : "92afc34de9543723df19f0f916ac1c614535a3d0947e5de81fa0d4e738575a5f",
+      "sizeBytes" : 4219
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "Assets.car",
+      "relativePath" : "Assets.car",
+      "sha256" : "b52613dd1733a8298ae290e994645aabec44e5b70c8604afccc5f7a8153ba9af",
+      "sizeBytes" : 824984
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "01J-lp-oVM-view-Ze5-6b-2t3.nib",
+      "relativePath" : "Base.lproj\/LaunchScreen~iphone.storyboardc\/01J-lp-oVM-view-Ze5-6b-2t3.nib",
+      "sha256" : "d4099e57b90d1580c882252f19dc20df8fc4b1cac06c1f611784910339168922",
+      "sizeBytes" : 2091
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Base.lproj\/LaunchScreen~iphone.storyboardc\/Info.plist",
+      "sha256" : "1f255d5cc53b531e3f29a9406a8df49a958e2bf9443d3e20bd8374f707f7d5c8",
+      "sizeBytes" : 258
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "UIViewController-01J-lp-oVM.nib",
+      "relativePath" : "Base.lproj\/LaunchScreen~iphone.storyboardc\/UIViewController-01J-lp-oVM.nib",
+      "sha256" : "54f3637f671feba5f19e82ec4f4a7fb448bb3cfc0fb180f089aa571fc8f053e2",
+      "sizeBytes" : 924
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Info.plist",
+      "sha256" : "c8efc2894ce621bd0828f801efd8fda51033c428421e9cc87a488fae5c5fed62",
+      "sizeBytes" : 6174
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "LaunchScreen~ipad.storyboardc\/Info.plist",
+      "sha256" : "4f8503b465178448f39d1fa679cfebe28005ece6876edd41a05db5bd6b7c6141",
+      "sizeBytes" : 258
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "UIViewController-Y6W-OH-hqX.nib",
+      "relativePath" : "LaunchScreen~ipad.storyboardc\/UIViewController-Y6W-OH-hqX.nib",
+      "sha256" : "1d3b9ef8a36248c2d8b18b08126447019b5604897562297c11c28e8002b15839",
+      "sizeBytes" : 924
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Y6W-OH-hqX-view-5EZ-qb-Rvc.nib",
+      "relativePath" : "LaunchScreen~ipad.storyboardc\/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib",
+      "sha256" : "facde05735cd9cf5d90bee198d1d14f255db1e6bfd3387e6f01d054a625bdbd0",
+      "sizeBytes" : 2080
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "PkgInfo",
+      "relativePath" : "PkgInfo",
+      "sha256" : "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "sizeBytes" : 8
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "PrivacyInfo.xcprivacy",
+      "sha256" : "dc8d7e1f9a7da7f3381f30746b59206ee62ce225b69fe3bcbb66234f8459be35",
+      "sizeBytes" : 461
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "text",
+      "name" : "README.md",
+      "relativePath" : "README.md",
+      "sha256" : "053524f902f5db75d1106886cd44a1fc4960fc8dddd27ed69284cbb6433d7d7d",
+      "sizeBytes" : 20484
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Manifest.plist",
+      "relativePath" : "SC_Info\/Manifest.plist",
+      "sha256" : "cb0793397daafde87c0818d40a9be3ad46966e06819ee3bc76439b60355a9bee",
+      "sizeBytes" : 381
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.sinf",
+      "relativePath" : "SC_Info\/Skool Communities.sinf",
+      "sha256" : "2312dcc2bfd48da3c40f04996f1b2577b0b05865e3e8825cfaa788672762e368",
+      "sizeBytes" : 1048
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.supf",
+      "relativePath" : "SC_Info\/Skool Communities.supf",
+      "sha256" : "e54c32b9d29ffc8e83877473e66036cda04928cf23c354e9fbb6ff2afe225c9e",
+      "sizeBytes" : 4092
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.supp",
+      "relativePath" : "SC_Info\/Skool Communities.supp",
+      "sha256" : "ae9f8315e2ba5aaf22a9baafc7df1f3fbb5757976dbce1d76eb3756ae2698004",
+      "sizeBytes" : 4196
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.supx",
+      "relativePath" : "SC_Info\/Skool Communities.supx",
+      "sha256" : "2768fdeb3d101855f4d7b95e899e8b35de04128c74eeae18348ff799fb86f4ae",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.v4.supp",
+      "relativePath" : "SC_Info\/Skool Communities.v4.supp",
+      "sha256" : "c733a3ac9bb76b98f489c60db103b724a242e9a85f478a53960a5ea36b158083",
+      "sizeBytes" : 4176
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Skool Communities.v5.supf",
+      "relativePath" : "SC_Info\/Skool Communities.v5.supf",
+      "sha256" : "9293b46796c2c46257a361f09f477b67621bf38de009be725901a3724ef16ab6",
+      "sizeBytes" : 4072
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "Skool Communities",
+      "relativePath" : "Skool Communities",
+      "sha256" : "7ce4982ba6faa5bc6c4f51b294acd60de9e66cad340ec4e7277641be46c86d44",
+      "sizeBytes" : 627024
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "_CodeSignature\/CodeResources",
+      "sha256" : "84900af38b7772e2a51fbdccfacbee08b45232492692e0db9d502d2622f84cd7",
+      "sizeBytes" : 7165
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "media",
+      "name" : "new_customer.wav",
+      "relativePath" : "new_customer.wav",
+      "sha256" : "daf1e0ce4511843138d4a1334256e1dca983ae4fd6a8e91abd04c9af552aa7d4",
+      "sizeBytes" : 27601
+    }
+  ],
+  "findings" : [
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cvss" : "CVSS:4.0\/AV:N\/AC:H\/AT:N\/PR:N\/UI:N\/VC:L\/VI:L\/VA:N\/SC:N\/SI:N\/SA:N",
+      "cwe" : [
+        "CWE-319"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "192.168.125.6 insecureHTTP=true minTLS=default forwardSecrecy=default"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "localhost insecureHTTP=true minTLS=default forwardSecrecy=default"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "localhost.skool.com insecureHTTP=true minTLS=default forwardSecrecy=default"
+        }
+      ],
+      "explanation" : "One or more NSExceptionDomains allow cleartext HTTP loads, a TLS version below 1.2, or connections without forward secrecy. MASTG-TEST-0322 and MASTG-TEST-0342 fail on these settings.",
+      "gdpr" : [
+
+      ],
+      "id" : "58BBC4BC-BBBF-4A6F-9BFC-A8475E53B2A5",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0342"
+      ],
+      "masvs" : [
+        "MASVS-NETWORK"
+      ],
+      "masvsControls" : [
+        "MASVS-NETWORK-1"
+      ],
+      "maswe" : [
+        "MASWE-0026"
+      ],
+      "metrics" : {
+        "count" : "3"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/nsapptransportsecurity",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-NETWORK\/MASWE-0026\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-NETWORK\/MASTG-TEST-0322\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-NETWORK\/MASTG-TEST-0342\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0042\/"
+      ],
+      "remediation" : "Remove NSExceptionAllowsInsecureHTTPLoads, require NSExceptionMinimumTLSVersion of TLSv1.2 or higher, and keep NSExceptionRequiresForwardSecrecy at its default for each exception domain.",
+      "ruleID" : "SECH-01.insecure_exception_domains",
+      "severity" : "medium",
+      "solove" : [
+
+      ],
+      "title" : "ATS exception domains permit cleartext or weak TLS (3)",
+      "vectorID" : "SECH-01",
+      "why" : "Per-domain ATS exceptions: the hole is real but bounded to the listed hosts."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "audio"
+        }
+      ],
+      "explanation" : "UIBackgroundModes contains \"audio\", keeps the app alive in the background. Music \/ podcast \/ VoIP apps need this legitimately, so it ships at low severity; pair with S04\/S08 sensor rules to assess intent.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "48C1F2FA-5982-4429-9EC6-2CC838B8FBB9",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+        "NSMicrophoneUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSMicrophoneUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "ruleID" : "DCS-05.background_audio_mode",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Background audio mode (persistence channel)",
+      "vectorID" : "DCS-05",
+      "why" : "Camera and screen capture APIs. Capture alone meets none of the WP248 criteria."
+    },
+    {
+      "affectedBinaries" : [
+        "Skool Communities"
+      ],
+      "cwe" : [
+        "CWE-749",
+        "CWE-94"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "Skool Communities",
+          "value" : "_OBJC_CLASS_$_WKUserScript"
+        }
+      ],
+      "explanation" : "WKUserScript injects JS at document start\/end on every load, useful for telemetry and credential interception.",
+      "gdpr" : [
+
+      ],
+      "id" : "98F7FDAF-450A-43ED-BC74-910193F963BB",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-PLATFORM-2",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0033"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/webkit\/wkuserscript",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0033\/"
+      ],
+      "ruleID" : "PLAT-01.user_script_injection",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "WKUserScript injection",
+      "vectorID" : "PLAT-01",
+      "why" : "The app injects a user script into its WebView."
+    },
+    {
+      "affectedBinaries" : [
+        "Skool Communities"
+      ],
+      "cwe" : [
+        "CWE-601",
+        "CWE-79",
+        "CWE-829"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "Skool Communities",
+          "value" : "_OBJC_CLASS_$_WKWebView"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "Skool Communities",
+          "value" : "_OBJC_CLASS_$_WKWebViewConfiguration"
+        }
+      ],
+      "explanation" : "WKWebView is the iOS embedded browser.",
+      "gdpr" : [
+
+      ],
+      "id" : "6C6CCE0D-7ED3-4AD2-82B2-583BE263E5F8",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4",
+        "MASVS-PLATFORM-2"
+      ],
+      "maswe" : [
+        "MASWE-0035"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/webkit\/wkwebview",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0035\/"
+      ],
+      "ruleID" : "PLAT-01.wkwebview_use",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "WKWebView in use",
+      "vectorID" : "PLAT-01",
+      "why" : "The app embeds a WebView."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-939"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "skool:\/\/"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "skoolmobile:\/\/"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "skoolremote:\/\/"
+        }
+      ],
+      "explanation" : "The app registers custom URL scheme(s) via CFBundleURLSchemes. Any app or web page can invoke these; if application(_:open:options:) acts on unvalidated parameters, this is an entry point for unauthorized actions. Custom schemes are also unverified (unlike Universal Links). Review the handler for input validation.",
+      "gdpr" : [
+
+      ],
+      "id" : "A6ABD625-E305-4F97-AC7D-585CB1CF2764",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4",
+        "MASVS-PLATFORM-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0029"
+      ],
+      "metrics" : {
+        "count" : "3",
+        "s" : "s"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/xcode\/defining-a-custom-url-scheme-for-your-app",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0029\/"
+      ],
+      "remediation" : "Validate and sanitize every parameter in application(_:open:options:); never trigger sensitive actions from a URL without authentication. Prefer Universal Links (verified) over custom schemes.",
+      "ruleID" : "PLAT-02.custom_url_schemes",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Registers 3 custom URL schemes (inbound deep-link surface)",
+      "vectorID" : "PLAT-02",
+      "why" : "The app registers custom URL schemes. MASWE-0029 makes them a weakness when a sensitive flow relies on them or the handler does not validate input, which MASTG-TEST-0370 and -0371 read from the handler code."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "audio"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "fetch"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "voip"
+        }
+      ],
+      "explanation" : "Legal iOS background-execution channels. `location`\/`voip` enable persistent background execution and are the strongest signal; `audio`\/`external-accessory` are moderate; `fetch`\/`remote-notification`\/`processing` are routine and declared by most apps.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "A2F8CFCF-B710-4F5E-AF92-F32602C49B0B",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "modes" : "audio, fetch, voip"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "remediation" : "Declare only the background modes the app actually needs; each is reviewed by App Review and must map to genuine user-facing functionality, not background telemetry.",
+      "ruleID" : "PLAT-04.background_modes",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Background modes declared: audio, fetch, voip",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "voip"
+        }
+      ],
+      "explanation" : "VoIP background mode keeps the app alive indefinitely.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "112693AF-5A75-4033-8983-71D380CBF4DA",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "ruleID" : "PLAT-04.bg_voip_mode",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "UIBackgroundModes contains \"voip\"",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-295"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSPinnedDomains absent"
+        }
+      ],
+      "explanation" : "The app declares ATS exception domains but no NSPinnedDomains, so connections to those hosts rely solely on the system trust store. Consider pinning leaf\/intermediate keys for sensitive endpoints.",
+      "gdpr" : [
+
+      ],
+      "id" : "2D35F097-BA22-414B-9326-5A052B243BCC",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0385"
+      ],
+      "masvs" : [
+        "MASVS-NETWORK"
+      ],
+      "masvsControls" : [
+        "MASVS-NETWORK-2"
+      ],
+      "maswe" : [
+        "MASWE-0028"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-NETWORK\/MASWE-0028\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-NETWORK\/MASTG-TEST-0385\/"
+      ],
+      "remediation" : "For sensitive endpoints, add NSPinnedDomains pinning the leaf\/intermediate public-key hashes, so a compromised or coerced CA cannot man-in-the-middle the connection.",
+      "ruleID" : "SECH-01.missing_pinning",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "No ATS certificate pinning (NSPinnedDomains) despite exception domains",
+      "vectorID" : "SECH-01",
+      "why" : "Absence of pinning is not a vulnerability - TLS still validates. It is defence-in-depth that this app does not have, which is worth recording and not worth a severity."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "aps-environment"
+        }
+      ],
+      "explanation" : "aps-environment entitlement, push notifications.",
+      "gdpr" : [
+
+      ],
+      "id" : "ED1F5121-4CFF-457B-A75B-4591F3E3AB49",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/aps-environment",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.aps_environment_production",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "APS push environment",
+      "vectorID" : "SECH-06",
+      "why" : "Push environment the build targets."
+    },
+    {
+      "affectedBinaries" : [
+        "Skool Communities"
+      ],
+      "cwe" : [
+        "CWE-494"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "Skool Communities",
+          "value" : "_dlsym"
+        }
+      ],
+      "explanation" : "The binary imports dlopen\/dlsym, so it can resolve and call code chosen at runtime rather than at link time. That is how optional frameworks, plugin architectures and A\/B-tested SDKs are loaded, and it is entirely normal, so this ships as INFO inventory rather than a weakness. It matters only as context: an app that also carries obfuscation (SURV-04) or a data broker (TRK-02) can assemble behaviour a static scan cannot see, and dynamic code loading is the mechanism that makes that possible. Note the limit of the signal: an import proves the symbol is linked, not that it is ever called, and iOS forbids loading code that is not already in the signed bundle. (MASWE-0049)",
+      "gdpr" : [
+
+      ],
+      "id" : "1E8C4715-5ADF-4EBC-A8CF-F0AB15AB9827",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4"
+      ],
+      "maswe" : [
+        "MASWE-0049"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0049\/"
+      ],
+      "ruleID" : "SECH-06.dynamic_loader_imports",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Dynamic loader in use (dlopen \/ dlsym)",
+      "vectorID" : "SECH-06",
+      "why" : "dlopen\/dlsym are present in the binary."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[4]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[10]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[9]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[0]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[3]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[1]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[2]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[6]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[7]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[5]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[8]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.developer.associated-domains[11]"
+        }
+      ],
+      "explanation" : "com.apple.developer.associated-domains, handles universal links \/ web credentials.",
+      "gdpr" : [
+
+      ],
+      "id" : "1B2DCBFE-CAD4-4E54-995F-4DF03224F5DA",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/com.apple.developer.associated-domains",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.universal_links_associated",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Associated domains \/ universal links",
+      "vectorID" : "SECH-06",
+      "why" : "Associated domains the app claims."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-1104",
+        "CWE-1357",
+        "CWE-451",
+        "CWE-693"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:MinimumOSVersion",
+          "value" : "13.0"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:DTPlatformVersion",
+          "value" : "26.5"
+        }
+      ],
+      "explanation" : "Info.plist records MinimumOSVersion 13.0, the iOS 26.5 SDK (iphoneos26.5) and Xcode 26.6. The minimum decides which platform protections the app can count on; the SDK decides which current platform behaviour it opts into.",
+      "gdpr" : [
+
+      ],
+      "id" : "1281E276-7AD6-411D-BB48-11CE6B53A6F3",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-1"
+      ],
+      "maswe" : [
+        "MASWE-0041",
+        "MASWE-0042"
+      ],
+      "metrics" : {
+        "minOS" : "13.0",
+        "sdk" : "26.5",
+        "sdkName" : "iphoneos26.5",
+        "xcode" : "26.6"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/minimumosversion",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0041\/",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0042\/"
+      ],
+      "ruleID" : "SECH-09.platform_versions",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Supports iOS 13.0 and later; built with the iOS 26.5 SDK",
+      "vectorID" : "SECH-09",
+      "why" : "Records the minimum iOS version and the SDK the app was built with."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "fetch"
+        }
+      ],
+      "explanation" : "UIBackgroundModes contains \"fetch\", system schedules periodic background wake-ups for opportunistic data sync. \"processing\", \"remote-notification\" and \"voip\" are covered by S12 (system persistence) and S19 (push channels).",
+      "gdpr" : [
+
+      ],
+      "id" : "A08BC3B1-7B3C-4F75-B767-6706F17B71D1",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "ruleID" : "SURV-03.background_fetch",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Background fetch mode (UIBackgroundModes \"fetch\")",
+      "vectorID" : "SURV-03"
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "www.apple.com"
+        }
+      ],
+      "explanation" : "The bundle references 1 endpoint(s) whose owner is based in US, owners: Apple. The country is the owning organisation's home jurisdiction from the tracker database, not where a server is hosted, and a referenced endpoint is not observed traffic. If the app sends personal data there, it is a third-country transfer: whether that is lawful depends on the safeguards, purpose and paperwork behind it, none of which is visible in a binary. US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+      "gdpr" : [
+        "Art. 44",
+        "Art. 46",
+        "Art. 49"
+      ],
+      "id" : "DDADF052-6058-443B-B50D-0BBC605A968E",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "adequacyNote" : " US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+        "count" : "1",
+        "country" : "US",
+        "ownersNote" : ", owners: Apple",
+        "s" : ""
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/eur-lex.europa.eu\/legal-content\/EN\/TXT\/?uri=CELEX%3A32016R0679"
+      ],
+      "ruleID" : "TRK-04.egress.us",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Endpoints owned by US-based organisations (1 endpoint)",
+      "vectorID" : "TRK-04",
+      "why" : "Where the endpoint owner is registered. International transfer is GDPR Chapter V, not a WP248 criterion."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "file",
+          "source" : "Skool Communities",
+          "value" : "Skool Communities"
+        }
+      ],
+      "explanation" : "The main Mach-O is encrypted by the App Store. Static string scanning of its TEXT segment won't work without a decrypted dump (e.g., via frida-ios-dump or bagbak on a jailbroken device). Embedded frameworks and dylibs are USUALLY ENCRYPTED TOO (measured 91% across the reference corpus; in half of apps every Mach-O is encrypted), so TEXT-segment string recall is limited bundle-wide, not just for the main binary. What still survives encryption is __LINKEDIT: symbols, imported\/defined symbol names, ObjC selectors and linked dylibs, which is why symbol-based detection carries this scan rather than string matching.",
+      "gdpr" : [
+
+      ],
+      "id" : "478306CE-61C0-4D42-B492-669719B0FD24",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-RESILIENCE"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASTG\/techniques\/ios\/MASTG-TECH-0054\/#decrypting-the-app-binary"
+      ],
+      "remediation" : "For full TEXT-segment coverage, supply a decrypted .ipa produced by frida-ios-dump or bagbak from a jailbroken device. Resource files, plists, entitlements, symbols, selectors and linked dylibs are still scanned in the meantime.",
+      "ruleID" : "meta.fairplay_main",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Main executable is FairPlay-encrypted",
+      "vectorID" : "SURV-02",
+      "why" : "Scan metadata: what the scanner could and could not see."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSAppleMusicUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable media library to attach media to posts"
+        }
+      ],
+      "explanation" : "Apple Music library access",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "6DBCECE1-489D-4AC3-A8B7-7BD11DDEABC8",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSAppleMusicUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSAppleMusicUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSAppleMusicUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Apple Music library access",
+      "vectorID" : "DCS-03",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSCalendarsUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable calendar access to update community events"
+        }
+      ],
+      "explanation" : "Calendar events access",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "118F3AB9-AB19-4F1A-B8A3-B9E6A40D9B7C",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSCalendarsUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSCalendarsFullAccessUsageDescription",
+        "NSCalendarsUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSCalendarsUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Calendar events access",
+      "vectorID" : "DCS-03",
+      "why" : "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSCameraUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable camera to attach photos to posts"
+        }
+      ],
+      "explanation" : "Camera access",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "69BB49E4-ECAF-4064-BD95-9A54434EBD2D",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSCameraUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSCameraUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSCameraUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Camera access",
+      "vectorID" : "DCS-05",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSContactsUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable contacts to lookup addresses and emails"
+        }
+      ],
+      "explanation" : "Address book \/ contacts access",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "4FA6BD05-BD37-49EF-B1DE-4BD45E0E967F",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSContactsUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSContactsUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSContactsUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Address book \/ contacts access",
+      "vectorID" : "DCS-03",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSDocumentsFolderUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable folder access to attach files to posts"
+        }
+      ],
+      "explanation" : "The user's Documents folder (Catalyst\/macOS)",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "B01FC3EE-3F5A-40FD-8E8E-A7B951CD9A99",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSDocumentsFolderUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: The user's Documents folder (Catalyst\/macOS)",
+      "vectorID" : "DCS-03",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSFileProviderDomainUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable file access to attach files to posts."
+        }
+      ],
+      "explanation" : "Files managed by other file providers",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "F0BD118E-D5F5-4E29-8258-DA7B30CF6BDF",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSFileProviderDomainUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Files managed by other file providers",
+      "vectorID" : "DCS-03",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSPhotoLibraryUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Enable photo access to attach photos to posts"
+        }
+      ],
+      "explanation" : "Photo library read",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "FE10A71C-DE7D-4AF2-B72C-1C43B60B5CE7",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSPhotoLibraryUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSPhotoLibraryAddUsageDescription",
+        "NSPhotoLibraryUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSPhotoLibraryUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Photo library read",
+      "vectorID" : "DCS-03",
+      "why" : "The photo library holds personal documents and the location each photo was taken, data of a highly personal nature under WP248 criterion 4. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "NSPrivacyAccessedAPICategoryUserDefaults"
+        }
+      ],
+      "explanation" : "UserDefaults and App Groups: a common covert channel between apps from the same developer.",
+      "gdpr" : [
+
+      ],
+      "id" : "20923459-C4D0-471C-8011-7730BA5A8C65",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.NSPrivacyAccessedAPICategoryUserDefaults",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Privacy manifest declares accessed API: NSPrivacyAccessedAPICategoryUserDefaults",
+      "vectorID" : "SURV-03",
+      "why" : "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    }
+  ],
+  "frameworks" : {
+    "attackMobile" : "18.1",
+    "cvss" : "4.0",
+    "mastg" : "2.0.0",
+    "masvs" : "2.1.0",
+    "maswe" : "1.0.0"
+  },
+  "hardening" : [
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "Skool Communities",
+      "relativePath" : "Skool Communities"
+    }
+  ],
+  "id" : "195AFB39-BA42-4394-AEE5-4561BABE7877",
+  "metadata" : {
+    "allowsArbitraryLoads" : false,
+    "associatedDomains" : [
+      "andy.skool.com",
+      "chat.skool.com",
+      "help.skool.com",
+      "link.notifs.skool.com",
+      "link.skool.com",
+      "linktest.skool.com",
+      "minh.skool.com",
+      "peacock.skool.com",
+      "skool.com",
+      "staging.skool.com",
+      "www.skool.com",
+      "www2.skool.com"
+    ],
+    "backgroundModes" : [
+      "fetch",
+      "audio",
+      "voip"
+    ],
+    "bundleID" : "com.skool.skoolcommunities",
+    "bundleName" : "Skool Communities",
+    "bundleVersion" : "2",
+    "displayName" : "Skool",
+    "embeddedBinaries" : [
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/AudioToolbox.framework\/AudioToolbox",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreGraphics.framework\/CoreGraphics",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/System\/Library\/Frameworks\/WebKit.framework\/WebKit",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/swift\/libswiftAVFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreAudio.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreGraphics.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMIDI.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMedia.dylib",
+          "\/usr\/lib\/swift\/libswiftDarwin.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUIKit.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib"
+        ],
+        "name" : "Skool Communities",
+        "relativePath" : "Skool Communities",
+        "sizeBytes" : 627024
+      }
+    ],
+    "embeddedFrameworks" : [
+
+    ],
+    "executableName" : "Skool Communities",
+    "infoPlistKeys" : [
+      "BGTaskSchedulerPermittedIdentifiers",
+      "BuildMachineOSBuild",
+      "CFBundleDevelopmentRegion",
+      "CFBundleDisplayName",
+      "CFBundleExecutable",
+      "CFBundleIcons",
+      "CFBundleIcons~ipad",
+      "CFBundleIdentifier",
+      "CFBundleInfoDictionaryVersion",
+      "CFBundleName",
+      "CFBundlePackageType",
+      "CFBundleShortVersionString",
+      "CFBundleSupportedPlatforms",
+      "CFBundleURLTypes",
+      "CFBundleVersion",
+      "DTAppStoreToolsBuild",
+      "DTCompiler",
+      "DTPlatformBuild",
+      "DTPlatformName",
+      "DTPlatformVersion",
+      "DTSDKBuild",
+      "DTSDKName",
+      "DTXcode",
+      "DTXcodeBuild",
+      "ITSAppUsesNonExemptEncryption",
+      "LSRequiresIPhoneOS",
+      "MinimumOSVersion",
+      "NSAppTransportSecurity",
+      "NSAppleMusicUsageDescription",
+      "NSCalendarsUsageDescription",
+      "NSCameraUsageDescription",
+      "NSContactsUsageDescription",
+      "NSDocumentsFolderUsageDescription",
+      "NSFileProviderDomainUsageDescription",
+      "NSLocationUsageDescription",
+      "NSMicrophoneUsageDescription",
+      "NSPhotoLibraryUsageDescription",
+      "NSUserNotificationsUsageDescription",
+      "UIApplicationSceneManifest",
+      "UIApplicationSupportsIndirectInputEvents",
+      "UIBackgroundModes",
+      "UIDeviceFamily",
+      "UILaunchStoryboardName~ipad",
+      "UILaunchStoryboardName~iphone",
+      "UIRequiredDeviceCapabilities",
+      "UIRequiresFullScreen",
+      "UISupportedInterfaceOrientations",
+      "UISupportedInterfaceOrientations~ipad"
+    ],
+    "minimumOSVersion" : "13.0",
+    "permissions" : [
+      {
+        "category" : "Apple Music library access",
+        "key" : "NSAppleMusicUsageDescription",
+        "value" : "Enable media library to attach media to posts",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "category" : "Calendar events access",
+        "key" : "NSCalendarsUsageDescription",
+        "value" : "Enable calendar access to update community events",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "category" : "Camera access",
+        "key" : "NSCameraUsageDescription",
+        "value" : "Enable camera to attach photos to posts",
+        "vectorID" : "DCS-05"
+      },
+      {
+        "category" : "Address book \/ contacts access",
+        "key" : "NSContactsUsageDescription",
+        "value" : "Enable contacts to lookup addresses and emails",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "category" : "The user's Documents folder (Catalyst\/macOS)",
+        "key" : "NSDocumentsFolderUsageDescription",
+        "value" : "Enable folder access to attach files to posts",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "category" : "Files managed by other file providers",
+        "key" : "NSFileProviderDomainUsageDescription",
+        "value" : "Enable file access to attach files to posts.",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "key" : "NSLocationUsageDescription",
+        "value" : "Enable location to tag location in posts"
+      },
+      {
+        "category" : "Microphone access (eavesdropping risk)",
+        "key" : "NSMicrophoneUsageDescription",
+        "value" : "Enable microphone to access videos in posts",
+        "vectorID" : "DCS-05"
+      },
+      {
+        "category" : "Photo library read",
+        "key" : "NSPhotoLibraryUsageDescription",
+        "value" : "Enable photo access to attach photos to posts",
+        "vectorID" : "DCS-03"
+      },
+      {
+        "key" : "NSUserNotificationsUsageDescription",
+        "value" : "Enable push notifications to be prompted when there is activity in your communities or posts."
+      }
+    ],
+    "privacyAccessedAPIReasons" : [
+      "CA92.1"
+    ],
+    "privacyAccessedAPIs" : [
+      "NSPrivacyAccessedAPICategoryUserDefaults"
+    ],
+    "privacyManifestPath" : "PrivacyInfo.xcprivacy",
+    "privacyTrackingDomains" : [
+
+    ],
+    "queriedURLSchemes" : [
+
+    ],
+    "shortVersion" : "1.1.21",
+    "signedIdentifier" : "com.skool.skoolcommunities",
+    "signedTeamID" : "WHH5JG3SL7",
+    "storeGenre" : "Social Networking",
+    "supportedPlatforms" : [
+      "iPhoneOS"
+    ],
+    "urlSchemes" : [
+      "skool",
+      "skoolmobile",
+      "skoolremote"
+    ]
+  },
+  "network" : {
+    "detectedSDKs" : [
+      {
+        "category" : "ecosystem",
+        "country" : "US",
+        "endpoints" : [
+          "www.apple.com"
+        ],
+        "evidenceCount" : 1,
+        "frameworks" : [
+          "(main)"
+        ],
+        "isTracker" : false,
+        "name" : "Apple",
+        "owner" : "Apple",
+        "trackerID" : "apple.core"
+      }
+    ],
+    "endpoints" : [
+      {
+        "category" : "ecosystem",
+        "cleartext" : true,
+        "country" : "US",
+        "host" : "www.apple.com",
+        "isTracker" : false,
+        "occurrenceCount" : 1,
+        "owner" : "Apple",
+        "registrableDomain" : "apple.com",
+        "samplePaths" : [
+          "\/DTDs\/PropertyList-1.0.dtd"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "SC_Info\/Manifest.plist"
+        ],
+        "trackerID" : "apple.core"
+      }
+    ]
+  },
+  "notes" : [
+    "Main binary is FairPlay-encrypted, TEXT-segment strings are unavailable. Resource files, symbols, and dylibs were still scanned for secrets\/endpoints. Drop a decrypted .ipa (frida-ios-dump \/ bagbak output) for full TEXT coverage.",
+    "No binary has readable code strings (all FairPlay-encrypted), so 57 rules that search only code strings could not be evaluated.",
+    "No embedded.mobileprovision found, typical for App Store builds re-signed by the store."
+  ],
+  "scanDurationSeconds" : 0.15139400959014893,
+  "secrets" : [
+
+  ],
+  "sourceIPAPath" : "\/Users\/hackerman\/AI-Repos\/ios-app-static-scan\/results-us150\/ipas\/com.skool.skoolcommunities.ipa",
+  "vectorSummaries" : [
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 12,
+      "vectorID" : "DCS-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "DCS-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-07"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "TRK-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "SURV-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SURV-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-05"
+    },
+    {
+      "maxSeverity" : "medium",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "SECH-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 15,
+      "vectorID" : "SECH-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-07"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-08"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-09"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "PLAT-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "PLAT-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "PLAT-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "PLAT-04"
+    }
+  ]
+}

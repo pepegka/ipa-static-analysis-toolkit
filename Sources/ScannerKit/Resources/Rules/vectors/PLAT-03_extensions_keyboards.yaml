@@ -1,0 +1,17 @@
+- id: PLAT-03.custom_keyboards_restricted
+  vector: PLAT-03
+  title: Restricts custom keyboards app-wide (positive signal)
+  description: |
+    Imports UIApplicationKeyboardExtensionPointIdentifier, the value an app delegate
+    compares against in application(_:shouldAllowExtensionPointIdentifier:) to refuse
+    third-party keyboards everywhere in the app. What the delegate returns needs the
+    manual check the linked MASTG test describes.
+  severity: info
+  maswe: [MASWE-0031]
+  mastg: [MASTG-TEST-0389]
+  polarity: defensive
+  search:
+    - kind: importedSymbol
+      pattern: '^_UIApplicationKeyboardExtensionPointIdentifier$'
+  references:
+    - https://developer.apple.com/documentation/uikit/uiapplication/extensionpointidentifier/keyboard

@@ -1,0 +1,417 @@
+{
+  "usageDescriptionKeys": {
+    "NFCReaderUsageDescription": {
+      "vector": "DCS-07",
+      "category": "NFC tag reading"
+    },
+    "NSAppleEventsUsageDescription": {
+      "vector": "PLAT-02",
+      "category": "Scripting other apps via Apple Events (Catalyst/macOS)",
+      "sensitive": true
+    },
+    "NSAppleMusicUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Apple Music library access"
+    },
+    "NSBluetoothAlwaysUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Persistent Bluetooth access (beacons, fingerprinting)"
+    },
+    "NSBluetoothPeripheralUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Bluetooth peripheral access"
+    },
+    "NSCalendarsFullAccessUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Full calendar read/write access"
+    },
+    "NSCalendarsUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Calendar events access"
+    },
+    "NSCalendarsWriteOnlyAccessUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Write-only calendar access"
+    },
+    "NSCameraUsageDescription": {
+      "vector": "DCS-05",
+      "category": "Camera access",
+      "sensitive": true
+    },
+    "NSContactsUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Address book / contacts access",
+      "sensitive": true
+    },
+    "NSDesktopFolderUsageDescription": {
+      "vector": "DCS-03",
+      "category": "The user's Desktop folder (Catalyst/macOS)"
+    },
+    "NSDocumentsFolderUsageDescription": {
+      "vector": "DCS-03",
+      "category": "The user's Documents folder (Catalyst/macOS)"
+    },
+    "NSDownloadsFolderUsageDescription": {
+      "vector": "DCS-03",
+      "category": "The user's Downloads folder (Catalyst/macOS)"
+    },
+    "NSFaceIDUsageDescription": {
+      "vector": "DCS-04",
+      "category": "Face ID biometric authentication"
+    },
+    "NSFallDetectionUsageDescription": {
+      "vector": "DCS-04",
+      "category": "Fall-detection motion data",
+      "sensitive": true
+    },
+    "NSFileProviderDomainUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Files managed by other file providers"
+    },
+    "NSFileProviderPresenceUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Awareness of when the user is browsing another provider's files"
+    },
+    "NSFocusStatusUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Whether the user has a Focus mode enabled"
+    },
+    "NSGKFriendListUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Game Center friend list",
+      "sensitive": true
+    },
+    "NSHealthClinicalHealthRecordsShareUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Clinical health records",
+      "sensitive": true
+    },
+    "NSHealthShareUsageDescription": {
+      "vector": "DCS-03",
+      "category": "HealthKit read"
+    },
+    "NSHealthUpdateUsageDescription": {
+      "vector": "DCS-03",
+      "category": "HealthKit write"
+    },
+    "NSHomeKitUsageDescription": {
+      "vector": "DCS-03",
+      "category": "HomeKit device access"
+    },
+    "NSIdentityUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Identity documents via the Identity Document Services framework",
+      "sensitive": true
+    },
+    "NSLocalNetworkUsageDescription": {
+      "vector": "TRK-01",
+      "category": "Local network scanning (routers, smart devices)"
+    },
+    "NSLocationAlwaysAndWhenInUseUsageDescription": {
+      "vector": "DCS-02",
+      "category": "Persistent location access, including while backgrounded",
+      "sensitive": true
+    },
+    "NSLocationAlwaysUsageDescription": {
+      "vector": "DCS-02",
+      "category": "Persistent location access (deprecated key)"
+    },
+    "NSLocationTemporaryUsageDescriptionDictionary": {
+      "vector": "DCS-02",
+      "category": "Temporary precise-location access"
+    },
+    "NSLocationWhenInUseUsageDescription": {
+      "vector": "DCS-02",
+      "category": "Location access while the app is in use",
+      "sensitive": true
+    },
+    "NSMicrophoneUsageDescription": {
+      "vector": "DCS-05",
+      "category": "Microphone access (eavesdropping risk)",
+      "sensitive": true
+    },
+    "NSMotionUsageDescription": {
+      "vector": "DCS-04",
+      "category": "Accelerometer / motion sensors (CoreMotion)"
+    },
+    "NSNearbyInteractionAllowOnceUsageDescription": {
+      "vector": "DCS-07",
+      "category": "One-off ultra-wideband ranging with nearby devices"
+    },
+    "NSNearbyInteractionUsageDescription": {
+      "vector": "DCS-01",
+      "category": "Nearby Interaction (UWB ranging)"
+    },
+    "NSNetworkVolumesUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Network volumes (Catalyst/macOS)"
+    },
+    "NSPhotoLibraryAddUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Photo library write"
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Photo library read",
+      "sensitive": true
+    },
+    "NSRemindersFullAccessUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Full access to reminders",
+      "sensitive": true
+    },
+    "NSRemindersUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Reminders access"
+    },
+    "NSRemovableVolumesUsageDescription": {
+      "vector": "DCS-03",
+      "category": "Removable volumes (Catalyst/macOS)"
+    },
+    "NSSensorKitUsageDescription": {
+      "vector": "DCS-04",
+      "category": "SensorKit research sensor data, ambient light, motion, keyboard and usage metrics",
+      "sensitive": true
+    },
+    "NSSiriUsageDescription": {
+      "vector": "DCS-05",
+      "category": "Sends user speech and app content to Siri",
+      "sensitive": true
+    },
+    "NSSpeechRecognitionUsageDescription": {
+      "vector": "DCS-05",
+      "category": "Speech recognition"
+    },
+    "NSSystemAdministrationUsageDescription": {
+      "vector": "SECH-06",
+      "category": "System administration privileges (Catalyst/macOS)",
+      "sensitive": true
+    },
+    "NSUserTrackingUsageDescription": {
+      "vector": "TRK-01",
+      "category": "App Tracking Transparency / IDFA collection",
+      "sensitive": true
+    },
+    "NSVideoSubscriberAccountUsageDescription": {
+      "vector": "DCS-01",
+      "category": "TV provider subscription account details",
+      "sensitive": true
+    }
+  },
+  "requiredReasonAPIs": {
+    "NSPrivacyAccessedAPICategoryFileTimestamp": {
+      "vector": "DCS-01",
+      "description": "File create/modify timestamps: a device-fingerprint component."
+    },
+    "NSPrivacyAccessedAPICategorySystemBootTime": {
+      "vector": "DCS-01",
+      "description": "System boot time (kern.boottime) is a strong fingerprinting signal."
+    },
+    "NSPrivacyAccessedAPICategoryDiskSpace": {
+      "vector": "DCS-01",
+      "description": "Disk free space: a device-fingerprint signal."
+    },
+    "NSPrivacyAccessedAPICategoryActiveKeyboards": {
+      "vector": "DCS-01",
+      "description": "Active keyboards list."
+    },
+    "NSPrivacyAccessedAPICategoryUserDefaults": {
+      "vector": "SURV-03",
+      "description": "UserDefaults and App Groups: a common covert channel between apps from the same developer."
+    }
+  },
+  "defaultPermissions": [
+    {
+      "vector": "DCS-02",
+      "keys": [
+        "NSLocationWhenInUseUsageDescription",
+        "NSLocationAlwaysAndWhenInUseUsageDescription",
+        "NSLocationAlwaysUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "contact"
+      ],
+      "keys": [
+        "NSContactsUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "photo",
+        "gallery"
+      ],
+      "keys": [
+        "NSPhotoLibraryUsageDescription",
+        "NSPhotoLibraryAddUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "calendar"
+      ],
+      "keys": [
+        "NSCalendarsUsageDescription",
+        "NSCalendarsFullAccessUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "reminder"
+      ],
+      "keys": [
+        "NSRemindersUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "health"
+      ],
+      "keys": [
+        "NSHealthShareUsageDescription",
+        "NSHealthUpdateUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "music"
+      ],
+      "keys": [
+        "NSAppleMusicUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-03",
+      "match": [
+        "homekit"
+      ],
+      "keys": [
+        "NSHomeKitUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-04",
+      "match": [
+        "motion",
+        "coremotion",
+        "accel",
+        "gyro"
+      ],
+      "keys": [
+        "NSMotionUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-04",
+      "match": [
+        "face"
+      ],
+      "keys": [
+        "NSFaceIDUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-05",
+      "match": [
+        "screen"
+      ],
+      "keys": []
+    },
+    {
+      "vector": "DCS-05",
+      "match": [
+        "speech"
+      ],
+      "keys": [
+        "NSMicrophoneUsageDescription",
+        "NSSpeechRecognitionUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-05",
+      "match": [
+        "mic",
+        "audio"
+      ],
+      "keys": [
+        "NSMicrophoneUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-05",
+      "match": [
+        "camera",
+        "capture",
+        "video"
+      ],
+      "keys": [
+        "NSCameraUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-07",
+      "match": [
+        "bluetooth",
+        "ble"
+      ],
+      "keys": [
+        "NSBluetoothAlwaysUsageDescription",
+        "NSBluetoothPeripheralUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-07",
+      "match": [
+        "nearby",
+        "uwb"
+      ],
+      "keys": [
+        "NSNearbyInteractionUsageDescription"
+      ]
+    },
+    {
+      "vector": "DCS-07",
+      "match": [
+        "local_network",
+        "localnet",
+        "bonjour"
+      ],
+      "keys": [
+        "NSLocalNetworkUsageDescription"
+      ]
+    },
+    {
+      "vector": "TRK-01",
+      "match": [
+        "idfa",
+        "att",
+        "tracking"
+      ],
+      "keys": [
+        "NSUserTrackingUsageDescription"
+      ]
+    }
+  ],
+  "standardURLSchemes": [
+    "http",
+    "https",
+    "mailto",
+    "tel",
+    "telprompt",
+    "sms",
+    "facetime",
+    "facetime-audio",
+    "itms",
+    "itms-apps",
+    "itms-services",
+    "maps",
+    "geo"
+  ]
+}

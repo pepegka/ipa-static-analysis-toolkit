@@ -1,0 +1,8 @@
+{
+  "uploadMinimum": {
+    "sdkMajor": 26,
+    "xcodeMajor": 26,
+    "effective": "2026-04-28",
+    "source": "https://developer.apple.com/news/upcoming-requirements/?id=04282026a"
+  }
+}

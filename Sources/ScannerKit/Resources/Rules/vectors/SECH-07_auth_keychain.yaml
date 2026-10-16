@@ -1,0 +1,56 @@
+- id: SECH-07.keychain_in_use
+  vector: SECH-07
+  title: Keychain API in use (SecItem)
+  description: |
+    Uses the Keychain Services API (SecItemAdd / SecItemCopyMatching / SecItemUpdate).
+    Informational, pair with SECH-02.keychain_accessible_always to judge whether items
+    are protected with an appropriate accessibility / access-control class.
+  severity: info
+  maswe: [MASWE-0016]
+  mastg: []
+  polarity: neutral
+  masvs: [MASVS-AUTH]
+  search:
+    - kind: importedSymbol
+      pattern: '^_SecItem(Add|CopyMatching|Update|Delete)$'
+  references:
+    - https://developer.apple.com/documentation/security/secitemadd(_:_:)
+
+- id: SECH-07.access_control_flags
+  vector: SECH-07
+  title: Keychain access control in use (SecAccessControlCreateWithFlags)
+  description: |
+    Imports SecAccessControlCreateWithFlags, which binds a Keychain item or key to
+    user presence, biometrics or the device passcode. A positive signal; which flags
+    are passed cannot be read from the symbol table.
+  severity: info
+  maswe: [MASWE-0016]
+  mastg: []
+  polarity: defensive
+  masvs: [MASVS-AUTH]
+  search:
+    - kind: importedSymbol
+      pattern: '^_SecAccessControlCreateWithFlags$'
+  references:
+    - https://developer.apple.com/documentation/security/secaccesscontrolcreatewithflags(_:_:_:_:)
+
+- id: SECH-07.app_attest
+  vector: SECH-07
+  title: App Attest / DeviceCheck attestation in use (positive signal)
+  description: |
+    The app declares com.apple.developer.devicecheck.appattest-environment, so it
+    uses App Attest to prove to its own server that requests come from a genuine,
+    unmodified build. This is a hardening measure, reported as inventory.
+    The entitlement's value (development vs production) is not visible from the
+    key alone; a development environment shipped to the App Store would be a
+    real defect, and needs a value-level check to catch.
+  severity: info
+  maswe: [MASWE-0056]
+  mastg: []
+  masvs: [MASVS-AUTH]
+  polarity: defensive
+  search:
+    - kind: entitlement
+      pattern: '^com\.apple\.developer\.devicecheck\.appattest-environment$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.devicecheck.appattest-environment

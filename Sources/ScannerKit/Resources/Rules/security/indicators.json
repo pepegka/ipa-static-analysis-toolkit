@@ -1,0 +1,67 @@
+{
+  "pinning": {
+    "strong": [
+      "SecTrustSetAnchorCertificates",
+      "SecTrustCopyKey",
+      "SecTrustCopyPublicKey",
+      "TrustKit",
+      "AFSecurityPolicy",
+      "TSKPinningValidator",
+      "CertificatePinner",
+      "publicKeyHashes"
+    ],
+    "weak": [
+      "SecTrustEvaluateWithError",
+      "SecPolicyCreateSSL",
+      "SecCertificateCopyData"
+    ],
+    "anchorCertificateExtensions": [
+      "der",
+      "cer",
+      "crt",
+      "pem"
+    ]
+  },
+  "storage": {
+    "encryptionMarkers": [
+      "sqlite3_key",
+      "sqlite3_rekey",
+      "sqlcipher",
+      "SQLCipher",
+      "encryptionKey",
+      "realm_config_set_encryption_key"
+    ],
+    "databaseExtensions": [
+      "sqlite",
+      "sqlite3",
+      "db",
+      "realm"
+    ]
+  },
+  "resourceScan": {
+    "textExtensions": [
+      "json",
+      "plist",
+      "strings",
+      "stringsdict",
+      "txt",
+      "xml",
+      "yaml",
+      "yml",
+      "cfg",
+      "conf",
+      "ini",
+      "pem",
+      "cer",
+      "crt",
+      "js",
+      "html",
+      "csv",
+      "properties",
+      "env",
+      "config"
+    ],
+    "maxFileBytes": 2097152,
+    "maxLinesPerFile": 50000
+  }
+}

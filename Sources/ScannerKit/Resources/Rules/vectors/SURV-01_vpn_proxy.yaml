@@ -1,0 +1,118 @@
+- id: SURV-01.utun_interface_string
+  vector: SURV-01
+  title: VPN tunnel interface name in strings
+  description: |
+    The binary embeds a concrete VPN tunnel interface name like utun0, ipsec0,
+    ppp0 or tap0 (with the trailing digit). Plain "utun" / "ipsec" appear in
+    many legitimate NetworkExtension contexts, so the rule requires the digit
+    suffix that is only meaningful when iterating over real interfaces.
+    Interface names are lowercase, so the match is case-sensitive: "TUN3|"
+    turned up inside compressed data in an ad SDK. "ipsec3" and "ipsec4" are
+    excluded because they are OpenSSL's names for two elliptic curves
+    ("IPSec/IKE/Oakley curve #3/#4"), present in every app that bundles it.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\b(utun[0-9]{1,2}|ipsec(?![34]\b)[0-9]{1,2}|ppp[0-9]{1,2}|tap[0-9]{1,2}|tun[0-9]{1,2})\b'
+      case_sensitive: true
+  attribution:
+    benign_in_frameworks: [WireGuardKit, OpenVPNAdapter, NetworkExtension, AmneziaVPN]
+  mitre: [T1422]
+  references:
+    - https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/getifaddrs.3.html
+    - https://developer.apple.com/documentation/networkextension/nepackettunnelprovider
+
+- id: SURV-01.getifaddrs_import
+  vector: SURV-01
+  title: Imports getifaddrs() for network interface enumeration
+  description: |
+    Imports the C function getifaddrs() which lists every network interface.
+    NOTE: getifaddrs is also the standard primitive for plain reachability and
+    local-IP discovery and is linked by many networking SDKs, so the import alone
+    is a weak VPN signal that fires on most apps. MASTG / privacy-guide VPN
+    detection keys on NEVPNManager or an explicit tunnel-interface name
+    (utun/ppp/ipsec), kept here as an informational marker only.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: importedSymbol
+      pattern: '^_getifaddrs$'
+  attribution:
+    benign_in_frameworks: [WireGuardKit, OpenVPNAdapter, NetworkExtension, Cronet, WebRTC]
+  references:
+    - https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/getifaddrs.3.html
+
+- id: SURV-01.nevpnmanager
+  vector: SURV-01
+  title: NEVPNManager / NETunnelProviderManager use
+  description: |
+    Uses Apple's NetworkExtension classes for VPN state inspection or VPN tunnel
+    creation. Legitimate for VPN apps; in non-VPN apps this is a strong
+    VPN-presence detector.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'NEVPNManager|NEVPNStatus|NETunnelProviderManager|NEVPNConnection'
+  attribution:
+    benign_in_frameworks: [WireGuardKit, OpenVPNAdapter, AmneziaVPN, NetworkExtension]
+  references:
+    - https://developer.apple.com/documentation/networkextension/nevpnmanager
+
+- id: SURV-01.proxy_settings_read
+  vector: SURV-01
+  title: Reads system proxy settings
+  description: |
+    Calls CFNetworkCopySystemProxySettings or reads HTTP proxy keys, often used
+    to detect that the user has interception/SOCKS/HTTP proxy enabled.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'CFNetworkCopySystemProxySettings'
+    - kind: string
+      pattern: 'kCFStreamPropertyHTTPProxyHost|kCFNetworkProxiesHTTPEnable|HTTPSProxy|HTTPSProxyPort'
+  references:
+    - https://developer.apple.com/documentation/cfnetwork/cfnetworkcopysystemproxysettings()
+
+- id: SURV-01.ip_check_endpoints
+  vector: SURV-01
+  title: External "what's my IP" endpoints
+  description: |
+    Hard-codes one of the well-known IP-echo services (api.ipify.org,
+    checkip.amazonaws.com, ifconfig.me).
+    A common building block for comparing the "real" egress IP against the
+    apparent (post-VPN) IP.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(api\.ipify\.org|checkip\.amazonaws\.com|ifconfig\.me)'
+  references:
+    - https://www.ipify.org/
+
+- id: SURV-01.vpn_app_enumeration
+  vector: SURV-01
+  title: VPN client app enumeration via URL schemes
+  description: |
+    Probes for known VPN-client apps installed on the device through
+    -canOpenURL: / LSApplicationQueriesSchemes. iOS analogue of the Android
+    `queryIntentServices("android.net.VpnService")` technique; the resulting
+    list is sometimes forwarded to an anti-fraud SDK.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: urlScheme
+      pattern: '(?i)^(wireguard|amneziavpn|amnezia|openvpn|outline|nordvpn|protonvpn|expressvpn|surfshark|mullvad|cloudflarewarp|warp|orbot|tor|tunnelbear|hotspotshield|cisco-?anyconnect|forticlient|openvpn-connect|wg-quick)(:.*)?$'
+    - kind: string
+      pattern: '(?i)\b(VpnAppList|InstalledVpnClients|EnumerateVpnApps|queryIntentServices.*VpnService)\b'
+  mitre: [T1422]
+  references:
+    - https://developer.apple.com/documentation/uikit/uiapplication/canopenurl(_:)

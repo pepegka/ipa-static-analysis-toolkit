@@ -1,0 +1,210 @@
+- id: TRK-01.appmetrica
+  vector: TRK-01
+  title: Yandex AppMetrica SDK
+  description: |
+    Yandex AppMetrica analytics SDK. Forwards device identifiers, sessions and
+    events off-device; some integrations also report a "vpn_enabled" flag.
+  severity: info
+  tracker_ids: [yandex.appmetrica]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'AMAAppMetrica|YMMYandexMetrica|YandexMobileMetrica'
+    - kind: dylib
+      pattern: 'AppMetrica|YandexMobileMetrica'
+    - kind: frameworkName
+      pattern: 'AppMetrica|YandexMobileMetrica'
+  attribution:
+    primary_framework: AppMetrica
+  references:
+    - https://appmetrica.yandex.com/docs/en/sdk/ios/analytics/quick-start
+
+- id: TRK-01.mytracker
+  vector: TRK-01
+  title: VK / Mail.ru MyTracker SDK
+  description: |
+    Mail.ru / VK MyTracker attribution SDK. Collects device and behaviour
+    telemetry and forwards it off-device.
+  severity: medium
+  tracker_ids: [mailru.mytracker]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'MyTracker|MRMyTracker|YMyTracker'
+    - kind: frameworkName
+      pattern: 'MyTracker'
+    - kind: string
+      pattern: 'mytracker_(disabled|enabled|sdk)|MyTrackerSDK'
+  attribution:
+    primary_framework: MyTracker
+  references:
+    - https://github.com/myTrackerSDK/mytracker-ios-spm
+
+- id: TRK-01.group_ib_sdk
+  vector: TRK-01
+  title: Group-IB Fraud Hunting Platform SDK
+  description: |
+    Group-IB anti-fraud SDK, collects touch events, device fingerprint and a
+    list of installed VPN clients, forwarded off-device.
+  severity: medium
+  tracker_ids: [groupib.fhp]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: 'group_ib|com\.group_ib|GroupIBFraudHunting|GIBSdk'
+    - kind: frameworkName
+      pattern: 'GroupIB|GIB'
+  references:
+    - https://www.group-ib.com/products/fraud-protection/
+
+- id: TRK-01.kaspersky_sdk
+  vector: TRK-01
+  title: Kaspersky mobile security SDK
+  description: |
+    Kaspersky Mobile SDK (kavsdk / KasperskySdk).
+  severity: medium
+  tracker_ids: [kaspersky.sdk]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\b(com\.kavsdk|KAVSDK|KasperskyLab|KavSdk|KasperskyMobile)\b'
+    - kind: frameworkName
+      pattern: 'Kaspersky|KAVSDK'
+  references:
+    - https://go.kaspersky.com/mobilesdk
+
+- id: TRK-01.appsflyer
+  vector: TRK-01
+  title: AppsFlyer attribution SDK
+  description: AppsFlyer marketing-attribution SDK, broad device telemetry to *.appsflyer.com.
+  severity: medium
+  tracker_ids: [appsflyer]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'AppsFlyer'
+    - kind: frameworkName
+      pattern: 'AppsFlyer'
+    - kind: string
+      pattern: 'appsflyer\.com|appsflyersdk'
+
+- id: TRK-01.firebase_analytics
+  vector: TRK-01
+  title: Firebase Analytics
+  description: Google Firebase Analytics SDK.
+  severity: info
+  tracker_ids: [google.analytics]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'OBJC_(META)?CLASS_\$_FIRAnalytics$|FirebaseAnalytics|GoogleAppMeasurement|APMMeasurement'
+    - kind: frameworkName
+      pattern: 'FirebaseAnalytics|GoogleAppMeasurement'
+
+- id: TRK-01.sentry
+  vector: TRK-01
+  title: Sentry crash + telemetry SDK
+  description: Sentry, captures crashes, breadcrumbs, request/response metadata.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'SentryClient|SentryHub|SentryCrash|SentryOptions|SentryScope'
+    - kind: frameworkName
+      pattern: '^Sentry(Cocoa|Swift|PrivateInternals)?$'
+  references:
+    - https://docs.sentry.io/platforms/apple/
+
+- id: TRK-01.session_replay_sdk
+  vector: TRK-01
+  title: Session-replay SDK linked
+  description: |
+    A session-replay SDK, or a vendor's dedicated session-replay module, is
+    embedded. These record what the user sees and taps so the session can be
+    replayed later. App Review Guideline 2.5.14 requires explicit consent and a
+    clear indication when an app records user activity. Matched by framework
+    name, because the vendor domains sit in FairPlay-encrypted code; a linked SDK
+    may still be switched off or masking the screen.
+  user_advice: |
+    Session recording is the app's own analytics, so the Allow Apps to Request
+    to Track switch does not stop it. Look for an analytics or session-recording
+    opt-out in the app's privacy settings; a filtering DNS profile that blocks
+    the vendor's upload hosts keeps recordings from leaving the device.
+  severity: medium
+  tracker_ids: [fullstory, logrocket, quantummetric, smartlook, glassbox, uxcam, contentsquare, mouseflow]
+  maswe: []
+  mastg: []
+  search:
+    - kind: frameworkName
+      pattern: '^(FullStory|FullStoryCapture|LogRocket|logrocket_flutter|QuantumMetric|QuantumMetric_SDK|quantum_metric|Smartlook|SmartlookAnalytics|flutter_smartlook|UXCam|Glassbox|ContentsquareModule|ContentsquareSDK|AmplitudeSessionReplay|AmplitudeSwiftSessionReplayPlugin|MixpanelSessionReplay|DynatraceSessionReplay)$'
+  references:
+    - https://developer.apple.com/app-store/review/guidelines/
+    - https://amplitude.com/docs/sdks/session-replay/session-replay-ios-plugin
+    - https://docs.mixpanel.com/docs/tracking-methods/sdks/swift/swift-replay
+    - https://docs.dynatrace.com/docs/observe/digital-experience/session-replay-latest/configure-session-replay-mobile/latest-session-replay-ios
+
+- id: TRK-01.adjust
+  vector: TRK-01
+  title: Adjust attribution SDK
+  description: Adjust marketing-attribution SDK.
+  severity: medium
+  tracker_ids: [adjust]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: frameworkName
+      pattern: '^Adjust(Sdk|SDK|Framework)?$'
+    - kind: string
+      pattern: 'app\.adjust\.com|com\.adjust\.sdk|adjust_sdk_signature'
+
+- id: TRK-01.branch
+  vector: TRK-01
+  title: Branch attribution SDK
+  description: Branch deep-linking and marketing attribution.
+  severity: medium
+  tracker_ids: [branch]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: frameworkName
+      pattern: '^Branch(SDK)?$|^BranchIO$'
+    - kind: string
+      pattern: 'api\.branch\.io|branchmetrics\.com|io\.branch\.sdk'
+
+- id: TRK-01.ok_tracer
+  vector: TRK-01
+  title: ok.tracer telemetry SDK (VK / Odnoklassniki)
+  description: |
+    `ok.tracer` event-collection SDK from the VK / Odnoklassniki ecosystem,
+    commonly bundled alongside the VK Push SDK and MyTracker.
+  severity: info
+  tracker_ids: [ok.tracer]
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(ok\.tracer|OkTracer|ru\.ok\.tracer)\b'
+  references:
+    - https://apptracer.ru/doc/ios/crash-report/
+
+- id: TRK-01.huawei_hms
+  vector: TRK-01
+  title: Huawei Mobile Services SDK
+  description: |
+    Huawei HMS SDK (push, analytics, attribution). Often shipped by apps
+    distributed through alternative app stores to support Huawei devices.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\b(com\.huawei\.hms|HuaweiMobileService|HMSAgent|HmsInstanceId)\b'
+  references:
+    - https://developer.huawei.com/consumer/en/hms/huawei-analyticskit/

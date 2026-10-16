@@ -1,0 +1,1819 @@
+{
+  "$schema_version": 1,
+  "cvssBands": [
+    {
+      "min": 9,
+      "severity": "critical"
+    },
+    {
+      "min": 7,
+      "severity": "high"
+    },
+    {
+      "min": 4,
+      "severity": "medium"
+    },
+    {
+      "min": 0.1,
+      "severity": "low"
+    },
+    {
+      "min": 0,
+      "severity": "info"
+    }
+  ],
+  "gdprHighRisk": {
+    "source": "Article 29 Working Party, Guidelines on Data Protection Impact Assessment (DPIA) and determining whether processing is \"likely to result in a high risk\" for the purposes of Regulation 2016/679, WP 248 rev.01; endorsed by the EDPB, Endorsement 1/2018",
+    "url": "https://ec.europa.eu/newsroom/article29/items/611236",
+    "criteria": {
+      "1": "Evaluation or scoring, including profiling and predicting",
+      "2": "Automated-decision making with legal or similar significant effect",
+      "3": "Systematic monitoring",
+      "4": "Sensitive data or data of a highly personal nature",
+      "5": "Data processed on a large scale",
+      "6": "Matching or combining datasets",
+      "7": "Data concerning vulnerable data subjects",
+      "8": "Innovative use or applying new technological or organisational solutions",
+      "9": "The processing prevents data subjects from exercising a right or using a service or a contract"
+    },
+    "threshold": 2,
+    "atOrAbove": "medium",
+    "below": "info",
+    "notScored": [
+      5
+    ]
+  },
+  "trackerCategories": {
+    "advertising": [
+      1,
+      6
+    ],
+    "attribution": [
+      1,
+      6
+    ],
+    "session-replay": [
+      1,
+      3
+    ],
+    "antifraud": [
+      1,
+      9
+    ],
+    "analytics": [
+      1
+    ],
+    "push": [
+      1
+    ],
+    "data_broker": [
+      1,
+      4,
+      6
+    ]
+  },
+  "compliance": {
+    "declaration_gap": "info",
+    "policy_gap": "info"
+  },
+  "vectors": {
+    "DCS-01": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    "DCS-02": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-03": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Access to a store of personal data. The contact list, pasteboard and media library are not among the WP248 high-risk criteria; photos and calendars are scored on their own rules."
+    },
+    "DCS-04": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Motion and touch input. Raw sensor access meets none of the WP248 criteria unless an SDK scores the person with it."
+    },
+    "DCS-05": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Camera and screen capture APIs. Capture alone meets none of the WP248 criteria."
+    },
+    "DCS-06": {
+      "method": "privacy",
+      "wp248": [
+        1
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting",
+        "Linking"
+      ],
+      "solove": [
+        "Aggregation"
+      ],
+      "why": "Which apps are installed says what a person is interested in: WP248 criterion 1 covers profiling from \"personal preferences or interests\". One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-07": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Local radio and network APIs. None of the WP248 criteria is met by the API alone."
+    },
+    "TRK-01": {
+      "method": "privacy",
+      "wp248": [
+        1
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An analytics SDK builds a usage profile: WP248 criterion 1 gives \"a company building behavioural or marketing profiles based on usage\" as its example. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "TRK-02": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        4,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Aggregation",
+        "Secondary Use"
+      ],
+      "why": "A data broker profiles (criterion 1), resells location (criterion 4) and combines data from many controllers (criterion 6)."
+    },
+    "TRK-04": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 44",
+        "Art. 46",
+        "Art. 49"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Where the endpoint owner is registered. International transfer is GDPR Chapter V, not a WP248 criterion."
+    },
+    "TRK-05": {
+      "method": "privacy",
+      "wp248": [
+        8
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Sending user content to a third-party model is a new technology in the sense of WP248 criterion 8. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "TGAP-01": {
+      "method": "compliance",
+      "kind": "declaration_gap",
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "solove": [
+        "Exclusion"
+      ]
+    },
+    "TGAP-02": {
+      "method": "compliance",
+      "kind": "declaration_gap",
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 7",
+        "Art. 25"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "solove": [
+        "Exclusion"
+      ]
+    },
+    "TGAP-03": {
+      "method": "privacy",
+      "wp248": [
+        7
+      ],
+      "gdpr": [
+        "Art. 8"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "solove": [
+        "Exclusion"
+      ],
+      "why": "Children are vulnerable data subjects under WP248 criterion 7. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "SURV-01": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Reading network interfaces and proxy settings on the device meets none of the WP248 criteria by itself."
+    },
+    "SURV-02": {
+      "method": "capability",
+      "note": "Anti-analysis detection is defensive: the app is protecting itself, not collecting from the user. Polarity gate keeps it at or below low."
+    },
+    "SURV-03": {
+      "method": "capability",
+      "note": "A capability the app holds, not a behaviour observed."
+    },
+    "SURV-04": {
+      "method": "capability",
+      "note": "Anti-analysis packing and string obfuscation. It tells a reader the binary is hiding something, which is why it is reported, but it collects nothing - and Scanner.swift promotes it on evidence when it appears next to a broker or a known implant."
+    },
+    "SURV-05": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+      "cvssScore": 10,
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 9(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "why": "Artefacts of a mercenary spyware implant: the operator reads and controls the device and every app on it over the network, without any action from the user."
+    },
+    "SECH-08": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "The company behind an embedded SDK. Provenance is not processing."
+    },
+    "PLAT-04": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    "SECH-01": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-02": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-03": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-04": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-05": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-06": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-07": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "PLAT-01": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "PLAT-02": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "PLAT-03": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "meta": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "perm": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "privacy": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "tracker": {
+      "method": "capability",
+      "note": "Rules in this vector are anchored one at a time: a CVSS vector describes a single weakness, not a family of them. Until a rule declares its own, it records a capability."
+    },
+    "SECH-09": {
+      "method": "capability",
+      "why": "The supported and targeted platform versions are recorded as facts."
+    }
+  },
+  "rules": {
+    "SECH-01.cfstream_plaintext_socket": {
+      "method": "capability",
+      "cwe": [
+        "CWE-319"
+      ],
+      "why": "CFStream and NSStream sockets are not covered by ATS. MASTG-TEST-0323 fails only when such a socket carries cleartext, which depends on whether the code enables TLS on it; that code is FairPlay-encrypted, so the scan records the API."
+    },
+    "SECH-01.disabled_cert_validation": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "Accepting any certificate turns a network position into a full read/write MITM.",
+      "cwe": [
+        "CWE-295"
+      ],
+      "mitre": [
+        "T1557"
+      ],
+      "cvssScore": 9.1
+    },
+    "SECH-01.allows_arbitrary_loads": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "NSAllowsArbitraryLoads removes the HTTPS floor for every domain, so any request the app makes over http:// or weak TLS can be read and altered on the path. Connections that use HTTPS stay encrypted, and the scan cannot say what, if anything, the app sends in cleartext, so confidentiality and integrity are scored low (convention point 2); the breadth - every domain rather than listed exceptions - does not change what is exposed per request.",
+      "cwe": [
+        "CWE-319"
+      ],
+      "cvssScore": 6.3
+    },
+    "SECH-01.allows_arbitrary_scoped": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "Same weakness as the global opt-out, scoped to web content, media or local resources (unqualified and .local names, IP addresses), so less of the app's data is exposed. IP addresses can be anywhere on the internet, so the attack vector stays network.",
+      "cwe": [
+        "CWE-319"
+      ],
+      "cvssScore": 6.3
+    },
+    "SECH-01.insecure_exception_domains": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "Per-domain ATS exceptions: the hole is real but bounded to the listed hosts.",
+      "cwe": [
+        "CWE-319"
+      ],
+      "cvssScore": 6.3
+    },
+    "SECH-01.missing_pinning": {
+      "method": "capability",
+      "why": "Absence of pinning is not a vulnerability - TLS still validates. It is defence-in-depth that this app does not have, which is worth recording and not worth a severity."
+    },
+    "SECH-02.file_protection_none": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "why": "NSFileProtectionNone leaves the file readable whenever the device is powered on, so physical access is enough to read it.",
+      "cwe": [
+        "CWE-922"
+      ],
+      "mitre": [
+        "T1533"
+      ],
+      "cvssScore": 5.1
+    },
+    "SECH-02.userdefaults_credentials": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "Credentials in a plist are readable from a backup or an unlocked device, and a credential grants write as well as read.",
+      "cwe": [
+        "CWE-312"
+      ],
+      "mitre": [
+        "T1552.001"
+      ],
+      "cvssScore": 6.8
+    },
+    "SECH-02.keychain_accessible_always": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "why": "kSecAttrAccessibleAlways defeats the point of the Keychain's lock-state binding.",
+      "cwe": [
+        "CWE-922"
+      ],
+      "cvssScore": 5.1
+    },
+    "SECH-02.plaintext_sqlite": {
+      "method": "capability",
+      "cwe": [
+        "CWE-312"
+      ],
+      "why": "An unencrypted SQLite file ships in the bundle. MASWE-0004 is about sensitive data in the package; most bundled databases are reference data, so the file is recorded for review."
+    },
+    "SECH-02.backup_exclusion_marker": {
+      "method": "capability",
+      "why": "Records that the app marks files as excluded from backup."
+    },
+    "SECH-02.data_protection_entitlement": {
+      "method": "capability",
+      "why": "A positive signal: the app declares a data-protection class."
+    },
+    "SECH-03.weak_hash": {
+      "method": "capability",
+      "cwe": [
+        "CWE-328"
+      ],
+      "why": "MD5 or SHA-1 is linked. MASTG-TEST-0211 fails only when the hash protects sensitive data; checksums and cache keys pass. That use is in FairPlay-encrypted code, so the scan records the API."
+    },
+    "SECH-03.insecure_randomness": {
+      "method": "capability",
+      "cwe": [
+        "CWE-338"
+      ],
+      "why": "A non-cryptographic generator is linked. MASTG-TEST-0311 fails only when its output is used for keys, tokens or other security values, which is in FairPlay-encrypted code, so the scan records the API."
+    },
+    "SECH-03.embedded_certificates": {
+      "method": "capability",
+      "why": "Certificate or public-key material is present in the bundle."
+    },
+    "SECH-03.cert_pinning": {
+      "method": "capability",
+      "why": "A positive signal: the app pins certificates."
+    },
+    "SECH-04.no_pie": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "A missing mitigation, not a bug: it makes some other memory-safety bug easier to exploit.",
+      "cvssScore": 2
+    },
+    "SECH-04.no_stack_canary": {
+      "method": "capability",
+      "why": "No __stack_chk_* symbol in a binary that carries Objective-C metadata. MASTG-TEST-0229 lists expected false positives for this check (Swift code, Flutter, React Native, compiler optimisation) and asks for the source and build flags to decide, so the binary is recorded for review."
+    },
+    "SECH-06.get_task_allow": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "A debuggable release build lets any local process attach and read or rewrite memory.",
+      "cwe": [
+        "CWE-489"
+      ],
+      "mitre": [
+        "T1622"
+      ],
+      "cvssScore": 8.4
+    },
+    "SECH-06.dynamic_codesigning": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "JIT entitlement means writable-executable memory, which removes a barrier to code injection.",
+      "cwe": [
+        "CWE-250"
+      ],
+      "cvssScore": 5.8
+    },
+    "SECH-06.private_entitlements": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "Apple-private entitlements grant platform access the sandbox otherwise withholds. Notable, and an App Store policy matter - but it is the app's own capability, not an exploitable bug.",
+      "cvssScore": 5.1
+    },
+    "SECH-06.app_group_entitlement": {
+      "method": "capability",
+      "why": "Shared container between the vendor's own apps."
+    },
+    "SECH-06.universal_links_associated": {
+      "method": "capability",
+      "why": "Associated domains the app claims."
+    },
+    "SECH-06.keychain_access_group": {
+      "method": "capability",
+      "why": "Credential sharing between the vendor's own apps."
+    },
+    "SECH-06.network_extension_provider": {
+      "method": "capability",
+      "why": "A high-privilege entitlement the app holds."
+    },
+    "SECH-06.systemextension": {
+      "method": "capability",
+      "why": "A high-privilege entitlement the app holds."
+    },
+    "SECH-06.driverkit": {
+      "method": "capability",
+      "why": "A high-privilege entitlement the app holds."
+    },
+    "SECH-06.aps_environment_production": {
+      "method": "capability",
+      "why": "Push environment the build targets."
+    },
+    "SECH-06.dynamic_loader_imports": {
+      "method": "capability",
+      "why": "dlopen/dlsym are present in the binary."
+    },
+    "SECH-07.keychain_in_use": {
+      "method": "capability",
+      "why": "A positive signal: the app uses the Keychain."
+    },
+    "SECH-07.access_control_flags": {
+      "method": "capability",
+      "why": "A positive signal: Keychain items are access-control bound."
+    },
+    "SECH-07.app_attest": {
+      "method": "capability",
+      "why": "A positive signal: the app attests itself to its backend."
+    },
+    "PLAT-01.legacy_uiwebview": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "UIWebView has no per-origin isolation and is deprecated with known unpatched issues; loading attacker content in one is enough.",
+      "cwe": [
+        "CWE-79"
+      ],
+      "mitre": [
+        "T1189"
+      ],
+      "cvssScore": 8.6
+    },
+    "PLAT-01.file_url_access": {
+      "method": "capability",
+      "cwe": [
+        "CWE-200",
+        "CWE-669"
+      ],
+      "why": "The key for a relaxed WebView file-origin policy is referenced. MASTG-TEST-0335 fails only when it is set to true for a WebView that loads file:// content, which the scan cannot read in encrypted code."
+    },
+    "PLAT-01.webview_inspectable": {
+      "method": "capability",
+      "cwe": [
+        "CWE-489"
+      ],
+      "why": "The isInspectable setter of a WebView or JavaScript context is called. Safari Web Inspector attaches only when the value is true in the release build; the value is in FairPlay-encrypted code, so the scan records the call (MASWE-0063)."
+    },
+    "PLAT-01.js_bridge_all_frames": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "A handler injected into all frames is reachable from third-party iframes, not just the page the app loaded.",
+      "cwe": [
+        "CWE-749"
+      ],
+      "cvssScore": 5.3
+    },
+    "PLAT-01.wkwebview_use": {
+      "method": "capability",
+      "why": "The app embeds a WebView."
+    },
+    "PLAT-01.js_message_handler": {
+      "method": "capability",
+      "why": "A JS-to-native bridge exists. What matters is what it exposes, which needs the two rules above to say."
+    },
+    "PLAT-01.js_evaluate": {
+      "method": "capability",
+      "why": "The app evaluates JavaScript in its WebView."
+    },
+    "PLAT-01.user_script_injection": {
+      "method": "capability",
+      "why": "The app injects a user script into its WebView."
+    },
+    "PLAT-02.custom_url_schemes": {
+      "method": "capability",
+      "cwe": [
+        "CWE-939"
+      ],
+      "why": "The app registers custom URL schemes. MASWE-0029 makes them a weakness when a sensitive flow relies on them or the handler does not validate input, which MASTG-TEST-0370 and -0371 read from the handler code."
+    },
+    "PLAT-03.keyboard_open_access": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "A keyboard with Full Access sees everything typed with it in any app and can reach the network: it observes the person across apps (WP248 criterion 3) and what it sees includes electronic communications (criterion 4). iOS keeps password and phone-pad fields on the system keyboard. MASTG-TEST-0390 then asks whether the typed text actually leaves the device, which needs the extension's code."
+    },
+    "PLAT-03.custom_keyboard": {
+      "method": "capability",
+      "why": "A keyboard extension without open access cannot reach the network."
+    },
+    "PLAT-03.truepredicate_activation": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "The extension is offered for every item the user shares. It receives only what the user chooses to share with it, which meets none of the WP248 criteria."
+    },
+    "SURV-05.stalkerware_families": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "cvssScore": 8.7,
+      "why": "Consumer stalkerware: whoever installed it reads the victim's messages, location and media over the network. Confidentiality is scored high; the tool does not alter or disable the device."
+    },
+    "SURV-05.stalkerware_domains": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "cvssScore": 8.7,
+      "why": "Consumer stalkerware: whoever installed it reads the victim's messages, location and media over the network. Confidentiality is scored high; the tool does not alter or disable the device."
+    },
+    "SURV-05.stalkerware_capabilities": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "cvssScore": 8.7,
+      "why": "Consumer stalkerware: whoever installed it reads the victim's messages, location and media over the network. Confidentiality is scored high; the tool does not alter or disable the device."
+    },
+    "DCS-01.idfa_idfv": {
+      "method": "privacy",
+      "wp248": [
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Linking"
+      ],
+      "solove": [
+        "Aggregation"
+      ],
+      "why": "The advertising identifier exists to let different companies match records about the same device (WP248 criterion 6); the vendor identifier is scoped to one developer. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-02.always_authorization": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "wp248When": {
+        "3": [
+          "NSLocationAlwaysAndWhenInUseUsageDescription"
+        ]
+      },
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 5(1)(c)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). Criterion 3, systematic monitoring (\"processing used to observe, monitor or control data subjects\"), counts only when the Info.plist declares NSLocationAlwaysAndWhenInUseUsageDescription: without it iOS cannot grant Always and the service delivers only while the app is in use."
+    },
+    "DCS-06.canOpenURL": {
+      "method": "capability",
+      "why": "One canOpenURL call is not enumeration."
+    },
+    "privacy.tracking_domains": {
+      "method": "capability",
+      "why": "The privacy manifest declares tracking domains. A declaration is the app doing the right thing; it is recorded, not penalised."
+    },
+    "TGAP-03.age_gate_absent": {
+      "method": "compliance",
+      "kind": "declaration_gap",
+      "why": "A kids-category app with no age gate is a declared-vs-built mismatch.",
+      "gdpr": [
+        "Art. 8"
+      ]
+    },
+    "TGAP-03.coppa_flag_mismatch": {
+      "method": "privacy",
+      "wp248": [
+        6,
+        7
+      ],
+      "gdpr": [
+        "Art. 8"
+      ],
+      "linddun": [
+        "Non-compliance"
+      ],
+      "solove": [
+        "Exclusion"
+      ],
+      "why": "Children's data (WP248 criterion 7) reaching third-party trackers that combine it with other datasets (criterion 6), against the app's own child-directed flag."
+    },
+    "TRK-05.on_device_ml": {
+      "method": "capability",
+      "why": "On-device inference sends nothing. It is the opposite of the rest of TRK-05."
+    },
+    "TRK-05.llm_sdk_symbols": {
+      "method": "privacy",
+      "wp248": [
+        8
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Sending user content to a third-party model is a new technology in the sense of WP248 criterion 8. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "SURV-01.ip_check_endpoints": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Detecting",
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "A what-is-my-IP lookup. It meets none of the WP248 criteria by itself."
+    },
+    "TGAP-03.family_controls": {
+      "method": "capability",
+      "why": "The FamilyControls entitlement means the app implements parental controls. A positive signal."
+    },
+    "TGAP-03.declared_age_range_entitlement": {
+      "method": "capability",
+      "why": "The app declares an age range. A declaration is the app being transparent, not a gap."
+    },
+    "DCS-02.significant_change_monitoring": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "wp248When": {
+        "3": [
+          "NSLocationAlwaysAndWhenInUseUsageDescription"
+        ]
+      },
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). Criterion 3, systematic monitoring (\"processing used to observe, monitor or control data subjects\"), counts only when the Info.plist declares NSLocationAlwaysAndWhenInUseUsageDescription: without it iOS cannot grant Always and the service delivers only while the app is in use."
+    },
+    "DCS-02.visit_monitoring": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "wp248When": {
+        "3": [
+          "NSLocationAlwaysAndWhenInUseUsageDescription"
+        ]
+      },
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). Criterion 3, systematic monitoring (\"processing used to observe, monitor or control data subjects\"), counts only when the Info.plist declares NSLocationAlwaysAndWhenInUseUsageDescription: without it iOS cannot grant Always and the service delivers only while the app is in use."
+    },
+    "DCS-05.audio_recording": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Recorded speech and voice messages are electronic communications, which WP248 criterion 4 names (\"household and private activities (such as electronic communications)\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-03.contacts_access": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Aggregation"
+      ],
+      "why": "The address book is other people's personal data, but WP248 does not list it among the high-risk criteria."
+    },
+    "meta": {
+      "method": "capability",
+      "why": "Scan metadata: what the scanner could and could not see."
+    },
+    "perm": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    "privacy": {
+      "method": "capability",
+      "why": "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    },
+    "privacy.gap": {
+      "method": "compliance",
+      "kind": "declaration_gap",
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "why": "The binary evidences an accessed-API category the privacy manifest does not declare. The defect is the gap between the two, which is verifiable from the bundle alone."
+    },
+    "tracker": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An identified third-party SDK. Its category decides the WP248 criteria: advertising and attribution build marketing profiles (criterion 1) by combining this app's data with what the vendor collects in other companies' apps (criterion 6); session replay observes the person (criterion 3) and profiles usage (1); anti-fraud scores the person (1) to decide whether they may use a service (9); analytics and push engagement profile usage (1); other categories meet none."
+    },
+    "DCS-06.ls_application_queries_schemes": {
+      "method": "privacy",
+      "wp248": [
+        1
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting",
+        "Linking"
+      ],
+      "solove": [
+        "Aggregation"
+      ],
+      "why": "Which apps are installed says what a person is interested in: WP248 criterion 1 covers profiling from \"personal preferences or interests\". One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "SECH-05.public_client_identifier": {
+      "method": "capability",
+      "why": "A public client identifier (a Firebase config, an OAuth client id) is meant to ship in the binary. Finding one is not finding a leak."
+    },
+    "SECH-05.cloud_credential": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+      "why": "A cloud root credential or a private key shipped in a binary that anyone can download: read, write and destroy on whatever it fronts, with no precondition beyond extracting it.",
+      "cwe": [
+        "CWE-798"
+      ],
+      "mitre": [
+        "T1552.001"
+      ],
+      "cvssScore": 9.3
+    },
+    "SECH-05.service_api_key": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+      "why": "A service API key grants read and write on that one service to anyone who unzips the app.",
+      "cwe": [
+        "CWE-798"
+      ],
+      "mitre": [
+        "T1552.001"
+      ],
+      "cvssScore": 9.3
+    },
+    "SECH-05.bearer_token": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+      "why": "A token or client secret of narrow or time-limited scope.",
+      "cwe": [
+        "CWE-798"
+      ],
+      "cvssScore": 6.9
+    },
+    "SECH-05.generic_credential": {
+      "method": "cvss",
+      "cvss": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "why": "A high-entropy string matched by shape rather than by issuer. It may not be a credential at all; if it is, its scope is unknown, so confidentiality is scored low and attack complexity high.",
+      "cwe": [
+        "CWE-798"
+      ],
+      "cvssScore": 6.3
+    },
+    "TRK-05.screen_context_to_llm": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4,
+        8
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 9(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Surveillance",
+        "Secondary Use"
+      ],
+      "why": "Screen content sent to a model endpoint: whatever is on screen goes with it, so the person's activity is observed (WP248 criterion 3), including highly personal data (criterion 4), by a new technology (criterion 8)."
+    },
+    "TGAP-03.declared_age_range_api": {
+      "method": "capability",
+      "why": "The app calls the DeclaredAgeRange API. Asking the platform for an age band, rather than guessing, is the app doing the right thing."
+    },
+    "SECH-02.file_protection_none_referenced": {
+      "method": "capability",
+      "why": "The import shows the protection class is referenced, not that sensitive data is stored under it."
+    },
+    "SECH-02.keychain_accessible_always_referenced": {
+      "method": "capability",
+      "why": "The import shows the accessibility class is referenced, not that an item is stored under it."
+    },
+    "SECH-01.cfstream_tls_relaxation_referenced": {
+      "method": "capability",
+      "why": "The import shows the relaxation keys are referenced, not that validation is disabled."
+    },
+    "TGAP-01.manifest_reason_invalid": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "The manifest breaks Apple's rule for its own declarations; a policy defect, verifiable from the bundle."
+    },
+    "TGAP-01.manifest_reason_missing": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "A declared category without a reason breaks Apple's manifest rules; a policy defect."
+    },
+    "TGAP-01.manifest_sdk_only_reason": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "Apple reserves this reason for third-party SDKs; declaring it in the app is a policy defect."
+    },
+    "TGAP-01.listed_sdk_without_manifest": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "Apple requires a manifest from the SDKs it lists; its absence is a policy defect, not evidence of undeclared collection."
+    },
+    "SECH-09.platform_versions": {
+      "method": "capability",
+      "why": "Records the minimum iOS version and the SDK the app was built with."
+    },
+    "SECH-09.sdk_below_upload_minimum": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "The build predates the SDK App Store Connect now requires for uploads. A policy fact about the binary, not a vulnerability in it."
+    },
+    "SECH-06.wifi_info_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.healthkit_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.healthkit_access_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.healthkit_background_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.homekit_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.contacts_notes_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.nfc_reader_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.notification_filtering_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.location_push_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.sensorkit_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.multicast_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-06.autofill_provider_entitlement": {
+      "method": "capability",
+      "why": "The entitlement grants a capability; the scan records it, the review decides whether it is justified."
+    },
+    "SECH-04.debug_symbols": {
+      "method": "capability",
+      "why": "Leftover debug information eases reverse engineering; MASWE files it under the resilience profile, where it is a finding only when resilience is required."
+    },
+    "PLAT-03.custom_keyboards_restricted": {
+      "method": "capability",
+      "why": "A positive signal: the app can refuse third-party keyboards."
+    },
+    "DCS-03.pasteboard_expiration": {
+      "method": "capability",
+      "why": "A positive signal: pasteboard items the app writes can expire."
+    },
+    "DCS-03.pasteboard_local_only": {
+      "method": "capability",
+      "why": "A positive signal: pasteboard items the app writes can stay on this device."
+    },
+    "SECH-06.outdated_signature_format": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "Apple's platform rule: a signature below CodeDirectory 20400 must be re-signed. A policy fact about the signature, verifiable from the bundle."
+    },
+    "SECH-01.hardcoded_http_urls": {
+      "method": "capability",
+      "why": "MASTG notes that an http:// URL in the bundle does not show it is used for communication; the scan records the candidates."
+    },
+    "TGAP-01.manifest_data_type_invalid": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "A collected-data type Apple does not define breaks the manifest's own rules; a policy defect."
+    },
+    "TGAP-01.manifest_tracking_mismatch": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "why": "The tracking flag and domains contradict each other, against Apple's rule for them; a policy defect."
+    },
+    "TGAP-01.declared_data_collection": {
+      "method": "capability",
+      "why": "Records what the developer declares; the declaration is not a defect."
+    },
+    "SECH-08.sdk_owner": {
+      "method": "capability",
+      "why": "An inventory of who owns the embedded SDKs. Ownership is not a weakness; data-broker and AI recipients carry their own findings under TRK-02 and TRK-05."
+    },
+    "TGAP-01.undeclared_tracking_domains": {
+      "method": "compliance",
+      "kind": "declaration_gap",
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "why": "The manifest declares tracking domains but misses some the app reaches, which fails MASTG-TEST-0281. iOS blocks only the declared domains when ATT permission is withheld, so the missing ones keep working. A declaration gap against Apple's rules and GDPR Art. 13; no standard grades it, so it is info."
+    },
+    "DCS-05.screen_capture_detect": {
+      "method": "capability",
+      "why": "Evidence of a mitigation, not of the weakness: MASWE-0038 names missing capture-state redaction 'despite the platform providing an API to detect the active capture state' as the way the weakness is introduced. Observing the API is the opposite finding."
+    },
+    "TGAP-02.inadequate_purpose_string": {
+      "method": "compliance",
+      "kind": "policy_gap",
+      "gdpr": [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "why": "The consent prompt carries no explanation, so the person cannot make the informed choice the prompt exists for (MASWE-0066). Verifiable from Info.plist alone; not exploitable."
+    },
+    "TRK-01.session_replay_sdk": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        3
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "A session-replay SDK records what the person does on screen to analyse behaviour: it observes the person (WP248 criterion 3) and profiles their usage (criterion 1). App Review Guideline 2.5.14 requires consent and a visible indicator."
+    },
+    "DCS-04.face_id_biometrics": {
+      "method": "capability",
+      "why": "LocalAuthentication returns only success or failure; no biometric data reaches the app (https://developer.apple.com/documentation/localauthentication). Whether the check is event-bound and bypassable (MASWE-0020) depends on the evaluatePolicy call site MASTG-TEST-0266 reads, which FairPlay encrypts, so the rule records the API and nothing more."
+    },
+    "DCS-02.region_monitoring": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "wp248When": {
+        "3": [
+          "NSLocationAlwaysAndWhenInUseUsageDescription"
+        ]
+      },
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Identifying",
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). Criterion 3, systematic monitoring (\"processing used to observe, monitor or control data subjects\"), counts only when the Info.plist declares NSLocationAlwaysAndWhenInUseUsageDescription: without it iOS cannot grant Always and the service delivers only while the app is in use."
+    },
+    "DCS-03.photo_library": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "The photo library holds personal documents and the location each photo was taken, data of a highly personal nature under WP248 criterion 4. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-03.calendar_access": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Data Disclosure"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-06.remote_control_apps": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        9
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting",
+        "Linking"
+      ],
+      "solove": [
+        "Aggregation"
+      ],
+      "why": "Checking for remote-support apps is a fraud signal: WP248 criterion 1 gives screening customers against a fraud database as its example, and criterion 9 covers processing that decides whether a person may use a service."
+    },
+    "DCS-07.wifi_info": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "The connected network's BSSID locates the device. Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "DCS-07.beacon_sdk": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "wp248When": {
+        "3": [
+          "NSLocationAlwaysAndWhenInUseUsageDescription"
+        ]
+      },
+      "gdpr": [
+        "Art. 6(1)"
+      ],
+      "linddun": [
+        "Detecting"
+      ],
+      "solove": [
+        "Surveillance"
+      ],
+      "why": "A retail proximity SDK exists to follow where a person goes. Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). Criterion 3, systematic monitoring (\"processing used to observe, monitor or control data subjects\"), counts only when the Info.plist declares NSLocationAlwaysAndWhenInUseUsageDescription: without it iOS cannot grant Always and the service delivers only while the app is in use."
+    },
+    "TRK-01.appsflyer": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An attribution SDK matches this app's install and usage with ad data from other companies' apps: a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    "TRK-01.adjust": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An attribution SDK matches this app's install and usage with ad data from other companies' apps: a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    "TRK-01.branch": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An attribution SDK matches this app's install and usage with ad data from other companies' apps: a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    "TRK-01.mytracker": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An attribution SDK matches this app's install and usage with ad data from other companies' apps: a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    "TRK-01.sentry": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Crash and error reports. They serve the app's own quality and meet none of the WP248 criteria."
+    },
+    "TRK-01.ok_tracer": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Crash and error reports. They serve the app's own quality and meet none of the WP248 criteria."
+    },
+    "TRK-01.huawei_hms": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "Platform services SDK. Linking it meets none of the WP248 criteria."
+    },
+    "TRK-01.group_ib_sdk": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        9
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An anti-fraud SDK: WP248 criterion 1 gives screening customers against a fraud database as its example, and criterion 9 covers processing that decides whether a person may use a service."
+    },
+    "TRK-01.kaspersky_sdk": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        9
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "linddun": [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "solove": [
+        "Secondary Use"
+      ],
+      "why": "An anti-fraud SDK: WP248 criterion 1 gives screening customers against a fraud database as its example, and criterion 9 covers processing that decides whether a person may use a service."
+    },
+    "TGAP-03.kids_category_trackers": {
+      "method": "privacy",
+      "wp248": [
+        6,
+        7
+      ],
+      "gdpr": [
+        "Art. 8"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "solove": [
+        "Exclusion"
+      ],
+      "why": "Children's data (WP248 criterion 7) reaching third-party trackers that combine it with other datasets (criterion 6) in a Kids-category app."
+    },
+    "perm.NSLocationAlwaysAndWhenInUseUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        3,
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Always location declared: iOS can deliver location while the app is not in use, which is systematic monitoring (WP248 criterion 3) of location data (criterion 4)."
+    },
+    "perm.NSLocationAlwaysUsageDescription": {
+      "method": "privacy",
+      "wp248": [],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Deprecated key that only iOS 10 and earlier read. From iOS 11 the Always prompt uses NSLocationAlwaysAndWhenInUseUsageDescription, which is scored on its own, so this key alone grants no background location on any OS the app supports."
+    },
+    "perm.NSLocationWhenInUseUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSLocationTemporaryUsageDescriptionDictionary": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Location data: WP248 criterion 4 names it among data of a highly personal nature (\"location data whose collection questions the freedom of movement\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSHealthShareUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 9(1)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Health data is a special category under GDPR Art. 9, the first thing WP248 criterion 4 lists. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSHealthUpdateUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 9(1)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Health data is a special category under GDPR Art. 9, the first thing WP248 criterion 4 lists. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSCalendarsUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSCalendarsFullAccessUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSRemindersUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSRemindersFullAccessUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "A calendar is a diary, which WP248 criterion 4 lists by name (\"personal documents, emails, diaries\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSPhotoLibraryUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "The photo library holds personal documents and the location each photo was taken, data of a highly personal nature under WP248 criterion 4. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSMicrophoneUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Recorded speech and voice messages are electronic communications, which WP248 criterion 4 names (\"household and private activities (such as electronic communications)\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSSpeechRecognitionUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Recorded speech and voice messages are electronic communications, which WP248 criterion 4 names (\"household and private activities (such as electronic communications)\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSUserTrackingUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        1,
+        6
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "The app declares it will ask to track: Apple defines tracking as linking its data with data from other companies for targeted advertising or measurement, a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    "perm.NSIdentityUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Identity documents are personal documents under WP248 criterion 4. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    "perm.NSHomeKitUsageDescription": {
+      "method": "privacy",
+      "wp248": [
+        4
+      ],
+      "gdpr": [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "linddun": [
+        "Unawareness & Unintervenability"
+      ],
+      "solove": [
+        "Intrusion"
+      ],
+      "why": "Home accessories reveal household and private activities, WP248 criterion 4. One criterion is a risk under GDPR, not a likely high risk."
+    }
+  }
+}

@@ -1,0 +1,127 @@
+- id: PLAT-01.wkwebview_use
+  vector: PLAT-01
+  title: WKWebView in use
+  description: WKWebView is the iOS embedded browser.
+  severity: info
+  maswe: [MASWE-0035]
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: symbol
+      pattern: 'WKWebView|WKWebViewConfiguration'
+  references:
+    - https://developer.apple.com/documentation/webkit/wkwebview
+
+- id: PLAT-01.js_message_handler
+  vector: PLAT-01
+  title: WKScriptMessageHandler JS→native bridge
+  description: |
+    Adding a WKScriptMessageHandler creates a JS→native call channel. Combined
+    with a remote page, this lets a server invoke native methods.
+  severity: info
+  maswe: [MASWE-0033, MASWE-0034]
+  mastg: [MASTG-TEST-0376]
+  polarity: neutral
+  search:
+    - kind: symbol
+      pattern: 'WKScriptMessageHandler|userContentController|addScriptMessageHandler'
+  references:
+    - https://developer.apple.com/documentation/webkit/wkscriptmessagehandler
+
+- id: PLAT-01.js_evaluate
+  vector: PLAT-01
+  title: Runtime JavaScript evaluation in WebView
+  description: "evaluateJavaScript: runs arbitrary JS in the WebView. Risk when source is server-controlled."
+  severity: info
+  maswe: [MASWE-0034]
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: symbol
+      pattern: 'evaluateJavaScript|evaluate_javascript'
+  references:
+    - https://developer.apple.com/documentation/webkit/wkwebview/evaluatejavascript(_:completionhandler:)
+
+- id: PLAT-01.user_script_injection
+  vector: PLAT-01
+  title: WKUserScript injection
+  description: WKUserScript injects JS at document start/end on every load, useful for telemetry and credential interception.
+  severity: info
+  maswe: [MASWE-0033]
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: symbol
+      pattern: 'WKUserScript|WKUserContentController|injectionTime'
+  references:
+    - https://developer.apple.com/documentation/webkit/wkuserscript
+
+- id: PLAT-01.legacy_uiwebview
+  vector: PLAT-01
+  title: Legacy UIWebView (deprecated, insecure)
+  description: |
+    UIWebView was deprecated by Apple and is no longer accepted in App Store
+    submissions. It lacks the out-of-process isolation of WKWebView and carries a
+    larger attack surface. Its presence flags a legacy/insecure component to
+    migrate, rather than an actively exploitable vulnerability.
+  severity: high
+  maswe: [MASWE-0035]
+  mastg: [MASTG-TEST-0331]
+  search:
+    - kind: importedSymbol
+      pattern: '^_OBJC_CLASS_\$_UIWebView$'
+    - kind: string
+      pattern: '\bUIWebView(Delegate)?\b'
+  references:
+    - https://developer.apple.com/documentation/uikit/uiwebview
+
+- id: PLAT-01.webview_inspectable
+  vector: PLAT-01
+  title: Web Inspector toggle set on a WebView or JavaScript context (isInspectable)
+  description: |
+    Calls the isInspectable setter of WKWebView or JSContext (iOS 16.4+). When the value is
+    true in a release build, Safari Web Inspector can attach over USB. The scan sees the
+    call; the value is in FairPlay-encrypted code.
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0063]
+  mastg: []
+  masvs: [MASVS-PLATFORM]
+  search:
+    - kind: symbol
+      pattern: 'objc_msgSend\$setInspectable:$'
+    - kind: importedSymbol
+      pattern: '^_JSGlobalContextSetInspectable2?$'
+  references:
+    - https://developer.apple.com/documentation/webkit/wkwebview/isinspectable
+
+- id: PLAT-01.file_url_access
+  vector: PLAT-01
+  title: WebView file-URL access keys referenced (allowFileAccessFromFileURLs)
+  description: |
+    References the private WKWebView preference keys allowFileAccessFromFileURLs /
+    allowUniversalAccessFromFileURLs. Set to true, they let JavaScript loaded from a file:
+    URL read other local files; whether they are set, and to what, is in encrypted code.
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0034]
+  mastg: [MASTG-TEST-0335]
+  masvs: [MASVS-PLATFORM]
+  search:
+    - kind: string
+      pattern: 'allowFileAccessFromFileURLs|allowUniversalAccessFromFileURLs'
+
+- id: PLAT-01.js_bridge_all_frames
+  vector: PLAT-01
+  title: JS message-handler script injected into all frames
+  description: |
+    A WKUserScript is injected with forMainFrameOnly:false alongside a script-message handler,
+    exposing the native message bridge to every (including third-party) iframe, the classic
+    universal-XSS-to-native amplifier. (MASWE-0068 / MASWE-0072)
+  severity: medium
+  maswe: [MASWE-0033]
+  mastg: []
+  masvs: [MASVS-PLATFORM]
+  search:
+    - kind: string
+      pattern: 'forMainFrameOnly'

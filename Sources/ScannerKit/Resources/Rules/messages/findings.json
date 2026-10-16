@@ -1,0 +1,796 @@
+{
+  "rules": {
+    "DCS-06.ls_application_queries_schemes": {
+      "title": "Probes installed apps via LSApplicationQueriesSchemes ({count} schemes)",
+      "explanation": "The app declares URL schemes it can probe with -canOpenURL:, the iOS analogue of Android's QUERY_ALL_PACKAGES. A short list (deep-linking into a few partner apps) is routine; a long list is an installed-app fingerprinting signal.",
+      "remediation": "Trim LSApplicationQueriesSchemes to the apps you actually work with; probing a broad list to fingerprint installed apps risks App Store rejection.",
+      "references": [
+        "https://developer.apple.com/documentation/uikit/uiapplication/canopenurl(_:)"
+      ],
+      "compare": {
+        "label": "Probes installed apps via LSApplicationQueriesSchemes",
+        "value": "count",
+        "kind": "count",
+        "unit": "schemes"
+      },
+      "maswe": [
+        "MASWE-0068"
+      ],
+      "mastg": []
+    },
+    "PLAT-02.custom_url_schemes": {
+      "title": "Registers {count} custom URL scheme{s} (inbound deep-link surface)",
+      "explanation": "The app registers custom URL scheme(s) via CFBundleURLSchemes. Any app or web page can invoke these; if application(_:open:options:) acts on unvalidated parameters, this is an entry point for unauthorized actions. Custom schemes are also unverified (unlike Universal Links). Review the handler for input validation.",
+      "remediation": "Validate and sanitize every parameter in application(_:open:options:); never trigger sensitive actions from a URL without authentication. Prefer Universal Links (verified) over custom schemes.",
+      "references": [
+        "https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app"
+      ],
+      "compare": {
+        "label": "Registers custom URL schemes (inbound deep-link surface)",
+        "value": "count",
+        "kind": "count",
+        "unit": "schemes"
+      },
+      "maswe": [
+        "MASWE-0029"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "PLAT-04.background_modes": {
+      "title": "Background modes declared: {modes}",
+      "explanation": "Legal iOS background-execution channels. `location`/`voip` enable persistent background execution and are the strongest signal; `audio`/`external-accessory` are moderate; `fetch`/`remote-notification`/`processing` are routine and declared by most apps.",
+      "remediation": "Declare only the background modes the app actually needs; each is reviewed by App Review and must map to genuine user-facing functionality, not background telemetry.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/uibackgroundmodes"
+      ],
+      "compare": {
+        "label": "Background modes declared",
+        "value": "modes",
+        "kind": "list",
+        "unit": "modes"
+      },
+      "maswe": [],
+      "mastg": []
+    },
+    "privacy.tracking_domains": {
+      "title": "Privacy manifest declares tracking domains ({count})",
+      "explanation": "Apple's privacy manifest requires apps to declare destinations that perform user tracking.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/privacy-manifest-files"
+      ],
+      "compare": {
+        "label": "Privacy manifest declares tracking domains",
+        "value": "count",
+        "kind": "count",
+        "unit": "domains"
+      },
+      "maswe": [
+        "MASWE-0074"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "SECH-01.allows_arbitrary_loads": {
+      "title": "App Transport Security globally disabled (NSAllowsArbitraryLoads)",
+      "explanation": "ATS is turned off app-wide, permitting plaintext HTTP and weak TLS to any host. Traffic can be intercepted/modified on hostile networks.",
+      "remediation": "Remove NSAllowsArbitraryLoads. Serve all traffic over HTTPS with TLS 1.2+, and scope any unavoidable exception to a specific domain via NSExceptionDomains.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity"
+      ],
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "mastg": [
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0342"
+      ]
+    },
+    "SECH-01.allows_arbitrary_scoped": {
+      "title": "ATS relaxed for web, media or local-network content ({which})",
+      "explanation": "ATS is relaxed for a class of connections (web content, media, or local-network addresses), permitting cleartext or weak-TLS loads of that traffic. MASTG-TEST-0322 fails on each of these keys.",
+      "remediation": "Drop NSAllowsArbitraryLoadsInWebContent, NSAllowsArbitraryLoadsForMedia and NSAllowsLocalNetworking where not needed and load the content over HTTPS. If a specific host needs cleartext, scope it under NSExceptionDomains instead.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity"
+      ],
+      "compare": {
+        "label": "ATS relaxed for web, media or local-network content",
+        "value": "which",
+        "kind": "list",
+        "unit": "scopes"
+      },
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "mastg": [
+        "MASTG-TEST-0322"
+      ]
+    },
+    "SECH-01.insecure_exception_domains": {
+      "title": "ATS exception domains permit cleartext or weak TLS ({count})",
+      "explanation": "One or more NSExceptionDomains allow cleartext HTTP loads, a TLS version below 1.2, or connections without forward secrecy. MASTG-TEST-0322 and MASTG-TEST-0342 fail on these settings.",
+      "remediation": "Remove NSExceptionAllowsInsecureHTTPLoads, require NSExceptionMinimumTLSVersion of TLSv1.2 or higher, and keep NSExceptionRequiresForwardSecrecy at its default for each exception domain.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity"
+      ],
+      "compare": {
+        "label": "ATS exception domains permit cleartext or weak TLS",
+        "value": "count",
+        "kind": "count",
+        "unit": "domains"
+      },
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "mastg": [
+        "MASTG-TEST-0322",
+        "MASTG-TEST-0342"
+      ]
+    },
+    "SECH-01.missing_pinning": {
+      "title": "No ATS certificate pinning (NSPinnedDomains) despite exception domains",
+      "explanation": "The app declares ATS exception domains but no NSPinnedDomains, so connections to those hosts rely solely on the system trust store. Consider pinning leaf/intermediate keys for sensitive endpoints.",
+      "remediation": "For sensitive endpoints, add NSPinnedDomains pinning the leaf/intermediate public-key hashes, so a compromised or coerced CA cannot man-in-the-middle the connection.",
+      "references": [],
+      "maswe": [
+        "MASWE-0028"
+      ],
+      "mastg": [
+        "MASTG-TEST-0385"
+      ]
+    },
+    "PLAT-03.keyboard_open_access": {
+      "title": "Custom keyboard with full network access: {name}",
+      "explanation": "The bundled custom-keyboard extension sets RequestsOpenAccess=YES. If the user turns on Allow Full Access, the keyboard gets network access while it sees everything typed with it, in any app. iOS swaps in the system keyboard for secure (password) and phone-pad fields, so those never reach it. A keyboard with network access can send keystrokes off the device; confirm it needs that access.",
+      "remediation": "Set RequestsOpenAccess=NO unless the keyboard needs network or full access. If it does, document why and keep keystroke data on the device.",
+      "references": [
+        "https://developer.apple.com/documentation/uikit/creating-a-custom-keyboard",
+        "https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html"
+      ],
+      "compare": {
+        "label": "Custom keyboard with full network access",
+        "kind": "count",
+        "unit": "extensions",
+        "detail": "name"
+      },
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "mastg": [
+        "MASTG-TEST-0390"
+      ]
+    },
+    "PLAT-03.custom_keyboard": {
+      "title": "Custom keyboard extension: {name}",
+      "explanation": "The app bundles a custom-keyboard extension (no open access requested). Keyboards see everything typed in their host app.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/uikit/creating-a-custom-keyboard"
+      ],
+      "compare": {
+        "label": "Custom keyboard extension",
+        "kind": "count",
+        "unit": "extensions",
+        "detail": "name"
+      },
+      "maswe": [],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "PLAT-03.truepredicate_activation": {
+      "title": "Extension activates on all content (TRUEPREDICATE): {name}",
+      "explanation": "The extension's NSExtensionActivationRule is the string TRUEPREDICATE, so it is offered for every shared item/URL regardless of type.",
+      "remediation": "Replace TRUEPREDICATE with a typed NSExtensionActivationRule dictionary that declares only the content types the extension actually handles.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/nsextension"
+      ],
+      "compare": {
+        "label": "Extension activates on all content (TRUEPREDICATE)",
+        "kind": "count",
+        "unit": "extensions",
+        "detail": "name"
+      },
+      "maswe": [],
+      "mastg": []
+    },
+    "SECH-04.no_pie": {
+      "title": "Binary is not position-independent (no PIE/ASLR): {name}",
+      "explanation": "The Mach-O header does not set MH_PIE, so the binary loads at a fixed address and ASLR is ineffective.",
+      "remediation": "Rebuild the binary as position-independent: pass -fPIE to the compiler and -pie to the linker (the Xcode default for app targets).",
+      "references": [],
+      "compare": {
+        "label": "Binary is not position-independent (no PIE/ASLR)",
+        "kind": "count",
+        "unit": "binaries",
+        "detail": "name"
+      },
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "mastg": [
+        "MASTG-TEST-0228"
+      ]
+    },
+    "SECH-04.no_stack_canary": {
+      "title": "No stack-canary symbol found: {name}",
+      "explanation": "No __stack_chk_* symbols were found in a binary that carries Objective-C metadata. Stack canaries mitigate stack buffer overflows, but a Swift class that subclasses an Objective-C class also carries that metadata and Swift code rarely needs a canary, so MASTG-TEST-0229 treats this as a lead for manual review of the build flags, not as a result.",
+      "remediation": "Rebuild with -fstack-protector-strong (or -fstack-protector-all) so the compiler inserts stack canaries on functions with local buffers.",
+      "references": [],
+      "compare": {
+        "label": "No stack-smashing protection (stack canary)",
+        "kind": "count",
+        "unit": "binaries",
+        "detail": "name"
+      },
+      "maswe": [
+        "MASWE-0045"
+      ],
+      "mastg": [
+        "MASTG-TEST-0229"
+      ],
+      "polarity": "neutral"
+    },
+    "SECH-02.plaintext_sqlite": {
+      "title": "Unencrypted SQLite store ships in the bundle ({count})",
+      "explanation": "{count} file{s} in the bundle carr{ies} the `SQLite format 3` header and no encryption layer (SQLCipher or equivalent) is linked{sqliteNote}. Anything sensitive in these files is readable from a backup or a filesystem dump. Only the shipped bundle is scanned; databases the app creates at runtime are not covered.",
+      "remediation": "If any of these stores hold credentials or PII, move that data to the Keychain or adopt an encrypted store (SQLCipher, or Core Data with NSFileProtectionComplete). Seed databases that hold only static content need no change.",
+      "references": [],
+      "compare": {
+        "label": "Unencrypted SQLite store ships in the bundle",
+        "value": "count",
+        "kind": "count",
+        "unit": "stores"
+      },
+      "maswe": [
+        "MASWE-0004"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "privacy.gap": {
+      "title": "Privacy manifest gap: {humanName} used but undeclared",
+      "explanation": "Apple requires apps that use this category of API to declare it in PrivacyInfo.xcprivacy with a justified reason. Indicator(s) for {humanName} ({humanIndicators}) appear in {count} framework(s), but the Privacy Manifest does not declare `{category}`. This is an App-Store-policy compliance gap.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api"
+      ],
+      "compare": {
+        "label": "Privacy manifest gap: {humanName} used but undeclared",
+        "kind": "count"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "TRK-05.llm_api_endpoints": {
+      "title": "Cloud LLM API endpoints ({count})",
+      "explanation": "The binary references cloud LLM endpoints: {hosts}. Content the user writes (prompts, often photos or screen context) can be sent to a third-party AI service.",
+      "remediation": "Disclose LLM data flows in the privacy policy and PrivacyInfo manifest; prefer on-device inference (CoreML / Foundation Models) for sensitive content.",
+      "references": [
+        "https://developers.openai.com/api/reference/overview",
+        "https://platform.claude.com/docs/en/api/overview",
+        "https://ai.google.dev/api"
+      ],
+      "compare": {
+        "label": "Cloud LLM API endpoints",
+        "value": "count",
+        "kind": "count",
+        "unit": "endpoints"
+      },
+      "maswe": [],
+      "mastg": []
+    },
+    "TRK-05.llm_sdk_symbols": {
+      "title": "LLM SDK linked ({sdks})",
+      "explanation": "An LLM client SDK is linked ({sdks}). Capability to send content to a cloud model.",
+      "remediation": null,
+      "references": [
+        "https://developers.openai.com/api/reference/overview",
+        "https://platform.claude.com/docs/en/api/overview",
+        "https://ai.google.dev/api"
+      ],
+      "compare": {
+        "label": "LLM SDK linked",
+        "value": "sdks",
+        "kind": "list",
+        "unit": "SDKs"
+      },
+      "maswe": [],
+      "mastg": []
+    },
+    "TRK-05.speech_to_cloud": {
+      "title": "Speech recognition with cloud STT endpoints",
+      "explanation": "Uses SFSpeechRecognizer alongside cloud speech-to-text endpoints ({hosts}), audio/transcripts sent off-device.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/speech/sfspeechrecognizer"
+      ],
+      "maswe": [],
+      "mastg": []
+    },
+    "TRK-05.screen_context_to_llm": {
+      "title": "Screen capture co-occurs with a cloud LLM endpoint",
+      "explanation": "Screenshot and image-render APIs appear together with a cloud LLM endpoint, so the app can send screen context (potentially containing other apps' content) to a third-party model.",
+      "remediation": null,
+      "references": [
+        "https://developers.openai.com/api/reference/overview",
+        "https://platform.claude.com/docs/en/api/overview",
+        "https://ai.google.dev/api"
+      ],
+      "maswe": [],
+      "mastg": []
+    },
+    "TRK-05.on_device_ml": {
+      "title": "On-device ML only (no cloud AI endpoint)",
+      "explanation": "Uses on-device ML (CoreML / Foundation Models) with no detected cloud AI endpoint, which keeps inference on the device.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/coreml"
+      ],
+      "maswe": [],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "TGAP-03.kids_category_trackers": {
+      "title": "Kids-genre app embeds ad/attribution trackers",
+      "explanation": "The App Store genre is kids-directed ({genre}) yet the app embeds {count} advertising/attribution SDK(s): {sdks}. COPPA and the App Store Kids Category prohibit third-party advertising/behavioural tracking for children.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/app-store/review/guidelines/"
+      ],
+      "maswe": [
+        "MASWE-0068"
+      ],
+      "mastg": []
+    },
+    "TGAP-03.coppa_flag_mismatch": {
+      "title": "Child-directed SDK flags present in a kids-genre app",
+      "explanation": "SDK COPPA / child-directed-treatment flags are referenced in a kids-genre app. Check they are set to the child-directed value at runtime; a flag that is present but false still allows ad personalisation for children.",
+      "remediation": null,
+      "references": [
+        "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+        "https://developer.apple.com/app-store/review/guidelines/"
+      ],
+      "maswe": [],
+      "mastg": []
+    },
+    "TGAP-03.declared_age_range_api": {
+      "title": "Declared Age Range API in use",
+      "explanation": "Uses Apple's Declared Age Range API, a privacy-preserving age-assurance signal (the app learns an age band without collecting a birthdate).",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/declaredagerange"
+      ],
+      "maswe": [],
+      "mastg": [],
+      "polarity": "defensive"
+    },
+    "TGAP-03.age_gate_absent": {
+      "title": "Kids-adjacent app without an age gate or age-assurance signal",
+      "explanation": "The app is kids-directed (genre {genre}{ratingNote}) but no age-gate or Declared Age Range signal was found; nothing statically limits or assures the user's age band.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/app-store/review/guidelines/"
+      ],
+      "maswe": [],
+      "mastg": []
+    },
+    "TGAP-02.tracking_without_att": {
+      "title": "Tracking capability without an ATT consent gate",
+      "explanation": "The app embeds tracking capability ({capability}) but declares no App Tracking Transparency prompt (NSUserTrackingUsageDescription / ATTrackingManager). Collection may therefore occur without, or before, user consent. Static analysis observes the capability, not the runtime order.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/apptrackingtransparency",
+        "https://developer.apple.com/app-store/user-privacy-and-data-use/"
+      ],
+      "maswe": [
+        "MASWE-0078"
+      ],
+      "mastg": []
+    },
+    "SECH-08.sdk_owner": {
+      "title": "Embedded SDK provenance: {owner}",
+      "explanation": "Third-party code from {owner}{countryNote} is embedded via {count} SDK(s): {names}. Each embedded SDK is a supply-chain dependency that can collect data and update its own behaviour.",
+      "remediation": "Inventory embedded SDKs and their data collection; remove unused SDKs and pin/verify their distribution to reduce supply-chain exposure.",
+      "references": [
+        "https://developer.apple.com/support/third-party-SDK-requirements/"
+      ],
+      "compare": {
+        "label": "Embedded SDK provenance: {owner}",
+        "kind": "count",
+        "unit": "SDKs",
+        "detail": "names"
+      },
+      "maswe": [],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "TRK-04.egress": {
+      "title": "Endpoints owned by {country}-based organisations ({count} endpoint{s})",
+      "explanation": "The bundle references {count} endpoint(s) whose owner is based in {country}{ownersNote}. The country is the owning organisation's home jurisdiction from the tracker database, not where a server is hosted, and a referenced endpoint is not observed traffic. If the app sends personal data there, that is a third-country transfer, and whether it is lawful depends on safeguards a binary does not show.{adequacyNote}",
+      "remediation": null,
+      "references": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
+      ],
+      "compare": {
+        "label": "Endpoints owned by {country}-based organisations",
+        "value": "count",
+        "kind": "count",
+        "unit": "endpoints"
+      },
+      "maswe": [],
+      "mastg": []
+    },
+    "SECH-05.public_client_identifier": {
+      "title": "Public client identifier ({type}) in {source}",
+      "explanation": "A string matching the {type} format ships in {source}. It identifies the client; it does not authorise access. {reason} Reported for inventory only; it is not a leaked secret.",
+      "remediation": "No rotation needed. For a Google API key, confirm in the Google Cloud console that it is restricted to this app and to the APIs it uses, and that authorisation is enforced server-side (Firebase Security Rules, App Check).",
+      "references": [
+        "https://firebase.google.com/docs/projects/api-keys",
+        "https://developers.google.com/maps/api-security-best-practices",
+        "https://www.rfc-editor.org/rfc/rfc8252#section-8.4"
+      ],
+      "compare": {
+        "label": "Public client identifier ({type})",
+        "kind": "count",
+        "unit": "files",
+        "detail": "source"
+      },
+      "maswe": [
+        "MASWE-0004"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "SECH-05.hardcoded_secret": {
+      "title": "Possible hardcoded secret ({type}) in {source}",
+      "explanation": "A string matching the {type} format was found embedded in the app. Hardcoded credentials can be extracted from a shipped app and abused.",
+      "remediation": "Rotate the exposed credential immediately, then move it server-side or into the Keychain. Never ship API keys or secrets inside the app bundle or binary.",
+      "references": [],
+      "compare": {
+        "label": "Possible hardcoded secret ({type})",
+        "kind": "count",
+        "unit": "files",
+        "detail": "source"
+      },
+      "maswe": [
+        "MASWE-0004"
+      ],
+      "mastg": []
+    },
+    "meta.fairplay_main": {
+      "title": "Main executable is FairPlay-encrypted",
+      "explanation": "The main Mach-O is encrypted by the App Store. Static string scanning of its TEXT segment won't work without a decrypted dump (e.g., via frida-ios-dump or bagbak on a jailbroken device). Embedded frameworks and dylibs are usually encrypted too, so code strings are missing across the bundle, not only in the main binary. __LINKEDIT stays readable (symbols, imported and defined names, ObjC selectors, linked dylibs), so this scan relies on symbol-based detection.",
+      "remediation": "For full TEXT-segment coverage, supply a decrypted .ipa produced by frida-ios-dump or bagbak from a jailbroken device. Resource files, plists, entitlements, symbols, selectors and linked dylibs are still scanned in the meantime.",
+      "references": [
+        "https://mas.owasp.org/MASTG/techniques/ios/MASTG-TECH-0054/#decrypting-the-app-binary"
+      ],
+      "maswe": [],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "tracker.endpoint": {
+      "title": "Tracker SDK: {name} ({category})",
+      "explanation": "The app carries {name} ({category}): {how}. Owner: {owner}{countryNote}.",
+      "remediation": "Confirm the SDK and its data collection are disclosed in the App Privacy label and PrivacyInfo.xcprivacy. Remove the SDK or put it behind explicit consent if the app does not need the telemetry.",
+      "references": [],
+      "compare": {
+        "label": "Tracker SDK: {name}",
+        "kind": "count",
+        "unit": "hosts and frameworks"
+      },
+      "maswe": [
+        "MASWE-0068"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.undeclared_tracking_domains": {
+      "title": "{count} tracker domain{s} reached but not declared in the privacy manifest",
+      "explanation": "The app ships a PrivacyInfo.xcprivacy declaring {declared} tracking domain(s), but {count} further tracker-classified host{s} appear in the bundle and are not covered by any declaration ({owners}). iOS makes requests to the domains listed in NSPrivacyTrackingDomains fail when the user has not granted App Tracking Transparency permission; a tracking domain missing from the list is not blocked, so the user's choice does not reach it. A domain is treated as declared when it matches exactly or is a subdomain of a declared entry. MASTG-TEST-0281 fails on exactly this.",
+      "remediation": "Add every host that carries tracking traffic to NSPrivacyTrackingDomains, or stop contacting it on a tracking code path. Apple's guidance is that the list must cover the domains the app reaches for tracking purposes, not just the SDKs it recognises.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacytrackingdomains",
+        "https://developer.apple.com/documentation/bundleresources/privacy-manifest-files"
+      ],
+      "compare": {
+        "label": "Tracker domains reached but not declared in the privacy manifest",
+        "value": "count",
+        "kind": "count",
+        "unit": "domains"
+      },
+      "maswe": [
+        "MASWE-0074"
+      ],
+      "mastg": [
+        "MASTG-TEST-0281"
+      ]
+    },
+    "tracker.*": {
+      "title": "(wildcard: citations for tracker.<id> findings)",
+      "explanation": "Reference-only entry. Tracker findings mint their rule ID from the tracker database, so they cannot match a fixed key; this supplies their citations.",
+      "remediation": null,
+      "references": [
+        "https://exodus-privacy.eu.org/"
+      ],
+      "maswe": [
+        "MASWE-0068"
+      ],
+      "mastg": []
+    },
+    "perm.*": {
+      "title": "(wildcard: citations for perm.<key> findings)",
+      "explanation": "Reference-only entry for declared purpose-string findings, whose rule ID is the Info.plist key itself.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/uikit/protecting-the-user-s-privacy"
+      ],
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ]
+    },
+    "privacy.*": {
+      "title": "(wildcard: citations for privacy.<category> findings)",
+      "explanation": "Reference-only entry for declared Required-Reason API categories, whose rule ID is Apple's category constant.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api"
+      ],
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "SECH-05.*": {
+      "title": "(wildcard: citations for SECH-05.<class>.<type> findings)",
+      "explanation": "Reference-only entry. The secret scanner builds each rule ID from the credential class and the token type (SECH-05.bearer_token.json_web_token); the file is the finding's instance, not part of the ID.",
+      "remediation": null,
+      "references": [],
+      "compare": {
+        "label": "Possible hardcoded secret ({type})",
+        "kind": "count",
+        "detail": "source"
+      },
+      "maswe": [
+        "MASWE-0004"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.manifest_reason_invalid": {
+      "title": "Privacy manifest declares {count} reason{s} Apple does not approve",
+      "explanation": "A PrivacyInfo.xcprivacy entry names a reason code, or an API category, that Apple does not list: {values}. Each required-reason category accepts only the codes Apple publishes for it, and App Store Connect rejects anything else.",
+      "remediation": "Replace each code with one Apple lists for that category, choosing the one that describes how the API is actually used.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitypereasons"
+      ],
+      "compare": {
+        "label": "Privacy manifest declares reasons Apple does not approve",
+        "value": "count",
+        "kind": "count",
+        "unit": "reasons"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.manifest_reason_missing": {
+      "title": "Privacy manifest declares API categories with no reason ({count})",
+      "explanation": "A PrivacyInfo.xcprivacy entry declares a required-reason API category but gives no NSPrivacyAccessedAPITypeReasons: {values}. Apple requires at least one approved reason for every declared category.",
+      "remediation": "Add the approved reason code that matches how the app uses the API.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitypereasons"
+      ],
+      "compare": {
+        "label": "Privacy manifest declares API categories with no reason",
+        "value": "count",
+        "kind": "count",
+        "unit": "categories"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.manifest_sdk_only_reason": {
+      "title": "App manifest declares a reason reserved for third-party SDKs ({values})",
+      "explanation": "The app's own PrivacyInfo.xcprivacy declares {values}. Apple states this reason may only be declared by third-party SDKs that wrap the API for the app to call.",
+      "remediation": "Declare the reason that describes the app's own use of the API; the SDK-wrapper reason belongs in the SDK's manifest.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitypereasons"
+      ],
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.listed_sdk_without_manifest": {
+      "title": "{count} SDK{s} on Apple's privacy-manifest list ship without a manifest",
+      "explanation": "Apple requires the SDKs on its list of commonly used third-party SDKs to include a privacy manifest. These are embedded as dynamic frameworks and none contains PrivacyInfo.xcprivacy: {values}.",
+      "remediation": "Update each SDK to a version that ships its privacy manifest, or add the manifest to the framework bundle.",
+      "references": [
+        "https://developer.apple.com/support/third-party-SDK-requirements/",
+        "https://developer.apple.com/documentation/bundleresources/adding-a-privacy-manifest-to-your-app-or-third-party-sdk"
+      ],
+      "compare": {
+        "label": "SDKs on Apple's privacy-manifest list without a manifest",
+        "value": "count",
+        "kind": "count",
+        "unit": "SDKs"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "SECH-09.platform_versions": {
+      "title": "Supports iOS {minOS} and later; built with the iOS {sdk} SDK",
+      "explanation": "Info.plist records MinimumOSVersion {minOS}, the iOS {sdk} SDK ({sdkName}) and Xcode {xcode}. The minimum decides which platform protections the app can count on; the SDK decides which current platform behaviour it opts into.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/minimumosversion"
+      ],
+      "compare": {
+        "label": "Minimum iOS version",
+        "value": "minOS",
+        "kind": "count"
+      },
+      "maswe": [
+        "MASWE-0041",
+        "MASWE-0042"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "SECH-09.sdk_below_upload_minimum": {
+      "title": "Built with the iOS {sdk} SDK, older than App Store Connect's minimum",
+      "explanation": "Since {effective}, apps uploaded to App Store Connect must be built with Xcode {xcodeMajor} and the iOS {sdkMajor} SDK. This build used the iOS {sdk} SDK, so it does not target the current platform release, and an update built the same way would be rejected.",
+      "remediation": "Rebuild with the current Xcode and SDK.",
+      "references": [
+        "https://developer.apple.com/news/upcoming-requirements/?id=04282026a"
+      ],
+      "maswe": [
+        "MASWE-0042"
+      ],
+      "mastg": []
+    },
+    "SECH-04.debug_symbols": {
+      "title": "Debug symbols left in binaries ({count})",
+      "explanation": "Binaries carrying {entries} debugger (stab) entries in their symbol table: {names}. Stabs name source files, object files and functions, and often the build machine's paths. They make reverse engineering easier and are not needed to run the app.",
+      "remediation": "Set Debug Information Format to DWARF with dSYM File for release builds and keep the dSYM out of the app bundle; strip the binaries.",
+      "references": [
+        "https://developer.apple.com/documentation/xcode/building-your-app-to-include-debugging-information"
+      ],
+      "compare": {
+        "label": "Debug symbols left in binaries",
+        "value": "count",
+        "kind": "count",
+        "unit": "binaries"
+      },
+      "maswe": [
+        "MASWE-0061"
+      ],
+      "mastg": [
+        "MASTG-TEST-0219"
+      ]
+    },
+    "SECH-06.outdated_signature_format": {
+      "title": "Signed with an outdated code signature format (CodeDirectory v={version})",
+      "explanation": "The app's CodeDirectory version is {version}. Apple says any version below 20400 must be re-signed: since iOS 15 the system requires the newer format, which embeds entitlements as DER, and apps signed with an older one do not launch.",
+      "remediation": "Re-sign the app on macOS 11 or later so the signature uses the current format and includes DER entitlements.",
+      "references": [
+        "https://developer.apple.com/documentation/xcode/using-the-latest-code-signature-format"
+      ],
+      "maswe": [
+        "MASWE-0056"
+      ],
+      "mastg": [
+        "MASTG-TEST-0220"
+      ]
+    },
+    "SECH-01.hardcoded_http_urls": {
+      "title": "Hard-coded cleartext http:// URLs ({count} host{s})",
+      "explanation": "The bundle contains http:// URLs for {count} host(s): {hosts}. A hard-coded cleartext URL is a place the app may talk to a server without TLS. Whether it does depends on how the URL is used and on the ATS configuration, which blocks cleartext loads through URLSession unless an exception allows them.",
+      "remediation": "Switch each URL to https://, and remove any ATS exception that only exists to keep a cleartext endpoint working.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity"
+      ],
+      "compare": {
+        "label": "Hard-coded cleartext http:// URLs",
+        "value": "count",
+        "kind": "count",
+        "unit": "hosts"
+      },
+      "maswe": [
+        "MASWE-0026"
+      ],
+      "mastg": [
+        "MASTG-TEST-0321"
+      ]
+    },
+    "TGAP-01.manifest_data_type_invalid": {
+      "title": "Privacy manifest declares collected-data values Apple does not define ({count})",
+      "explanation": "NSPrivacyCollectedDataTypes uses types or purposes that are not on Apple's lists: {values}. Xcode combines the bundle's privacy manifests into the report developers use to fill in the App Store privacy label, and these values are not ones that report defines.",
+      "remediation": "Use the NSPrivacyCollectedDataType and NSPrivacyCollectedDataTypePurpose values from Apple's lists that match the data and its use.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatype",
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypepurposes"
+      ],
+      "compare": {
+        "label": "Privacy manifest declares undefined collected-data values",
+        "value": "count",
+        "kind": "count",
+        "unit": "types"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.manifest_tracking_mismatch": {
+      "title": "Privacy manifest tracking flag and tracking domains disagree ({count})",
+      "explanation": "Apple requires a list of tracking domains when NSPrivacyTracking is true, and only honours the list when it is: {values}. Without both, the system cannot block tracking requests for users who decline App Tracking Transparency.",
+      "remediation": "Set NSPrivacyTracking to true and list every domain used for tracking, or remove both if the app does not track.",
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacytracking",
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacytrackingdomains"
+      ],
+      "compare": {
+        "label": "Privacy manifest tracking flag and domains disagree",
+        "value": "count",
+        "kind": "count",
+        "unit": "manifests"
+      },
+      "maswe": [
+        "MASWE-0074"
+      ],
+      "mastg": []
+    },
+    "TGAP-01.declared_data_collection": {
+      "title": "Privacy manifests declare {count} collected data type{s}",
+      "explanation": "Across the bundle's privacy manifests the app and its SDKs declare collecting: {types}. {linked} are declared linked to the user's identity and {tracking} used for tracking. This is what the developer states; a static scan cannot show what leaves the device.",
+      "remediation": null,
+      "references": [
+        "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes"
+      ],
+      "compare": {
+        "label": "Declared collected data types",
+        "value": "count",
+        "kind": "count",
+        "unit": "types"
+      },
+      "maswe": [
+        "MASWE-0073"
+      ],
+      "mastg": [],
+      "polarity": "neutral"
+    },
+    "TGAP-02.inadequate_purpose_string": {
+      "title": "{count} permission purpose string{s} {verb} not explain the access",
+      "explanation": "iOS shows a purpose string when the app asks for a protected resource, and the person decides from it. These declared strings cannot explain anything: {values}. MASTG-TEST-0360 fails an app whose purpose string does not meaningfully and specifically explain why it needs the resource.",
+      "remediation": "Replace each string with a sentence that names the feature and why it needs the resource, and make sure Info.plist build settings are expanded in the shipped bundle.",
+      "references": [
+        "https://developer.apple.com/documentation/uikit/requesting-access-to-protected-resources",
+        "https://mas.owasp.org/MASTG/tests/ios/MASVS-PRIVACY/MASTG-TEST-0360/"
+      ],
+      "compare": {
+        "label": "Permission purpose strings that explain nothing",
+        "value": "count",
+        "kind": "count",
+        "unit": "keys"
+      },
+      "maswe": [
+        "MASWE-0066"
+      ],
+      "mastg": [
+        "MASTG-TEST-0360"
+      ],
+      "userAdvice": "The text under a permission prompt should say what the access is for. When it does not, decline; if a feature later needs the access, you can allow it in Settings ▸ Privacy & Security."
+    }
+  }
+}

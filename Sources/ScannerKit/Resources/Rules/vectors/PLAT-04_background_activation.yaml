@@ -1,0 +1,117 @@
+- id: PLAT-04.bg_location_mode
+  vector: PLAT-04
+  title: UIBackgroundModes contains "location"
+  description: Continuous background location, strong persistence + tracking channel.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: backgroundMode
+      pattern: '^location$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/uibackgroundmodes
+
+- id: PLAT-04.bg_voip_mode
+  vector: PLAT-04
+  title: UIBackgroundModes contains "voip"
+  description: VoIP background mode keeps the app alive indefinitely.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: backgroundMode
+      pattern: '^voip$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/information-property-list/uibackgroundmodes
+
+- id: PLAT-04.bg_processing
+  vector: PLAT-04
+  title: UIBackgroundModes contains "processing" (BGTaskScheduler channel)
+  description: |
+    Periodic BG processing, telemetry drain channel. The corresponding
+    BGTaskScheduler API use is covered by SURV-03.bg_task_scheduler; the
+    "remote-notification" mode is covered by PLAT-04.silent_remote_notification
+    (which is the security-relevant silent-push channel).
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: backgroundMode
+      pattern: '^processing$'
+  references:
+    - https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest
+
+- id: PLAT-04.voip_push
+  vector: PLAT-04
+  title: PushKit VoIP push (silent wakeup)
+  description: |
+    PushKit lets a server wake the app at any time without notifying the user, used by
+    legitimate VoIP, but also as a covert wakeup channel. Apple has tightened policy
+    several times; restricted to actual VoIP calls.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'PKPushRegistry|PKPushPayload|PKPushCredentials|didReceiveIncomingPush'
+  references:
+    - https://developer.apple.com/documentation/pushkit/pkpushregistry
+
+- id: PLAT-04.silent_remote_notification
+  vector: PLAT-04
+  title: Content-available silent push
+  description: |
+    content-available=1 silent push lets the server wake the app to refresh
+    data without a visible notification. The `didReceiveRemoteNotification`
+    delegate method appears in almost every push-using app, so it is not used
+    as a signal; the silent variant is the `content-available` payload and the
+    `remote-notification` UIBackgroundModes entry together.
+  severity: info
+  maswe: []
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\bcontent-available\b|"content_available"\s*:'
+    - kind: backgroundMode
+      pattern: '^remote-notification$'
+  references:
+    - https://developer.apple.com/documentation/usernotifications/pushing-background-updates-to-your-app
+
+- id: PLAT-04.critical_alerts
+  vector: PLAT-04
+  title: Critical-alert push entitlement
+  description: |
+    com.apple.developer.usernotifications.critical-alerts, overrides Do-Not-Disturb
+    silencing. Tight Apple review.
+  severity: info
+  maswe: [MASWE-0037]
+  mastg: []
+  search:
+    - kind: entitlement
+      pattern: 'usernotifications.critical-alerts|critical-alerts'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.usernotifications.critical-alerts
+
+- id: PLAT-04.communication_push
+  vector: PLAT-04
+  title: Communication-style push
+  description: com.apple.developer.usernotifications.communication entitlement.
+  severity: info
+  maswe: [MASWE-0037]
+  mastg: []
+  search:
+    - kind: entitlement
+      pattern: 'usernotifications.communication'
+
+- id: PLAT-04.time_sensitive
+  vector: PLAT-04
+  title: Time-sensitive notifications
+  description: com.apple.developer.usernotifications.time-sensitive, bypasses Focus filters.
+  severity: info
+  maswe: [MASWE-0037]
+  mastg: []
+  search:
+    - kind: entitlement
+      pattern: 'usernotifications.time-sensitive'
+  references:
+    - https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel

@@ -1,0 +1,249 @@
+{
+  "regions": [
+    {
+      "code": "AD",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "AR",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "AT",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "BE",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "BG",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "gdprAdequate": true
+    },
+    {
+      "code": "CH",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "gdprAdequate": false
+    },
+    {
+      "code": "CY",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "CZ",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "gdprAdequate": true
+    },
+    {
+      "code": "DK",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "EE",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "ES",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "FI",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "FO",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "gdprAdequate": true
+    },
+    {
+      "code": "GB",
+      "name": "the UK",
+      "gdprAdequate": true
+    },
+    {
+      "code": "GG",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "GR",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "HR",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "HU",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "IE",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "gdprAdequate": true
+    },
+    {
+      "code": "IM",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "gdprAdequate": false
+    },
+    {
+      "code": "IS",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "IT",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "JE",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "gdprAdequate": true
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "gdprAdequate": true
+    },
+    {
+      "code": "LI",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "LT",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "LU",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "LV",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "MT",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "NL",
+      "name": "the Netherlands",
+      "gdprAdequate": true
+    },
+    {
+      "code": "NO",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "NZ",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "PL",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "PT",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "RO",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "gdprAdequate": false
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "gdprAdequate": true
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "gdprAdequate": false
+    },
+    {
+      "code": "SI",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "SK",
+      "name": null,
+      "gdprAdequate": true
+    },
+    {
+      "code": "US",
+      "name": "the US",
+      "gdprAdequate": false
+    },
+    {
+      "code": "UY",
+      "name": null,
+      "gdprAdequate": true
+    }
+  ]
+}

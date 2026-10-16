@@ -1,0 +1,53 @@
+- id: DCS-04.touch_biometrics
+  vector: DCS-04
+  title: Touch coordinate / force / radius capture
+  description: |
+    Intercepts UITouch.majorRadius / force / forceTouch, captures pressure,
+    size and position per tap, a common behavioural-biometric fingerprint.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\b(majorRadius|forceTouch|UITraitForceTouch|preciseLocationInView)\b'
+    - kind: symbol
+      pattern: 'UITraitForceTouchCapability|majorRadius'
+  references:
+    - https://developer.apple.com/documentation/uikit/uitouch
+
+- id: DCS-04.core_motion
+  vector: DCS-04
+  title: CoreMotion accelerometer / gyroscope
+  description: |
+    Direct reads from CMMotionManager / CMAccelerometer / CMGyro, used for gait
+    analysis and behavioural fingerprinting.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'CMMotionManager|CMAccelerometer|CMGyro|CMDeviceMotion'
+    - kind: string
+      pattern: 'startAccelerometerUpdates|startGyroUpdates|startDeviceMotionUpdates'
+  attribution:
+    benign_in_frameworks: [ARKit, RealityKit, SceneKit, GameplayKit]
+  references:
+    - https://developer.apple.com/documentation/coremotion/cmmotionmanager
+
+- id: DCS-04.face_id_biometrics
+  vector: DCS-04
+  title: FaceID / LocalAuthentication biometrics
+  description: |
+    LocalAuthentication / LAPolicy biometric checks. The app receives only
+    success or failure, never biometric data. Whether the check is event-bound
+    (MASWE-0020) needs the evaluatePolicy call site, which sits in encrypted
+    code, so this records the API for review and is not a weakness on its own.
+  polarity: neutral
+  severity: info
+  maswe: [MASWE-0020]
+  mastg: [MASTG-TEST-0266]
+  search:
+    - kind: symbol
+      pattern: 'LAContext|LocalAuthentication|LAPolicy'
+  references:
+    - https://developer.apple.com/documentation/localauthentication/lacontext

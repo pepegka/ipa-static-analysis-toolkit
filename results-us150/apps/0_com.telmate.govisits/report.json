@@ -1,0 +1,3424 @@
+{
+  "ats" : {
+    "allowsArbitraryLoads" : false,
+    "allowsArbitraryLoadsForMedia" : false,
+    "allowsArbitraryLoadsInWebContent" : false,
+    "allowsLocalNetworking" : false,
+    "exceptionDomains" : [
+
+    ]
+  },
+  "coverage" : {
+    "binaries" : 5,
+    "binariesWithReadableText" : 1,
+    "stringOnlyRules" : [
+      "DCS-01.battery_uptime_telemetry",
+      "DCS-01.sysctl_hw_kern",
+      "DCS-04.touch_data_struct",
+      "DCS-06.remote_control_apps",
+      "PLAT-01.file_url_access",
+      "PLAT-01.js_bridge_all_frames",
+      "SECH-01.disabled_cert_validation",
+      "SECH-02.file_protection_none",
+      "SECH-02.keychain_accessible_always",
+      "SECH-02.userdefaults_credentials",
+      "SECH-03.embedded_certificates",
+      "SECH-03.government_root_ca",
+      "SURV-01.gis_vpn_endpoint",
+      "SURV-01.ip_check_endpoints",
+      "SURV-01.max_obfuscated_interfaces",
+      "SURV-01.tor_detect",
+      "SURV-01.utun_interface_string",
+      "SURV-01.vpn_challenge_block",
+      "SURV-01.vpn_flag_in_telemetry",
+      "SURV-01.vpn_mtu_heuristic",
+      "SURV-01.vpn_probability_model",
+      "SURV-01.yandex_checkvpn_endpoint",
+      "SURV-02.cydia_substrate",
+      "SURV-02.frida_indicators",
+      "SURV-02.is_jailbroken_naming",
+      "SURV-02.jailbreak_file_paths",
+      "SURV-02.jailbreak_url_schemes",
+      "SURV-04.byte_array_constants",
+      "SURV-04.runtime_string_decode",
+      "SURV-04.tampered_classnames",
+      "SURV-05.amnesty_mvt_domains",
+      "SURV-05.candiru_devilstongue",
+      "SURV-05.finfisher",
+      "SURV-05.hermit_rcs",
+      "SURV-05.lockdown_bypass_strings",
+      "SURV-05.paragon_graphite",
+      "SURV-05.pegasus_nso_strings",
+      "SURV-05.predator_intellexa",
+      "SURV-05.reign_quadream",
+      "SURV-05.stalkerware_capabilities",
+      "SURV-05.stalkerware_domains",
+      "SURV-05.stalkerware_families",
+      "SURV-05.triangulation_triangledb",
+      "TRK-01.huawei_hms",
+      "TRK-01.kaspersky_vpn_client_status",
+      "TRK-01.mailru_vpn_probability",
+      "TRK-01.ok_tracer",
+      "TRK-02.anomaly_six",
+      "TRK-02.babel_street",
+      "TRK-02.predicio_cuebiq",
+      "TRK-02.safegraph",
+      "TRK-02.vermillion_strike",
+      "TRK-03.carrier_geo_sdk",
+      "TRK-03.egov_identity_endpoint",
+      "TRK-03.lawful_intercept_markers",
+      "TRK-03.regional_ecosystem_domains",
+      "TRK-03.regional_payment_systems"
+    ]
+  },
+  "createdAt" : "2026-09-30T20:41:04Z",
+  "fileManifest" : [
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon60x60@2x.png",
+      "relativePath" : "AppIcon60x60@2x.png",
+      "sha256" : "228a70f0c622ba7a970e823024eba4b6928db0e18c6c47c0fff9b2ee3f2bad23",
+      "sizeBytes" : 10868
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon76x76@2x~ipad.png",
+      "relativePath" : "AppIcon76x76@2x~ipad.png",
+      "sha256" : "a1f0c37a58c20d8b25716a5e0d72436bcc4bf356d19b1fdec7bcafd2f55ac6ba",
+      "sizeBytes" : 15262
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "Assets.car",
+      "relativePath" : "Assets.car",
+      "sha256" : "e81eb2a3fe13ed19cddaece980211f32ca4dfd7afd18dde111f1865c47dc5b4a",
+      "sizeBytes" : 3363080
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "01J-lp-oVM-view-Ze5-6b-2t3.nib",
+      "relativePath" : "Base.lproj\/LaunchScreen.storyboardc\/01J-lp-oVM-view-Ze5-6b-2t3.nib",
+      "sha256" : "7a6ff7e95da6ae7b38bcbe87b68a91d870b38b93b4ef7c3aab7cd3a681ff291c",
+      "sizeBytes" : 2579
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Base.lproj\/LaunchScreen.storyboardc\/Info.plist",
+      "sha256" : "1f255d5cc53b531e3f29a9406a8df49a958e2bf9443d3e20bd8374f707f7d5c8",
+      "sizeBytes" : 258
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "UIViewController-01J-lp-oVM.nib",
+      "relativePath" : "Base.lproj\/LaunchScreen.storyboardc\/UIViewController-01J-lp-oVM.nib",
+      "sha256" : "54f3637f671feba5f19e82ec4f4a7fb448bb3cfc0fb180f089aa571fc8f053e2",
+      "sizeBytes" : 924
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "3JP-AL-v94-view-yOV-so-43B.nib",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/3JP-AL-v94-view-yOV-so-43B.nib",
+      "sha256" : "798db150bd04ed1b5f5372b6883803bd93ea3f820ed060e2bb2849868df59db0",
+      "sizeBytes" : 1225
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/Info.plist",
+      "sha256" : "10ac01f2a95cc18c58edb8767f9d2e555c55f28a7f37bcadc5e7bb99fee3ac4c",
+      "sizeBytes" : 257
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "MainNavigation.nib",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/MainNavigation.nib",
+      "sha256" : "a5349251da49b3dc8908ad844411d670be61d614a74dbe5d7178ce9c1273d80b",
+      "sizeBytes" : 2190
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "SecondaryWebViewController.nib",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/SecondaryWebViewController.nib",
+      "sha256" : "7a6b7db59aa948ec1dee5859d9fd7ce044e00768e0da46151b4e3baffd889406",
+      "sizeBytes" : 1150
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "WebLoginController.nib",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/WebLoginController.nib",
+      "sha256" : "3f237f502802ab24563be6643deb4edcc9571f91105dd0ff9a945040b12f19ba",
+      "sizeBytes" : 1403
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "kvs-s0-KEL-view-cq3-JU-tdX.nib",
+      "relativePath" : "Base.lproj\/Main.storyboardc\/kvs-s0-KEL-view-cq3-JU-tdX.nib",
+      "sha256" : "9c1e660d71dd671a2692910870fcaad74ec344d00cc9af611238b7502b5d4830",
+      "sizeBytes" : 3570
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CountrySelectorVC.nib",
+      "relativePath" : "CountrySelector.storyboardc\/CountrySelectorVC.nib",
+      "sha256" : "95168a570c03cf2be3245b5b7f6f06d1b05966ec763fd70ba84ea27113e58999",
+      "sizeBytes" : 1069
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "CountrySelector.storyboardc\/Info.plist",
+      "sha256" : "2bd17fb05bdca1bce00cbc7fe4d3db6c231a9a79311cc500db4b6a2592f38385",
+      "sizeBytes" : 159
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "U3Z-eH-UhM-view-nba-Fe-Zjy.nib",
+      "relativePath" : "CountrySelector.storyboardc\/U3Z-eH-UhM-view-nba-Fe-Zjy.nib",
+      "sha256" : "1e80d5a5c162d13b37dd2e65eb36db3206294c6e174da793aa890ce5d2d439f5",
+      "sizeBytes" : 8929
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseABTesting.bundle\/Info.plist",
+      "sha256" : "684cb649a8984c85fc89bbf705b7cb7bb076f1cff6a0d2ad6c5782fe9f52200b",
+      "sizeBytes" : 704
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseABTesting.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseCore.bundle\/Info.plist",
+      "sha256" : "b4f05e339e99f4cdcce1c44ad52c15394772a3cc25e66c62617f211c8dc2905c",
+      "sizeBytes" : 694
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseCore.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "11e31f5f6b60e80ebd5901549fce5043f9af3e683f874022945000b405306c3f",
+      "sizeBytes" : 855
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseCoreExtension.bundle\/Info.plist",
+      "sha256" : "77c81d43f1c399a12bdb309c3b5f894114cca4241fb3aee58421cacaf6e94e79",
+      "sizeBytes" : 712
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseCoreExtension.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseCoreInternal.bundle\/Info.plist",
+      "sha256" : "1449a1a0a97c8c6f99c54c6628be4236db8a0723e0355d04bcffc41e06dd5ff9",
+      "sizeBytes" : 710
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseCoreInternal.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "5b7fe979423dede3e08afc29a42f00f6086275dc548a84c29774235863eed3ef",
+      "sizeBytes" : 855
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseCrashlytics.bundle\/Info.plist",
+      "sha256" : "d090cbdd2ff0df28d62a673f4b06bc8061a67482d58fb9d5f94563ac993f7888",
+      "sizeBytes" : 708
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseCrashlytics.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "e9bcc6e9c7382bf506cadabe74cfd4ed155686806ba81c195a634b86aa5fcce0",
+      "sizeBytes" : 1383
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseCrashlyticsSwift.bundle\/Info.plist",
+      "sha256" : "04c0a2db25ba0e586b4bb31b0fee148b5d445757b6bb0bf4225dc254d3b51f72",
+      "sizeBytes" : 718
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseCrashlyticsSwift.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "e9bcc6e9c7382bf506cadabe74cfd4ed155686806ba81c195a634b86aa5fcce0",
+      "sizeBytes" : 1383
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/Info.plist",
+      "sha256" : "ec829dd128d3dcd024836b845050a7ca386cf877d9faf3f0bb86c0b6294cbd54",
+      "sizeBytes" : 243
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "banner-view-vc.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/banner-view-vc.nib",
+      "sha256" : "772e2f831af3f7eb5655a8e1ccd290e241e2f565c2ef65eb0d904b7ce3b94d44",
+      "sizeBytes" : 1044
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "card-view-vc.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/card-view-vc.nib",
+      "sha256" : "9f72c42c81fee93fbf4ba4cf0be06c018ca5850e975ecc303528e44ed9ca09a0",
+      "sizeBytes" : 1040
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "image-only-vc.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/image-only-vc.nib",
+      "sha256" : "11a2b35e4da7dfb4f3b3e5e6624ac67dbb4223a8ba2fbabfe166d0594295b507",
+      "sizeBytes" : 1046
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "lGH-bl-7Xw-view-ef6-R8-q1S.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/lGH-bl-7Xw-view-ef6-R8-q1S.nib",
+      "sha256" : "b5ce631b69251e844ea8b036a9ddbedafc690db6784f93d48bdda4e5c6e6357b",
+      "sizeBytes" : 3628
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "lbb-HM-tHJ-view-vRb-yf-OWE.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/lbb-HM-tHJ-view-vRb-yf-OWE.nib",
+      "sha256" : "1270d6126067438bd447eabc65eaf322e67907ce4f2314e51bfaeef6d7e5cccb",
+      "sizeBytes" : 4842
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "modal-view-vc.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/modal-view-vc.nib",
+      "sha256" : "1497b59bf2e62f1770be7a69030623f4400376d72877bc869ee479b2efcbc227",
+      "sizeBytes" : 1042
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "oTF-1C-LZP-view-SM1-hn-m3n.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/oTF-1C-LZP-view-SM1-hn-m3n.nib",
+      "sha256" : "52d07f1dd64b8511071f9228557ecca5e4d9070de7329e63e9935551a30ddd6f",
+      "sizeBytes" : 11329
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "x01-lq-3r6-view-1pz-BP-O6T.nib",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/FIRInAppMessageDisplayStoryboard.storyboardc\/x01-lq-3r6-view-1pz-BP-O6T.nib",
+      "sha256" : "0c575720c6895be6091800336927aaa2996e916209fadcd1db6e82d644cc2099",
+      "sizeBytes" : 13756
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/Info.plist",
+      "sha256" : "dbc537c2cf3c5530e50a5c3bc2d9620f2409f0b7b7be956835842dfe94e5934e",
+      "sizeBytes" : 722
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "close-with-transparency.png",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/close-with-transparency.png",
+      "sha256" : "4b176ba5e3cfe4db66a0b4dda4cd83a53bbb5cb0a61fc20bfbb339a707271340",
+      "sizeBytes" : 379
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "close-with-transparency@2x.png",
+      "relativePath" : "Firebase_FirebaseInAppMessaging_iOS.bundle\/close-with-transparency@2x.png",
+      "sha256" : "0020cf8b55aaa6f5eb1d1d8265b1e034bb9a94b0f59de4d9884d7619abaf4e7b",
+      "sizeBytes" : 837
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseInstallations.bundle\/Info.plist",
+      "sha256" : "d4a0c1bc58e0188ac19033bd750abb46096efc6f6730d91c2498da9d0b5b9925",
+      "sizeBytes" : 712
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseInstallations.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "cfbb3c4f76a66d53698bae91f7110c00f2148e6e6f13ad7d32592909bc010e51",
+      "sizeBytes" : 1105
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Firebase_FirebaseMessaging.bundle\/Info.plist",
+      "sha256" : "4cff040c93fde8d3f014355d8c928f57a78b06cdcd304847292ac5e3a494269b",
+      "sizeBytes" : 704
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Firebase_FirebaseMessaging.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "98762096372ac27f5e888c7372d512f0d3f5cf3283c64006070f4cde1a72a071",
+      "sizeBytes" : 2357
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "FirebaseAnalytics",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/FirebaseAnalytics",
+      "sha256" : "73aa2995dd3454f9639c18e30cfbfcf34ff3c2dde27bbf31eee469ada20f6329",
+      "sizeBytes" : 35584
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/Info.plist",
+      "sha256" : "2efb6e66c8f6c07cb84d5c0aac23087e918f7b5dfed2ec433568b6c0ffc1591e",
+      "sizeBytes" : 1546
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "FirebaseAnalytics.supf",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/SC_Info\/FirebaseAnalytics.supf",
+      "sha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes" : 0
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "FirebaseAnalytics.supx",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/SC_Info\/FirebaseAnalytics.supx",
+      "sha256" : "05a0b2489a5656062225d7e7b275c84f94703fea3461704bb57637c5976058f3",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "FirebaseAnalytics.v4.supp",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/SC_Info\/FirebaseAnalytics.v4.supp",
+      "sha256" : "f10aa22416d3e1293b1f45f210c01f830188afddad85f10352f704819a09bb0d",
+      "sizeBytes" : 848
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "FirebaseAnalytics.v5.supf",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/SC_Info\/FirebaseAnalytics.v5.supf",
+      "sha256" : "e889b8326d53fdbbcadd2057e1a47ff013e202871dec29cedb2d49b6a9e529e0",
+      "sizeBytes" : 872
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/_CodeSignature\/CodeResources",
+      "sha256" : "8c69ddb207eec5d32fc740fa2334c5c9d3f8406cf3046553b99ac52195f03cb1",
+      "sizeBytes" : 2776
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "GoogleAdsOnDeviceConversion",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/GoogleAdsOnDeviceConversion",
+      "sha256" : "a32c07f6d8e94d0ad6b45c2446f17847f80b67f4f439c340a7a79cb9006a0236",
+      "sizeBytes" : 35616
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/Info.plist",
+      "sha256" : "2c2e9c0265b9375b764bf9cc14e70cfa8baf122ec0ca9a9bce70a7f2540d6611",
+      "sizeBytes" : 1524
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAdsOnDeviceConversion.supf",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/SC_Info\/GoogleAdsOnDeviceConversion.supf",
+      "sha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes" : 0
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAdsOnDeviceConversion.supx",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/SC_Info\/GoogleAdsOnDeviceConversion.supx",
+      "sha256" : "05a0b2489a5656062225d7e7b275c84f94703fea3461704bb57637c5976058f3",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAdsOnDeviceConversion.v4.supp",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/SC_Info\/GoogleAdsOnDeviceConversion.v4.supp",
+      "sha256" : "f10aa22416d3e1293b1f45f210c01f830188afddad85f10352f704819a09bb0d",
+      "sizeBytes" : 848
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAdsOnDeviceConversion.v5.supf",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/SC_Info\/GoogleAdsOnDeviceConversion.v5.supf",
+      "sha256" : "036498be1b16892e05597033b6e7b39f45a899a04c718b4c78294fc4c2eabe26",
+      "sizeBytes" : 872
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/_CodeSignature\/CodeResources",
+      "sha256" : "2d5ab8a268cf289d5009526412e486d7d7f974127f5c5db127f2ddd46a1fc1d3",
+      "sizeBytes" : 2836
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "GoogleAppMeasurement",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/GoogleAppMeasurement",
+      "sha256" : "8698f3a0e0ae7c9da74ec8fadec58871855bd6afd754189a14083c4bf0293593",
+      "sizeBytes" : 35584
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/Info.plist",
+      "sha256" : "9b3fe9824327b86d14640f0251ed283be8d0640692885a2013e2b2e00e0a138f",
+      "sizeBytes" : 1555
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurement.supf",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/SC_Info\/GoogleAppMeasurement.supf",
+      "sha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes" : 0
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurement.supx",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/SC_Info\/GoogleAppMeasurement.supx",
+      "sha256" : "05a0b2489a5656062225d7e7b275c84f94703fea3461704bb57637c5976058f3",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurement.v4.supp",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/SC_Info\/GoogleAppMeasurement.v4.supp",
+      "sha256" : "7d919b571deb47b697c35b473b3cc9720736374931cd08f1a81dddd80b64ad4e",
+      "sizeBytes" : 848
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurement.v5.supf",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/SC_Info\/GoogleAppMeasurement.v5.supf",
+      "sha256" : "5c497e64917f611dbff598d9a5f1273907e3f99c053909cddd793aad0eddd740",
+      "sizeBytes" : 872
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/_CodeSignature\/CodeResources",
+      "sha256" : "a4bca08158f1d179578a38e79c8e7c543a4dfcc76175d68669fdccc2822e2fa5",
+      "sizeBytes" : 2794
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "GoogleAppMeasurementIdentitySupport",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/GoogleAppMeasurementIdentitySupport",
+      "sha256" : "1b3491c8b9f9cdacf1a6c7ffba99fd8652fe79eb90131c09e192f0c7366fc532",
+      "sizeBytes" : 35632
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/Info.plist",
+      "sha256" : "030aa5beb80becfa9df5f2fe8b410899bab722d3548862d1fa0b67f665a4326b",
+      "sizeBytes" : 1600
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurementIdentitySupport.supf",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/SC_Info\/GoogleAppMeasurementIdentitySupport.supf",
+      "sha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes" : 0
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurementIdentitySupport.supx",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/SC_Info\/GoogleAppMeasurementIdentitySupport.supx",
+      "sha256" : "05a0b2489a5656062225d7e7b275c84f94703fea3461704bb57637c5976058f3",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurementIdentitySupport.v4.supp",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/SC_Info\/GoogleAppMeasurementIdentitySupport.v4.supp",
+      "sha256" : "a3461b9b52c2fa80c56fb7ad014419332158092c61fe65bb86d34495b58fed7e",
+      "sizeBytes" : 848
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "GoogleAppMeasurementIdentitySupport.v5.supf",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/SC_Info\/GoogleAppMeasurementIdentitySupport.v5.supf",
+      "sha256" : "5c497e64917f611dbff598d9a5f1273907e3f99c053909cddd793aad0eddd740",
+      "sizeBytes" : 872
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/_CodeSignature\/CodeResources",
+      "sha256" : "62a55bb37f8b75aabf535fa6a2c301af32aa34746deceb4c3c279a4ecc833d51",
+      "sizeBytes" : 2884
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleDataTransport_GoogleDataTransport.bundle\/Info.plist",
+      "sha256" : "50777eba15e21827daf417072f21c0b64f9dcade2b5dd96181266cc393b29832",
+      "sizeBytes" : 722
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleDataTransport_GoogleDataTransport.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "cfbb3c4f76a66d53698bae91f7110c00f2148e6e6f13ad7d32592909bc010e51",
+      "sizeBytes" : 1105
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "GoogleService-Info.plist",
+      "relativePath" : "GoogleService-Info.plist",
+      "sha256" : "32cd588f182b82388608809f79133bdd0f204c028c88f0dc4b555d64f1abccf5",
+      "sizeBytes" : 896
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle\/Info.plist",
+      "sha256" : "4fbdf0ce9a37713b5575331a26a11d5467c560e57a87ad2094e7ab7a2340baae",
+      "sizeBytes" : 746
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Environment.bundle\/Info.plist",
+      "sha256" : "d5e0314325ebad0090d0c21a5aa6b46abdaa5e770e2fad455dfb16a4878c667d",
+      "sizeBytes" : 730
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Environment.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "b08273d687379394792f71c94c1083616a04af8afaa396d8058980f444cfb3d4",
+      "sizeBytes" : 855
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Logger.bundle\/Info.plist",
+      "sha256" : "5fcc24b1854e16c74ee8b550cf00fd5d51c98d7995131825cbcaa4d0d6072c83",
+      "sizeBytes" : 720
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Logger.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-MethodSwizzler.bundle\/Info.plist",
+      "sha256" : "c2aa5e6cda9442fb60f1258bf80336ef8b7d72d884008f0ca96974e72194ef68",
+      "sizeBytes" : 736
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-MethodSwizzler.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-NSData.bundle\/Info.plist",
+      "sha256" : "b9b9b7afe5b1b83eaf0e1beb627f708b8e775e45705699434a4652eaa51b9c4d",
+      "sizeBytes" : 720
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-NSData.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Network.bundle\/Info.plist",
+      "sha256" : "7d77e9f930a1e2eb2875416b523da4aa1225b1a076f37ff630cb41e39e7d47c3",
+      "sizeBytes" : 722
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Network.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "0ac00a0b7eff0079dce252e29ab41d71cf58c6c94fe4e44ea110cef5c62970e1",
+      "sizeBytes" : 856
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Reachability.bundle\/Info.plist",
+      "sha256" : "1f950ffe718254578f87ae5f1cced5e9a52a737af6934d7dc1001f146e14d57f",
+      "sizeBytes" : 732
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-Reachability.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "1377eccedff8f8320f78040e9c9d3e17ecc0ea569594b56af0ef17be44197c7a",
+      "sizeBytes" : 478
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-UserDefaults.bundle\/Info.plist",
+      "sha256" : "bf92ca90ee3498aff16738f0d17de3607e4269b66174e0d7cfe0488bd696bf1f",
+      "sizeBytes" : 732
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "GoogleUtilities_GoogleUtilities-UserDefaults.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "fac507c510aba7884e805fb5feff1a8a8d0c7f42c01d174f927a2bdfaa7130b4",
+      "sizeBytes" : 911
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Info.plist",
+      "sha256" : "ff48a26e6c5dc6105d4103db85f78a0b827595668120c1d51ae043baeabc6230",
+      "sizeBytes" : 4588
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "PkgInfo",
+      "relativePath" : "PkgInfo",
+      "sha256" : "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "sizeBytes" : 8
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Promises_FBLPromises.bundle\/Info.plist",
+      "sha256" : "e7e44465596121f47de31a379e87a0cdff02e62c4894e6d49da29ead3dbf9e08",
+      "sizeBytes" : 684
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Promises_FBLPromises.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "74b0cd72fc23c1ef302f22ee2753f61817cdc5af0ff7a7f2d0632b524fb8acea",
+      "sizeBytes" : 373
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Promises_Promises.bundle\/Info.plist",
+      "sha256" : "ad9af5224028f4256ef1a048fcc3d913c92494dc255584591d5c0c9291de13c0",
+      "sizeBytes" : 678
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Promises_Promises.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "74b0cd72fc23c1ef302f22ee2753f61817cdc5af0ff7a7f2d0632b524fb8acea",
+      "sizeBytes" : 373
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Manifest.plist",
+      "relativePath" : "SC_Info\/Manifest.plist",
+      "sha256" : "4b9a8c51832d65199508479dd60a37138a1b92595fae08aa372e8829c228b89f",
+      "sizeBytes" : 787
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.sinf",
+      "relativePath" : "SC_Info\/VideoVisits.sinf",
+      "sha256" : "a50f7bd2c43ef8186cba5d240231722213da7b3f8035a5f07ca81b887567b8b6",
+      "sizeBytes" : 1032
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.supf",
+      "relativePath" : "SC_Info\/VideoVisits.supf",
+      "sha256" : "ae78440c2b8ae4d308b9c9e7ef359f5b2ab6d3d3a070bd92ba29e64ba366fab2",
+      "sizeBytes" : 23164
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.supp",
+      "relativePath" : "SC_Info\/VideoVisits.supp",
+      "sha256" : "7d144871ce06c29942365035262474d7065984a69efc150a891f32f1c5008a0f",
+      "sizeBytes" : 23268
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.supx",
+      "relativePath" : "SC_Info\/VideoVisits.supx",
+      "sha256" : "05a0b2489a5656062225d7e7b275c84f94703fea3461704bb57637c5976058f3",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.v4.supp",
+      "relativePath" : "SC_Info\/VideoVisits.v4.supp",
+      "sha256" : "76f2d88378367c9eee4bf8484143629c3779bd0ea639a857dc811f21bddca5d5",
+      "sizeBytes" : 23248
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "VideoVisits.v5.supf",
+      "relativePath" : "SC_Info\/VideoVisits.v5.supf",
+      "sha256" : "3ab80b9f49aa061581b14b290e314c3ea613c967144c5406dd3647e85139566d",
+      "sizeBytes" : 23144
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "VideoVisits",
+      "relativePath" : "VideoVisits",
+      "sha256" : "368f9b122795b5a808a31a305efcc0052efb8099cecd83f712e8be904d23da5c",
+      "sizeBytes" : 3818480
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "_CodeSignature\/CodeResources",
+      "sha256" : "c3528019f79ee3fa6142f0fa13b075095f54a2bdb42fcbed460f58d7c05597c4",
+      "sizeBytes" : 40138
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "text",
+      "name" : "Localizable.strings",
+      "relativePath" : "en.lproj\/Localizable.strings",
+      "sha256" : "c60153ad3917bd26ba61cac734e36002857d713b39557a1c6adbb5d3bbded65e",
+      "sizeBytes" : 1700
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "text",
+      "name" : "Localizable.strings",
+      "relativePath" : "es.lproj\/Localizable.strings",
+      "sha256" : "209c761df0bfe1bdfd3874ccaa233080681e39877c05e5052290380d13bcd78c",
+      "sizeBytes" : 2617
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "text",
+      "name" : "Localizable.strings",
+      "relativePath" : "fr-CA.lproj\/Localizable.strings",
+      "sha256" : "d6d292e84f998d685770b200a3fa2d712e84d690966ed6734cc846fe0935af7f",
+      "sizeBytes" : 2968
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "nanopb_nanopb.bundle\/Info.plist",
+      "sha256" : "ff47743b0a4cfd4d5f6078811726288d4f7d568ea5837031e78bc6f150ac514e",
+      "sizeBytes" : 668
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "nanopb_nanopb.bundle\/PrivacyInfo.xcprivacy",
+      "sha256" : "729ba3cbd0f458c78cd61edf17350edafe0e34ca86e314ec64c8cb22ccd21b54",
+      "sizeBytes" : 374
+    }
+  ],
+  "findings" : [
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSUserTrackingUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "This allows the app to monitor usage to improve performance."
+        }
+      ],
+      "explanation" : "App Tracking Transparency \/ IDFA collection",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "4AFCB495-30FC-49E8-AAEF-DEEB79DEC6CD",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSUserTrackingUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSUserTrackingUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSUserTrackingUsageDescription",
+      "severity" : "medium",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: App Tracking Transparency \/ IDFA collection",
+      "vectorID" : "TRK-01",
+      "why" : "The app declares it will ask to track: Apple defines tracking as linking its data with data from other companies for targeted advertising or measurement, a marketing profile (WP248 criterion 1) built by combining datasets across controllers (criterion 6)."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "VideoVisits",
+          "value" : "_OBJC_CLASS_$_CTTelephonyNetworkInfo"
+        }
+      ],
+      "explanation" : "CTTelephonyNetworkInfo \/ CTCarrier, mobile country \/ mobile network code, used both for roaming detection and as a fingerprinting signal.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "37560667-BC5D-4C9D-AAF4-CED410207B7B",
+      "linddun" : [
+        "Identifying"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/coretelephony\/ctcarrier",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "DCS-01.carrier_info",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Cellular operator information (CTCarrier)",
+      "vectorID" : "DCS-01",
+      "why" : "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_sysctl"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_sysctlbyname"
+        }
+      ],
+      "explanation" : "Low-level C call to read kernel-level hardware parameters.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "6823F19F-7F9D-4A1B-BF8E-5D3BC2144550",
+      "linddun" : [
+        "Identifying"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/kernel\/1387446-sysctlbyname",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "DCS-01.sysctlbyname_import",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Imports sysctlbyname()",
+      "vectorID" : "DCS-01",
+      "why" : "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "context" : "NSPrivacyAccessedAPITypeReasons",
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "1C8F.1"
+        }
+      ],
+      "explanation" : "A privacy manifest declares required reason 1C8F.1 for the UserDefaults API: the code reads and writes defaults shared with the apps, extensions and App Clips in the same App Group. Apple permits this only within the group and forbids using it for tracking. Inventory: it shows a shared store exists, not what is stored in it. (The rule id is kept for continuity; it used to fire on any UserDefaults declaration and claimed an advertising-ID share nothing in the bundle showed.)",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "DF44E0A3-FA7C-4A2E-B59A-B7B2CB6F940A",
+      "linddun" : [
+        "Identifying"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/app-privacy-configuration\/nsprivacyaccessedapitypes\/nsprivacyaccessedapitypereasons"
+      ],
+      "ruleID" : "DCS-01.user_defaults_appgroup_fingerprint",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "UserDefaults shared within an App Group (declared reason 1C8F.1)",
+      "vectorID" : "DCS-01",
+      "why" : "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "VideoVisits",
+          "value" : "_OBJC_CLASS_$_AVCaptureDevice"
+        }
+      ],
+      "explanation" : "AVCaptureSession \/ AVCaptureDevice, direct camera capture.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "4CA20205-746D-4072-B243-72DEB627D18F",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+        "NSCameraUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSCameraUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/avfoundation\/avcapturesession",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "DCS-05.video_capture",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Camera capture API",
+      "vectorID" : "DCS-05",
+      "why" : "Camera and screen capture APIs. Capture alone meets none of the WP248 criteria."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "gomessaging"
+        }
+      ],
+      "explanation" : "The app declares URL schemes it can probe with -canOpenURL:, the iOS analogue of Android's QUERY_ALL_PACKAGES. A short list (deep-linking into a few partner apps) is routine; a long list is an installed-app fingerprinting signal.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "1F99DD0A-EB5F-42DD-BE78-63E8DEC8E567",
+      "linddun" : [
+        "Detecting",
+        "Linking"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+        "count" : "1"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/uiapplication\/canopenurl(_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "remediation" : "Trim LSApplicationQueriesSchemes to only the apps you genuinely interoperate with; probing a broad list to fingerprint installed apps risks App Store rejection.",
+      "ruleID" : "DCS-06.ls_application_queries_schemes",
+      "severity" : "info",
+      "solove" : [
+        "Aggregation"
+      ],
+      "title" : "Probes installed apps via LSApplicationQueriesSchemes (1 schemes)",
+      "vectorID" : "DCS-06",
+      "why" : "Which apps are installed says what a person is interested in: WP248 criterion 1 covers profiling from \"personal preferences or interests\". One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-601",
+        "CWE-79",
+        "CWE-829"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "VideoVisits",
+          "value" : "_OBJC_CLASS_$_WKWebView"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "VideoVisits",
+          "value" : "_OBJC_CLASS_$_WKWebViewConfiguration"
+        }
+      ],
+      "explanation" : "WKWebView is the iOS embedded browser.",
+      "gdpr" : [
+
+      ],
+      "id" : "C0178BEA-328E-46F0-813A-DD23D19086DB",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4",
+        "MASVS-PLATFORM-2"
+      ],
+      "maswe" : [
+        "MASWE-0035"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/webkit\/wkwebview",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0035\/"
+      ],
+      "ruleID" : "PLAT-01.wkwebview_use",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "WKWebView in use",
+      "vectorID" : "PLAT-01",
+      "why" : "The app embeds a WebView."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-939"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "com.telmate.govisits:\/\/"
+        }
+      ],
+      "explanation" : "The app registers custom URL scheme(s) via CFBundleURLSchemes. Any app or web page can invoke these; if application(_:open:options:) acts on unvalidated parameters, this is an entry point for unauthorized actions. Custom schemes are also unverified (unlike Universal Links). Review the handler for input validation.",
+      "gdpr" : [
+
+      ],
+      "id" : "439E2558-E09B-4EC3-9A41-0DA5B92CBDD4",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4",
+        "MASVS-PLATFORM-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0029"
+      ],
+      "metrics" : {
+        "count" : "1",
+        "s" : ""
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/xcode\/defining-a-custom-url-scheme-for-your-app",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0029\/"
+      ],
+      "remediation" : "Validate and sanitize every parameter in application(_:open:options:); never trigger sensitive actions from a URL without authentication. Prefer Universal Links (verified) over custom schemes.",
+      "ruleID" : "PLAT-02.custom_url_schemes",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Registers 1 custom URL scheme (inbound deep-link surface)",
+      "vectorID" : "PLAT-02",
+      "why" : "The app registers custom URL schemes. MASWE-0029 makes them a weakness when a sensitive flow relies on them or the handler does not validate input, which MASTG-TEST-0370 and -0371 read from the handler code."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "remote-notification"
+        }
+      ],
+      "explanation" : "Legal iOS background-execution channels. `location`\/`voip` enable persistent background execution and are the strongest signal; `audio`\/`external-accessory` are moderate; `fetch`\/`remote-notification`\/`processing` are routine and declared by most apps.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "92608741-181A-469B-A6E3-58BDA013D6F1",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "modes" : "remote-notification"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "remediation" : "Declare only the background modes the app actually needs; each is reviewed by App Review and must map to genuine user-facing functionality, not background telemetry.",
+      "ruleID" : "PLAT-04.background_modes",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Background modes declared: remote-notification",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "remote-notification"
+        }
+      ],
+      "explanation" : "content-available=1 silent push lets the server wake the app to refresh data without a visible notification. The `didReceiveRemoteNotification` delegate method appears in almost every push-using app, so it's no longer a primary signal; the silent variant is the `content-available` payload and the `remote-notification` UIBackgroundModes entry together.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "5D1FA23A-F657-4FE2-838A-BEF34ED4D5BB",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/usernotifications\/pushing-background-updates-to-your-app"
+      ],
+      "ruleID" : "PLAT-04.silent_remote_notification",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Content-available silent push",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-212",
+        "CWE-313"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_NSURLIsExcludedFromBackupKey"
+        }
+      ],
+      "explanation" : "References NSURLIsExcludedFromBackupKey \/ isExcludedFromBackup. The key does not guarantee exclusion, and sensitive files still need to be encrypted, so its presence is a reference, not a mitigation.",
+      "gdpr" : [
+
+      ],
+      "id" : "419D30EF-E5FE-4446-9D1E-FC0FA2D565B5",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0215"
+      ],
+      "masvs" : [
+        "MASVS-STORAGE"
+      ],
+      "masvsControls" : [
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0006"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/foundation\/urlresourcekey\/isexcludedfrombackupkey",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-STORAGE\/MASWE-0006\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-STORAGE\/MASTG-TEST-0215\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0023\/"
+      ],
+      "ruleID" : "SECH-02.backup_exclusion_marker",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Backup-exclusion API in use (NSURLIsExcludedFromBackupKey)",
+      "vectorID" : "SECH-02",
+      "why" : "Records that the app marks files as excluded from backup."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-200",
+        "CWE-284",
+        "CWE-312",
+        "CWE-313",
+        "CWE-732",
+        "CWE-922"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_NSFileProtectionNone"
+        }
+      ],
+      "explanation" : "A binary imports NSFileProtectionNone, the class that leaves a file readable while the device is locked. The import shows the option is referenced, often by a library that maps every protection class; whether it is applied to sensitive data needs the manual review the linked MASTG test describes.",
+      "gdpr" : [
+
+      ],
+      "id" : "1DB6955D-6E27-4509-9F0D-557D27BB58D9",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0300"
+      ],
+      "masvs" : [
+        "MASVS-STORAGE"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-2",
+        "MASVS-STORAGE-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0001"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/foundation\/fileprotectiontype\/none",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-STORAGE\/MASWE-0001\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-STORAGE\/MASTG-TEST-0300\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0024\/"
+      ],
+      "ruleID" : "SECH-02.file_protection_none_referenced",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "References NSFileProtectionNone",
+      "vectorID" : "SECH-02",
+      "why" : "The import shows the protection class is referenced, not that sensitive data is stored under it."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-338"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_drand48"
+        }
+      ],
+      "explanation" : "Imports rand() \/ srand() \/ random() \/ drand48(), predictable PRNGs unsuitable for tokens, keys, IVs or nonces. Use SecRandomCopyBytes or arc4random_buf. `arc4random() % n` also introduces modulo bias; prefer arc4random_uniform(n).",
+      "gdpr" : [
+
+      ],
+      "id" : "03D26B91-537D-4CA7-AACC-5857AB1D321A",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0311"
+      ],
+      "masvs" : [
+        "MASVS-CRYPTO"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-1"
+      ],
+      "maswe" : [
+        "MASWE-0012"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/security\/secrandomcopybytes(_:_:_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0012\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-CRYPTO\/MASTG-TEST-0311\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0025\/"
+      ],
+      "ruleID" : "SECH-03.insecure_randomness",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Non-cryptographic random number generator",
+      "vectorID" : "SECH-03",
+      "why" : "A non-cryptographic generator is linked. MASTG-TEST-0311 fails only when its output is used for keys, tokens or other security values, which is in FairPlay-encrypted code, so the scan records the API."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-328"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_CC_MD5"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_CC_SHA1"
+        }
+      ],
+      "explanation" : "Imports CC_MD5 \/ CC_SHA1 (CommonCrypto) or CryptoKit's Insecure.MD5 \/ Insecure.SHA1. Both are collision-broken and unsuitable for signatures, integrity checks or password hashing, but are also widely used for non-security purposes (cache keys, ETags, file checksums), so the finding is a pointer for review.",
+      "gdpr" : [
+
+      ],
+      "id" : "415580D0-3CE4-4AD5-9EFB-57980FE2C678",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0211"
+      ],
+      "masvs" : [
+        "MASVS-CRYPTO"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-1"
+      ],
+      "maswe" : [
+        "MASWE-0008"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/csrc.nist.gov\/pubs\/sp\/800\/131\/a\/r2\/final",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0008\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-CRYPTO\/MASTG-TEST-0211\/"
+      ],
+      "ruleID" : "SECH-03.weak_hash",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Weak hash primitive (MD5 \/ SHA-1)",
+      "vectorID" : "SECH-03",
+      "why" : "MD5 or SHA-1 is linked. MASTG-TEST-0211 fails only when the hash protects sensitive data; checksums and cache keys pass. That use is in FairPlay-encrypted code, so the scan records the API."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "aps-environment"
+        }
+      ],
+      "explanation" : "aps-environment entitlement, push notifications.",
+      "gdpr" : [
+
+      ],
+      "id" : "55BC8DEF-6975-4FD5-9DCA-2A817FF63244",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/aps-environment",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.aps_environment_production",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "APS push environment",
+      "vectorID" : "SECH-06",
+      "why" : "Push environment the build targets."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-494"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_dlsym"
+        }
+      ],
+      "explanation" : "The binary imports dlopen\/dlsym, so it can resolve and call code chosen at runtime rather than at link time. That is how optional frameworks, plugin architectures and A\/B-tested SDKs are loaded, and it is entirely normal, so this ships as INFO inventory rather than a weakness. It matters only as context: an app that also carries obfuscation (SURV-04) or a data broker (TRK-02) can assemble behaviour a static scan cannot see, and dynamic code loading is the mechanism that makes that possible. Note the limit of the signal: an import proves the symbol is linked, not that it is ever called, and iOS forbids loading code that is not already in the signed bundle. (MASWE-0049)",
+      "gdpr" : [
+
+      ],
+      "id" : "2E79D96E-2801-4699-A3CE-FBAA98C068E4",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4"
+      ],
+      "maswe" : [
+        "MASWE-0049"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0049\/"
+      ],
+      "ruleID" : "SECH-06.dynamic_loader_imports",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Dynamic loader in use (dlopen \/ dlsym)",
+      "vectorID" : "SECH-06",
+      "why" : "dlopen\/dlsym are present in the binary."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+        "CWE-284",
+        "CWE-306"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_SecItemAdd"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_SecItemCopyMatching"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_SecItemDelete"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "_SecItemUpdate"
+        }
+      ],
+      "explanation" : "Uses the Keychain Services API (SecItemAdd \/ SecItemCopyMatching \/ SecItemUpdate). Informational, pair with SECH-02.keychain_accessible_always to judge whether items are protected with an appropriate accessibility \/ access-control class.",
+      "gdpr" : [
+
+      ],
+      "id" : "F4A6B954-96A5-4018-9074-6B4B1BF79B7D",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-AUTH"
+      ],
+      "masvsControls" : [
+        "MASVS-AUTH-2",
+        "MASVS-AUTH-3",
+        "MASVS-CRYPTO-2"
+      ],
+      "maswe" : [
+        "MASWE-0016"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/security\/secitemadd(_:_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0016\/"
+      ],
+      "ruleID" : "SECH-07.keychain_in_use",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Keychain API in use (SecItem)",
+      "vectorID" : "SECH-07",
+      "why" : "A positive signal: the app uses the Keychain."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+
+      ],
+      "explanation" : "Third-party code from Google (US) is embedded via 1 SDK(s): Firebase Analytics. Each embedded SDK is a supply-chain dependency that can collect data and update its own behaviour.",
+      "gdpr" : [
+
+      ],
+      "id" : "109F72BB-D501-48B0-A428-B27FC503928F",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "count" : "1",
+        "countryNote" : " (US)",
+        "names" : "Firebase Analytics",
+        "owner" : "Google"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/support\/third-party-SDK-requirements\/"
+      ],
+      "remediation" : "Inventory embedded SDKs and their data collection; remove unused SDKs and pin\/verify their distribution to reduce supply-chain exposure.",
+      "ruleID" : "SECH-08.sdk_owner.google",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Embedded SDK provenance: Google",
+      "vectorID" : "SECH-08",
+      "why" : "An inventory of who owns the embedded SDKs. Ownership is not a weakness; data-broker and AI recipients carry their own findings under TRK-02 and TRK-05."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-1104",
+        "CWE-1357",
+        "CWE-451",
+        "CWE-693"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:MinimumOSVersion",
+          "value" : "16.0"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:DTPlatformVersion",
+          "value" : "26.2"
+        }
+      ],
+      "explanation" : "Info.plist records MinimumOSVersion 16.0, the iOS 26.2 SDK (iphoneos26.2) and Xcode 26.3. The minimum decides which platform protections the app can count on; the SDK decides which current platform behaviour it opts into.",
+      "gdpr" : [
+
+      ],
+      "id" : "60CF6E23-31AF-4D12-8560-198811FFE1A4",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-1"
+      ],
+      "maswe" : [
+        "MASWE-0041",
+        "MASWE-0042"
+      ],
+      "metrics" : {
+        "minOS" : "16.0",
+        "sdk" : "26.2",
+        "sdkName" : "iphoneos26.2",
+        "xcode" : "26.3"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/minimumosversion",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0041\/",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0042\/"
+      ],
+      "ruleID" : "SECH-09.platform_versions",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Supports iOS 16.0 and later; built with the iOS 26.2 SDK",
+      "vectorID" : "SECH-09",
+      "why" : "Records the minimum iOS version and the SDK the app was built with."
+    },
+    {
+      "affectedBinaries" : [
+        "VideoVisits"
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "__dyld_get_image_header"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "VideoVisits",
+          "value" : "__dyld_image_count"
+        }
+      ],
+      "explanation" : "Calls _dyld_image_count \/ _dyld_get_image_name, can be used to detect injected dylibs (tweaks, Frida gadget). NOTE: these symbols are also used by crash reporters, analytics SDKs and the Swift runtime to enumerate loaded images, so bare presence is not anti-analysis. OWASP MASTG anti-debugging tests key on ptrace \/ sysctl(P_TRACED) rather than dyld enumeration, so this is an informational capability marker, not a weakness.",
+      "gdpr" : [
+
+      ],
+      "id" : "362E1DF6-8A5C-43BB-888D-75DFB3A95FB2",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-RESILIENCE"
+      ],
+      "masvsControls" : [
+        "MASVS-RESILIENCE-4"
+      ],
+      "maswe" : [
+        "MASWE-0065"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-RESILIENCE\/MASWE-0065\/"
+      ],
+      "ruleID" : "SURV-02.dyld_image_introspection",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "dyld image-list introspection",
+      "vectorID" : "SURV-02"
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "CrashData"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "DeviceID"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "OtherDataTypes"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "OtherDiagnosticData"
+        }
+      ],
+      "explanation" : "Across the bundle's privacy manifests the app and its SDKs declare collecting: CrashData, DeviceID, OtherDataTypes, OtherDiagnosticData. 0 are declared linked to the user's identity and 0 used for tracking. This is what the developer states; a static scan cannot show what leaves the device.",
+      "gdpr" : [
+        "Art. 13",
+        "Art. 5(1)(a)"
+      ],
+      "id" : "E275EE26-16FA-4CF3-941B-93E291D2BE43",
+      "linddun" : [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+        "count" : "4",
+        "linked" : "0",
+        "s" : "s",
+        "tracking" : "0",
+        "types" : "CrashData, DeviceID, OtherDataTypes, OtherDiagnosticData"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/app-privacy-configuration\/nsprivacycollecteddatatypes",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "TGAP-01.declared_data_collection",
+      "severity" : "info",
+      "solove" : [
+        "Exclusion"
+      ],
+      "title" : "Privacy manifests declare 4 collected data types",
+      "vectorID" : "TGAP-01",
+      "why" : "Records what the developer declares; the declaration is not a defect."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "file",
+          "source" : "Frameworks\/GoogleAppMeasurement.framework",
+          "value" : "GoogleAppMeasurement.framework"
+        },
+        {
+          "kind" : "file",
+          "source" : "Frameworks\/FirebaseAnalytics.framework",
+          "value" : "FirebaseAnalytics.framework"
+        },
+        {
+          "kind" : "file",
+          "source" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework",
+          "value" : "GoogleAppMeasurementIdentitySupport.framework"
+        }
+      ],
+      "explanation" : "Google Firebase Analytics SDK.",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "id" : "0CC8EE65-0611-4249-8FD2-4616718F9715",
+      "linddun" : [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "TRK-01.firebase_analytics",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Firebase Analytics",
+      "vectorID" : "TRK-01",
+      "why" : "An analytics SDK builds a usage profile: WP248 criterion 1 gives \"a company building behavioural or marketing profiles based on usage\" as its example. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "www.apple.com"
+        }
+      ],
+      "explanation" : "The bundle references 1 endpoint(s) whose owner is based in US, owners: Apple. The country is the owning organisation's home jurisdiction from the tracker database, not where a server is hosted, and a referenced endpoint is not observed traffic. If the app sends personal data there, it is a third-country transfer: whether that is lawful depends on the safeguards, purpose and paperwork behind it, none of which is visible in a binary. US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+      "gdpr" : [
+        "Art. 44",
+        "Art. 46",
+        "Art. 49"
+      ],
+      "id" : "C9902181-E457-4C30-BDD6-A014C268A1E0",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "adequacyNote" : " US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+        "count" : "1",
+        "country" : "US",
+        "ownersNote" : ", owners: Apple",
+        "s" : ""
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/eur-lex.europa.eu\/legal-content\/EN\/TXT\/?uri=CELEX%3A32016R0679"
+      ],
+      "ruleID" : "TRK-04.egress.us",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Endpoints owned by US-based organisations (1 endpoint)",
+      "vectorID" : "TRK-04",
+      "why" : "Where the endpoint owner is registered. International transfer is GDPR Chapter V, not a WP248 criterion."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "file",
+          "source" : "VideoVisits",
+          "value" : "VideoVisits"
+        }
+      ],
+      "explanation" : "The main Mach-O is encrypted by the App Store. Static string scanning of its TEXT segment won't work without a decrypted dump (e.g., via frida-ios-dump or bagbak on a jailbroken device). Embedded frameworks and dylibs are USUALLY ENCRYPTED TOO (measured 91% across the reference corpus; in half of apps every Mach-O is encrypted), so TEXT-segment string recall is limited bundle-wide, not just for the main binary. What still survives encryption is __LINKEDIT: symbols, imported\/defined symbol names, ObjC selectors and linked dylibs, which is why symbol-based detection carries this scan rather than string matching.",
+      "gdpr" : [
+
+      ],
+      "id" : "8F56C4C6-8742-4DF1-A3AB-EDFABD4E595A",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-RESILIENCE"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASTG\/techniques\/ios\/MASTG-TECH-0054\/#decrypting-the-app-binary"
+      ],
+      "remediation" : "For full TEXT-segment coverage, supply a decrypted .ipa produced by frida-ios-dump or bagbak from a jailbroken device. Resource files, plists, entitlements, symbols, selectors and linked dylibs are still scanned in the meantime.",
+      "ruleID" : "meta.fairplay_main",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Main executable is FairPlay-encrypted",
+      "vectorID" : "SURV-02",
+      "why" : "Scan metadata: what the scanner could and could not see."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSMicrophoneUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Allow Go Visits to access your microphone? GO Visits needs this so you can video chat with your contacts."
+        }
+      ],
+      "explanation" : "Microphone access (eavesdropping risk)",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "4D436951-113A-485F-9007-D958CA52D5A7",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSMicrophoneUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSMicrophoneUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSMicrophoneUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Microphone access (eavesdropping risk)",
+      "vectorID" : "DCS-05",
+      "why" : "Recorded speech and voice messages are electronic communications, which WP248 criterion 4 names (\"household and private activities (such as electronic communications)\"). One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Firebase_FirebaseCore.bundle\/PrivacyInfo.xcprivacy",
+          "value" : "NSPrivacyAccessedAPICategoryFileTimestamp"
+        }
+      ],
+      "explanation" : "File create\/modify timestamps: a device-fingerprint component.",
+      "gdpr" : [
+
+      ],
+      "id" : "F711738C-3AD9-42F8-A813-86F32EE68E94",
+      "linddun" : [
+        "Identifying",
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.NSPrivacyAccessedAPICategoryFileTimestamp",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Privacy manifest declares accessed API: NSPrivacyAccessedAPICategoryFileTimestamp",
+      "vectorID" : "DCS-01",
+      "why" : "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Firebase_FirebaseCore.bundle\/PrivacyInfo.xcprivacy",
+          "value" : "NSPrivacyAccessedAPICategoryUserDefaults"
+        }
+      ],
+      "explanation" : "UserDefaults and App Groups: a common covert channel between apps from the same developer.",
+      "gdpr" : [
+
+      ],
+      "id" : "259EA141-7A8B-46A2-9BC9-CC4687501B72",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.NSPrivacyAccessedAPICategoryUserDefaults",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Privacy manifest declares accessed API: NSPrivacyAccessedAPICategoryUserDefaults",
+      "vectorID" : "SURV-03",
+      "why" : "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "file",
+          "source" : "Frameworks\/FirebaseAnalytics.framework",
+          "value" : "FirebaseAnalytics.framework"
+        },
+        {
+          "kind" : "file",
+          "source" : "Frameworks\/GoogleAppMeasurement.framework",
+          "value" : "GoogleAppMeasurement.framework"
+        }
+      ],
+      "explanation" : "The app carries Firebase Analytics (analytics): its framework ships in Frameworks\/ (FirebaseAnalytics, GoogleAppMeasurement). Owner: Google · US.",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "id" : "14F3D945-B7E6-4202-B1E7-D1EDA3C2F3A9",
+      "linddun" : [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+        "category" : "analytics",
+        "count" : "2",
+        "countryNote" : " · US",
+        "how" : "its framework ships in Frameworks\/ (FirebaseAnalytics, GoogleAppMeasurement)",
+        "name" : "Firebase Analytics",
+        "owner" : "Google"
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "FirebaseAnalytics",
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/exodus-privacy.eu.org\/",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "remediation" : "Confirm the SDK and its data collection are disclosed in the App Privacy label and PrivacyInfo.xcprivacy. Remove or gate the SDK behind explicit consent if the telemetry is not essential.",
+      "ruleID" : "tracker.google.analytics",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Tracker SDK: Firebase Analytics (analytics)",
+      "vectorID" : "TRK-01",
+      "why" : "An identified third-party SDK. Its category decides the WP248 criteria: advertising and attribution build marketing profiles (criterion 1) by combining this app's data with what the vendor collects in other companies' apps (criterion 6); session replay observes the person (criterion 3) and profiles usage (1); anti-fraud scores the person (1) to decide whether they may use a service (9); analytics and push engagement profile usage (1); other categories meet none."
+    }
+  ],
+  "frameworks" : {
+    "attackMobile" : "18.1",
+    "cvss" : "4.0",
+    "mastg" : "2.0.0",
+    "masvs" : "2.1.0",
+    "maswe" : "1.0.0"
+  },
+  "hardening" : [
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : false,
+      "hasPIE" : true,
+      "isEncrypted" : false,
+      "name" : "GoogleAppMeasurement",
+      "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/GoogleAppMeasurement"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : false,
+      "hasPIE" : true,
+      "isEncrypted" : false,
+      "name" : "FirebaseAnalytics",
+      "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/FirebaseAnalytics"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : false,
+      "hasPIE" : true,
+      "isEncrypted" : false,
+      "name" : "GoogleAdsOnDeviceConversion",
+      "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/GoogleAdsOnDeviceConversion"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : false,
+      "hasPIE" : true,
+      "isEncrypted" : false,
+      "name" : "GoogleAppMeasurementIdentitySupport",
+      "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/GoogleAppMeasurementIdentitySupport"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "VideoVisits",
+      "relativePath" : "VideoVisits"
+    }
+  ],
+  "id" : "C5E85469-3AA6-444D-B25B-CBCF49A4620D",
+  "metadata" : {
+    "allowsArbitraryLoads" : false,
+    "associatedDomains" : [
+
+    ],
+    "backgroundModes" : [
+      "remote-notification"
+    ],
+    "bundleID" : "com.telmate.govisits",
+    "bundleName" : "VideoVisits",
+    "bundleVersion" : "18",
+    "embeddedBinaries" : [
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : false,
+        "linkedDylibs" : [
+          "\/usr\/lib\/libSystem.B.dylib"
+        ],
+        "name" : "GoogleAppMeasurement",
+        "relativePath" : "Frameworks\/GoogleAppMeasurement.framework\/GoogleAppMeasurement",
+        "sizeBytes" : 35584
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : false,
+        "linkedDylibs" : [
+          "\/usr\/lib\/libSystem.B.dylib"
+        ],
+        "name" : "FirebaseAnalytics",
+        "relativePath" : "Frameworks\/FirebaseAnalytics.framework\/FirebaseAnalytics",
+        "sizeBytes" : 35584
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : false,
+        "linkedDylibs" : [
+          "\/usr\/lib\/libSystem.B.dylib"
+        ],
+        "name" : "GoogleAdsOnDeviceConversion",
+        "relativePath" : "Frameworks\/GoogleAdsOnDeviceConversion.framework\/GoogleAdsOnDeviceConversion",
+        "sizeBytes" : 35616
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : false,
+        "linkedDylibs" : [
+          "\/usr\/lib\/libSystem.B.dylib"
+        ],
+        "name" : "GoogleAppMeasurementIdentitySupport",
+        "relativePath" : "Frameworks\/GoogleAppMeasurementIdentitySupport.framework\/GoogleAppMeasurementIdentitySupport",
+        "sizeBytes" : 35632
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/AVFoundation.framework\/AVFoundation",
+          "\/System\/Library\/Frameworks\/AppTrackingTransparency.framework\/AppTrackingTransparency",
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreGraphics.framework\/CoreGraphics",
+          "\/System\/Library\/Frameworks\/CoreTelephony.framework\/CoreTelephony",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/MetricKit.framework\/MetricKit",
+          "\/System\/Library\/Frameworks\/MobileCoreServices.framework\/MobileCoreServices",
+          "\/System\/Library\/Frameworks\/Network.framework\/Network",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/StoreKit.framework\/StoreKit",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/SystemConfiguration.framework\/SystemConfiguration",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/System\/Library\/Frameworks\/WebKit.framework\/WebKit",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libsqlite3.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftAVFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreAudio.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMIDI.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMedia.dylib",
+          "\/usr\/lib\/swift\/libswiftDarwin.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUIKit.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswift_StringProcessing.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib"
+        ],
+        "name" : "VideoVisits",
+        "relativePath" : "VideoVisits",
+        "sizeBytes" : 3818480
+      }
+    ],
+    "embeddedFrameworks" : [
+      "GoogleAppMeasurement",
+      "FirebaseAnalytics",
+      "GoogleAdsOnDeviceConversion",
+      "GoogleAppMeasurementIdentitySupport"
+    ],
+    "executableName" : "VideoVisits",
+    "infoPlistKeys" : [
+      "BuildMachineOSBuild",
+      "CFBundleDevelopmentRegion",
+      "CFBundleExecutable",
+      "CFBundleIcons",
+      "CFBundleIcons~ipad",
+      "CFBundleIdentifier",
+      "CFBundleInfoDictionaryVersion",
+      "CFBundleName",
+      "CFBundlePackageType",
+      "CFBundleShortVersionString",
+      "CFBundleSupportedPlatforms",
+      "CFBundleURLTypes",
+      "CFBundleVersion",
+      "DTAppStoreToolsBuild",
+      "DTCompiler",
+      "DTPlatformBuild",
+      "DTPlatformName",
+      "DTPlatformVersion",
+      "DTSDKBuild",
+      "DTSDKName",
+      "DTXcode",
+      "DTXcodeBuild",
+      "ITSAppUsesNonExemptEncryption",
+      "LSApplicationQueriesSchemes",
+      "LSRequiresIPhoneOS",
+      "MinimumOSVersion",
+      "NSCameraUsageDescription",
+      "NSMicrophoneUsageDescription",
+      "NSUserTrackingUsageDescription",
+      "UIApplicationSceneManifest",
+      "UIApplicationSupportsIndirectInputEvents",
+      "UIBackgroundModes",
+      "UIDeviceFamily",
+      "UILaunchStoryboardName",
+      "UIMainStoryboardFile",
+      "UIRequiredDeviceCapabilities",
+      "UISupportedInterfaceOrientations",
+      "UISupportedInterfaceOrientations~ipad"
+    ],
+    "minimumOSVersion" : "16.0",
+    "permissions" : [
+      {
+        "category" : "Camera access",
+        "key" : "NSCameraUsageDescription",
+        "value" : "Allow Go Visits to access your camera? GO Visits needs this so you can video chat with your contacts.",
+        "vectorID" : "DCS-05"
+      },
+      {
+        "category" : "Microphone access (eavesdropping risk)",
+        "key" : "NSMicrophoneUsageDescription",
+        "value" : "Allow Go Visits to access your microphone? GO Visits needs this so you can video chat with your contacts.",
+        "vectorID" : "DCS-05"
+      },
+      {
+        "category" : "App Tracking Transparency \/ IDFA collection",
+        "key" : "NSUserTrackingUsageDescription",
+        "value" : "This allows the app to monitor usage to improve performance.",
+        "vectorID" : "TRK-01"
+      }
+    ],
+    "privacyAccessedAPIReasons" : [
+      "1C8F.1",
+      "C56D.1",
+      "C617.1",
+      "CA92.1"
+    ],
+    "privacyAccessedAPIs" : [
+      "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "NSPrivacyAccessedAPICategoryUserDefaults"
+    ],
+    "privacyManifestPath" : "Firebase_FirebaseCore.bundle\/PrivacyInfo.xcprivacy",
+    "privacyTrackingDomains" : [
+
+    ],
+    "queriedURLSchemes" : [
+      "gomessaging"
+    ],
+    "shortVersion" : "5.0",
+    "signedIdentifier" : "com.telmate.govisits",
+    "signedTeamID" : "2J324PQJ83",
+    "storeGenre" : "Social Networking",
+    "supportedPlatforms" : [
+      "iPhoneOS"
+    ],
+    "urlSchemes" : [
+      "com.telmate.govisits"
+    ]
+  },
+  "network" : {
+    "detectedSDKs" : [
+      {
+        "category" : "analytics",
+        "country" : "US",
+        "endpoints" : [
+
+        ],
+        "evidenceCount" : 2,
+        "frameworks" : [
+          "FirebaseAnalytics",
+          "GoogleAppMeasurement"
+        ],
+        "isTracker" : true,
+        "name" : "Firebase Analytics",
+        "owner" : "Google",
+        "trackerID" : "google.analytics"
+      },
+      {
+        "category" : "ecosystem",
+        "country" : "US",
+        "endpoints" : [
+          "www.apple.com"
+        ],
+        "evidenceCount" : 1,
+        "frameworks" : [
+          "(main)"
+        ],
+        "isTracker" : false,
+        "name" : "Apple",
+        "owner" : "Apple",
+        "trackerID" : "apple.core"
+      }
+    ],
+    "endpoints" : [
+      {
+        "cleartext" : false,
+        "host" : "telmate-notification.appspot.com",
+        "isTracker" : false,
+        "occurrenceCount" : 1,
+        "registrableDomain" : "telmate-notification.appspot.com",
+        "samplePaths" : [
+
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "GoogleService-Info.plist"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "telmate-notification.firebaseio.com",
+        "isTracker" : false,
+        "occurrenceCount" : 1,
+        "registrableDomain" : "firebaseio.com",
+        "samplePaths" : [
+
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "GoogleService-Info.plist"
+        ]
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : true,
+        "country" : "US",
+        "host" : "www.apple.com",
+        "isTracker" : false,
+        "occurrenceCount" : 1,
+        "owner" : "Apple",
+        "registrableDomain" : "apple.com",
+        "samplePaths" : [
+          "\/DTDs\/PropertyList-1.0.dtd"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "SC_Info\/Manifest.plist"
+        ],
+        "trackerID" : "apple.core"
+      }
+    ]
+  },
+  "notes" : [
+    "Main binary is FairPlay-encrypted, TEXT-segment strings are unavailable. Resource files, symbols, and dylibs were still scanned for secrets\/endpoints. Drop a decrypted .ipa (frida-ios-dump \/ bagbak output) for full TEXT coverage.",
+    "Code strings are readable in 1 of 5 binaries; 57 rules that search only code strings saw those binaries alone.",
+    "No embedded.mobileprovision found, typical for App Store builds re-signed by the store."
+  ],
+  "scanDurationSeconds" : 0.4261249303817749,
+  "secrets" : [
+
+  ],
+  "sourceIPAPath" : "\/Users\/hackerman\/AI-Repos\/ios-app-static-scan\/results-us150\/ipas\/com.telmate.govisits.ipa",
+  "vectorSummaries" : [
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 5,
+      "vectorID" : "DCS-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "DCS-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "DCS-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-07"
+    },
+    {
+      "maxSeverity" : "medium",
+      "uniqueArtifactCount" : 5,
+      "vectorID" : "TRK-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "TRK-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "TGAP-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "SURV-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "SURV-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "SECH-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "SECH-07"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-08"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-09"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "PLAT-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "PLAT-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "PLAT-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "PLAT-04"
+    }
+  ]
+}

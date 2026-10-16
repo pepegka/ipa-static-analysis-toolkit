@@ -1,0 +1,90 @@
+- id: DCS-03.uipasteboard_read
+  vector: DCS-03
+  title: UIPasteboard / generalPasteboard access
+  description: |
+    UIPasteboard / generalPasteboard / UIPasteboardChanged, reading the system
+    pasteboard. Background clipboard reads are a well-documented privacy issue.
+  severity: info
+  maswe: [MASWE-0030]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'UIPasteboard'
+    - kind: string
+      pattern: 'UIPasteboardChangedNotification|UIPasteboardNameGeneral|generalPasteboard'
+  attribution:
+    benign_in_frameworks: [SwiftUI, UIKit]
+  references:
+    - https://developer.apple.com/documentation/uikit/uipasteboard
+
+- id: DCS-03.contacts_access
+  vector: DCS-03
+  title: Contacts (ABAddressBook / CNContactStore)
+  description: ABAddressBook or CNContactStore, phone-book access.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'CNContactStore|ABAddressBook'
+  references:
+    - https://developer.apple.com/documentation/contacts/cncontactstore
+
+- id: DCS-03.photo_library
+  vector: DCS-03
+  title: Photo library (PHPhotoLibrary)
+  description: PHPhotoLibrary / UIImagePickerController for photo-library access.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'PHPhotoLibrary'
+  references:
+    - https://developer.apple.com/documentation/photos/phphotolibrary
+
+- id: DCS-03.calendar_access
+  vector: DCS-03
+  title: Calendar / Reminders access (EventKit)
+  description: EKEventStore, calendars and reminders.
+  severity: info
+  maswe: [MASWE-0066]
+  mastg: [MASTG-TEST-0360]
+  search:
+    - kind: symbol
+      pattern: 'EKEventStore|EKCalendar'
+  references:
+    - https://developer.apple.com/documentation/eventkit/ekeventstore
+
+- id: DCS-03.pasteboard_expiration
+  vector: DCS-03
+  title: Sets an expiration date on pasteboard items (positive signal)
+  description: |
+    Imports UIPasteboardOptionExpirationDate, the option that makes items written with
+    setItems(_:options:) expire, so copied data does not stay on the pasteboard.
+  severity: info
+  maswe: [MASWE-0036]
+  mastg: [MASTG-TEST-0279]
+  polarity: defensive
+  search:
+    - kind: importedSymbol
+      pattern: '^_UIPasteboardOptionExpirationDate$'
+  references:
+    - https://developer.apple.com/documentation/uikit/uipasteboard/optionskey/expirationdate
+
+- id: DCS-03.pasteboard_local_only
+  vector: DCS-03
+  title: Keeps pasteboard items on this device (positive signal)
+  description: |
+    Imports UIPasteboardOptionLocalOnly, the option that keeps items written with
+    setItems(_:options:) off Universal Clipboard, so they do not reach the user's
+    other devices.
+  severity: info
+  maswe: [MASWE-0036]
+  mastg: [MASTG-TEST-0280]
+  polarity: defensive
+  search:
+    - kind: importedSymbol
+      pattern: '^_UIPasteboardOptionLocalOnly$'
+  references:
+    - https://developer.apple.com/documentation/uikit/uipasteboard/optionskey/localonly

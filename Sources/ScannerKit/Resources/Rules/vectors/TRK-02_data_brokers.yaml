@@ -1,0 +1,83 @@
+- id: TRK-02.xmode
+  vector: TRK-02
+  title: X-Mode / Outlogic location broker
+  description: |
+    X-Mode (rebranded Outlogic) sells precise location data to defense / commercial buyers.
+    Banned from Google Play and named in FTC actions.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(xmode|x_-?mode|outlogic|xmode\.io|xmodeapi)\b'
+    - kind: frameworkName
+      pattern: 'XMode|Outlogic'
+
+- id: TRK-02.anomaly_six
+  vector: TRK-02
+  title: Anomaly Six (Sybil)
+  description: Anomaly Six / Sybil, defense-contractor location broker.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(anomaly_?six|a6sdk|sybil_sdk)\b'
+
+- id: TRK-02.babel_street
+  vector: TRK-02
+  title: Babel Street / Locate-X
+  description: Babel Street Locate-X, defense/intel mobile-location product.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(babel_?street|locate-?x|babelstreet)\b'
+
+- id: TRK-02.safegraph
+  vector: TRK-02
+  title: SafeGraph / Veraset
+  description: SafeGraph / Veraset, bulk mobility datasets to commercial + gov buyers.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(safegraph|veraset)\b'
+
+- id: TRK-02.predicio_cuebiq
+  vector: TRK-02
+  title: Predicio / Cuebiq
+  description: Predicio / Cuebiq, location-data brokers named in 2020s research.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(predicio|cuebiq|teemo|placediq)\b'
+
+- id: TRK-02.foursquare_pilgrim
+  vector: TRK-02
+  title: Foursquare Pilgrim / Placed
+  description: Foursquare Pilgrim SDK (renamed Movement SDK in 2023), passive location tracking.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(pilgrim_sdk|placed_sdk|foursquare.+pilgrim)\b'
+    - kind: frameworkName
+      pattern: '^(Pilgrim|MovementSdk)$'
+      case_sensitive: true
+
+- id: TRK-02.vermillion_strike
+  vector: TRK-02
+  title: Vermillion Strike / Mossad-linked brokers
+  description: Suspicious brokers named in academic/investigative research.
+  severity: medium
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(vermillion_?strike|fluent_streams|near_intelligence)\b'

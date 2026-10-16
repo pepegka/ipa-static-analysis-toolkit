@@ -1,0 +1,131 @@
+- id: DCS-01.sysctl_hw_kern
+  vector: DCS-01
+  title: sysctl reads hardware/kernel identity
+  description: |
+    Hard-codes one of the canonical fingerprinting sysctl names: hw.machine
+    (device model), hw.model, kern.osversion, kern.osproductversion, hw.cputype
+    or hw.cpusubtype. `kern.boottime` is the strongest single signal and is
+    handled separately by DCS-01.boottime_fingerprint.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: 'hw\.machine|hw\.model|kern\.osversion|kern\.osproductversion|hw\.cputype|hw\.cpusubtype'
+  references:
+    - https://developer.apple.com/documentation/kernel/1387446-sysctlbyname
+
+- id: DCS-01.sysctlbyname_import
+  vector: DCS-01
+  title: Imports sysctlbyname()
+  description: Low-level C call to read kernel-level hardware parameters.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: importedSymbol
+      pattern: '^_sysctlbyname$|^_sysctl$'
+  references:
+    - https://developer.apple.com/documentation/kernel/1387446-sysctlbyname
+
+- id: DCS-01.idfa_idfv
+  vector: DCS-01
+  title: IDFA / IDFV / ASIdentifierManager
+  description: |
+    References the advertising or vendor identifier API (IDFA / IDFV /
+    ASIdentifierManager / identifierForVendor). Required for cross-app
+    correlation.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'ASIdentifierManager|advertisingIdentifier|identifierForVendor'
+    - kind: string
+      pattern: '\b(idfa|idfv)\b'
+  references:
+    - https://developer.apple.com/documentation/adsupport/asidentifiermanager
+    - https://developer.apple.com/documentation/uikit/uidevice/identifierforvendor
+
+- id: DCS-01.carrier_info
+  vector: DCS-01
+  title: Cellular operator information (CTCarrier)
+  description: |
+    CTTelephonyNetworkInfo / CTCarrier, mobile country / mobile network code,
+    used both for roaming detection and as a fingerprinting signal.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: symbol
+      pattern: 'CTTelephonyNetworkInfo|CTCarrier|mobileCountryCode|mobileNetworkCode'
+  references:
+    - https://developer.apple.com/documentation/coretelephony/ctcarrier
+
+- id: DCS-01.battery_uptime_telemetry
+  vector: DCS-01
+  title: Battery / uptime / SIM-location telemetry
+  description: |
+    Reads battery level, simLocation or carrier name; all fingerprint components.
+    The previous bare `\buptime\b` matcher fired on stock debug-log strings and
+    is dropped; uptime fingerprinting is already covered by DCS-01.boottime_fingerprint.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '\b(batteryLevel|simLocation|operatorName|carrierName|simSerialNumber|subscriberCellularProvider)\b'
+  references:
+    - https://developer.apple.com/documentation/uikit/uidevice/batterylevel
+
+- id: DCS-01.file_metadata_fingerprint
+  vector: DCS-01
+  title: File creation date / disk size as fingerprint signal
+  description: |
+    Reads NSFileCreationDate / NSFileSystemFreeSize / NSFileSystemSize. Apple's
+    Privacy Manifest specifically calls these out as fingerprinting APIs.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: importedSymbol
+      pattern: '^_(NSFileCreationDate|NSFileSystemFreeSize|NSFileSystemSize)$'
+    - kind: string
+      pattern: 'NSFileCreationDate|NSFileSystemFreeSize|NSFileSystemSize'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api
+
+- id: DCS-01.boottime_fingerprint
+  vector: DCS-01
+  title: Boot time fingerprint (PrivacyAccessedAPICategorySystemBootTime)
+  description: |
+    Either reads `kern.boottime` directly or declares the matching Privacy Manifest
+    API category. Apple-documented as a strong device-unique identifier.
+  severity: info
+  maswe: [MASWE-0068]
+  mastg: []
+  search:
+    - kind: plistValue
+      pattern: 'NSPrivacyAccessedAPICategorySystemBootTime'
+    - kind: string
+      pattern: 'kern\.boottime'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api
+
+- id: DCS-01.user_defaults_appgroup_fingerprint
+  vector: DCS-01
+  title: UserDefaults shared within an App Group (declared reason 1C8F.1)
+  description: |
+    A privacy manifest declares required reason 1C8F.1 for the UserDefaults API: the
+    code reads and writes defaults shared with the apps, extensions and App Clips in
+    the same App Group. Apple permits this only within the group and forbids using it
+    for tracking. Inventory: it shows a shared store exists, not what is stored in it.
+  severity: info
+  maswe: []
+  mastg: []
+  polarity: neutral
+  search:
+    - kind: plistValue
+      pattern: '^1C8F\.1$'
+  references:
+    - https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitypereasons

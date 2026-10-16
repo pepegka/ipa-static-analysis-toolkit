@@ -1,0 +1,265 @@
+{
+  "groups": [
+    {
+      "id": "tracking",
+      "heading": "Tracking & advertising"
+    },
+    {
+      "id": "ai",
+      "heading": "AI & child safety"
+    },
+    {
+      "id": "surveillance",
+      "heading": "Surveillance & data collection"
+    },
+    {
+      "id": "security",
+      "heading": "Security posture"
+    },
+    {
+      "id": "sovereignty",
+      "heading": "Data sovereignty"
+    },
+    {
+      "id": "footprint",
+      "heading": "Footprint & scale"
+    }
+  ],
+  "cards": {
+    "ai.cloud_llm": {
+      "label": "ship a cloud LLM / AI client or endpoint that can receive user content",
+      "accent": "purple",
+      "ctx": "TRK-05: free-text prompts, and often photos or screen context, sent to a third-party model. Share of the apps with per-app detail in this dashboard."
+    },
+    "ai.kids_trackers": {
+      "label": "of kids-category apps embed ad / attribution trackers",
+      "accent": "red",
+      "ctx": "TGAP-03: COPPA and the App Store Kids Category prohibit third-party advertising to children. {kidsApps} kids-genre apps in this batch."
+    },
+    "ai.proximity": {
+      "label": "reference nearby-device APIs (BLE / UWB / Wi-Fi / Bonjour)",
+      "accent": "yellow",
+      "ctx": "DCS-07: proximity signals can fingerprint the user's physical and household environment. A reference shows the capability, not a scan of the user's surroundings. Share of the apps with per-app detail in this dashboard."
+    },
+    "footprint.average_size": {
+      "label": "is the average app download size in this batch",
+      "accent": "",
+      "ctx": "Largest: {largest} · total {total}."
+    },
+    "footprint.avg_permissions": {
+      "label": "permission purpose strings declared by the average app",
+      "accent": "yellow",
+      "ctx": "Every NS*UsageDescription in Info.plist, sensitive or not. A declaration is a statement of intent, not proof the API is called."
+    },
+    "footprint.heavily_tracked": {
+      "label": "of apps are heavily tracked (10+ distinct tracker SDKs)",
+      "accent": "orange",
+      "ctx": "{apps}. Median across the whole batch, apps with no trackers included, is {median}."
+    },
+    "footprint.largest_app": {
+      "label": "is the largest app ({app})",
+      "accent": "",
+      "ctx": "Bigger binaries mean more third-party SDKs and attack surface."
+    },
+    "footprint.size_confound": {
+      "label": "is how strongly app size alone predicts the finding count",
+      "accent": "yellow",
+      "ctx": "Across {apps} apps. Bigger binaries carry more third-party code, so part of a large finding count is volume rather than behaviour. Read a per-app tally against its size, not on its own."
+    },
+    "footprint.top_endpoint_owner": {
+      "label": "of apps reference {owner}-owned endpoints",
+      "accent": "teal",
+      "ctx": "Most common endpoint owner by resolved network destination."
+    },
+    "footprint.total_findings": {
+      "label": "total findings raised across {apps} apps",
+      "accent": "teal",
+      "ctx": "Median of {median} findings per app."
+    },
+    "security.ats_arbitrary": {
+      "label": "weaken App Transport Security with arbitrary network loads",
+      "accent": "yellow",
+      "ctx": "{oneIn} apps opt out of HTTPS-only networking."
+    },
+    "security.encryption_coverage": {
+      "label": "of analysed binaries are FairPlay-encrypted at rest",
+      "accent": "teal",
+      "ctx": "Across {binaries} Mach-O binaries. Encrypted code hides its strings, so tracker and secret counts on this page are a floor, not a census.{blindNote}"
+    },
+    "security.high_or_critical": {
+      "label": "carry at least one high- or critical-severity finding",
+      "accent": "red",
+      "ctx": "{critical} critical and {high} high findings across the batch; the headline counts apps."
+    },
+    "security.insecure_storage": {
+      "label": "show a weak data-at-rest setting (file protection off, keychain readable while locked)",
+      "accent": "orange",
+      "ctx": "Counts findings at low severity or above. The info-level references are left out, and so is the backup-exclusion API: that is a mitigation (MASWE-0006), not a weakness."
+    },
+    "security.no_arc": {
+      "label": "of analysed binaries are built without ARC memory management",
+      "accent": "yellow",
+      "ctx": "Across {binaries} Mach-O binaries where the flag is readable. Manual retain/release is where use-after-free bugs live."
+    },
+    "security.no_canary": {
+      "label": "of analysed binaries ship without stack canaries",
+      "accent": "yellow",
+      "ctx": "Across {binaries} Mach-O binaries where the flag is readable. Canaries are the cheapest defence against stack smashing."
+    },
+    "security.secrets": {
+      "label": "ship a hard-coded credential in the binary or resources",
+      "accent": "red",
+      "ctx": "API keys, tokens or credentials matched by format or entropy. Public client identifiers (a Firebase API key in its configuration file) are identifiers by design and are not counted."
+    },
+    "security.weak_crypto": {
+      "label": "reference weak hash or non-cryptographic random APIs (MD5 / SHA-1, rand())",
+      "accent": "orange",
+      "ctx": "An import shows the API is available to the app's code, not that it protects anything with it; MASWE-0008 and MASWE-0012 turn on how it is used. Common for checksums and cache keys."
+    },
+    "security.webview_bridge": {
+      "label": "configure a WebView in a way MASWE flags",
+      "accent": "yellow",
+      "ctx": "Legacy UIWebView, file-URL access, remote inspection in release, or a JS bridge injected into every frame. Plain WKWebView use and ordinary message handlers are inventory and are not counted."
+    },
+    "sovereignty.foreign_owner": {
+      "label": "embed a tracker whose owner is based outside {home}",
+      "accent": "teal",
+      "ctx": "Relative to the storefront this batch was drawn from. Cross-border transfers are what GDPR Chapter V and data-residency laws regulate; whether one happens is decided at runtime."
+    },
+    "sovereignty.top_endpoint_country": {
+      "label": "of apps reference endpoints owned by a company based in {country}",
+      "accent": "teal",
+      "ctx": "The owning organisation's home jurisdiction, from the tracker database. Not where a server is hosted: that needs DNS and GeoIP, which a static scan does not do."
+    },
+    "sovereignty.top_tracker_country": {
+      "label": "embed a tracker from a company based in {country}",
+      "accent": "teal",
+      "ctx": "Data-sovereignty signal: the tracker owner's home jurisdiction. Embedding shows the SDK or its endpoint is present, not a transfer. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.att_prompt": {
+      "label": "ask for App Tracking Transparency consent to track you across apps",
+      "accent": "orange",
+      "ctx": "An ATT prompt means the app wants the IDFA for cross-app/-site tracking."
+    },
+    "surv.background_exfil": {
+      "label": "can run network work in the background above info",
+      "accent": "red",
+      "ctx": "Background modes and silent pushes are how an app does work while not in the foreground. Declaring one is normal; this counts only the ones rated above info."
+    },
+    "surv.biometrics": {
+      "label": "read motion sensors or raw touch data (behavioural-biometric inputs)",
+      "accent": "red",
+      "ctx": "Accelerometer, gyroscope and touch coordinate/force capture. Face ID is not counted: it is local authentication and has its own card. Counts findings at low severity or above; the info-level references nearly every app carries are left out."
+    },
+    "surv.contacts_permission": {
+      "label": "request access to your contacts / address book",
+      "accent": "orange",
+      "ctx": "Contact graphs are a common social-graph data source. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.content_access": {
+      "label": "reference clipboard, contacts, photo-library or calendar APIs",
+      "accent": "yellow",
+      "ctx": "Pasteboard reads and address-book or photo access are common over-collection signals. Counts findings that meet two WP 248 criteria; API references alone are info and left out."
+    },
+    "surv.data_broker": {
+      "label": "embed a known third-party data broker",
+      "accent": "red",
+      "ctx": "X-Mode / Outlogic / SafeGraph / Cuebiq-class location & behaviour brokers. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.face_id": {
+      "label": "use Face ID / biometric authentication",
+      "accent": "green",
+      "ctx": "Local biometric auth (LocalAuthentication) is a privacy-preserving signal. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.fingerprinting": {
+      "label": "reference device-identifier or fingerprinting APIs (IDFA / IDFV, hardware probes)",
+      "accent": "orange",
+      "ctx": "A reference shows the capability is in the app, not that it builds a fingerprint. Counts findings that meet two WP 248 criteria; API references alone are info and left out."
+    },
+    "surv.location": {
+      "label": "may track location in the background",
+      "accent": "orange",
+      "ctx": "Always authorization declared in Info.plist, or visit, region or significant-change monitoring with that key present: systematic monitoring of location data, WP 248 criteria 3 and 4. Location used only while the app is open is info and not counted here."
+    },
+    "surv.location_permission": {
+      "label": "request access to your location",
+      "accent": "yellow",
+      "ctx": "Across when-in-use, always and temporary precision variants. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.microphone_permission": {
+      "label": "request microphone access",
+      "accent": "yellow",
+      "ctx": "Audio capture permission declared in Info.plist. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.session_replay": {
+      "label": "run a session-replay SDK that can record taps, scrolls and screens",
+      "accent": "red",
+      "ctx": "FullStory, Quantum Metric, LogRocket, Smartlook, or a vendor's session-replay module (Amplitude, Mixpanel, Dynatrace), found by framework name or tracker domain. Linked is not recording: the SDK may be off or masking the screen. Share of the apps with per-app detail in this dashboard."
+    },
+    "surv.top_permission": {
+      "label": "of apps request access to {what}",
+      "accent": "yellow",
+      "ctx": "{key}: the most-declared sensitive permission in this batch, in {apps} apps."
+    },
+    "tracking.advertising": {
+      "label": "embed at least one advertising / ad-mediation SDK",
+      "accent": "orange",
+      "ctx": "Ad SDKs are the most common vector for cross-app identifiers and RTB data sharing. Share of the apps with per-app detail in this dashboard."
+    },
+    "tracking.analytics": {
+      "label": "ship an analytics SDK that profiles in-app behaviour",
+      "accent": "yellow",
+      "ctx": "Firebase / Amplitude / Mixpanel-class event and funnel tracking. Share of the apps with per-app detail in this dashboard."
+    },
+    "tracking.any_tracker": {
+      "label": "of apps embed at least one third-party tracker SDK",
+      "accent": "orange",
+      "ctx": "{instances} tracker instances across {distinct} distinct SDKs in this batch."
+    },
+    "tracking.most_prevalent": {
+      "label": "of apps contain the most prevalent tracker ({name})",
+      "accent": "purple",
+      "ctx": "{detail}"
+    },
+    "tracking.outlier": {
+      "label": "tracker SDKs in a single app ({app})",
+      "accent": "red",
+      "ctx": "Median among apps that carry at least one tracker is {median}. One app at this scale skews every per-app average on this page."
+    },
+    "tracking.owners_per_app": {
+      "label": "distinct tracker companies embedded in the average app",
+      "accent": "purple",
+      "ctx": "{owners} different tracker owners seen across the batch."
+    },
+    "tracking.per_app": {
+      "label": "trackers in the average tracked app",
+      "accent": "orange",
+      "ctx": "Counting only apps that ship at least one tracker. Worst: {worst}."
+    },
+    "footprint.apple_policy_gap": {
+      "label": "of apps carry at least one Apple App Store policy gap",
+      "accent": "orange",
+      "ctx": "Required-Reason API declarations, tracking-domain declarations, ATT consent or the kids category. {cleanNote}"
+    },
+    "footprint.most_findings": {
+      "label": "critical and high findings in the app carrying the most ({app})",
+      "accent": "red",
+      "ctx": "{cleanest} Apps are ordered by this tally."
+    },
+    "footprint.busiest_category": {
+      "label": "findings for the average app in the busiest category ({name})",
+      "accent": "orange",
+      "ctx": "Mean across the {count} apps in that category · batch median {median} findings per app."
+    },
+    "footprint.top_cluster": {
+      "label": "of apps raise a finding in {cluster}",
+      "accent": "purple",
+      "ctx": "The most frequently hit cluster: an OWASP MASVS control group, or Apple App Store policy."
+    },
+    "footprint.top_maswe": {
+      "label": "findings in the most-hit OWASP MASWE weakness class",
+      "accent": "purple",
+      "ctx": "{weakness} ({id}). Counted as findings across {apps} apps, not as a share of them: one app can raise this weakness many times."
+    }
+  }
+}

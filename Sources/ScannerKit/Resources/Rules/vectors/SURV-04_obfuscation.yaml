@@ -1,0 +1,51 @@
+- id: SURV-04.runtime_string_decode
+  vector: SURV-04
+  title: Runtime string decoding helper
+  description: |
+    Method or function whose name indicates runtime string deobfuscation,
+    a classic anti-static-analysis tell (e.g. XOR-decoding network-interface
+    names at runtime).
+  severity: info
+  maswe: [MASWE-0059]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(deobfuscate|xor_decode|decode_?string|decryptString|hide_?string|str_?xor|runtimeDecode)\b'
+
+- id: SURV-04.byte_array_constants
+  vector: SURV-04
+  title: Suspicious byte-array constant for runtime string decoding
+  description: |
+    A 12-byte+ run of `0xNN, 0xNN, …` hex constants, typical of XOR-encoded
+    interface names or hardcoded keys. The previous 5-byte threshold matched
+    most asset-size and colour tables, so the rule is narrowed to a length
+    where a static-string decoder array becomes the dominant explanation.
+    Still ships as informational and pairs best with manual review.
+  severity: info
+  maswe: [MASWE-0059]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '0x[0-9A-Fa-f]{2}(, ?0x[0-9A-Fa-f]{2}){11,}'
+
+- id: SURV-04.tampered_classnames
+  vector: SURV-04
+  title: Obfuscated class / method names
+  description: |
+    ObjC class symbols named as a 1–3 letter prefix followed by a 4+ digit
+    counter (`_OBJC_CLASS_$_AB12345`), the shape emitted by class-renaming
+    obfuscators.
+
+    Long `_TtC` names are not matched: `_TtC` is ordinary Swift class mangling (a
+    length-prefixed module and class name), so a long match only means a long module
+    name. Obfuscators rename toward short identifiers, not long ones.
+
+    Real obfuscation detection needs character-level entropy over demangled names
+    plus absence of dictionary substrings. That is not attempted here, because it is
+    unvalidated on this corpus.
+  severity: info
+  maswe: [MASWE-0059]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '_OBJC_CLASS_\$_[A-Za-z]{1,3}[0-9]{4,}'

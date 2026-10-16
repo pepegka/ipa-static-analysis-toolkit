@@ -1,0 +1,4669 @@
+{
+  "ats" : {
+    "allowsArbitraryLoads" : false,
+    "allowsArbitraryLoadsForMedia" : false,
+    "allowsArbitraryLoadsInWebContent" : false,
+    "allowsLocalNetworking" : false,
+    "exceptionDomains" : [
+
+    ]
+  },
+  "coverage" : {
+    "binaries" : 5,
+    "binariesWithReadableText" : 4,
+    "stringOnlyRules" : [
+      "DCS-01.battery_uptime_telemetry",
+      "DCS-01.sysctl_hw_kern",
+      "DCS-04.touch_data_struct",
+      "DCS-06.remote_control_apps",
+      "PLAT-01.file_url_access",
+      "PLAT-01.js_bridge_all_frames",
+      "SECH-01.disabled_cert_validation",
+      "SECH-02.file_protection_none",
+      "SECH-02.keychain_accessible_always",
+      "SECH-02.userdefaults_credentials",
+      "SECH-03.embedded_certificates",
+      "SECH-03.government_root_ca",
+      "SURV-01.gis_vpn_endpoint",
+      "SURV-01.ip_check_endpoints",
+      "SURV-01.max_obfuscated_interfaces",
+      "SURV-01.tor_detect",
+      "SURV-01.utun_interface_string",
+      "SURV-01.vpn_challenge_block",
+      "SURV-01.vpn_flag_in_telemetry",
+      "SURV-01.vpn_mtu_heuristic",
+      "SURV-01.vpn_probability_model",
+      "SURV-01.yandex_checkvpn_endpoint",
+      "SURV-02.cydia_substrate",
+      "SURV-02.frida_indicators",
+      "SURV-02.is_jailbroken_naming",
+      "SURV-02.jailbreak_file_paths",
+      "SURV-02.jailbreak_url_schemes",
+      "SURV-04.byte_array_constants",
+      "SURV-04.runtime_string_decode",
+      "SURV-04.tampered_classnames",
+      "SURV-05.amnesty_mvt_domains",
+      "SURV-05.candiru_devilstongue",
+      "SURV-05.finfisher",
+      "SURV-05.hermit_rcs",
+      "SURV-05.lockdown_bypass_strings",
+      "SURV-05.paragon_graphite",
+      "SURV-05.pegasus_nso_strings",
+      "SURV-05.predator_intellexa",
+      "SURV-05.reign_quadream",
+      "SURV-05.stalkerware_capabilities",
+      "SURV-05.stalkerware_domains",
+      "SURV-05.stalkerware_families",
+      "SURV-05.triangulation_triangledb",
+      "TRK-01.huawei_hms",
+      "TRK-01.kaspersky_vpn_client_status",
+      "TRK-01.mailru_vpn_probability",
+      "TRK-01.ok_tracer",
+      "TRK-02.anomaly_six",
+      "TRK-02.babel_street",
+      "TRK-02.predicio_cuebiq",
+      "TRK-02.safegraph",
+      "TRK-02.vermillion_strike",
+      "TRK-03.carrier_geo_sdk",
+      "TRK-03.egov_identity_endpoint",
+      "TRK-03.lawful_intercept_markers",
+      "TRK-03.regional_ecosystem_domains",
+      "TRK-03.regional_payment_systems"
+    ]
+  },
+  "createdAt" : "2026-09-30T20:45:16Z",
+  "fileManifest" : [
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon60x60@2x.png",
+      "relativePath" : "AppIcon60x60@2x.png",
+      "sha256" : "d872d59a291a0286420522a36a62e4e9aff0bf6d70ffb3a8fc765cbc518ffa63",
+      "sizeBytes" : 5159
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "AppIcon76x76@2x~ipad.png",
+      "relativePath" : "AppIcon76x76@2x~ipad.png",
+      "sha256" : "b067d8dca1e337e2fe4daaa32866126e4c1ad2bf3d0c6a8fdf875697b03f3f32",
+      "sizeBytes" : 6470
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "Assets.car",
+      "relativePath" : "Assets.car",
+      "sha256" : "d06a1ee2324d683d773c4717c1217c860f2cab2b2421eb9e224f75bce7f46740",
+      "sizeBytes" : 9853672
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Frameworks\/Lottie.framework\/Info.plist",
+      "sha256" : "d33b70268f2e5b7035fce9d4ac1116dfddcdeaed6f096d5277639d07bada38b6",
+      "sizeBytes" : 748
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "Lottie",
+      "relativePath" : "Frameworks\/Lottie.framework\/Lottie",
+      "sha256" : "f52883a88aa5c89392b35faac17262ad6bbb53afbd8cfee2a6ce0ed8057c59be",
+      "sizeBytes" : 2313968
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "Frameworks\/Lottie.framework\/PrivacyInfo.xcprivacy",
+      "sha256" : "10da67f217824f019288ec328ababc290ab0399c52e9be77a24d494339137da2",
+      "sizeBytes" : 599
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Lottie.supf",
+      "relativePath" : "Frameworks\/Lottie.framework\/SC_Info\/Lottie.supf",
+      "sha256" : "aa0f1200076eb821d80a5bb9d058c69c108af6bd34e8fd358e5fe2385ceec817",
+      "sizeBytes" : 14204
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Lottie.supp",
+      "relativePath" : "Frameworks\/Lottie.framework\/SC_Info\/Lottie.supp",
+      "sha256" : "d900a0292e3bab573d6dc283c5f51e761c08c1fdeea3036716b311dedbea2df4",
+      "sizeBytes" : 14308
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Lottie.supx",
+      "relativePath" : "Frameworks\/Lottie.framework\/SC_Info\/Lottie.supx",
+      "sha256" : "72dc9eacc9d28212fb1fc867906ae2bf5b9c3eb82568acb4cb9f472a83baa679",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Lottie.v4.supp",
+      "relativePath" : "Frameworks\/Lottie.framework\/SC_Info\/Lottie.v4.supp",
+      "sha256" : "c7c9afabc6eb340a717af8d932a244c2271fd2cd7dc1927d765a98fc246bf59c",
+      "sizeBytes" : 14288
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "Lottie.v5.supf",
+      "relativePath" : "Frameworks\/Lottie.framework\/SC_Info\/Lottie.v5.supf",
+      "sha256" : "6e1cd8d60dfe39ac3d3e27f1be7792f7ecd0bae01654aca87dd5e42b498850fc",
+      "sizeBytes" : 14184
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "Frameworks\/Lottie.framework\/_CodeSignature\/CodeResources",
+      "sha256" : "248ad6b18fc8fc529d9fc847c46f211e5b6705911358bbe8439fade94ec033ca",
+      "sizeBytes" : 3010
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "GoogleService-Info.plist",
+      "relativePath" : "GoogleService-Info.plist",
+      "sha256" : "2a1a1356b095822a1fd4d4eaaa0995cbb54c164cdb42dc0deebec4708a6b672b",
+      "sizeBytes" : 486
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "Info.plist",
+      "sha256" : "17c8059cc62e4969cd4880e73195897423c6a8ae6b5642057e664737d9a1d545",
+      "sizeBytes" : 4547
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "PkgInfo",
+      "relativePath" : "PkgInfo",
+      "sha256" : "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "sizeBytes" : 8
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "DigestWidgetExtension",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+      "sha256" : "6ec14f2ca612c0371b41e48ba09313fc6762907095668fa8dc3ae45dc2892c43",
+      "sizeBytes" : 31016960
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/Info.plist",
+      "sha256" : "0b54fdc81da352e7a2055df33d30155fa58218651f1347419206615aa295c5c0",
+      "sizeBytes" : 1040
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "DigestWidgetExtension.supf",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/SC_Info\/DigestWidgetExtension.supf",
+      "sha256" : "c02fc3950ea4fa031a617b41a5237877b20269b5c271df946f467178cb8b43e8",
+      "sizeBytes" : 183676
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "DigestWidgetExtension.supp",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/SC_Info\/DigestWidgetExtension.supp",
+      "sha256" : "32f5f249e2dfbca1fd32a6b823efa684015324339d45bf18468d76ffd6be8f74",
+      "sizeBytes" : 183780
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "DigestWidgetExtension.supx",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/SC_Info\/DigestWidgetExtension.supx",
+      "sha256" : "72dc9eacc9d28212fb1fc867906ae2bf5b9c3eb82568acb4cb9f472a83baa679",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "DigestWidgetExtension.v4.supp",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/SC_Info\/DigestWidgetExtension.v4.supp",
+      "sha256" : "14ffd263731beced580e8bdc7166eb6aff06cec24c0dd66a6aafc841c013b757",
+      "sizeBytes" : 183760
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "DigestWidgetExtension.v5.supf",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/SC_Info\/DigestWidgetExtension.v5.supf",
+      "sha256" : "544ef6787165887fb156b2f1c3b42bf28a8cdf69fc1ffd09e5fccdc63e1e2076",
+      "sizeBytes" : 183656
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/_CodeSignature\/CodeResources",
+      "sha256" : "6605a6fa2f815db39f5a401797f111b2fea130c29733964d3912e7958bd42d89",
+      "sizeBytes" : 2800
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "image",
+      "name" : "Assets.car",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/Assets.car",
+      "sha256" : "08fce045b8cf49c4db98c75edfb48f0343752aa2834d3abec1f414febb6a8127",
+      "sizeBytes" : 9791800
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/Base.lproj\/MainInterface.storyboardc\/Info.plist",
+      "sha256" : "b0e89ceae812296c06bc1497e59c9811413ea4579c0965b4617028e4235b9824",
+      "sizeBytes" : 258
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "M4Y-Lb-cyx-view-S3S-Oj-5AN.nib",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/Base.lproj\/MainInterface.storyboardc\/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib",
+      "sha256" : "3f73bf311810df3f76c257088c699ee25d54aaf9efef0b80e7d32bceedf62312",
+      "sizeBytes" : 1214
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "UIViewController-M4Y-Lb-cyx.nib",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/Base.lproj\/MainInterface.storyboardc\/UIViewController-M4Y-Lb-cyx.nib",
+      "sha256" : "3ca1b116e64add2f12901794f0de92dc77c935a7158586f48eae4ee6cf417ce8",
+      "sizeBytes" : 1014
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "GoogleService-Info.plist",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/GoogleService-Info.plist",
+      "sha256" : "2a1a1356b095822a1fd4d4eaaa0995cbb54c164cdb42dc0deebec4708a6b672b",
+      "sizeBytes" : 486
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/Info.plist",
+      "sha256" : "23c002a404344cf522dffd4f5a2b3a280cc94ec46d72a201f32addd3dc3ba019",
+      "sizeBytes" : 1457
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "NotificationContent",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+      "sha256" : "218893a8c355b51d060373796ac11083391d3ab5773f7e17d64b41c4f6d4e70f",
+      "sizeBytes" : 31110944
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/PrivacyInfo.xcprivacy",
+      "sha256" : "6886a280bab422e3b024b0655fd71ae7547fcef1ad57de2e68f5150e25988ffe",
+      "sizeBytes" : 1384
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationContent.supf",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/SC_Info\/NotificationContent.supf",
+      "sha256" : "cf36abff2554fa5d34b3c352f884287b8180262e64121c1ae9bcdd422a7af22d",
+      "sizeBytes" : 184188
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationContent.supp",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/SC_Info\/NotificationContent.supp",
+      "sha256" : "104604359c50f74c86f8582fbe5f0b45975fbc1ff7459f67919785938789ac73",
+      "sizeBytes" : 184292
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationContent.supx",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/SC_Info\/NotificationContent.supx",
+      "sha256" : "72dc9eacc9d28212fb1fc867906ae2bf5b9c3eb82568acb4cb9f472a83baa679",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationContent.v4.supp",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/SC_Info\/NotificationContent.v4.supp",
+      "sha256" : "7e7726a2320b23274cc02a3e15d0921b53dfebdfa27574eeb972d3b07701bdb2",
+      "sizeBytes" : 184272
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationContent.v5.supf",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/SC_Info\/NotificationContent.v5.supf",
+      "sha256" : "a92c21838ab7aca9226376f897229f3a99d532e2cd675c625e59942d86bf35b3",
+      "sizeBytes" : 184168
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/_CodeSignature\/CodeResources",
+      "sha256" : "c28463028b8385896f6b37ef99d320755bb51ddd432294279632c7e2f58b5d10",
+      "sizeBytes" : 4810
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "GoogleService-Info.plist",
+      "relativePath" : "PlugIns\/NotificationService.appex\/GoogleService-Info.plist",
+      "sha256" : "2a1a1356b095822a1fd4d4eaaa0995cbb54c164cdb42dc0deebec4708a6b672b",
+      "sizeBytes" : 486
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Info.plist",
+      "relativePath" : "PlugIns\/NotificationService.appex\/Info.plist",
+      "sha256" : "6f2199119f57ab461157f0cf9fada0552f7f9d6a1d85d41caeb149c227c8148b",
+      "sizeBytes" : 1106
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "NotificationService",
+      "relativePath" : "PlugIns\/NotificationService.appex\/NotificationService",
+      "sha256" : "95a48c1971714fcfc619ea00c2c8a941a0312181618fb6164d70dfd39021155d",
+      "sizeBytes" : 31014768
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "PlugIns\/NotificationService.appex\/PrivacyInfo.xcprivacy",
+      "sha256" : "6886a280bab422e3b024b0655fd71ae7547fcef1ad57de2e68f5150e25988ffe",
+      "sizeBytes" : 1384
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationService.supf",
+      "relativePath" : "PlugIns\/NotificationService.appex\/SC_Info\/NotificationService.supf",
+      "sha256" : "d5839ded6776d5341969885b8025883763b3479c18e0606736fcf0cabfd37e18",
+      "sizeBytes" : 183676
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationService.supp",
+      "relativePath" : "PlugIns\/NotificationService.appex\/SC_Info\/NotificationService.supp",
+      "sha256" : "959ccbef63cdb85ecdc8d94344338e92de944afc9eb870b9bd18c64ad3a5c328",
+      "sizeBytes" : 183780
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationService.supx",
+      "relativePath" : "PlugIns\/NotificationService.appex\/SC_Info\/NotificationService.supx",
+      "sha256" : "72dc9eacc9d28212fb1fc867906ae2bf5b9c3eb82568acb4cb9f472a83baa679",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationService.v4.supp",
+      "relativePath" : "PlugIns\/NotificationService.appex\/SC_Info\/NotificationService.v4.supp",
+      "sha256" : "3a98427b395503585aae8ddd65eeeb8d171d44846062b6a67ad3dfc70b1eaad8",
+      "sizeBytes" : 183760
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "NotificationService.v5.supf",
+      "relativePath" : "PlugIns\/NotificationService.appex\/SC_Info\/NotificationService.v5.supf",
+      "sha256" : "e4a39100fb49a785b0b3dac8522593cb8f854bb7efe9f12772e584e35b20701a",
+      "sizeBytes" : 183656
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "PlugIns\/NotificationService.appex\/_CodeSignature\/CodeResources",
+      "sha256" : "6cc2e550cea55741397cfe25717085f82302561c0494f3e8fe86d53f976a8129",
+      "sizeBytes" : 3394
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "PrivacyInfo.xcprivacy",
+      "relativePath" : "PrivacyInfo.xcprivacy",
+      "sha256" : "6886a280bab422e3b024b0655fd71ae7547fcef1ad57de2e68f5150e25988ffe",
+      "sizeBytes" : 1384
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "plist",
+      "name" : "Manifest.plist",
+      "relativePath" : "SC_Info\/Manifest.plist",
+      "sha256" : "607072bd0819e6ff7fc776241b0ab439bfc4a247c5e32c7c472f88c77c7d6177",
+      "sizeBytes" : 688
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.sinf",
+      "relativePath" : "SC_Info\/iosApp.sinf",
+      "sha256" : "106f58345c96c42ddb7d7af8a2414814a61ff3c8a92c3d1dd5b09ea75ce95420",
+      "sizeBytes" : 1048
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.supf",
+      "relativePath" : "SC_Info\/iosApp.supf",
+      "sha256" : "994006d93596ea4ededc2e2513b1c04275ffbee8b8cdb54a51f3cfcd07b518cb",
+      "sizeBytes" : 200700
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.supp",
+      "relativePath" : "SC_Info\/iosApp.supp",
+      "sha256" : "1a63b55035181bed6cc928e958682888601df44e387fdfa790998772d2da4c79",
+      "sizeBytes" : 200804
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.supx",
+      "relativePath" : "SC_Info\/iosApp.supx",
+      "sha256" : "72dc9eacc9d28212fb1fc867906ae2bf5b9c3eb82568acb4cb9f472a83baa679",
+      "sizeBytes" : 80
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.v4.supp",
+      "relativePath" : "SC_Info\/iosApp.v4.supp",
+      "sha256" : "acc0f7eaea51a772743f58ea69f52e33d98170b92590ce1c1cf2724c7eb7e43f",
+      "sizeBytes" : 200784
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "iosApp.v5.supf",
+      "relativePath" : "SC_Info\/iosApp.v5.supf",
+      "sha256" : "859182e5fd6aa0c48fbf7e858cc6a291e169074a51b1e037cd6f09101bd64d9f",
+      "sizeBytes" : 200680
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "other",
+      "name" : "CodeResources",
+      "relativePath" : "_CodeSignature\/CodeResources",
+      "sha256" : "8ef27188b5b69c3e423964669686ceb73954aa84c6cfda0be70418f3832bbb3b",
+      "sizeBytes" : 17408
+    },
+    {
+      "isSuspicious" : false,
+      "kind" : "binary",
+      "name" : "iosApp",
+      "relativePath" : "iosApp",
+      "sha256" : "1ad960611c3f5081fccd6422fb237aa46aaf49157eb0a48e0d96bf819b6226f2",
+      "sizeBytes" : 33384176
+    }
+  ],
+  "findings" : [
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_CTTelephonyNetworkInfo"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_CTTelephonyNetworkInfo"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_CTTelephonyNetworkInfo"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "iosApp",
+          "value" : "_OBJC_CLASS_$_CTTelephonyNetworkInfo"
+        }
+      ],
+      "explanation" : "CTTelephonyNetworkInfo \/ CTCarrier, mobile country \/ mobile network code, used both for roaming detection and as a fingerprinting signal.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "7227FEF3-D862-4585-8EBA-0343D9F92482",
+      "linddun" : [
+        "Identifying"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/coretelephony\/ctcarrier",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "DCS-01.carrier_info",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Cellular operator information (CTCarrier)",
+      "vectorID" : "DCS-01",
+      "why" : "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_sysctl"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_sysctlbyname"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_sysctl"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_sysctlbyname"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_sysctl"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_sysctlbyname"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_sysctl"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_sysctlbyname"
+        }
+      ],
+      "explanation" : "Low-level C call to read kernel-level hardware parameters.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "05E03DBA-B0F5-4982-8789-84D60A1055AE",
+      "linddun" : [
+        "Identifying"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/kernel\/1387446-sysctlbyname",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "DCS-01.sysctlbyname_import",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Imports sysctlbyname()",
+      "vectorID" : "DCS-01",
+      "why" : "Device and environment signals. On their own they meet none of the WP248 criteria; profiling happens in the SDK that combines them, which the tracker rules score."
+    },
+    {
+      "affectedBinaries" : [
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-200",
+        "CWE-668"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "iosApp",
+          "value" : "_OBJC_CLASS_$_UIPasteboard"
+        }
+      ],
+      "explanation" : "UIPasteboard \/ generalPasteboard \/ UIPasteboardChanged, reading the system pasteboard. Background clipboard reads are a well-documented privacy issue.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "6B58E8CF-0C78-4619-B548-48A130CCF0F0",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PLATFORM-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0030"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/uipasteboard",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0030\/"
+      ],
+      "ruleID" : "DCS-03.uipasteboard_read",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "UIPasteboard \/ generalPasteboard access",
+      "vectorID" : "DCS-03",
+      "why" : "Access to a store of personal data. The contact list, pasteboard and media library are not among the WP248 high-risk criteria; photos and calendars are scored on their own rules."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-285",
+        "CWE-287",
+        "CWE-312",
+        "CWE-319",
+        "CWE-326",
+        "CWE-602",
+        "CWE-603",
+        "CWE-863",
+        "CWE-922"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_LAContext"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_LAContext"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_LAContext"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "iosApp",
+          "value" : "_OBJC_CLASS_$_LAContext"
+        }
+      ],
+      "explanation" : "LocalAuthentication \/ LAPolicy biometric checks. The app receives only success or failure, never biometric data. Whether the check is event-bound (MASWE-0020) needs the evaluatePolicy call site, which sits in encrypted code, so this records the API for review and is not a weakness on its own.",
+      "gdpr" : [
+
+      ],
+      "id" : "6F0B2049-E2CA-4D23-ACE0-FB50B73FD8F3",
+      "linddun" : [
+        "Identifying",
+        "Detecting"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0266"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-AUTH-2",
+        "MASVS-CRYPTO-2"
+      ],
+      "maswe" : [
+        "MASWE-0020"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+        "NSFaceIDUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSFaceIDUsageDescription"
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/localauthentication\/lacontext",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-AUTH\/MASWE-0020\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-AUTH\/MASTG-TEST-0266\/"
+      ],
+      "ruleID" : "DCS-04.face_id_biometrics",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "FaceID \/ LocalAuthentication biometrics",
+      "vectorID" : "DCS-04",
+      "why" : "LocalAuthentication returns only success or failure; no biometric data reaches the app (https:\/\/developer.apple.com\/documentation\/localauthentication). Whether the check is event-bound and bypassable (MASWE-0020) depends on the evaluatePolicy call site MASTG-TEST-0266 reads, which FairPlay encrypts, so the rule records the API and nothing more."
+    },
+    {
+      "affectedBinaries" : [
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "objcSelector",
+          "source" : "iosApp",
+          "value" : "_OBJC_CLASS_$_AVCaptureDevice"
+        }
+      ],
+      "explanation" : "AVCaptureSession \/ AVCaptureDevice, direct camera capture.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "CF6C4E77-F2EC-4A52-A345-106AE9BCAC80",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+        "NSCameraUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSCameraUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/avfoundation\/avcapturesession",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "DCS-05.video_capture",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Camera capture API",
+      "vectorID" : "DCS-05",
+      "why" : "Camera and screen capture APIs. Capture alone meets none of the WP248 criteria."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-939"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "uspsidmobile:\/\/"
+        }
+      ],
+      "explanation" : "The app registers custom URL scheme(s) via CFBundleURLSchemes. Any app or web page can invoke these; if application(_:open:options:) acts on unvalidated parameters, this is an entry point for unauthorized actions. Custom schemes are also unverified (unlike Universal Links). Review the handler for input validation.",
+      "gdpr" : [
+
+      ],
+      "id" : "5B5B4414-4B1B-42CB-99E3-1809BE910CBD",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4",
+        "MASVS-PLATFORM-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0029"
+      ],
+      "metrics" : {
+        "count" : "1",
+        "s" : ""
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/xcode\/defining-a-custom-url-scheme-for-your-app",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PLATFORM\/MASWE-0029\/"
+      ],
+      "remediation" : "Validate and sanitize every parameter in application(_:open:options:); never trigger sensitive actions from a URL without authentication. Prefer Universal Links (verified) over custom schemes.",
+      "ruleID" : "PLAT-02.custom_url_schemes",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Registers 1 custom URL scheme (inbound deep-link surface)",
+      "vectorID" : "PLAT-02",
+      "why" : "The app registers custom URL schemes. MASWE-0029 makes them a weakness when a sensitive flow relies on them or the handler does not validate input, which MASTG-TEST-0370 and -0371 read from the handler code."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "fetch"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "remote-notification"
+        }
+      ],
+      "explanation" : "Legal iOS background-execution channels. `location`\/`voip` enable persistent background execution and are the strongest signal; `audio`\/`external-accessory` are moderate; `fetch`\/`remote-notification`\/`processing` are routine and declared by most apps.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "4232E045-9F42-424B-AC54-98D7056805BB",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "modes" : "fetch, remote-notification"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "remediation" : "Declare only the background modes the app actually needs; each is reviewed by App Review and must map to genuine user-facing functionality, not background telemetry.",
+      "ruleID" : "PLAT-04.background_modes",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Background modes declared: fetch, remote-notification",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "remote-notification"
+        }
+      ],
+      "explanation" : "content-available=1 silent push lets the server wake the app to refresh data without a visible notification. The `didReceiveRemoteNotification` delegate method appears in almost every push-using app, so it's no longer a primary signal; the silent variant is the `content-available` payload and the `remote-notification` UIBackgroundModes entry together.",
+      "gdpr" : [
+        "Art. 6(1)"
+      ],
+      "id" : "CCE23C0A-61BB-46EE-8C81-9417FE45CF03",
+      "linddun" : [
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PLATFORM"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/usernotifications\/pushing-background-updates-to-your-app"
+      ],
+      "ruleID" : "PLAT-04.silent_remote_notification",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Content-available silent push",
+      "vectorID" : "PLAT-04",
+      "why" : "Background execution and push modes. None of the WP248 criteria is met by the mode alone."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-212",
+        "CWE-313"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_NSURLIsExcludedFromBackupKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_NSURLIsExcludedFromBackupKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_NSURLIsExcludedFromBackupKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_NSURLIsExcludedFromBackupKey"
+        }
+      ],
+      "explanation" : "References NSURLIsExcludedFromBackupKey \/ isExcludedFromBackup. The key does not guarantee exclusion, and sensitive files still need to be encrypted, so its presence is a reference, not a mitigation.",
+      "gdpr" : [
+
+      ],
+      "id" : "AD82EA14-6974-4632-B33B-0B18D3B83BE9",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0215"
+      ],
+      "masvs" : [
+        "MASVS-STORAGE"
+      ],
+      "masvsControls" : [
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0006"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/foundation\/urlresourcekey\/isexcludedfrombackupkey",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-STORAGE\/MASWE-0006\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-STORAGE\/MASTG-TEST-0215\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0023\/"
+      ],
+      "ruleID" : "SECH-02.backup_exclusion_marker",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Backup-exclusion API in use (NSURLIsExcludedFromBackupKey)",
+      "vectorID" : "SECH-02",
+      "why" : "Records that the app marks files as excluded from backup."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-200",
+        "CWE-284",
+        "CWE-312",
+        "CWE-313",
+        "CWE-732",
+        "CWE-922"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_NSFileProtectionNone"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_NSFileProtectionNone"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_NSFileProtectionNone"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_NSFileProtectionNone"
+        }
+      ],
+      "explanation" : "A binary imports NSFileProtectionNone, the class that leaves a file readable while the device is locked. The import shows the option is referenced, often by a library that maps every protection class; whether it is applied to sensitive data needs the manual review the linked MASTG test describes.",
+      "gdpr" : [
+
+      ],
+      "id" : "250E2473-1C39-4AF7-B422-A086DBFC9B73",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0300"
+      ],
+      "masvs" : [
+        "MASVS-STORAGE"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-2",
+        "MASVS-STORAGE-1",
+        "MASVS-STORAGE-2"
+      ],
+      "maswe" : [
+        "MASWE-0001"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/foundation\/fileprotectiontype\/none",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-STORAGE\/MASWE-0001\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-STORAGE\/MASTG-TEST-0300\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0024\/"
+      ],
+      "ruleID" : "SECH-02.file_protection_none_referenced",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "References NSFileProtectionNone",
+      "vectorID" : "SECH-02",
+      "why" : "The import shows the protection class is referenced, not that sensitive data is stored under it."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-338"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_drand48"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_random"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_drand48"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_random"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_drand48"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_random"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_drand48"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_random"
+        }
+      ],
+      "explanation" : "Imports rand() \/ srand() \/ random() \/ drand48(), predictable PRNGs unsuitable for tokens, keys, IVs or nonces. Use SecRandomCopyBytes or arc4random_buf. `arc4random() % n` also introduces modulo bias; prefer arc4random_uniform(n).",
+      "gdpr" : [
+
+      ],
+      "id" : "2F0F8334-E17A-4753-80AE-2D4548CC9FB9",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0311"
+      ],
+      "masvs" : [
+        "MASVS-CRYPTO"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-1"
+      ],
+      "maswe" : [
+        "MASWE-0012"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/security\/secrandomcopybytes(_:_:_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0012\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-CRYPTO\/MASTG-TEST-0311\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0025\/"
+      ],
+      "ruleID" : "SECH-03.insecure_randomness",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Non-cryptographic random number generator",
+      "vectorID" : "SECH-03",
+      "why" : "A non-cryptographic generator is linked. MASTG-TEST-0311 fails only when its output is used for keys, tokens or other security values, which is in FairPlay-encrypted code, so the scan records the API."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-328"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_CC_MD5"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_CC_SHA1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_CC_MD5"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_CC_SHA1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_CC_MD5"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_CC_SHA1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_CC_MD5"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_CC_SHA1"
+        }
+      ],
+      "explanation" : "Imports CC_MD5 \/ CC_SHA1 (CommonCrypto) or CryptoKit's Insecure.MD5 \/ Insecure.SHA1. Both are collision-broken and unsuitable for signatures, integrity checks or password hashing, but are also widely used for non-security purposes (cache keys, ETags, file checksums), so the finding is a pointer for review.",
+      "gdpr" : [
+
+      ],
+      "id" : "67BDC916-F63A-4251-BC17-36DD9257BAD0",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0211"
+      ],
+      "masvs" : [
+        "MASVS-CRYPTO"
+      ],
+      "masvsControls" : [
+        "MASVS-CRYPTO-1"
+      ],
+      "maswe" : [
+        "MASWE-0008"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/csrc.nist.gov\/pubs\/sp\/800\/131\/a\/r2\/final",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0008\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-CRYPTO\/MASTG-TEST-0211\/"
+      ],
+      "ruleID" : "SECH-03.weak_hash",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Weak hash primitive (MD5 \/ SHA-1)",
+      "vectorID" : "SECH-03",
+      "why" : "MD5 or SHA-1 is linked. MASTG-TEST-0211 fails only when the hash protects sensitive data; checksums and cache keys pass. That use is in FairPlay-encrypted code, so the scan records the API."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.security.application-groups[0]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "com.apple.security.application-groups"
+        }
+      ],
+      "explanation" : "application-groups entitlement allows multiple apps from the same publisher to share UserDefaults\/files (often used to share IDFA \/ VPN-detected flag between sibling apps).",
+      "gdpr" : [
+
+      ],
+      "id" : "EDB53C35-7308-4183-ADD4-84C591CAAB8D",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/com.apple.security.application-groups",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.app_group_entitlement",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "App Groups entitlement (cross-app data sharing)",
+      "vectorID" : "SECH-06",
+      "why" : "Shared container between the vendor's own apps."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "aps-environment"
+        }
+      ],
+      "explanation" : "aps-environment entitlement, push notifications.",
+      "gdpr" : [
+
+      ],
+      "id" : "BD407C9F-7483-4FA0-9AF6-D0CC26B52DE7",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/aps-environment",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.aps_environment_production",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "APS push environment",
+      "vectorID" : "SECH-06",
+      "why" : "Push environment the build targets."
+    },
+    {
+      "affectedBinaries" : [
+        "Frameworks\/Lottie.framework\/Lottie",
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-494"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "Frameworks\/Lottie.framework\/Lottie",
+          "value" : "_dlsym"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_dlopen"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_dlsym"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_dlopen"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_dlsym"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_dlopen"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_dlsym"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_dlopen"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_dlsym"
+        }
+      ],
+      "explanation" : "The binary imports dlopen\/dlsym, so it can resolve and call code chosen at runtime rather than at link time. That is how optional frameworks, plugin architectures and A\/B-tested SDKs are loaded, and it is entirely normal, so this ships as INFO inventory rather than a weakness. It matters only as context: an app that also carries obfuscation (SURV-04) or a data broker (TRK-02) can assemble behaviour a static scan cannot see, and dynamic code loading is the mechanism that makes that possible. Note the limit of the signal: an import proves the symbol is linked, not that it is ever called, and iOS forbids loading code that is not already in the signed bundle. (MASWE-0049)",
+      "gdpr" : [
+
+      ],
+      "id" : "4E6B1A04-4D4D-4B95-B24A-215D8CD9AE42",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-4"
+      ],
+      "maswe" : [
+        "MASWE-0049"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "Lottie",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0049\/"
+      ],
+      "ruleID" : "SECH-06.dynamic_loader_imports",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Dynamic loader in use (dlopen \/ dlsym)",
+      "vectorID" : "SECH-06",
+      "why" : "dlopen\/dlsym are present in the binary."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "keychain-access-groups[0]"
+        },
+        {
+          "kind" : "entitlement",
+          "source" : "codesign",
+          "value" : "keychain-access-groups"
+        }
+      ],
+      "explanation" : "keychain-access-groups, shares keychain entries across same-publisher apps.",
+      "gdpr" : [
+
+      ],
+      "id" : "3BF35D6A-D611-4C76-A8AB-EBD389C10999",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+        "MASTG-TEST-0362"
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/entitlements\/keychain-access-groups",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0362\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "SECH-06.keychain_access_group",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Keychain access group (cross-app credential share)",
+      "vectorID" : "SECH-06",
+      "why" : "Credential sharing between the vendor's own apps."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-284",
+        "CWE-306"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_SecAccessControlCreateWithFlags"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_SecAccessControlCreateWithFlags"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_SecAccessControlCreateWithFlags"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_SecAccessControlCreateWithFlags"
+        }
+      ],
+      "explanation" : "Imports SecAccessControlCreateWithFlags, which binds a Keychain item or key to user presence, biometrics or the device passcode. A positive signal; which flags are passed cannot be read from the symbol table.",
+      "gdpr" : [
+
+      ],
+      "id" : "0360A824-BA6A-4E48-8851-CF456EA2EB93",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-AUTH"
+      ],
+      "masvsControls" : [
+        "MASVS-AUTH-2",
+        "MASVS-AUTH-3",
+        "MASVS-CRYPTO-2"
+      ],
+      "maswe" : [
+        "MASWE-0016"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "defensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/security\/secaccesscontrolcreatewithflags(_:_:_:_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0016\/"
+      ],
+      "ruleID" : "SECH-07.access_control_flags",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Keychain access control in use (SecAccessControlCreateWithFlags)",
+      "vectorID" : "SECH-07",
+      "why" : "A positive signal: Keychain items are access-control bound."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+        "CWE-284",
+        "CWE-306"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_SecItemAdd"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_SecItemCopyMatching"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_SecItemDelete"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_SecItemUpdate"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_SecItemAdd"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_SecItemCopyMatching"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_SecItemDelete"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_SecItemUpdate"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_SecItemAdd"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_SecItemCopyMatching"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_SecItemDelete"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_SecItemUpdate"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_SecItemAdd"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_SecItemCopyMatching"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_SecItemDelete"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_SecItemUpdate"
+        }
+      ],
+      "explanation" : "Uses the Keychain Services API (SecItemAdd \/ SecItemCopyMatching \/ SecItemUpdate). Informational, pair with SECH-02.keychain_accessible_always to judge whether items are protected with an appropriate accessibility \/ access-control class.",
+      "gdpr" : [
+
+      ],
+      "id" : "B8203BF4-6E4B-487D-91EF-F3C47E556402",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-AUTH"
+      ],
+      "masvsControls" : [
+        "MASVS-AUTH-2",
+        "MASVS-AUTH-3",
+        "MASVS-CRYPTO-2"
+      ],
+      "maswe" : [
+        "MASWE-0016"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/security\/secitemadd(_:_:)",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CRYPTO\/MASWE-0016\/"
+      ],
+      "ruleID" : "SECH-07.keychain_in_use",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Keychain API in use (SecItem)",
+      "vectorID" : "SECH-07",
+      "why" : "A positive signal: the app uses the Keychain."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-1104",
+        "CWE-1357",
+        "CWE-451",
+        "CWE-693"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:MinimumOSVersion",
+          "value" : "18.0"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:DTPlatformVersion",
+          "value" : "26.4"
+        }
+      ],
+      "explanation" : "Info.plist records MinimumOSVersion 18.0, the iOS 26.4 SDK (iphoneos26.4) and Xcode 26.4. The minimum decides which platform protections the app can count on; the SDK decides which current platform behaviour it opts into.",
+      "gdpr" : [
+
+      ],
+      "id" : "77A0CD06-5688-403F-B516-3DFE33C561C6",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-CODE"
+      ],
+      "masvsControls" : [
+        "MASVS-CODE-1"
+      ],
+      "maswe" : [
+        "MASWE-0041",
+        "MASWE-0042"
+      ],
+      "metrics" : {
+        "minOS" : "18.0",
+        "sdk" : "26.4",
+        "sdkName" : "iphoneos26.4",
+        "xcode" : "26.4"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/minimumosversion",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0041\/",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-CODE\/MASWE-0042\/"
+      ],
+      "ruleID" : "SECH-09.platform_versions",
+      "severity" : "info",
+      "solove" : [
+
+      ],
+      "title" : "Supports iOS 18.0 and later; built with the iOS 26.4 SDK",
+      "vectorID" : "SECH-09",
+      "why" : "Records the minimum iOS version and the SDK the app was built with."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService",
+        "iosApp"
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "__dyld_get_image_header"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "__dyld_image_count"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "__dyld_get_image_header"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "__dyld_image_count"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "__dyld_get_image_header"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "__dyld_image_count"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "__dyld_get_image_header"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "__dyld_image_count"
+        }
+      ],
+      "explanation" : "Calls _dyld_image_count \/ _dyld_get_image_name, can be used to detect injected dylibs (tweaks, Frida gadget). NOTE: these symbols are also used by crash reporters, analytics SDKs and the Swift runtime to enumerate loaded images, so bare presence is not anti-analysis. OWASP MASTG anti-debugging tests key on ptrace \/ sysctl(P_TRACED) rather than dyld enumeration, so this is an informational capability marker, not a weakness.",
+      "gdpr" : [
+
+      ],
+      "id" : "9F74B46A-756A-461E-86E4-C1C0D6A9623D",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-RESILIENCE"
+      ],
+      "masvsControls" : [
+        "MASVS-RESILIENCE-4"
+      ],
+      "maswe" : [
+        "MASWE-0065"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "(main)",
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-RESILIENCE\/MASWE-0065\/"
+      ],
+      "ruleID" : "SURV-02.dyld_image_introspection",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "dyld image-list introspection",
+      "vectorID" : "SURV-02"
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist:UIBackgroundModes",
+          "value" : "fetch"
+        }
+      ],
+      "explanation" : "UIBackgroundModes contains \"fetch\", system schedules periodic background wake-ups for opportunistic data sync. \"processing\", \"remote-notification\" and \"voip\" are covered by S12 (system persistence) and S19 (push channels).",
+      "gdpr" : [
+
+      ],
+      "id" : "5D2A37B6-152D-442A-A772-FF013E80CEB8",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+        "(main)"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/information-property-list\/uibackgroundmodes"
+      ],
+      "ruleID" : "SURV-03.background_fetch",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Background fetch mode (UIBackgroundModes \"fetch\")",
+      "vectorID" : "SURV-03"
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "CrashData"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "PrivacyInfo.xcprivacy",
+          "value" : "OtherDiagnosticData"
+        }
+      ],
+      "explanation" : "Across the bundle's privacy manifests the app and its SDKs declare collecting: CrashData, OtherDiagnosticData. 0 are declared linked to the user's identity and 0 used for tracking. This is what the developer states; a static scan cannot show what leaves the device.",
+      "gdpr" : [
+        "Art. 13",
+        "Art. 5(1)(a)"
+      ],
+      "id" : "DD98EF40-0761-4817-84E1-1E6787B7CDEF",
+      "linddun" : [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+        "count" : "2",
+        "linked" : "0",
+        "s" : "s",
+        "tracking" : "0",
+        "types" : "CrashData, OtherDiagnosticData"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/app-privacy-configuration\/nsprivacycollecteddatatypes",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "TGAP-01.declared_data_collection",
+      "severity" : "info",
+      "solove" : [
+        "Exclusion"
+      ],
+      "title" : "Privacy manifests declare 2 collected data types",
+      "vectorID" : "TGAP-01",
+      "why" : "Records what the developer declares; the declaration is not a defect."
+    },
+    {
+      "affectedBinaries" : [
+        "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "PlugIns\/NotificationService.appex\/NotificationService"
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementATTUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementATTUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementApplicationSupportSubdirectory"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementBackgroundTaskInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementManualInstall"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementPlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementProtocolVersion"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementSGTMDebugModeKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementSGTMHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementSGTMPreviewHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementSGTMPreviewKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementSuspensionTimeInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamAdNetworkClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamAdNetworkID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamCP1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamCampaign"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamCampaignID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamCampaignInfoSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamContent"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamCreativeFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamDoubleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamGADSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamGBRAID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamGoogleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamMarketingTactic"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamMedium"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamSalesforceSubscriberID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamSourcePlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamStoreResultID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementURLParamTerm"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_APMMeasurementUserAttributeNamePrefixLifetimeValue"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics_iosKt"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics_iosKt"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementATTUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementATTUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementApplicationSupportSubdirectory"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementBackgroundTaskInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementManualInstall"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementPlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementProtocolVersion"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementSGTMDebugModeKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementSGTMHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementSGTMPreviewHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementSGTMPreviewKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementSuspensionTimeInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamAdNetworkClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamAdNetworkID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamCP1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamCampaign"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamCampaignID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamCampaignInfoSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamContent"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamCreativeFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamDoubleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamGADSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamGBRAID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamGoogleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamMarketingTactic"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamMedium"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamSalesforceSubscriberID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamSourcePlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamStoreResultID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementURLParamTerm"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_APMMeasurementUserAttributeNamePrefixLifetimeValue"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics_iosKt"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics_iosKt"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementATTUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementATTUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementApplicationSupportSubdirectory"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementBackgroundTaskInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementManualInstall"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementPlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementProtocolVersion"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementSGTMDebugModeKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementSGTMHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementSGTMPreviewHTTPHeaderName"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementSGTMPreviewKey"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementSuspensionTimeInterval"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamAdNetworkClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamAdNetworkID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamCP1"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamCampaign"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamCampaignID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamCampaignInfoSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamContent"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamCreativeFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamDoubleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamGADSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamGBRAID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamGoogleClickID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamMarketingTactic"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamMedium"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamSalesforceSubscriberID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamSource"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamSourcePlatform"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamStoreResultID"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementURLParamTerm"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementUploadURL"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementUploadURLWithSubdomainFormat"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_APMMeasurementUserAttributeNamePrefixLifetimeValue"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_CLASS_$_SharedFirebaseAnalytics_iosKt"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_APMMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_FIRAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_FirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurement"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_PodsDummy_GoogleAppMeasurementIdentitySupport"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics"
+        },
+        {
+          "kind" : "objcSelector",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_OBJC_METACLASS_$_SharedFirebaseAnalytics_iosKt"
+        }
+      ],
+      "explanation" : "Google Firebase Analytics SDK.",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 14(1)(e)"
+      ],
+      "id" : "25F137C4-995D-4E46-BD35-93C967531CC1",
+      "linddun" : [
+        "Data Disclosure",
+        "Linking"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-2"
+      ],
+      "maswe" : [
+        "MASWE-0068"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+        "DigestWidgetExtension.appex",
+        "NotificationContent.appex",
+        "NotificationService.appex"
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0068\/"
+      ],
+      "ruleID" : "TRK-01.firebase_analytics",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Firebase Analytics",
+      "vectorID" : "TRK-01",
+      "why" : "An analytics SDK builds a usage profile: WP248 criterion 1 gives \"a company building behavioural or marketing profiles based on usage\" as its example. One criterion is a risk under GDPR, not a likely high risk."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "apps.apple.com"
+        },
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "issuetracker.google.com"
+        },
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "www.google.com"
+        },
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "b.corp.google.com"
+        },
+        {
+          "kind" : "url",
+          "source" : "network",
+          "value" : "www.apple.com"
+        }
+      ],
+      "explanation" : "The bundle references 5 endpoint(s) whose owner is based in US, owners: Apple, Google. The country is the owning organisation's home jurisdiction from the tracker database, not where a server is hosted, and a referenced endpoint is not observed traffic. If the app sends personal data there, it is a third-country transfer: whether that is lawful depends on the safeguards, purpose and paperwork behind it, none of which is visible in a binary. US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+      "gdpr" : [
+        "Art. 44",
+        "Art. 46",
+        "Art. 49"
+      ],
+      "id" : "38C149FC-DE7A-4927-B033-482B7E6B7E26",
+      "linddun" : [
+        "Data Disclosure"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+        "adequacyNote" : " US holds no EU adequacy decision, so a transfer there needs an Art. 46 safeguard or an Art. 49 derogation.",
+        "count" : "5",
+        "country" : "US",
+        "ownersNote" : ", owners: Apple, Google",
+        "s" : "s"
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/eur-lex.europa.eu\/legal-content\/EN\/TXT\/?uri=CELEX%3A32016R0679"
+      ],
+      "ruleID" : "TRK-04.egress.us",
+      "severity" : "info",
+      "solove" : [
+        "Secondary Use"
+      ],
+      "title" : "Endpoints owned by US-based organisations (5 endpoints)",
+      "vectorID" : "TRK-04",
+      "why" : "Where the endpoint owner is registered. International transfer is GDPR Chapter V, not a WP248 criterion."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+
+      ],
+      "evidences" : [
+        {
+          "kind" : "file",
+          "source" : "iosApp",
+          "value" : "iosApp"
+        }
+      ],
+      "explanation" : "The main Mach-O is encrypted by the App Store. Static string scanning of its TEXT segment won't work without a decrypted dump (e.g., via frida-ios-dump or bagbak on a jailbroken device). Embedded frameworks and dylibs are USUALLY ENCRYPTED TOO (measured 91% across the reference corpus; in half of apps every Mach-O is encrypted), so TEXT-segment string recall is limited bundle-wide, not just for the main binary. What still survives encryption is __LINKEDIT: symbols, imported\/defined symbol names, ObjC selectors and linked dylibs, which is why symbol-based detection carries this scan rather than string matching.",
+      "gdpr" : [
+
+      ],
+      "id" : "7D501C12-4546-4B26-8C46-E8923130B6F9",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-RESILIENCE"
+      ],
+      "masvsControls" : [
+
+      ],
+      "maswe" : [
+
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/mas.owasp.org\/MASTG\/techniques\/ios\/MASTG-TECH-0054\/#decrypting-the-app-binary"
+      ],
+      "remediation" : "For full TEXT-segment coverage, supply a decrypted .ipa produced by frida-ios-dump or bagbak from a jailbroken device. Resource files, plists, entitlements, symbols, selectors and linked dylibs are still scanned in the meantime.",
+      "ruleID" : "meta.fairplay_main",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Main executable is FairPlay-encrypted",
+      "vectorID" : "SURV-02",
+      "why" : "Scan metadata: what the scanner could and could not see."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-250"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistKey",
+          "source" : "Info.plist",
+          "value" : "NSPhotoLibraryAddUsageDescription"
+        },
+        {
+          "kind" : "plistValue",
+          "source" : "Info.plist",
+          "value" : "Informed Delivery Mobile needs permission to save mailpiece images to your photo albumn."
+        }
+      ],
+      "explanation" : "Photo library write",
+      "gdpr" : [
+        "Art. 6(1)",
+        "Art. 13(1)(c)"
+      ],
+      "id" : "48501184-C4BB-47A0-BFD8-9912D1C060BA",
+      "linddun" : [
+        "Unawareness & Unintervenability"
+      ],
+      "mastg" : [
+        "MASTG-TEST-0360"
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1"
+      ],
+      "maswe" : [
+        "MASWE-0066"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "permissionsRequired" : [
+        "NSPhotoLibraryAddUsageDescription",
+        "NSPhotoLibraryUsageDescription"
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/uikit\/protecting-the-user-s-privacy",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0066\/",
+        "https:\/\/mas.owasp.org\/MASTG\/tests\/ios\/MASVS-PRIVACY\/MASTG-TEST-0360\/",
+        "https:\/\/mas.owasp.org\/MASTG\/best-practices\/MASTG-BEST-0051\/"
+      ],
+      "ruleID" : "perm.NSPhotoLibraryAddUsageDescription",
+      "severity" : "info",
+      "solove" : [
+        "Intrusion"
+      ],
+      "title" : "Requests permission: Photo library write",
+      "vectorID" : "DCS-03",
+      "why" : "A purpose string in Info.plist declares that the app may ask for the resource. The declared data type decides the criteria; most meet none."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "PlugIns\/NotificationContent.appex\/PrivacyInfo.xcprivacy",
+          "value" : "NSPrivacyAccessedAPICategoryFileTimestamp"
+        }
+      ],
+      "explanation" : "File create\/modify timestamps: a device-fingerprint component.",
+      "gdpr" : [
+
+      ],
+      "id" : "B3CF491A-8125-41A9-8CC9-837CDA2359AA",
+      "linddun" : [
+        "Identifying",
+        "Detecting"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.NSPrivacyAccessedAPICategoryFileTimestamp",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance"
+      ],
+      "title" : "Privacy manifest declares accessed API: NSPrivacyAccessedAPICategoryFileTimestamp",
+      "vectorID" : "DCS-01",
+      "why" : "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "plistValue",
+          "source" : "PlugIns\/NotificationContent.appex\/PrivacyInfo.xcprivacy",
+          "value" : "NSPrivacyAccessedAPICategoryUserDefaults"
+        }
+      ],
+      "explanation" : "UserDefaults and App Groups: a common covert channel between apps from the same developer.",
+      "gdpr" : [
+
+      ],
+      "id" : "DBBDAE1C-45C6-4CEF-A7E2-65D95DD81B33",
+      "linddun" : [
+
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+
+      },
+      "mitre" : [
+
+      ],
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "neutral",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.NSPrivacyAccessedAPICategoryUserDefaults",
+      "severity" : "info",
+      "solove" : [
+        "Surveillance",
+        "Intrusion"
+      ],
+      "title" : "Privacy manifest declares accessed API: NSPrivacyAccessedAPICategoryUserDefaults",
+      "vectorID" : "SURV-03",
+      "why" : "A privacy-manifest declaration. The app stating what it accesses is the app complying, and is recorded as inventory."
+    },
+    {
+      "affectedBinaries" : [
+
+      ],
+      "cwe" : [
+        "CWE-359"
+      ],
+      "evidences" : [
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_fstatfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "value" : "_statfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_fstatfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "value" : "_statfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_fstatfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "PlugIns\/NotificationService.appex\/NotificationService",
+          "value" : "_statfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_fstatfs"
+        },
+        {
+          "kind" : "symbol",
+          "source" : "iosApp",
+          "value" : "_statfs"
+        }
+      ],
+      "explanation" : "Apple requires apps that use this category of API to declare it in PrivacyInfo.xcprivacy with a justified reason. Indicator(s) for Disk space (systemFreeSize \/ systemSize \/ volumeAvailableCapacity*Key \/ volumeTotalCapacityKey \/ statfs \/ fstatfs \/ statvfs \/ fstatvfs) appear in 4 framework(s), but the Privacy Manifest does not declare `NSPrivacyAccessedAPICategoryDiskSpace`. This is an App-Store-policy compliance gap.",
+      "gdpr" : [
+        "Art. 5(1)(a)",
+        "Art. 13"
+      ],
+      "id" : "FECEE47F-4265-49C9-A3B4-A4F182FF1B1A",
+      "linddun" : [
+        "Unawareness & Unintervenability",
+        "Non-compliance"
+      ],
+      "mastg" : [
+
+      ],
+      "masvs" : [
+        "MASVS-PRIVACY"
+      ],
+      "masvsControls" : [
+        "MASVS-PRIVACY-1",
+        "MASVS-PRIVACY-3"
+      ],
+      "maswe" : [
+        "MASWE-0073"
+      ],
+      "metrics" : {
+        "category" : "NSPrivacyAccessedAPICategoryDiskSpace",
+        "count" : "4",
+        "humanIndicators" : "systemFreeSize \/ systemSize \/ volumeAvailableCapacity*Key \/ volumeTotalCapacityKey \/ statfs \/ fstatfs \/ statvfs \/ fstatvfs",
+        "humanName" : "Disk space"
+      },
+      "mitre" : [
+
+      ],
+      "owningFramework" : "(main)",
+      "owningFrameworks" : [
+
+      ],
+      "permissionsGranted" : [
+
+      ],
+      "permissionsRequired" : [
+
+      ],
+      "polarity" : "offensive",
+      "references" : [
+        "https:\/\/developer.apple.com\/documentation\/bundleresources\/describing-use-of-required-reason-api",
+        "https:\/\/mas.owasp.org\/MASWE\/MASVS-PRIVACY\/MASWE-0073\/"
+      ],
+      "ruleID" : "privacy.gap.NSPrivacyAccessedAPICategoryDiskSpace",
+      "severity" : "info",
+      "solove" : [
+        "Exclusion"
+      ],
+      "title" : "Privacy manifest gap: Disk space used but undeclared",
+      "vectorID" : "TGAP-01",
+      "why" : "The binary evidences an accessed-API category the privacy manifest does not declare. The defect is the gap between the two, which is verifiable from the bundle alone."
+    }
+  ],
+  "frameworks" : {
+    "attackMobile" : "18.1",
+    "cvss" : "4.0",
+    "mastg" : "2.0.0",
+    "masvs" : "2.1.0",
+    "maswe" : "1.0.0"
+  },
+  "hardening" : [
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "NotificationContent",
+      "relativePath" : "PlugIns\/NotificationContent.appex\/NotificationContent"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "DigestWidgetExtension",
+      "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "NotificationService",
+      "relativePath" : "PlugIns\/NotificationService.appex\/NotificationService"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "iosApp",
+      "relativePath" : "iosApp"
+    },
+    {
+      "architectures" : [
+        "arm64"
+      ],
+      "hasARC" : true,
+      "hasPIE" : true,
+      "hasStackCanary" : true,
+      "isEncrypted" : true,
+      "name" : "Lottie",
+      "relativePath" : "Frameworks\/Lottie.framework\/Lottie"
+    }
+  ],
+  "id" : "EBE7EEA7-C937-490C-8CFC-C79FB2735E6E",
+  "metadata" : {
+    "allowsArbitraryLoads" : false,
+    "associatedDomains" : [
+
+    ],
+    "backgroundModes" : [
+      "fetch",
+      "remote-notification"
+    ],
+    "bundleID" : "com.usps.id45833",
+    "bundleName" : "Informed Delivery",
+    "bundleVersion" : "1.3.1.20002036",
+    "displayName" : "Informed Delivery",
+    "embeddedBinaries" : [
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreTelephony.framework\/CoreTelephony",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/LocalAuthentication.framework\/LocalAuthentication",
+          "\/System\/Library\/Frameworks\/MetricKit.framework\/MetricKit",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/StoreKit.framework\/StoreKit",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/SystemConfiguration.framework\/SystemConfiguration",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/System\/Library\/Frameworks\/UserNotificationsUI.framework\/UserNotificationsUI",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswift_Builtin_float.dylib",
+          "\/usr\/lib\/swift\/libswift_Concurrency.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib"
+        ],
+        "name" : "NotificationContent",
+        "relativePath" : "PlugIns\/NotificationContent.appex\/NotificationContent",
+        "sizeBytes" : 31110944
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreTelephony.framework\/CoreTelephony",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/LocalAuthentication.framework\/LocalAuthentication",
+          "\/System\/Library\/Frameworks\/MetricKit.framework\/MetricKit",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/StoreKit.framework\/StoreKit",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/SystemConfiguration.framework\/SystemConfiguration",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/System\/Library\/Frameworks\/WidgetKit.framework\/WidgetKit",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreLocation.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftIntents.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswift_Builtin_float.dylib",
+          "\/usr\/lib\/swift\/libswift_Concurrency.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib"
+        ],
+        "name" : "DigestWidgetExtension",
+        "relativePath" : "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+        "sizeBytes" : 31016960
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreTelephony.framework\/CoreTelephony",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/LocalAuthentication.framework\/LocalAuthentication",
+          "\/System\/Library\/Frameworks\/MetricKit.framework\/MetricKit",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/StoreKit.framework\/StoreKit",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/SystemConfiguration.framework\/SystemConfiguration",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreLocation.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftIntents.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswift_Builtin_float.dylib",
+          "\/usr\/lib\/swift\/libswift_Concurrency.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib"
+        ],
+        "name" : "NotificationService",
+        "relativePath" : "PlugIns\/NotificationService.appex\/NotificationService",
+        "sizeBytes" : 31014768
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/ARKit.framework\/ARKit",
+          "\/System\/Library\/Frameworks\/AVFoundation.framework\/AVFoundation",
+          "\/System\/Library\/Frameworks\/AuthenticationServices.framework\/AuthenticationServices",
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreGraphics.framework\/CoreGraphics",
+          "\/System\/Library\/Frameworks\/CoreImage.framework\/CoreImage",
+          "\/System\/Library\/Frameworks\/CoreTelephony.framework\/CoreTelephony",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/LocalAuthentication.framework\/LocalAuthentication",
+          "\/System\/Library\/Frameworks\/MetricKit.framework\/MetricKit",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/SafariServices.framework\/SafariServices",
+          "\/System\/Library\/Frameworks\/Security.framework\/Security",
+          "\/System\/Library\/Frameworks\/StoreKit.framework\/StoreKit",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/SystemConfiguration.framework\/SystemConfiguration",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/System\/Library\/Frameworks\/UserNotifications.framework\/UserNotifications",
+          "\/System\/Library\/Frameworks\/Vision.framework\/Vision",
+          "\/System\/Library\/Frameworks\/_StoreKit_SwiftUI.framework\/_StoreKit_SwiftUI",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftARKit.dylib",
+          "\/usr\/lib\/swift\/libswiftAVFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftAccelerate.dylib",
+          "\/usr\/lib\/swift\/libswiftCompression.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreAudio.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreLocation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMIDI.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreMedia.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftGLKit.dylib",
+          "\/usr\/lib\/swift\/libswiftIntents.dylib",
+          "\/usr\/lib\/swift\/libswiftMapKit.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftModelIO.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSceneKit.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftSpriteKit.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswift_Builtin_float.dylib",
+          "\/usr\/lib\/swift\/libswift_Concurrency.dylib",
+          "\/usr\/lib\/swift\/libswift_StringProcessing.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib",
+          "@rpath\/Lottie.framework\/Lottie"
+        ],
+        "name" : "iosApp",
+        "relativePath" : "iosApp",
+        "sizeBytes" : 33384176
+      },
+      {
+        "architectures" : [
+          "arm64"
+        ],
+        "isFairPlayEncrypted" : true,
+        "linkedDylibs" : [
+          "\/System\/Library\/Frameworks\/Combine.framework\/Combine",
+          "\/System\/Library\/Frameworks\/CoreFoundation.framework\/CoreFoundation",
+          "\/System\/Library\/Frameworks\/CoreGraphics.framework\/CoreGraphics",
+          "\/System\/Library\/Frameworks\/CoreText.framework\/CoreText",
+          "\/System\/Library\/Frameworks\/Foundation.framework\/Foundation",
+          "\/System\/Library\/Frameworks\/QuartzCore.framework\/QuartzCore",
+          "\/System\/Library\/Frameworks\/SwiftUI.framework\/SwiftUI",
+          "\/System\/Library\/Frameworks\/UIKit.framework\/UIKit",
+          "\/usr\/lib\/libSystem.B.dylib",
+          "\/usr\/lib\/libc++.1.dylib",
+          "\/usr\/lib\/libcompression.dylib",
+          "\/usr\/lib\/libobjc.A.dylib",
+          "\/usr\/lib\/libz.1.dylib",
+          "\/usr\/lib\/swift\/libswiftCompression.dylib",
+          "\/usr\/lib\/swift\/libswiftCore.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreGraphics.dylib",
+          "\/usr\/lib\/swift\/libswiftCoreImage.dylib",
+          "\/usr\/lib\/swift\/libswiftDarwin.dylib",
+          "\/usr\/lib\/swift\/libswiftDataDetection.dylib",
+          "\/usr\/lib\/swift\/libswiftDispatch.dylib",
+          "\/usr\/lib\/swift\/libswiftFoundation.dylib",
+          "\/usr\/lib\/swift\/libswiftMetal.dylib",
+          "\/usr\/lib\/swift\/libswiftOSLog.dylib",
+          "\/usr\/lib\/swift\/libswiftObjectiveC.dylib",
+          "\/usr\/lib\/swift\/libswiftQuartzCore.dylib",
+          "\/usr\/lib\/swift\/libswiftSpatial.dylib",
+          "\/usr\/lib\/swift\/libswiftUIKit.dylib",
+          "\/usr\/lib\/swift\/libswiftUniformTypeIdentifiers.dylib",
+          "\/usr\/lib\/swift\/libswiftXPC.dylib",
+          "\/usr\/lib\/swift\/libswiftos.dylib",
+          "\/usr\/lib\/swift\/libswiftsimd.dylib",
+          "@rpath\/libswift_Concurrency.dylib"
+        ],
+        "name" : "Lottie",
+        "relativePath" : "Frameworks\/Lottie.framework\/Lottie",
+        "sizeBytes" : 2313968
+      }
+    ],
+    "embeddedFrameworks" : [
+      "Lottie"
+    ],
+    "executableName" : "iosApp",
+    "infoPlistKeys" : [
+      "BuildMachineOSBuild",
+      "CFBundleDevelopmentRegion",
+      "CFBundleDisplayName",
+      "CFBundleExecutable",
+      "CFBundleIcons",
+      "CFBundleIcons~ipad",
+      "CFBundleIdentifier",
+      "CFBundleInfoDictionaryVersion",
+      "CFBundleName",
+      "CFBundlePackageType",
+      "CFBundleShortVersionString",
+      "CFBundleSupportedPlatforms",
+      "CFBundleURLTypes",
+      "CFBundleVersion",
+      "DTAppStoreToolsBuild",
+      "DTCompiler",
+      "DTPlatformBuild",
+      "DTPlatformName",
+      "DTPlatformVersion",
+      "DTSDKBuild",
+      "DTSDKName",
+      "DTXcode",
+      "DTXcodeBuild",
+      "FirebaseAppDelegateProxyEnabled",
+      "FirebaseAutomaticScreenReportingEnabled",
+      "ITSAppUsesNonExemptEncryption",
+      "LSApplicationCategoryType",
+      "LSMinimumSystemVersion",
+      "LSRequiresIPhoneOS",
+      "MinimumOSVersion",
+      "NSCameraUsageDescription",
+      "NSFaceIDUsageDescription",
+      "NSPhotoLibraryAddUsageDescription",
+      "UIApplicationSceneManifest",
+      "UIBackgroundModes",
+      "UIDesignRequiresCompatibility",
+      "UIDeviceFamily",
+      "UILaunchScreen",
+      "UIRequiredDeviceCapabilities",
+      "UIStatusBarStyle",
+      "UISupportedInterfaceOrientations",
+      "UISupportedInterfaceOrientations~ipad",
+      "UIViewControllerBasedStatusBarAppearance"
+    ],
+    "minimumOSVersion" : "18.0",
+    "permissions" : [
+      {
+        "category" : "Camera access",
+        "key" : "NSCameraUsageDescription",
+        "value" : "Informed Delivery Mobile would like to access the camera to scan package barcodes.",
+        "vectorID" : "DCS-05"
+      },
+      {
+        "category" : "Face ID biometric authentication",
+        "key" : "NSFaceIDUsageDescription",
+        "value" : "Enabling Face ID allows you quick and secure access to your USPS Informed Delivery account.",
+        "vectorID" : "DCS-04"
+      },
+      {
+        "category" : "Photo library write",
+        "key" : "NSPhotoLibraryAddUsageDescription",
+        "value" : "Informed Delivery Mobile needs permission to save mailpiece images to your photo albumn.",
+        "vectorID" : "DCS-03"
+      }
+    ],
+    "privacyAccessedAPIReasons" : [
+      "C617.1",
+      "CA92.1"
+    ],
+    "privacyAccessedAPIs" : [
+      "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "NSPrivacyAccessedAPICategoryUserDefaults"
+    ],
+    "privacyManifestPath" : "PlugIns\/NotificationContent.appex\/PrivacyInfo.xcprivacy",
+    "privacyTrackingDomains" : [
+
+    ],
+    "queriedURLSchemes" : [
+
+    ],
+    "shortVersion" : "1.3.1",
+    "signedIdentifier" : "com.usps.id45833",
+    "signedTeamID" : "62MPUHDNRS",
+    "storeGenre" : "Business",
+    "supportedPlatforms" : [
+      "iPhoneOS"
+    ],
+    "urlSchemes" : [
+      "uspsidmobile"
+    ]
+  },
+  "network" : {
+    "detectedSDKs" : [
+      {
+        "category" : "ecosystem",
+        "country" : "US",
+        "endpoints" : [
+          "b.corp.google.com",
+          "issuetracker.google.com",
+          "www.google.com"
+        ],
+        "evidenceCount" : 20,
+        "frameworks" : [
+          "(main)",
+          "DigestWidgetExtension.appex",
+          "NotificationContent.appex",
+          "NotificationService.appex"
+        ],
+        "isTracker" : false,
+        "name" : "Google APIs",
+        "owner" : "Google",
+        "trackerID" : "google.api"
+      },
+      {
+        "category" : "ecosystem",
+        "country" : "US",
+        "endpoints" : [
+          "apps.apple.com",
+          "www.apple.com"
+        ],
+        "evidenceCount" : 9,
+        "frameworks" : [
+          "(main)",
+          "DigestWidgetExtension.appex",
+          "NotificationContent.appex",
+          "NotificationService.appex"
+        ],
+        "isTracker" : false,
+        "name" : "Apple",
+        "owner" : "Apple",
+        "trackerID" : "apple.core"
+      }
+    ],
+    "endpoints" : [
+      {
+        "cleartext" : false,
+        "host" : "apis-id.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 28,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/informed-delivery\/v1",
+          "\/informed-delivery\/v2",
+          "\/informed-delivery\/packages\/v1",
+          "\/informed-delivery-images\/v1",
+          "\/informed-delivery\/subscribers\/v1\/subscribers",
+          "\/informed-delivery-login\/v1"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "keyc.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 24,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/realms\/USPS-M\/protocol\/openid-connect",
+          "\/realms\/USPS-M\/ext\/logout",
+          "\/realms\/USPS-M\/protocol\/openid-connect\/logout",
+          "\/realms\/USPS-M\/protocol\/openid-connect\/auth",
+          "\/realms\/USPS-M\/protocol\/openid-connect\/token",
+          "\/realms\/USPS-M\/protocol\/openid-connect\/userinfo"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "apis.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 12,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/tracking\/v3",
+          "\/tracking\/v3r2"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "www.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 12,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/global-elements\/header\/mobile-alerts\/id-mobile-config.json",
+          "\/text-tracking\/welcome.htm",
+          "\/tracking\/easr-terms-and-conditions-popup.htm"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : false,
+        "country" : "US",
+        "host" : "apps.apple.com",
+        "isTracker" : false,
+        "occurrenceCount" : 8,
+        "owner" : "Apple",
+        "registrableDomain" : "apple.com",
+        "samplePaths" : [
+          "\/us\/app\/informed-delivery-mobile\/id6478885776",
+          "\/app\/id6478885776?action=write-review"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ],
+        "trackerID" : "apple.core"
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : false,
+        "country" : "US",
+        "host" : "issuetracker.google.com",
+        "isTracker" : false,
+        "occurrenceCount" : 8,
+        "owner" : "Google",
+        "registrableDomain" : "google.com",
+        "samplePaths" : [
+          "\/issues\/new?component=907884&template=1466542",
+          "\/issues\/241760537"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ],
+        "trackerID" : "google.api"
+      },
+      {
+        "cleartext" : false,
+        "host" : "ktor.io",
+        "isTracker" : false,
+        "occurrenceCount" : 8,
+        "registrableDomain" : "ktor.io",
+        "samplePaths" : [
+          "\/docs\/faq.html#no-transformation-found-exception",
+          "\/docs\/http-client-engines.html"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "tools.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 8,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/redelivery.htm",
+          "\/go\/TrackConfirmAction"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : false,
+        "country" : "US",
+        "host" : "www.google.com",
+        "isTracker" : false,
+        "occurrenceCount" : 8,
+        "owner" : "Google",
+        "registrableDomain" : "google.com",
+        "samplePaths" : [
+          "\/"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ],
+        "trackerID" : "google.api"
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : false,
+        "country" : "US",
+        "host" : "b.corp.google.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "owner" : "Google",
+        "registrableDomain" : "google.com",
+        "samplePaths" : [
+          "\/issues\/new?component=907884&template=1466542"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ],
+        "trackerID" : "google.api"
+      },
+      {
+        "cleartext" : false,
+        "host" : "emailus.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/s\/informed-delivery-inquiry"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "faq.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/?articleId=1449159866675"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "informeddelivery.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/portal\/terms-conditions-sms"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "reg.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/entreg\/assets\/html\/informed-delivery.html"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "verified.usps.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "usps.com",
+        "samplePaths" : [
+          "\/login\/?realm=\/alpha&theme=USPS-MobileApp2&goto=https:\/\/reg.usps.com\/entreg\/secure\/EditProfilePersonalAction_input"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "youtrack.jetbrains.com",
+        "isTracker" : false,
+        "occurrenceCount" : 4,
+        "registrableDomain" : "jetbrains.com",
+        "samplePaths" : [
+          "\/issue\/KTOR-8367\/"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "PlugIns\/DigestWidgetExtension.appex\/DigestWidgetExtension",
+          "PlugIns\/NotificationContent.appex\/NotificationContent",
+          "PlugIns\/NotificationService.appex\/NotificationService",
+          "iosApp"
+        ]
+      },
+      {
+        "cleartext" : false,
+        "host" : "uspscio-it-idc-9060-00p.appspot.com",
+        "isTracker" : false,
+        "occurrenceCount" : 3,
+        "registrableDomain" : "uspscio-it-idc-9060-00p.appspot.com",
+        "samplePaths" : [
+
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "GoogleService-Info.plist",
+          "PlugIns\/NotificationContent.appex\/GoogleService-Info.plist",
+          "PlugIns\/NotificationService.appex\/GoogleService-Info.plist"
+        ]
+      },
+      {
+        "category" : "ecosystem",
+        "cleartext" : true,
+        "country" : "US",
+        "host" : "www.apple.com",
+        "isTracker" : false,
+        "occurrenceCount" : 1,
+        "owner" : "Apple",
+        "registrableDomain" : "apple.com",
+        "samplePaths" : [
+          "\/DTDs\/PropertyList-1.0.dtd"
+        ],
+        "samplePlistKeys" : [
+
+        ],
+        "sources" : [
+          "SC_Info\/Manifest.plist"
+        ],
+        "trackerID" : "apple.core"
+      }
+    ]
+  },
+  "notes" : [
+    "Main binary is FairPlay-encrypted, TEXT-segment strings are unavailable. Resource files, symbols, and dylibs were still scanned for secrets\/endpoints. Drop a decrypted .ipa (frida-ios-dump \/ bagbak output) for full TEXT coverage.",
+    "Code strings are readable in 4 of 5 binaries; 57 rules that search only code strings saw those binaries alone.",
+    "No embedded.mobileprovision found, typical for App Store builds re-signed by the store."
+  ],
+  "scanDurationSeconds" : 30.460052013397217,
+  "secrets" : [
+
+  ],
+  "sourceIPAPath" : "\/Users\/hackerman\/AI-Repos\/ios-app-static-scan\/results-us150\/ipas\/com.usps.id45833.ipa",
+  "vectorSummaries" : [
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "DCS-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "DCS-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "DCS-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "DCS-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "DCS-07"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 48,
+      "vectorID" : "TRK-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 5,
+      "vectorID" : "TRK-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TRK-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "TGAP-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "TGAP-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 3,
+      "vectorID" : "SURV-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SURV-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SURV-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 4,
+      "vectorID" : "SECH-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-04"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-05"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 7,
+      "vectorID" : "SECH-06"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 5,
+      "vectorID" : "SECH-07"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "SECH-08"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "SECH-09"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "PLAT-01"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 1,
+      "vectorID" : "PLAT-02"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 0,
+      "vectorID" : "PLAT-03"
+    },
+    {
+      "maxSeverity" : "info",
+      "uniqueArtifactCount" : 2,
+      "vectorID" : "PLAT-04"
+    }
+  ]
+}

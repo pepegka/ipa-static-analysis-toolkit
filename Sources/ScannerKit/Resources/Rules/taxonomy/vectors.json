@@ -1,0 +1,368 @@
+{
+  "vectors" : [
+    {
+      "construct" : "DCS",
+      "description" : "IDFA/IDFV, sysctl hardware probes, boot time, disk space, carrier data.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-01",
+      "mitre" : [
+        "T1426",
+        "T1422"
+      ],
+      "title" : "Device & environment fingerprinting",
+      "userAdvice" : "Limit fingerprinting: Settings ▸ Privacy & Security ▸ Tracking ▸ turn off \"Allow Apps to Request to Track\". Fingerprints can survive resets, so favour apps that don't do it."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "CoreLocation use, especially background or significant-change monitoring.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-02",
+      "mitre" : [
+        "T1430"
+      ],
+      "title" : "Location tracking",
+      "userAdvice" : "Settings ▸ Privacy ▸ Location Services ▸ [app]: choose \"While Using\" or \"Never\", and turn OFF \"Precise Location\" if exact position isn't needed. Avoid granting \"Always\"."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "Pasteboard reads, contacts/photo library access, calendar/reminders access.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-03",
+      "mitre" : [
+        "T1409",
+        "T1636.003",
+        "T1414"
+      ],
+      "title" : "Content access (clipboard / contacts / photos / calendar)",
+      "userAdvice" : "Grant Photos and Contacts as \"Limited\"/\"Selected\" rather than full access (Settings ▸ Privacy). iOS warns when an app reads your clipboard. Decline paste prompts you didn't expect."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "Touch event capture, accelerometer/gyroscope motion fingerprinting.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-04",
+      "mitre" : [
+        "T1417"
+      ],
+      "title" : "Behavioural biometrics & motion sensors",
+      "userAdvice" : "Motion and touch profiling can't be toggled per-app; restrict Motion & Fitness in Settings ▸ Privacy where offered, and prefer apps that disclose this behaviour."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "Camera/mic capture, screen-recording detection or capture.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-05",
+      "mitre" : [
+        "T1429",
+        "T1512",
+        "T1513"
+      ],
+      "title" : "Audio / video / screen capture",
+      "userAdvice" : "Settings ▸ Privacy ▸ Camera / Microphone: disable for apps that don't need them. The orange (mic) and green (camera) dots show active use. Watch for unexpected activations."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "Probing which other apps are installed via URL schemes / canOpenURL / LSApplicationQueriesSchemes.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-06",
+      "mitre" : [
+        "T1418",
+        "T1426"
+      ],
+      "title" : "Installed-app enumeration",
+      "userAdvice" : "Not user-controllable. An app probing which other apps you have installed is profiling you. Prefer alternatives with clearer privacy practices and review the developer's privacy policy."
+    },
+    {
+      "construct" : "DCS",
+      "description" : "BLE scanning, UWB ranging, Wi-Fi/BSSID info, Bonjour service enumeration and retail-beacon SDKs. Fingerprints the user's physical and household environment (who/what is nearby).",
+      "group" : "MASVS-PRIVACY",
+      "id" : "DCS-07",
+      "mitre" : [
+        "T1422",
+        "T1430"
+      ],
+      "title" : "Proximity & cross-device sensing",
+      "userAdvice" : "This app can sense nearby devices (Bluetooth/UWB/Wi-Fi), building a picture of your physical surroundings. In Settings ▸ Privacy, deny Bluetooth and Local Network access to apps that don't clearly need them."
+    },
+    {
+      "construct" : "TRK",
+      "description" : "Known analytics/anti-fraud SDKs that ship device + behaviour data off-device.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TRK-01",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "Analytics / attribution / anti-fraud SDKs",
+      "userAdvice" : "Turn off \"Allow Apps to Request to Track\" and review any in-app analytics/personalisation toggles. A filtering DNS profile can further cut telemetry."
+    },
+    {
+      "construct" : "TRK",
+      "description" : "X-Mode / Anomaly Six / Outlogic / Babel Street / SafeGraph / Vermillion / Predicio / Cuebiq: location and behaviour brokers.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TRK-02",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "Data-broker embedding",
+      "userAdvice" : "Strong privacy red flag. Opt out of tracking (Settings ▸ Privacy ▸ Tracking) and, where available, the data broker's own opt-out page; consider removing the app."
+    },
+    {
+      "construct" : "TRK",
+      "description" : "Where data egresses. Endpoint geography and owner are inferred statically from URLs, as a data-residency and cross-border transfer signal.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TRK-04",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "Server region / data residency",
+      "userAdvice" : "Your data may be sent to servers in other countries with different privacy laws. Review the privacy policy before sharing sensitive information."
+    },
+    {
+      "construct" : "TRK",
+      "description" : "LLM/vision/speech SDKs and cloud AI endpoints (OpenAI, Anthropic, Gemini, Mistral, Azure OpenAI, cloud STT) that send free-text user content (messages, photos, screen context) off the device.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TRK-05",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "AI / LLM data egress",
+      "userAdvice" : "This app can send what you type, say or photograph to a cloud AI service. Avoid sharing sensitive personal, health or financial details in its AI features, and review the privacy policy for how prompts are retained."
+    },
+    {
+      "construct" : "TGAP",
+      "description" : "Apple-mandated API category is used inside binaries but not declared in PrivacyInfo.xcprivacy. An App Store policy violation.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TGAP-01",
+      "mitre" : [
+        "T1426"
+      ],
+      "title" : "Privacy-manifest gap (used vs declared)",
+      "userAdvice" : "A disclosure/compliance gap rather than a user control. Treat undisclosed data use as a caution sign when deciding whether to trust the app."
+    },
+    {
+      "construct" : "TGAP",
+      "description" : "Tracking capability (IDFA / tracking SDKs) present alongside App Tracking Transparency. Flags collection that may precede or bypass user consent.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TGAP-02",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "Consent / ATT ordering integrity",
+      "userAdvice" : "If the app tracks you before you tap \"Ask App Not to Track\", that's a consent red flag. Turn off Settings ▸ Privacy & Security ▸ Tracking ▸ \"Allow Apps to Request to Track\"."
+    },
+    {
+      "construct" : "TGAP",
+      "description" : "Kids-genre apps embedding ad trackers, absent age-gate/Declared-Age-Range signals, and SDK COPPA/child-directed flags. A kids-facing app with ad trackers is a different and worse finding than the same SDK elsewhere.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "TGAP-03",
+      "mitre" : [
+        "T1437"
+      ],
+      "title" : "Child-safety & age-assurance signals",
+      "userAdvice" : "If this is a child-facing app, embedded ad/tracking SDKs are a serious concern. Prefer apps in the Kids category that state they don't use third-party advertising, and set up Screen Time / Ask to Buy for children."
+    },
+    {
+      "construct" : "SURV",
+      "description" : "Checks for VPN tunnels and proxy settings.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "SURV-01",
+      "mitre" : [
+        "T1422"
+      ],
+      "title" : "VPN / proxy detection",
+      "userAdvice" : "If you use a VPN or privacy tool, be aware this app can detect it and may change behaviour or block you. No user setting disables this detection."
+    },
+    {
+      "construct" : "SURV",
+      "description" : "Frida / Cydia / debugger / dyld checks and ptrace tricks used to resist analysis.",
+      "group" : "MASVS-RESILIENCE",
+      "id" : "SURV-02",
+      "mitre" : [
+        "T1633"
+      ],
+      "title" : "Anti-analysis / anti-debug / anti-jailbreak",
+      "userAdvice" : "Usually defensive (anti-fraud / anti-tamper). If the app refuses to run on your device for no clear reason, this is often why. No user action needed."
+    },
+    {
+      "construct" : "SURV",
+      "description" : "Background URL sessions, BGTaskScheduler, expiring background tasks used for telemetry drain.",
+      "group" : "MASVS-PRIVACY",
+      "id" : "SURV-03",
+      "mitre" : [
+        "T1437",
+        "T1646"
+      ],
+      "title" : "Hidden background exfiltration",
+      "userAdvice" : "Reduce silent background data sends: Settings ▸ General ▸ Background App Refresh ▸ turn off for this app."
+    },
+    {
+      "construct" : "SURV",
+      "description" : "XOR-decoded interface names, runtime string decoding, suspicious constant tables.",
+      "group" : "MASVS-RESILIENCE",
+      "id" : "SURV-04",
+      "mitre" : [
+        "T1406"
+      ],
+      "title" : "Obfuscation indicators",
+      "userAdvice" : "Heavy obfuscation isn't proof of wrongdoing but it hides behaviour; prefer apps that are transparent about what they collect and do."
+    },
+    {
+      "construct" : "SURV",
+      "description" : "Strings, domains, file paths and sandbox-escape primitives matching published commercial-spyware IOCs (Citizen Lab datasets).",
+      "group" : "MASVS-RESILIENCE",
+      "id" : "SURV-05",
+      "mitre" : [
+        "T1456",
+        "T1404"
+      ],
+      "title" : "Known spyware / stalkerware IOCs",
+      "userAdvice" : "Treat as serious. Don't log in, update iOS immediately, enable Lockdown Mode (Settings ▸ Privacy & Security), and seek expert help if you may be targeted."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "App Transport Security weaknesses, cleartext HTTP exceptions, weak TLS, and missing certificate pinning markers.",
+      "group" : "MASVS-NETWORK",
+      "id" : "SECH-01",
+      "mitre" : [
+        "T1521"
+      ],
+      "title" : "Transport security (ATS / TLS / pinning)",
+      "userAdvice" : "On untrusted Wi-Fi, apps with weak transport security can leak data. Avoid sensitive actions on public networks when using such apps."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "World-readable files, plaintext databases, NSFileProtectionNone, and Keychain misuse markers.",
+      "group" : "MASVS-STORAGE",
+      "id" : "SECH-02",
+      "mitre" : [
+        "T1409"
+      ],
+      "title" : "Data-at-rest protection",
+      "userAdvice" : "Set a device passcode and enable Face/Touch ID (this turns on file data protection), and avoid storing sensitive information in apps flagged here."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "Weak primitives (DES, MD5, RC4), ECB mode, hardcoded keys/certs, custom XOR. Compliance and trust risk.",
+      "group" : "MASVS-CRYPTO",
+      "id" : "SECH-03",
+      "mitre" : [
+        "T1521"
+      ],
+      "title" : "Cryptography",
+      "userAdvice" : "Nothing to toggle; weak cryptography is a developer issue. Avoid storing highly sensitive data in apps that show crypto warnings."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "PIE/ASLR, stack canaries, ARC, and encryption state of each Mach-O binary.",
+      "group" : "MASVS-CODE",
+      "id" : "SECH-04",
+      "mitre" : [
+        "T1633"
+      ],
+      "title" : "Binary hardening",
+      "userAdvice" : "Developer-side hardening. Weak hardening slightly raises exploit risk, so keep iOS and the app updated."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "API keys, tokens, private keys and other high-entropy secrets embedded in binaries or resources.",
+      "group" : "MASVS-STORAGE",
+      "id" : "SECH-05",
+      "mitre" : [
+        "T1409"
+      ],
+      "title" : "Hardcoded secrets & credentials",
+      "userAdvice" : "Developer issue with no direct user action, but embedded keys signal weaker security hygiene. Be cautious with sensitive data in this app."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "Enterprise / ad-hoc / development profiles, expired signing and sideload markers, relevant for non-App-Store distribution.",
+      "group" : "MASVS-CODE",
+      "id" : "SECH-06",
+      "mitre" : [
+        "T1631"
+      ],
+      "title" : "Code signing / entitlement posture",
+      "userAdvice" : "If this app isn't from the App Store, only install it from a source you fully trust. Sideloaded and enterprise apps bypass App Store review."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "Keychain items stored without an access-control / accessibility class and biometric/passcode policy use: the strength of credential storage and local auth.",
+      "group" : "MASVS-AUTH",
+      "id" : "SECH-07",
+      "mitre" : [
+
+      ],
+      "title" : "Authentication & keychain protection",
+      "userAdvice" : "Set a strong device passcode and enable biometrics; both strengthen how the app's stored credentials are protected."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "Third-party SDK provenance and update/CDN channel: embedded trackers and their owner class as a software-supply-chain risk.",
+      "group" : "MASVS-CODE",
+      "id" : "SECH-08",
+      "mitre" : [
+        "T1474"
+      ],
+      "title" : "SDK provenance & supply chain",
+      "userAdvice" : "Bundled third-party SDKs widen who gets your data and the app's supply-chain risk. Prefer apps with fewer embedded trackers; keep the app updated."
+    },
+    {
+      "construct" : "SECH",
+      "description" : "The iOS versions the app still supports and the SDK and Xcode it was built with.",
+      "group" : "MASVS-CODE",
+      "id" : "SECH-09",
+      "mitre" : [
+
+      ],
+      "title" : "Platform version",
+      "userAdvice" : "Keep iOS and the app up to date. An app that still runs on old iOS versions cannot rely on protections Apple added since."
+    },
+    {
+      "construct" : "PLAT",
+      "description" : "WKWebView, JS evaluation bridges, message handlers, JS-injected scripts: a common channel for credential and UA exfiltration.",
+      "group" : "MASVS-PLATFORM",
+      "id" : "PLAT-01",
+      "mitre" : [
+        "T1417"
+      ],
+      "title" : "WebView / JavaScript bridge",
+      "userAdvice" : "Avoid typing passwords on in-app web screens. Open sensitive links in Safari instead, where you can verify the address bar."
+    },
+    {
+      "construct" : "PLAT",
+      "description" : "Custom URL schemes the app itself registers (CFBundleURLSchemes) and wildcard universal-link domains: inbound attack surface where unvalidated parameters can drive sensitive actions.",
+      "group" : "MASVS-PLATFORM",
+      "id" : "PLAT-02",
+      "mitre" : [
+        "T1474",
+        "T1631"
+      ],
+      "title" : "Deep-link / URL-scheme handler exposure",
+      "userAdvice" : "Be wary of links that open this app from messages or websites; don't tap deep links from untrusted sources."
+    },
+    {
+      "construct" : "PLAT",
+      "description" : "Bundled app extensions (PlugIns/*.appex): custom keyboards with RequestsOpenAccess (keystroke exfiltration) and share/action extensions with TRUEPREDICATE activation rules.",
+      "group" : "MASVS-PLATFORM",
+      "id" : "PLAT-03",
+      "mitre" : [
+        "T1417"
+      ],
+      "title" : "App extensions & custom keyboards",
+      "userAdvice" : "For a bundled custom keyboard, deny \"Full Access\" (Settings ▸ General ▸ Keyboard) unless you truly need it. Full access can send keystrokes off your device."
+    },
+    {
+      "construct" : "PLAT",
+      "description" : "Background-execution and remote-wakeup surface: UIBackgroundModes abuse, VoIP/background processing, and silent / VoIP / critical push. These wake the app without user awareness.",
+      "group" : "MASVS-PLATFORM",
+      "id" : "PLAT-04",
+      "mitre" : [
+        "T1541",
+        "T1398",
+        "T1645"
+      ],
+      "title" : "Background-activation surface",
+      "userAdvice" : "Limit how the app wakes itself: turn off Background App Refresh and revoke unused Location/Notification permissions in Settings."
+    }
+  ]
+}

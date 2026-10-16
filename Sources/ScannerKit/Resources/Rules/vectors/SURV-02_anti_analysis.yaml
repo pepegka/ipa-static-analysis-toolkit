@@ -1,0 +1,123 @@
+- id: SURV-02.frida_indicators
+  vector: SURV-02
+  title: Frida instrumentation indicators
+  description: |
+    Frida marker strings (frida-server, frida-gadget, gum-js-loop) or the default
+    frida-server port 27042, an anti-instrumentation probe.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0065]
+  mastg: []
+  search:
+    - kind: string
+      pattern: '(?i)\b(frida|frida-server|frida-gadget|gum-js-loop|GumJS)\b'
+    - kind: string
+      pattern: '\b27042\b'
+
+- id: SURV-02.cydia_substrate
+  vector: SURV-02
+  title: MobileSubstrate / CydiaSubstrate references
+  description: |
+    Mentions of CydiaSubstrate / MobileSubstrate / SubstrateLoader / TweakInject,
+    used to detect tweak injection on jailbroken devices.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0051]
+  mastg: [MASTG-TEST-0240]
+  search:
+    - kind: string
+      pattern: 'CydiaSubstrate|MobileSubstrate|SubstrateLoader|TweakInject|libsubstrate'
+
+- id: SURV-02.jailbreak_url_schemes
+  vector: SURV-02
+  title: Probes Cydia / Sileo / Filza URL schemes
+  description: Probes jailbreak-store URL schemes via -canOpenURL:.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0051]
+  mastg: [MASTG-TEST-0240]
+  search:
+    - kind: string
+      pattern: '\b(cydia|sileo|zbra|filza|undecimus|xina15|checkra1n|palera1n)://'
+
+- id: SURV-02.jailbreak_file_paths
+  vector: SURV-02
+  title: Jailbreak filesystem paths probed
+  description: |
+    Hard-codes paths that exist only on jailbroken devices. The narrow primary
+    pattern targets paths that are *only* jailbreak-relevant (Cydia, apt, the
+    MobileSubstrate dylibs and jailbreakd). Broader literals such as `/bin/bash`
+    or `/etc/apt` regularly appear in stock debug strings and are handled by
+    the `ignore-stdlib-debug-paths` suppression; they only re-surface when
+    these higher-signal paths also appear in the same binary.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0051]
+  mastg: [MASTG-TEST-0240]
+  search:
+    - kind: string
+      pattern: '/Applications/Cydia\.app|/private/var/lib/apt|/Library/MobileSubstrate|/var/cache/apt|/usr/libexec/cydia|/usr/sbin/sshd|/usr/bin/ssh|/usr/sbin/jailbreakd|/Applications/Sileo\.app|/Applications/Zebra\.app|/var/jb/'
+
+- id: SURV-02.ptrace_deny_attach
+  vector: SURV-02
+  title: Anti-debug via ptrace(PT_DENY_ATTACH)
+  description: |
+    Calls ptrace with PT_DENY_ATTACH to prevent debugger attachment. Standard
+    anti-analysis primitive.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0064]
+  mastg: [MASTG-TEST-0401]
+  search:
+    - kind: string
+      pattern: 'PT_DENY_ATTACH|P_TRACED'
+    - kind: importedSymbol
+      pattern: '^_ptrace$'
+
+- id: SURV-02.dyld_image_introspection
+  vector: SURV-02
+  title: dyld image-list introspection
+  description: |
+    Calls _dyld_image_count / _dyld_get_image_name, can be used to detect injected
+    dylibs (tweaks, Frida gadget). NOTE: these symbols are also used by crash
+    reporters, analytics SDKs and the Swift runtime to enumerate loaded images, so
+    bare presence is not anti-analysis. OWASP MASTG anti-debugging tests
+    key on ptrace / sysctl(P_TRACED) rather than dyld
+    enumeration, so this is an informational capability marker, not a weakness.
+  severity: info
+  polarity: neutral
+  maswe: [MASWE-0065]
+  mastg: []
+  search:
+    - kind: importedSymbol
+      pattern: '_dyld_image_count|_dyld_get_image_name|_dyld_get_image_header'
+
+- id: SURV-02.fork_posix_spawn
+  vector: SURV-02
+  title: fork / posix_spawn execution probe
+  description: |
+    Calls fork() or posix_spawn(), calling these from a sandboxed iOS app is
+    forbidden; a successful call indicates a jailbroken environment. NOTE: many
+    cross-platform SDKs and the Swift/ObjC runtime merely *link* these symbols
+    without calling them on iOS, so the import alone is a very weak signal and
+    fires on most apps. Treated as informational rather than a weakness (MASTG keys
+    anti-tamper on ptrace / sysctl, not on linked posix symbols).
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0051]
+  mastg: []
+  search:
+    - kind: importedSymbol
+      pattern: '^_fork$|^_posix_spawn$'
+
+- id: SURV-02.is_jailbroken_naming
+  vector: SURV-02
+  title: isJailbroken / jailbreak detection variable
+  description: A symbol or string named isJailbroken / is_rooted / jailbreak_detected.
+  severity: info
+  polarity: defensive
+  maswe: [MASWE-0051]
+  mastg: [MASTG-TEST-0240]
+  search:
+    - kind: string
+      pattern: '(?i)\b(isJailbroken|is_?rooted|jailbreak_?detected|JailbreakCheck)\b'
